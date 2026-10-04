@@ -3109,7 +3109,7 @@
       "a",
       "b"
     ],
-    "explanation": "The vendor has stopped all updates, which makes the switches end-of-life, and they remain in service because an older system depends on them, which makes them legacy hardware. A malicious update is a tampered patch delivered to customers, and no updates are coming at all. A race condition is a timing flaw in software.",
+    "explanation": "The model is end-of-life and the vendor has stopped all firmware and security updates (the point where support and patches stop is also called end of service life, or EOSL), and the switches stay in service because an older production system depends on them, which makes them legacy hardware. A malicious update is a tampered patch delivered to customers, and no updates are coming at all. A race condition is a timing flaw in software.",
     "source": "ai-generated",
     "verified": false,
     "topics": [
@@ -3300,7 +3300,7 @@
       "d": "Zero-day"
     },
     "answer": "d",
-    "explanation": "A zero-day is a vulnerability that is exploited before the vendor knows about it or has released a fix. End-of-life describes products that no longer receive updates at all. A misconfiguration is an insecure setting rather than a code flaw, and a malicious update is a tampered patch from a compromised vendor.",
+    "explanation": "A zero-day is a vulnerability that is exploited before the vendor knows about it or has released a fix. End-of-life describes a product the manufacturer no longer sells and may soon stop patching, which is a known lifecycle state rather than an unknown flaw. A misconfiguration is an insecure setting rather than a code flaw, and a malicious update is a tampered patch from a compromised vendor.",
     "source": "ai-generated",
     "verified": false,
     "topics": [
@@ -4045,7 +4045,7 @@
       "d": "Isolation"
     },
     "answer": "b",
-    "explanation": "Configuration enforcement uses tools such as Group Policy, MDM, or configuration management software to apply the approved baseline again and again, so any drift is corrected automatically. Decommissioning retires systems, and patching installs vendor fixes for vulnerabilities. Isolation separates a system from others and does not reset its settings.",
+    "explanation": "Configuration enforcement checks systems against the required configuration and brings them back into compliance, for example Group Policy or MDM re-applying the baseline, or a posture assessment each time a device connects that quarantines out-of-compliance systems until they are fixed. Decommissioning retires systems, and patching installs vendor fixes for vulnerabilities. Isolation separates a system from others and does not reset its settings.",
     "source": "ai-generated",
     "verified": false,
     "topics": [
@@ -5184,13 +5184,13 @@
     "objective": "3.4",
     "question": "A company runs its customer-facing application on two different public cloud providers so that a major outage at one provider does not take the service offline. Which approach does this describe?",
     "choices": {
-      "a": "Hybrid cloud",
+      "a": "Serverless architecture",
       "b": "Private cloud",
       "c": "Community cloud",
       "d": "Multi-cloud"
     },
     "answer": "d",
-    "explanation": "Multi-cloud uses services from more than one cloud provider, which avoids dependence on a single provider's availability. A hybrid cloud combines on-premises or private infrastructure with a public cloud, a private cloud serves a single organization, and a community cloud is shared by organizations with common needs.",
+    "explanation": "Multi-cloud uses services from more than one cloud provider, which avoids dependence on a single provider's availability. Serverless architecture runs code as provider-managed functions and does not by itself add provider redundancy, a private cloud serves a single organization, and a community cloud is shared by organizations with common needs.",
     "source": "ai-generated",
     "verified": false,
     "topics": [
@@ -5270,7 +5270,7 @@
       "d": "Parallel processing test"
     },
     "answer": "c",
-    "explanation": "A tabletop exercise is a discussion-based walkthrough of a scenario in which participants describe their actions without affecting any systems, which makes it low cost and low risk. A simulation has participants actually perform their actions in a staged event, a fail over test switches to backup systems, and a parallel processing test runs backup systems alongside production.",
+    "explanation": "A tabletop exercise is a discussion-based walkthrough of a scenario in which participants describe their actions without affecting any systems, which makes it low cost and low risk. A simulation has participants actually perform their actions in a staged event, a fail over test switches to backup systems, and parallel processing splits work across multiple processors so a faulty one can be removed while the rest keep running.",
     "source": "ai-generated",
     "verified": false,
     "topics": [
@@ -5289,7 +5289,7 @@
       "d": "Parallel processing test"
     },
     "answer": "a",
-    "explanation": "A simulation recreates a realistic event so participants practice their real procedures and tools, while staying away from production. A tabletop exercise is only a discussion, a fail over test deliberately shifts production to redundant systems, and a parallel processing test runs recovery systems alongside production to compare results.",
+    "explanation": "A simulation recreates a realistic event so participants practice their real procedures and tools, while staying away from production. A tabletop exercise is only a discussion, a fail over test deliberately shifts production to redundant systems, and parallel processing splits work across multiple processors so a faulty one can be removed while the rest keep running.",
     "source": "ai-generated",
     "verified": false,
     "topics": [
@@ -5308,7 +5308,7 @@
       "d": "Fail over test"
     },
     "answer": "d",
-    "explanation": "A fail over test intentionally causes the primary system to fail so the team can confirm that redundant systems take over as designed. A tabletop exercise is discussion only, a simulation stages an event for responders to practice, and a parallel processing test runs recovery systems at the same time as production without switching over.",
+    "explanation": "A fail over test intentionally causes the primary system to fail so the team can confirm that redundant systems take over as designed. A tabletop exercise is discussion only, a simulation stages an event for responders to practice, and parallel processing splits work across multiple processors so a faulty one can be removed while the rest keep running.",
     "source": "ai-generated",
     "verified": false,
     "topics": [
@@ -5319,15 +5319,15 @@
     "id": "SY0-701-3060",
     "domain": "3.0",
     "objective": "3.4",
-    "question": "A bank brings its recovery systems online and processes the same day's real transactions on both production and recovery systems at the same time, then compares the results. Production remains the official system throughout. Which type of test is this?",
+    "question": "A transaction-processing system splits each batch of work across eight processors running at the same time. During a recovery test, the team forces one processor to return bad results and confirms that the system detects it, removes it from the pool of available processors, and finishes the batch on the remaining seven. Which recovery testing concept is being validated?",
     "choices": {
-      "a": "Fail over test",
-      "b": "Parallel processing test",
-      "c": "Tabletop exercise",
-      "d": "Simulation"
+      "a": "Tabletop exercise",
+      "b": "Parallel processing",
+      "c": "Simulation",
+      "d": "Journaling"
     },
     "answer": "b",
-    "explanation": "A parallel processing test runs the recovery systems alongside production on the same workload to confirm they can handle it correctly, without interrupting the primary systems. A fail over test actually moves operations to the backup systems, a tabletop exercise is a discussion, and a simulation stages an event for responders to practice on.",
+    "explanation": "Parallel processing splits work across multiple CPUs or systems, which improves performance and recovery because a faulty processor can be identified and removed while the others keep working. A tabletop exercise is a discussion only, a simulation stages an event such as a phishing campaign for people to respond to, and journaling logs data writes so storage can be recovered after a failure.",
     "source": "ai-generated",
     "verified": false,
     "topics": [
@@ -7111,15 +7111,15 @@
     "id": "SY0-701-4339",
     "domain": "4.0",
     "objective": "4.6",
-    "question": "Before an online bank creates an account, applicants must upload a government-issued photo ID, take a live selfie that is compared with the ID photo, and answer questions drawn from their credit history. What is this process called?",
+    "question": "Before an online bank creates an account, applicants must upload a government-issued photo ID, take a live selfie that is compared with the ID photo, and answer questions drawn from their credit history. What is this overall process called?",
     "choices": {
       "a": "Federation",
-      "b": "Attestation",
+      "b": "Provisioning",
       "c": "Identity proofing",
       "d": "Authorization"
     },
     "answer": "c",
-    "explanation": "Identity proofing verifies that a person is who they claim to be before credentials or an account are issued. Federation is a trust relationship between identity systems, attestation is a formal confirmation such as a manager certifying access, and authorization decides what an already authenticated identity may do.",
+    "explanation": "Identity proofing confirms that a person is who they claim to be before an account or credentials are issued, using steps such as gathering information from the applicant and verifying (attesting) the identity against documents like a passport or ID. Federation is a trust relationship between organizations' identity systems, provisioning is creating the account after identity is confirmed, and authorization decides what an already authenticated identity may do.",
     "source": "ai-generated",
     "verified": false,
     "topics": [
@@ -7226,19 +7226,20 @@
     "id": "SY0-701-4345",
     "domain": "4.0",
     "objective": "4.6",
-    "question": "Each quarter, department managers must review a list of their staff's application permissions and formally confirm that each permission is still required, removing any that are not. What is this process called?",
+    "question": "As part of identity proofing for a new contractor, an HR officer meets the contractor in person and examines a passport to confirm that the contractor really is the person named on it. Which term describes this confirmation step?",
     "choices": {
-      "a": "Identity proofing",
+      "a": "Federation",
       "b": "Attestation",
       "c": "Provisioning",
-      "d": "Federation"
+      "d": "Authorization"
     },
     "answer": "b",
-    "explanation": "Access attestation (also called access recertification) is a periodic, formal confirmation by a responsible person that users' access is still appropriate. Identity proofing verifies who someone is before issuing credentials, provisioning creates accounts and grants initial access, and federation establishes trust between identity systems.",
+    "explanation": "In identity and access management, attestation (also called verification) is the identity proofing step that confirms a claimed identity with evidence such as a passport or an in-person meeting; it can also be automated. Federation is a trust relationship between organizations, provisioning creates the account after identity is confirmed, and authorization decides what an authenticated identity may access.",
     "source": "ai-generated",
     "verified": false,
     "topics": [
-      "4.6-09"
+      "4.6-09",
+      "4.6-03"
     ]
   },
   {
@@ -8595,7 +8596,7 @@
     "id": "SY0-701-5022",
     "domain": "5.0",
     "objective": "5.1",
-    "question": "A company forms a group of managers from IT, legal, HR, finance, and operations that meets monthly to review security issues, prioritize initiatives, and make recommendations to executive leadership. Which type of governance structure is this?",
+    "question": "A company forms a group of subject-matter experts from IT, legal, HR, and finance. Each month the group considers the risk information gathered for it, determines the next steps on specific security topics, and presents its results to the board. Which type of governance structure is this group?",
     "choices": {
       "a": "Decentralized structure",
       "b": "Board",
@@ -8603,7 +8604,7 @@
       "d": "Government entity"
     },
     "answer": "c",
-    "explanation": "A committee is a group of people from relevant departments assigned to review a specific area, such as security, and make recommendations or decisions within its mandate. A board has ultimate oversight of the whole organization, a government entity is a public-sector body, and a decentralized structure describes how authority is distributed across business units.",
+    "explanation": "A committee is a group of subject-matter experts that considers the input it is given, determines the next steps for the topic at hand, and presents its results to the board. The board is the body this group reports to, a government entity is a public-sector body shaped by legal, administrative, and political requirements, and a decentralized structure describes spreading decision-making across individuals or locations.",
     "source": "ai-generated",
     "verified": false,
     "topics": [
@@ -10200,6 +10201,2920 @@
     "verified": false,
     "topics": [
       "5.6-18"
+    ]
+  },
+  {
+    "id": "SY0-701-1901",
+    "domain": "1.0",
+    "objective": "1.2",
+    "question": "A security team is grouping its controls by the CIA principle each one primarily supports. Which control primarily supports availability?",
+    "choices": {
+      "a": "Comparing file hashes against a known-good baseline",
+      "b": "Encrypting the customer database",
+      "c": "Clustering the web servers so the site keeps running if one server fails",
+      "d": "Requiring two-factor authentication before records can be viewed"
+    },
+    "answer": "c",
+    "explanation": "Redundancy and fault tolerance, such as clustered servers, keep systems up and accessible to authorized users, which is availability. Comparing hashes detects changes and supports integrity, while encryption and two-factor authentication prevent unauthorized disclosure and support confidentiality.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.2-01"
+    ]
+  },
+  {
+    "id": "SY0-701-1902",
+    "domain": "1.0",
+    "objective": "1.2",
+    "question": "A manager later denies having approved a large purchase order that was sent from her account. The company wants future approvals to provide proof of origin that the approver cannot credibly deny. Which method BEST provides this?",
+    "choices": {
+      "a": "Store a SHA-256 hash of each purchase order alongside it",
+      "b": "Have each approver digitally sign the purchase order with a private key",
+      "c": "Encrypt each purchase order with a symmetric key shared by the approver and the purchasing team",
+      "d": "Send purchase orders only over a TLS-encrypted connection"
+    },
+    "answer": "b",
+    "explanation": "A digital signature made with a private key that only the approver holds proves integrity and origin, so the approver cannot later deny signing. A hash alone shows whether data changed but does not tie it to a person, a shared symmetric key is held by more than one party so it cannot prove which one acted, and TLS protects data in transit without proving who approved it.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.2-02"
+    ]
+  },
+  {
+    "id": "SY0-701-1903",
+    "domain": "1.0",
+    "objective": "1.2",
+    "question": "A security team has spent several weeks comparing its current controls, staff training, and policies with the requirements of NIST SP 800-171. What should the resulting gap analysis report contain?",
+    "choices": {
+      "a": "A formal description of the current security state and recommendations for reaching the required baseline",
+      "b": "A list of vulnerabilities that testers successfully exploited in production systems",
+      "c": "The estimated financial impact of an outage for each business function",
+      "d": "The change advisory board approvals needed to deploy the next patch cycle"
+    },
+    "answer": "a",
+    "explanation": "A gap analysis compares where the organization is with where it wants to be, so its report describes the current state and recommends how to close the gaps to meet the baseline. Exploited vulnerabilities come from a penetration test, outage impact per business function comes from a business impact analysis, and change approvals belong to change management.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.2-06"
+    ]
+  },
+  {
+    "id": "SY0-701-1904",
+    "domain": "1.0",
+    "objective": "1.4",
+    "question": "Two branch offices must load the same symmetric key into a pair of legacy encryption devices. Security policy prohibits sending the key across any network, even in encrypted form. How should the key be shared?",
+    "choices": {
+      "a": "Deliver the key out of band, such as by courier or in person",
+      "b": "Email the key to the other office over a TLS-protected mail connection",
+      "c": "Encrypt the key with the other office's public key and send it across the WAN",
+      "d": "Send a SHA-256 hash of the key so the other office can recover it"
+    },
+    "answer": "a",
+    "explanation": "Out-of-band key exchange moves the key outside the network, for example by courier, telephone, or in person, which satisfies the policy. Emailing the key or encrypting it with a public key are in-band methods that still cross the network, and a hash is one-way, so the key cannot be recovered from it.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.4-08"
+    ]
+  },
+  {
+    "id": "SY0-701-1905",
+    "domain": "1.0",
+    "objective": "1.4",
+    "question": "Several shipping companies want to record container handoffs so that no single company controls the records and every participant keeps a copy it can use to verify the transaction history. Which technology BEST meets this requirement?",
+    "choices": {
+      "a": "A blockchain distributed ledger",
+      "b": "A central database protected by a hardware security module",
+      "c": "Key escrow with a trusted third party",
+      "d": "A private certificate authority"
+    },
+    "answer": "a",
+    "explanation": "A blockchain is a distributed ledger that every participant maintains and replicates, so no single party controls the records and anyone can verify them. A central database is controlled by whoever runs it even if an HSM protects its keys, key escrow only stores copies of keys with a third party, and a private CA issues certificates rather than recording transactions.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.4-22",
+      "1.4-23"
+    ]
+  },
+  {
+    "id": "SY0-701-1906",
+    "domain": "1.0",
+    "objective": "1.2",
+    "question": "An employee accidentally emails a spreadsheet of every employee's salary to an outside vendor. No data was changed, and all systems stayed online. Which security principle was violated?",
+    "choices": {
+      "a": "Integrity",
+      "b": "Availability",
+      "c": "Confidentiality",
+      "d": "Accounting"
+    },
+    "answer": "c",
+    "explanation": "Confidentiality means information is disclosed only to authorized people, and sending salary data to an outside party breaks that. Integrity was not affected because nothing was modified, availability was not affected because systems stayed up, and accounting is part of AAA rather than the CIA triad.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.2-01"
+    ]
+  },
+  {
+    "id": "SY0-701-1907",
+    "domain": "1.0",
+    "objective": "1.2",
+    "question": "Bob receives a message from Alice along with her digital signature. How does Bob verify that the message came from Alice and was not changed?",
+    "choices": {
+      "a": "Decrypt the signature with Alice's public key and compare the result with a hash he computes from the message",
+      "b": "Decrypt the signature with his own private key and read the original message from it",
+      "c": "Encrypt the message with Alice's public key and check that it matches the signature",
+      "d": "Ask Alice for her private key and use it to re-create the signature"
+    },
+    "answer": "a",
+    "explanation": "Alice signed by encrypting a hash of the message with her private key, so Bob decrypts the signature with her public key and compares that hash with his own hash of the message; a match proves origin and integrity. Bob's private key plays no part in Alice's signature, encrypting the message with her public key produces ciphertext rather than a signature, and a private key must never be shared.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.2-02"
+    ]
+  },
+  {
+    "id": "SY0-701-1908",
+    "domain": "1.0",
+    "objective": "1.2",
+    "question": "A RADIUS server records each user's login time, logout time, and the amount of data sent and received during every VPN session. Which AAA function do these records provide?",
+    "choices": {
+      "a": "Identification",
+      "b": "Authentication",
+      "c": "Authorization",
+      "d": "Accounting"
+    },
+    "answer": "d",
+    "explanation": "Accounting tracks what a user did and what resources were used, such as session times and data transferred. Identification is the claim of who a user is, authentication proves that claim, and authorization decides what the authenticated user may access.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.2-03"
+    ]
+  },
+  {
+    "id": "SY0-701-1909",
+    "domain": "1.0",
+    "objective": "1.2",
+    "question": "A company's leadership asks the security team to begin a gap analysis. What must the team establish first so that the comparison has meaning?",
+    "choices": {
+      "a": "The target baseline, such as a formal framework like ISO/IEC 27001 or a set of internal security goals",
+      "b": "The annualized loss expectancy for every asset",
+      "c": "The list of systems scheduled for the next maintenance window",
+      "d": "The scope and rules of engagement for a penetration test"
+    },
+    "answer": "a",
+    "explanation": "A gap analysis measures the distance between the current state and a desired state, so the team must first choose the baseline or framework it will measure against. Annualized loss expectancy belongs to quantitative risk analysis, maintenance windows belong to change management, and rules of engagement define a penetration test.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.2-06"
+    ]
+  },
+  {
+    "id": "SY0-701-1910",
+    "domain": "1.0",
+    "objective": "1.2",
+    "question": "In a zero trust architecture, which component communicates with the policy enforcement point, generates access tokens or credentials, and tells the enforcement point to allow or disallow a session after a decision has been made?",
+    "choices": {
+      "a": "Policy engine",
+      "b": "Policy administrator",
+      "c": "Subject",
+      "d": "Implicit trust zone"
+    },
+    "answer": "b",
+    "explanation": "The policy administrator carries out the policy engine's decision by issuing tokens or credentials and instructing the policy enforcement point. The policy engine makes the grant, deny, or revoke decision itself, the subject is the user or system requesting access, and an implicit trust zone is the area behind the enforcement point.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.2-07"
+    ]
+  },
+  {
+    "id": "SY0-701-1911",
+    "domain": "1.0",
+    "objective": "1.2",
+    "question": "As part of a zero trust project, a company removes unused remote access paths and limits each user to only the specific applications needed for the job, which decreases the number of possible entry points an attacker could use. Which zero trust concept does this describe?",
+    "choices": {
+      "a": "Adaptive identity",
+      "b": "Implicit trust zone",
+      "c": "Threat scope reduction",
+      "d": "Policy enforcement point"
+    },
+    "answer": "c",
+    "explanation": "Threat scope reduction shrinks the attack surface by decreasing the number of possible entry points and limiting what each subject can reach. Adaptive identity adjusts verification based on context such as location or device, an implicit trust zone is an area trusted after passing an enforcement point, and the policy enforcement point is the gatekeeper that applies decisions.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.2-07"
+    ]
+  },
+  {
+    "id": "SY0-701-1912",
+    "domain": "1.0",
+    "objective": "1.2",
+    "question": "Which TWO zero trust components belong to the control plane? (Choose two.)",
+    "choices": {
+      "a": "Policy engine",
+      "b": "Policy enforcement point",
+      "c": "Policy administrator",
+      "d": "Implicit trust zone"
+    },
+    "answer": [
+      "a",
+      "c"
+    ],
+    "explanation": "The control plane defines policies and makes and communicates access decisions, which is the role of the policy engine and policy administrator. The policy enforcement point and implicit trust zones are part of the data plane, where traffic between subjects and resources is actually allowed, monitored, or terminated.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.2-07",
+      "1.2-08"
+    ]
+  },
+  {
+    "id": "SY0-701-1913",
+    "domain": "1.0",
+    "objective": "1.4",
+    "question": "A team plans to protect messages between 50 employees using only symmetric encryption, with a separate secret key for each pair of employees. What is the main drawback of this approach?",
+    "choices": {
+      "a": "Symmetric encryption is too slow to encrypt ordinary messages",
+      "b": "A large number of shared keys must be securely distributed and managed, which does not scale well",
+      "c": "Symmetric encryption cannot keep message contents confidential",
+      "d": "Each employee would have to publish a private key"
+    },
+    "answer": "b",
+    "explanation": "Symmetric encryption uses one shared secret per pair, so the number of keys grows quickly and each must be delivered securely, which is why it is often combined with asymmetric encryption. Symmetric encryption is actually fast and does provide confidentiality, and symmetric schemes do not use public and private key pairs.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.4-07"
+    ]
+  },
+  {
+    "id": "SY0-701-1914",
+    "domain": "1.0",
+    "objective": "1.4",
+    "question": "A customer database must keep the Social Security number column encrypted with its own key, while names and order history in the same table stay readable to reporting tools. Which encryption level BEST meets this requirement?",
+    "choices": {
+      "a": "Full-disk encryption",
+      "b": "Transparent database encryption of the entire database",
+      "c": "Record-level encryption",
+      "d": "Transport encryption"
+    },
+    "answer": "c",
+    "explanation": "Record-level encryption protects individual columns or fields, each with its own key, so only the sensitive column is encrypted. Full-disk and transparent database encryption encrypt everything in storage and decrypt it all for authorized queries, and transport encryption protects data only while it crosses the network.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.4-04"
+    ]
+  },
+  {
+    "id": "SY0-701-1915",
+    "domain": "1.0",
+    "objective": "1.4",
+    "question": "Several employees share one workstation, each with a separate account. One user wants a folder of personal HR documents encrypted so that the other users who sign in to the same computer cannot read it. Which encryption level BEST meets this need?",
+    "choices": {
+      "a": "File-level encryption, such as EFS",
+      "b": "Full-disk encryption",
+      "c": "Transport encryption",
+      "d": "Volume encryption of the system drive"
+    },
+    "answer": "a",
+    "explanation": "File-level encryption, such as Windows EFS, encrypts chosen files for a specific user, so other accounts on the same computer cannot read them. Full-disk and volume encryption protect data if the drive is stolen but decrypt it for anyone who signs in to the running system, and transport encryption protects data only in transit.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.4-04"
+    ]
+  },
+  {
+    "id": "SY0-701-1916",
+    "domain": "1.0",
+    "objective": "1.4",
+    "question": "Two systems each combine their own private key with the other system's public key, and both arrive at the same symmetric key without that key ever being sent across the network. Which method is this?",
+    "choices": {
+      "a": "Key escrow",
+      "b": "Out-of-band key exchange",
+      "c": "Key stretching",
+      "d": "Diffie-Hellman key exchange"
+    },
+    "answer": "d",
+    "explanation": "Diffie-Hellman lets two parties derive the same shared symmetric key from their own private key and the other's public key, so the key itself is never transmitted. Key escrow stores copies of keys with a third party, out-of-band exchange delivers the key outside the network, and key stretching strengthens weak keys such as passwords.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.4-08"
+    ]
+  },
+  {
+    "id": "SY0-701-1917",
+    "domain": "1.0",
+    "objective": "1.4",
+    "question": "Why should the symmetric session keys used to encrypt network sessions be ephemeral and randomly generated?",
+    "choices": {
+      "a": "So the same key can be reused for every session to reduce overhead",
+      "b": "So a copy of each key can be held in escrow by a third party",
+      "c": "So a key that is compromised exposes only one session, and attackers cannot predict the next key",
+      "d": "So the keys can be shorter than the keys used by asymmetric algorithms"
+    },
+    "answer": "c",
+    "explanation": "Session keys should change often and be unpredictable, so a stolen key decrypts only the session it protected and cannot be used to guess other keys. Reusing one key across sessions increases exposure, escrow is a recovery arrangement unrelated to session keys, and although symmetric keys are typically shorter than asymmetric keys, that is not why session keys are made ephemeral.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.4-08"
+    ]
+  },
+  {
+    "id": "SY0-701-1918",
+    "domain": "1.0",
+    "objective": "1.4",
+    "question": "Which TWO of the following are practical uses of blockchain technology? (Choose two.)",
+    "choices": {
+      "a": "Payment processing",
+      "b": "Storing a server's private keys in tamper-resistant hardware",
+      "c": "Supply chain monitoring",
+      "d": "Hiding a message inside an image file"
+    },
+    "answer": [
+      "a",
+      "c"
+    ],
+    "explanation": "Blockchain's distributed ledger records transactions that every participant can verify, which suits payment processing and supply chain monitoring. Protecting private keys in tamper-resistant hardware describes a hardware security module, and hiding a message inside an image is steganography.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.4-22"
+    ]
+  },
+  {
+    "id": "SY0-701-1919",
+    "domain": "1.0",
+    "objective": "1.2",
+    "question": "Which TWO controls primarily support the integrity part of the CIA triad? (Choose two.)",
+    "choices": {
+      "a": "Hashing files and comparing the digests",
+      "b": "Installing redundant power supplies in servers",
+      "c": "Digitally signing documents",
+      "d": "Encrypting laptop hard drives"
+    },
+    "answer": [
+      "a",
+      "c"
+    ],
+    "explanation": "Hashing and digital signatures let a recipient detect any change to data, which is integrity. Redundant power supplies keep systems running and support availability, and encrypting laptop drives prevents unauthorized disclosure, which supports confidentiality.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.2-01"
+    ]
+  },
+  {
+    "id": "SY0-701-1920",
+    "domain": "1.0",
+    "objective": "1.2",
+    "question": "A company digitally signs the press releases it posts on its public website so readers can confirm they are genuine. The releases themselves are not encrypted. Which statement about this arrangement is accurate?",
+    "choices": {
+      "a": "The signatures are useless unless the press releases are also encrypted",
+      "b": "The signatures provide integrity, authentication, and non-repudiation, but not confidentiality",
+      "c": "The signatures provide confidentiality, because only readers with the private key can view the releases",
+      "d": "Readers must have the company's private key to check the signatures"
+    },
+    "answer": "b",
+    "explanation": "A digital signature does not require the message to be encrypted; it proves the content was not changed, who sent it, and that the sender cannot deny it, while the content stays readable to everyone. Signing does not provide confidentiality, and readers verify with the company's public key, never its private key.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.2-02"
+    ]
+  },
+  {
+    "id": "SY0-701-1921",
+    "domain": "1.0",
+    "objective": "1.2",
+    "question": "Early in a gap analysis, the security team records each employee's formal experience, current training, and knowledge of security policies, and documents how existing IT processes actually operate. What is the purpose of this work?",
+    "choices": {
+      "a": "To establish the current state of people and processes so it can be compared with the target baseline",
+      "b": "To calculate how long each business function can be offline before causing serious harm",
+      "c": "To test how staff respond to a simulated incident",
+      "d": "To decide which employees should be removed from the change advisory board"
+    },
+    "answer": "a",
+    "explanation": "A gap analysis needs a clear picture of the current state, including people and processes, before it can be compared with the desired baseline. Determining tolerable outage time is part of a business impact analysis, testing incident response is a tabletop or simulation exercise, and change advisory board membership is unrelated.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.2-06"
+    ]
+  },
+  {
+    "id": "SY0-701-1922",
+    "domain": "1.0",
+    "objective": "1.2",
+    "question": "What is the primary purpose of placing a honeypot on a company network?",
+    "choices": {
+      "a": "To block malicious traffic before it reaches production servers",
+      "b": "To attract attackers to a decoy system so their tools and techniques can be observed",
+      "c": "To encrypt sensitive data so attackers cannot read it",
+      "d": "To serve as a backup copy of production systems for disaster recovery"
+    },
+    "answer": "b",
+    "explanation": "A honeypot is a decoy that attracts attackers so defenders can watch and learn from their activity, and any interaction with it is suspicious. It does not block traffic like a firewall or IPS, it does not encrypt data, and it holds no real production data, so it is not a recovery copy.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.2-17"
+    ]
+  },
+  {
+    "id": "SY0-701-1923",
+    "domain": "1.0",
+    "objective": "1.4",
+    "question": "A phone's mobile wallet sends each merchant a temporary token in place of the real card number during payment. Attackers later breach one merchant's point-of-sale system and copy thousands of these tokens. What is the MOST likely result?",
+    "choices": {
+      "a": "The attackers can decrypt the tokens with the merchant's private key to get the card numbers",
+      "b": "The attackers can use the tokens to make new purchases at any other merchant",
+      "c": "The stolen tokens are of little use, because they are not the card numbers and cannot be reused for later purchases",
+      "d": "The attackers can recover the card numbers from the tokens with a rainbow table"
+    },
+    "answer": "c",
+    "explanation": "Tokenization replaces the card number with a temporary placeholder used during payment, so an attacker who captures tokens cannot use them later or turn them back into card numbers. Tokens are not encrypted with any key, so there is nothing to decrypt, and they are not hashes, so rainbow tables do not apply. A token is valid only for its own transaction, so it cannot fund new purchases elsewhere.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.4-16"
+    ]
+  },
+  {
+    "id": "SY0-701-1924",
+    "domain": "1.0",
+    "objective": "1.4",
+    "question": "An administrator hashes a 2 KB text file and a 4 GB disk image, both with SHA-256. Which statement about the two results is correct?",
+    "choices": {
+      "a": "The disk image's digest is much longer because the input is larger",
+      "b": "Both digests are the same fixed length, and neither can be reversed to recover the original file",
+      "c": "Both digests can be decrypted with the administrator's private key",
+      "d": "The text file's digest will match the disk image's digest because the same algorithm was used"
+    },
+    "answer": "b",
+    "explanation": "A hash function takes input of any size and produces a fixed-size digest, 256 bits for SHA-256, and it is a one-way function that cannot be reversed. Digest length does not grow with input size, hashes are not decrypted with any key, and different inputs should produce different digests.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.4-18"
+    ]
+  },
+  {
+    "id": "SY0-701-1925",
+    "domain": "1.0",
+    "objective": "1.4",
+    "question": "A company is considering recording its supplier payments on a public blockchain. The CFO asks whether outsiders, including competitors, would be able to see the transactions. Which statement is accurate?",
+    "choices": {
+      "a": "Only the company's own nodes receive a copy of its transactions",
+      "b": "The transactions are visible to participants, because the open public ledger is replicated to everyone on the network",
+      "c": "Each transaction is automatically deleted from the ledger once the payment settles",
+      "d": "The ledger is encrypted with a key that only the blockchain's central administrator holds"
+    },
+    "answer": "b",
+    "explanation": "A public blockchain uses an open public ledger that every participant maintains and replicates, so recorded transactions can be viewed by anyone on the network, and confidential details would need protection outside the ledger. Records are not limited to the company's own nodes, and past entries are not deleted because the ledger is a permanent shared history. A public blockchain has no central administrator holding a key that hides the ledger.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.4-22",
+      "1.4-23"
+    ]
+  },
+  {
+    "id": "SY0-701-2901",
+    "domain": "2.0",
+    "objective": "2.2",
+    "question": "A caller says she is the CFO's new executive assistant. She mentions the CFO's name and current travel schedule and urgently asks the help desk to reset the CFO's password and read the temporary password to her over the phone. Which response BEST protects against this impersonation attempt?",
+    "choices": {
+      "a": "Send the temporary password by text message to the number the caller provides",
+      "b": "Reset the password because the caller knew the CFO's travel schedule",
+      "c": "Ask the caller to spell her full name and job title before reading the password",
+      "d": "Verify the request by calling the CFO's office at the number listed in the company directory before taking any action"
+    },
+    "answer": "d",
+    "explanation": "Impersonators use details gathered during reconnaissance to sound legitimate, so the request should be verified through an independent, already-known contact method before anything is disclosed. Knowing a travel schedule proves nothing, and asking the caller for her name and title only checks information she controls. Sending the password to a number she supplies still delivers it to the attacker.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.2-22"
+    ]
+  },
+  {
+    "id": "SY0-701-2902",
+    "domain": "2.0",
+    "objective": "2.2",
+    "question": "A security team worries that attackers could compromise an industry association website that the company's engineers visit every day and use it to infect their workstations. Which TWO controls would BEST reduce the risk from this watering hole threat? (Choose two.)",
+    "choices": {
+      "a": "Block executable attachments on the email gateway",
+      "b": "Keep endpoint anti-malware signatures and web browsers up to date",
+      "c": "Require employees to change their passwords every 30 days",
+      "d": "Use a firewall or IPS that inspects web traffic and blocks known exploit code"
+    },
+    "answer": [
+      "b",
+      "d"
+    ],
+    "explanation": "A watering hole delivers malicious code through a legitimate website, so defense in depth with updated anti-malware and browsers on the endpoint and inspection of web traffic by a firewall or IPS can stop the exploit. Frequent password changes do not stop a drive-by infection. Blocking email attachments does not help because the victims are infected by visiting a website, not by opening email.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.2-25"
+    ]
+  },
+  {
+    "id": "SY0-701-2903",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "During memory forensics, an analyst finds that a legitimate explorer.exe process has loaded a library from C:\\Users\\Public\\temp\\msupd.dll, a location no legitimate component uses. The library is making outbound connections with explorer.exe's permissions. Which technique was MOST likely used?",
+    "choices": {
+      "a": "Buffer overflow",
+      "b": "Race condition",
+      "c": "Directory traversal",
+      "d": "DLL injection"
+    },
+    "answer": "d",
+    "explanation": "DLL injection forces a running process to load a malicious dynamic-link library, so the attacker's code runs inside a trusted process with its permissions, which is a common form of memory injection. A buffer overflow overwrites memory past the end of a buffer, and directory traversal reads files outside an allowed folder through ../ paths. A race condition is a timing flaw between a check and a use.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.3-01"
+    ]
+  },
+  {
+    "id": "SY0-701-2904",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "An online store lets customers redeem a $50 gift card. A tester sends 20 redemption requests for the same card at the same instant, and the account is credited $1,000 because every request checked the card's balance before any of them marked the card as used. Which vulnerability is this?",
+    "choices": {
+      "a": "Memory injection",
+      "b": "Buffer overflow",
+      "c": "Race condition",
+      "d": "Cross-site request forgery"
+    },
+    "answer": "c",
+    "explanation": "A race condition occurs when simultaneous operations act on a shared resource without proper locking, so each request sees the old state before any update is recorded. A buffer overflow writes past a memory buffer, and cross-site request forgery tricks a logged-in user's browser into sending a request. Memory injection places malicious code in another process's memory.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.3-03"
+    ]
+  },
+  {
+    "id": "SY0-701-2905",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "While an employee reads a news website, a pop-up warns that the computer's video player is out of date and offers an Update now button that downloads an installer. Which action BEST follows safe update practice?",
+    "choices": {
+      "a": "Turn off the operating system's requirement for signed applications so the installer can run",
+      "b": "Close the pop-up and get any update through the vendor's official site or the application's built-in updater",
+      "c": "Download the installer and run it with administrator rights so it can finish properly",
+      "d": "Click Update now because the site has detected an outdated version"
+    },
+    "answer": "b",
+    "explanation": "Updates should come only from trusted sources, such as the developer's own site or the application's automatic updater, because random pop-ups are a common way to deliver malicious updates. Clicking the pop-up or running its installer as an administrator trusts an unknown source. Disabling the signed-app requirement removes a control that helps block tampered software.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.3-04"
+    ]
+  },
+  {
+    "id": "SY0-701-2906",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "A vendor's monthly operating system security bulletin lists one fix as a Security Feature Bypass vulnerability. Which description BEST matches this category?",
+    "choices": {
+      "a": "An attacker can run arbitrary code on the system from across the network",
+      "b": "An attacker can raise a standard user account to SYSTEM or root privileges",
+      "c": "An attacker can read memory contents or files that should not be disclosed",
+      "d": "An attacker can get around a built-in OS protection, such as a code-signing or sign-in check, that should have blocked an action"
+    },
+    "answer": "d",
+    "explanation": "A security feature bypass lets an attacker avoid a protection the operating system provides, such as an integrity or authentication check, without having to defeat it directly. Running code over the network is remote code execution, and gaining SYSTEM or root rights is elevation of privilege. Reading data that should stay private is information disclosure; OS vendors list each of these as a separate category in their monthly bulletins.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.3-05"
+    ]
+  },
+  {
+    "id": "SY0-701-2907",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "A penetration tester types admin' OR '1'='1' -- into the username field of a login page and is signed in as the first account in the database without knowing any password. Which coding practice would BEST prevent this?",
+    "choices": {
+      "a": "Encrypting the login page with TLS",
+      "b": "Requiring longer and more complex passwords",
+      "c": "Using parameterized queries (prepared statements) for all database access",
+      "d": "Encoding HTML output before it is displayed in the browser"
+    },
+    "answer": "c",
+    "explanation": "This is SQL injection, and parameterized queries keep user input as data so it can never change the structure of the SQL statement. HTML output encoding defends against cross-site scripting rather than database queries. Stronger passwords do not matter when no password is checked, and TLS protects data in transit but still delivers the malicious input to the server.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.3-06"
+    ]
+  },
+  {
+    "id": "SY0-701-2908",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "An attacker emails customers a link to a bank's search page in which the search parameter contains a script. When a customer clicks it, the bank's site repeats the parameter in the results page, and the script sends the customer's session cookie to the attacker. Nothing is saved on the bank's server. Which attack is this?",
+    "choices": {
+      "a": "Cross-site request forgery",
+      "b": "Reflected (non-persistent) cross-site scripting",
+      "c": "Stored (persistent) cross-site scripting",
+      "d": "SQL injection"
+    },
+    "answer": "b",
+    "explanation": "In reflected XSS, the script travels in a link and is echoed back by the vulnerable site, so it runs in the victim's browser as if it came from the trusted server. Stored XSS saves the script on the site so every visitor receives it, which did not happen here. Cross-site request forgery makes the victim's browser send an unwanted request rather than run a script, and SQL injection targets the database.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.3-07"
+    ]
+  },
+  {
+    "id": "SY0-701-2909",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "An audit of a company's cloud tenant finds that administrators sign in to the cloud management console with only a username and password, and logs show repeated credential-stuffing attempts against the console's public sign-in page. Which change would BEST reduce this risk?",
+    "choices": {
+      "a": "Require multifactor authentication for all management console accounts",
+      "b": "Enable full-disk encryption on the virtual machines",
+      "c": "Increase the size of the virtual machine instances",
+      "d": "Move the company's virtual machines to a different cloud region"
+    },
+    "answer": "a",
+    "explanation": "The cloud management console is reachable from the internet and controls the whole tenant, so requiring MFA stops attackers who have guessed or stolen passwords. Changing regions or instance sizes does nothing for authentication. Full-disk encryption protects stored data but does not stop someone who logs in to the console.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.3-13"
+    ]
+  },
+  {
+    "id": "SY0-701-2910",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "Which TWO findings are misconfiguration vulnerabilities? (Choose two.)",
+    "choices": {
+      "a": "A browser vendor confirms an actively exploited flaw for which no patch exists yet",
+      "b": "A reseller shipped switches that contain counterfeit components",
+      "c": "The Linux root account allows direct SSH login and uses a simple dictionary-word password",
+      "d": "Network administrators manage the core routers over Telnet"
+    },
+    "answer": [
+      "c",
+      "d"
+    ],
+    "explanation": "Choosing an unencrypted protocol such as Telnet for management and leaving a powerful admin account open to direct login with a weak password are both insecure settings chosen by the organization, which makes them misconfigurations. An exploited flaw with no patch is a zero-day. Counterfeit components from a reseller are a hardware supply chain problem.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.3-18"
+    ]
+  },
+  {
+    "id": "SY0-701-2911",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "A vulnerability in a company's web server software was published with a CVE identifier three months ago, and the vendor released a patch the same week. The company has not installed it, and attackers are now exploiting it against the company. How should this vulnerability be described?",
+    "choices": {
+      "a": "A zero-day, because attackers are actively exploiting it",
+      "b": "A known, unpatched vulnerability rather than a zero-day, because the vendor knows about it and a fix exists",
+      "c": "A zero-day, because the company's servers are still vulnerable",
+      "d": "A misconfiguration, because the server software was installed incorrectly"
+    },
+    "answer": "b",
+    "explanation": "A zero-day is a flaw the vendor does not yet know about, so no patch or mitigation exists; this one was published with a CVE and patched months ago, so it is a known vulnerability the company has failed to fix. Active exploitation and the company's own exposure do not turn a known, patchable flaw into a zero-day. Nothing indicates an incorrect setting, so it is not a misconfiguration, and installing the vendor's patch closes it.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.3-21"
+    ]
+  },
+  {
+    "id": "SY0-701-2912",
+    "domain": "2.0",
+    "objective": "2.4",
+    "question": "After a peer company is hit by ransomware, management asks which measure would BEST let the company get its data back without paying a ransom. What should the security team recommend?",
+    "choices": {
+      "a": "Full-disk encryption on all file servers",
+      "b": "Copies of important files on a network share that all users can write to",
+      "c": "Longer minimum password length for all users",
+      "d": "Regular backups kept offline or immutable, with restores tested"
+    },
+    "answer": "d",
+    "explanation": "Ransomware encrypts data and demands payment for the key, so a backup the malware cannot reach, such as an offline or immutable copy, lets the company restore without paying. A writable network share would be encrypted along with everything else. Full-disk encryption protects a stolen drive but does not stop malware running on the server, and longer passwords do not recover encrypted files.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.4-01"
+    ]
+  },
+  {
+    "id": "SY0-701-2913",
+    "domain": "2.0",
+    "objective": "2.4",
+    "question": "An EDR alert shows that a document opened from email started PowerShell, which downloaded a payload and ran it entirely in memory. No malicious file was ever written to disk, and the traditional file-scanning antivirus found nothing. Which type of malware does this BEST describe?",
+    "choices": {
+      "a": "Boot sector virus",
+      "b": "Logic bomb",
+      "c": "Fileless virus",
+      "d": "Bloatware"
+    },
+    "answer": "c",
+    "explanation": "A fileless virus operates in memory, often through built-in tools such as PowerShell, and is never installed as a file, which helps it avoid antivirus that scans files. A boot sector virus infects the startup area of a disk. Bloatware is unwanted preinstalled software, and a logic bomb waits for a trigger before acting.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.4-06"
+    ]
+  },
+  {
+    "id": "SY0-701-2914",
+    "domain": "2.0",
+    "objective": "2.4",
+    "question": "An online retailer's website goes offline when tens of thousands of compromised home routers and cameras around the world all send web requests to it at the same moment. Which attack does this BEST describe?",
+    "choices": {
+      "a": "On-path attack",
+      "b": "RF jamming",
+      "c": "Domain hijacking",
+      "d": "Distributed denial-of-service from a botnet"
+    },
+    "answer": "d",
+    "explanation": "A distributed denial-of-service attack uses many compromised devices, a botnet, to overwhelm a service's bandwidth or resources until it is unavailable. An on-path attack intercepts traffic rather than flooding it, and domain hijacking takes over a domain's registration. RF jamming disrupts wireless signals in a local area, not an internet-facing website.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.4-13"
+    ]
+  },
+  {
+    "id": "SY0-701-2915",
+    "domain": "2.0",
+    "objective": "2.4",
+    "question": "Customers of an online retailer are being sent to a fake storefront. The retailer's web servers and its own DNS servers were never touched, but someone signed in to the retailer's account at its domain registrar with a phished password and changed the domain's name servers. Which attack occurred?",
+    "choices": {
+      "a": "Typosquatting",
+      "b": "Domain hijacking",
+      "c": "DNS cache poisoning",
+      "d": "ARP poisoning"
+    },
+    "answer": "b",
+    "explanation": "Domain hijacking takes control of a domain's registration, so the attacker decides where the name points without touching the victim's servers. DNS cache poisoning inserts false records into a resolver's cache and affects only users of that resolver. Typosquatting relies on users mistyping the name, and ARP poisoning redirects traffic only on a local subnet.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.4-14"
+    ]
+  },
+  {
+    "id": "SY0-701-2916",
+    "domain": "2.0",
+    "objective": "2.4",
+    "question": "Wi-Fi clients in a warehouse lose their connections at random times. A spectrum analyzer shows a strong, continuous signal across all 2.4 GHz channels, and a small battery-powered transmitter is later found hidden behind a shelf. Packet captures show no unusual deauthentication frames. Which attack was taking place?",
+    "choices": {
+      "a": "Deauthentication attack",
+      "b": "Evil twin",
+      "c": "RF jamming",
+      "d": "Bluesnarfing"
+    },
+    "answer": "c",
+    "explanation": "RF jamming deliberately transmits interfering signals that lower the signal-to-noise ratio so receivers cannot hear legitimate traffic, which is a wireless denial of service. A deauthentication attack would show forged deauth frames, which were absent. An evil twin is a rogue access point that copies an SSID, and bluesnarfing steals data over Bluetooth.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.4-15"
+    ]
+  },
+  {
+    "id": "SY0-701-2917",
+    "domain": "2.0",
+    "objective": "2.4",
+    "question": "A customer's online banking session shows a valid HTTPS certificate, yet the payee account on a transfer is changed after the customer submits it, while the screen still shows the original details. Investigators find a malicious browser extension on the customer's PC. Which attack is this?",
+    "choices": {
+      "a": "DNS cache poisoning",
+      "b": "Replay attack",
+      "c": "ARP poisoning",
+      "d": "On-path browser attack"
+    },
+    "answer": "d",
+    "explanation": "In an on-path browser attack, formerly called man-in-the-browser, malware inside the victim's browser changes requests and responses, so encryption and certificates look normal to the user. ARP poisoning and DNS cache poisoning redirect traffic over the network and would not explain a valid session altered inside the browser. A replay attack resends captured traffic instead of modifying it in real time.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.4-16"
+    ]
+  },
+  {
+    "id": "SY0-701-2918",
+    "domain": "2.0",
+    "objective": "2.4",
+    "question": "Attackers modify a JavaScript file that an online store loads on its checkout page. The added lines copy the card details customers type and send them to a domain the attackers control. Which category of attack does this BEST represent?",
+    "choices": {
+      "a": "Birthday attack",
+      "b": "Downgrade attack",
+      "c": "RFID cloning",
+      "d": "Malicious code"
+    },
+    "answer": "d",
+    "explanation": "Script added to a website to steal data is malicious code, which can take many forms, including executables, scripts, and macros. A downgrade attack forces weaker encryption, and a birthday attack looks for hash collisions. RFID cloning copies access badges and has nothing to do with website code.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.4-18"
+    ]
+  },
+  {
+    "id": "SY0-701-2919",
+    "domain": "2.0",
+    "objective": "2.2",
+    "question": "A caller claiming to be a new account representative for the company's software vendor chats with an employee about sports and a recent trade show. In passing, he asks which VPN product the company uses, what version it runs, and who manages it, and the employee answers without thinking twice. Which technique is the caller using?",
+    "choices": {
+      "a": "Watering hole",
+      "b": "Brand impersonation",
+      "c": "Smishing",
+      "d": "Eliciting information through impersonation"
+    },
+    "answer": "d",
+    "explanation": "Eliciting information means using friendly conversation and a believable role to pull out details the victim does not realize are sensitive, and posing as a vendor representative is impersonation. Brand impersonation copies a company's look in fake websites or messages sent to many people. A watering hole compromises a website the targets visit, and smishing uses text messages.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.2-22"
+    ]
+  },
+  {
+    "id": "SY0-701-2920",
+    "domain": "2.0",
+    "objective": "2.2",
+    "question": "Which statement BEST describes how a watering hole attack differs from a phishing attack?",
+    "choices": {
+      "a": "The attacker calls the victims and pretends to be technical support",
+      "b": "The attacker registers a misspelled domain and hopes users mistype the address",
+      "c": "The attacker compromises a legitimate website the target group already visits and waits for victims, instead of sending a lure to them",
+      "d": "The attacker must have physical access to the victims' building"
+    },
+    "answer": "c",
+    "explanation": "A watering hole attack infects a trusted third-party site the targets are known to use, which works even against people who ignore phishing messages. Registering misspelled domains is typosquatting, and a phone-based pretext is vishing. A watering hole is carried out remotely through the website and needs no physical access.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.2-25"
+    ]
+  },
+  {
+    "id": "SY0-701-2921",
+    "domain": "2.0",
+    "objective": "2.2",
+    "question": "Attackers have built thousands of fake sites that copy a popular soft drink company's logo and colors, and they promote the sites through search ads and chat messages offering prizes. Which user practice BEST protects against this brand impersonation campaign?",
+    "choices": {
+      "a": "Trust a site if it shows the company's correct logo and colors",
+      "b": "Reach the company only through its official website or app, entered or opened directly, rather than through ads or message links",
+      "c": "Trust a sponsored search result, because search engines confirm that advertisers own the brands they display",
+      "d": "Download prize files only when they are videos rather than programs"
+    },
+    "answer": "b",
+    "explanation": "Brand impersonation copies a trusted company's look and spreads through search results, ads, and messages, so going directly to the official site or app avoids the fake copies. Logos and colors are exactly what the attackers copy, and paid ads can point to fake sites, so neither proves a site is genuine. These campaigns often deliver malware in a file presented as a prize video, so a video download is not safe just because it does not look like a program.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.2-26"
+    ]
+  },
+  {
+    "id": "SY0-701-2922",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "Why do attackers often inject malicious code into an existing, legitimate process instead of running it as a separate program?",
+    "choices": {
+      "a": "Injected code runs faster than code in its own process",
+      "b": "Injected code survives replacement of the hard drive",
+      "c": "Injection forces the operating system to install missing patches",
+      "d": "The code hides inside a trusted process and gets that process's data access and permissions"
+    },
+    "answer": "d",
+    "explanation": "Memory injection hides malware inside a legitimate process, which makes it harder to spot and gives it the same rights as that process, sometimes enabling privilege escalation. Speed is not the goal, and injection does nothing to install patches. Surviving a drive replacement describes firmware-level malware, not code injected into memory.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.3-01"
+    ]
+  },
+  {
+    "id": "SY0-701-2923",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "Which development practice MOST directly prevents buffer overflow vulnerabilities?",
+    "choices": {
+      "a": "Digitally signing the compiled application",
+      "b": "Encoding output before it is shown in a web page",
+      "c": "Using parameterized database queries",
+      "d": "Checking the length of input against the size of the buffer before copying it"
+    },
+    "answer": "d",
+    "explanation": "A buffer overflow happens when more data is written than a buffer can hold, so bounds checking the input before it is copied prevents the spill into nearby memory. Parameterized queries stop SQL injection, and output encoding stops cross-site scripting. Code signing proves who published the software but does not fix flaws in it.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.3-02"
+    ]
+  },
+  {
+    "id": "SY0-701-2924",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "What does a time-of-check to time-of-use (TOCTOU) vulnerability describe?",
+    "choices": {
+      "a": "The state of a resource changes between the moment it is validated and the moment it is used",
+      "b": "A program writes more data into memory than a buffer can hold",
+      "c": "Captured authentication traffic is resent later to impersonate a user",
+      "d": "Two systems are forced to negotiate an older protocol version"
+    },
+    "answer": "a",
+    "explanation": "TOCTOU is a race condition in which something changes after a check but before the result of that check is used, so the program acts on outdated information. Writing past a buffer is a buffer overflow, and resending captured traffic is a replay attack. Forcing an older protocol version is a downgrade attack.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.3-03"
+    ]
+  },
+  {
+    "id": "SY0-701-2925",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "Which TWO practices BEST protect an organization when it installs software updates, in case an update turns out to be malicious or faulty? (Choose two.)",
+    "choices": {
+      "a": "Keep a known-good backup that can be restored if an update causes problems",
+      "b": "Install any update offered in a browser pop-up as soon as it appears",
+      "c": "Install updates only from trusted sources and confirm their digital signatures",
+      "d": "Disable the operating system's signed-application requirement to avoid installation errors"
+    },
+    "answer": [
+      "a",
+      "c"
+    ],
+    "explanation": "Getting updates from trusted sources and checking their signatures reduces the chance of installing a tampered update, and a known-good backup allows recovery if one gets through anyway. Turning off signature checks removes a key protection against malicious updates. Browser pop-ups are a common way to deliver fake updates.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.3-04"
+    ]
+  },
+  {
+    "id": "SY0-701-2926",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "A vendor's monthly operating system security bulletin lists several fixes as Elevation of Privilege vulnerabilities. What could an attacker who exploits one of these flaws do?",
+    "choices": {
+      "a": "Gain higher permissions than the account was granted, such as SYSTEM or root",
+      "b": "Read data in transit between the server and its clients",
+      "c": "Make a service unavailable to legitimate users",
+      "d": "Send messages that appear to come from a different sender"
+    },
+    "answer": "a",
+    "explanation": "An elevation of privilege flaw lets an attacker raise a limited account to higher rights, often the highest level on the operating system. Reading data in transit is information disclosure, and making a service unavailable is denial of service. Faking a sender is spoofing, which OS bulletins list as a separate category.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.3-05"
+    ]
+  },
+  {
+    "id": "SY0-701-2927",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "Which TWO outcomes can a successful SQL injection attack against a web application's database directly cause? (Choose two.)",
+    "choices": {
+      "a": "Adding, changing, or deleting records, such as creating new user accounts",
+      "b": "Recording keystrokes on the victim's laptop",
+      "c": "Cloning the victim's RFID access badge",
+      "d": "Reading every record in the database, including other users' data"
+    },
+    "answer": [
+      "a",
+      "d"
+    ],
+    "explanation": "SQL injection lets the attacker run their own database commands, so they can view all data and also insert, change, or delete it, including adding accounts. Recording keystrokes requires a keylogger on the endpoint, and cloning a badge is a physical attack, so neither is a direct result of injecting SQL.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.3-06"
+    ]
+  },
+  {
+    "id": "SY0-701-2928",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "Which control BEST protects a web application from cross-site scripting?",
+    "choices": {
+      "a": "Using parameterized queries for all database access",
+      "b": "Validating user input and encoding output so user-supplied scripts are not executed",
+      "c": "Turning off directory listing on the web server",
+      "d": "Enabling full-disk encryption on the web server"
+    },
+    "answer": "b",
+    "explanation": "XSS works when a site places user-supplied script into a page, so validating input and encoding output prevents that script from running in visitors' browsers. Parameterized queries stop SQL injection, not script in web pages. Full-disk encryption protects stored data, and disabling directory listing hides file lists, so neither stops XSS.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.3-07"
+    ]
+  },
+  {
+    "id": "SY0-701-2929",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "A manufacturer announces that a firewall model has reached end of life: it is no longer sold, but security updates will continue for two more years. Which statement is MOST accurate for a company that runs these firewalls?",
+    "choices": {
+      "a": "End of life means the firewalls now contain a zero-day vulnerability",
+      "b": "The firewalls stopped receiving security patches on the announcement date and must be removed immediately",
+      "c": "The firewalls can still be patched for now, but the company should plan to replace them before support and security updates end",
+      "d": "End of life means the manufacturer will publish the firewall's source code"
+    },
+    "answer": "c",
+    "explanation": "End of life means the product is no longer sold, though the manufacturer may keep supporting it for a time; when support ends (end of service life), patches stop and the device becomes a serious risk. In this case patches continue, so removal is not required yet. EOL has nothing to do with publishing source code, and it does not mean an unknown flaw exists.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.3-09"
+    ]
+  },
+  {
+    "id": "SY0-701-2930",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "A hospital must keep a legacy imaging system that runs an old operating system and cannot be upgraded without replacing the expensive scanner it controls. Which TWO measures BEST reduce the risk from this system? (Choose two.)",
+    "choices": {
+      "a": "Remove the system from the asset inventory so scanners stop reporting it",
+      "b": "Add firewall rules that allow only the specific connections the system needs",
+      "c": "Enable IPS signatures that detect attacks against the older operating system",
+      "d": "Give the system a public IP address so the vendor can connect directly"
+    },
+    "answer": [
+      "b",
+      "c"
+    ],
+    "explanation": "Legacy systems that cannot be updated need extra protection around them, such as restrictive firewall rules and IPS signatures aimed at their older software. Removing the system from inventory only hides the risk. A public IP address exposes the unpatched system directly to the internet.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.3-10"
+    ]
+  },
+  {
+    "id": "SY0-701-2931",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "A virtualization provider learns that memory pages reallocated from one tenant's virtual machine to another sometimes still contain the previous tenant's data. Which action BEST addresses this vulnerability?",
+    "choices": {
+      "a": "Apply hypervisor security updates so memory is cleared before it is given to another VM",
+      "b": "Increase the amount of RAM assigned to each virtual machine",
+      "c": "Move the affected virtual machines to a different data center region",
+      "d": "Require MFA for the provider's management console"
+    },
+    "answer": "a",
+    "explanation": "This is resource reuse: the hypervisor shares physical resources between VMs, and fixing its memory management, usually through security patches, stops leftover data from being exposed. Adding RAM or moving regions leaves the same flawed hypervisor in place. MFA protects console logins but does nothing about data left in reused memory.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.3-12"
+    ]
+  },
+  {
+    "id": "SY0-701-2932",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "A cloud-hosted API runs administrative functions for any request that includes the header X-Admin: true, without checking a token or session. Attackers use this to change other customers' settings. Which type of attack against the cloud service does this describe?",
+    "choices": {
+      "a": "Cross-site scripting",
+      "b": "Directory traversal",
+      "c": "Authentication bypass",
+      "d": "Denial of service"
+    },
+    "answer": "c",
+    "explanation": "Authentication bypass takes advantage of weak or faulty authentication so an attacker gets access without valid credentials, as when a simple header is trusted instead of a token. Directory traversal reads files outside an allowed folder, and denial of service makes a service unavailable. Cross-site scripting runs script in other users' browsers.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.3-13"
+    ]
+  },
+  {
+    "id": "SY0-701-2933",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "A researcher finds that a company's cloud storage bucket of scanned customer contracts can be listed and downloaded by anyone on the internet without signing in. The storage service itself has no software flaw. Which vulnerability type is this?",
+    "choices": {
+      "a": "Zero-day",
+      "b": "Malicious update",
+      "c": "Misconfiguration",
+      "d": "Resource reuse"
+    },
+    "answer": "c",
+    "explanation": "Open permissions on storage are a misconfiguration: the service works as designed, but the company set access too broadly. A zero-day is an unknown flaw in software, and resource reuse exposes leftover data in reallocated memory or storage. A malicious update is a tampered patch from a compromised vendor.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.3-18"
+    ]
+  },
+  {
+    "id": "SY0-701-2934",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "A company wants corporate phones to install apps only from the approved app store and to keep rooted or jailbroken phones away from company email and files. Which control BEST meets both needs?",
+    "choices": {
+      "a": "A host-based firewall app on every phone",
+      "b": "Mobile device management policies that block unknown app sources and detect and restrict rooted or jailbroken devices",
+      "c": "Full-disk encryption on every phone",
+      "d": "Removing preinstalled bloatware from every phone"
+    },
+    "answer": "b",
+    "explanation": "MDM can enforce where apps may be installed from, which prevents side loading, and can check device integrity so rooted or jailbroken phones lose access to corporate data. Encryption protects stored data if a phone is lost but does not control app sources. A host-based firewall filters network traffic, and removing bloatware does not stop jailbreaking or side loading.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.3-19",
+      "2.3-20"
+    ]
+  },
+  {
+    "id": "SY0-701-2935",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "A browser vendor confirms that attackers are actively exploiting a newly discovered flaw in its product and says a patch is still being developed. Which response by the security team is MOST appropriate in the meantime?",
+    "choices": {
+      "a": "Treat it as a zero-day and apply compensating controls, such as disabling the affected feature and increasing monitoring, until the patch is released",
+      "b": "Rely on signature-based antivirus, which will reliably block all exploits for the flaw",
+      "c": "Classify the browser as end-of-life and remove it from all systems",
+      "d": "Take no action because the vendor now knows about the flaw"
+    },
+    "answer": "a",
+    "explanation": "A flaw that is being exploited with no fix available is a zero-day, so the team should reduce exposure with workarounds and closer monitoring until the vendor's patch arrives. Vendor awareness does not protect anyone without a fix. New exploits often have no signatures yet, and the browser is still supported, so it is not end-of-life.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.3-21"
+    ]
+  },
+  {
+    "id": "SY0-701-2936",
+    "domain": "2.0",
+    "objective": "2.4",
+    "question": "A worm is spreading across the internet by exploiting a vulnerable network service, with no user action required. Which statement about the company's defenses is MOST accurate?",
+    "choices": {
+      "a": "User awareness training is the main defense, because the worm spreads only when users open attachments",
+      "b": "Full-disk encryption on the servers will prevent the worm from infecting them",
+      "c": "Firewalls and IDS/IPS can block many worms at the network edge, but they help much less once a worm is already inside the network",
+      "d": "The worm cannot spread between computers on the same internal subnet"
+    },
+    "answer": "c",
+    "explanation": "Worms self-replicate over the network, so firewalls and IDS/IPS that block the exploited service or known worm traffic can stop many infestations, but a worm that gets inside can spread between internal systems that perimeter controls never see. Awareness training does little against a worm that needs no user action. Full-disk encryption protects data on a stolen drive rather than a running server, and worms spread easily between hosts on the same subnet.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.4-03"
+    ]
+  },
+  {
+    "id": "SY0-701-2937",
+    "domain": "2.0",
+    "objective": "2.4",
+    "question": "A technician wants to remove unwanted manufacturer-installed apps from a batch of new laptops. What should the technician try FIRST?",
+    "choices": {
+      "a": "The operating system's built-in uninstaller",
+      "b": "A third-party registry cleaner downloaded from a forum",
+      "c": "Disabling the endpoint protection software so the apps can be deleted",
+      "d": "Deleting the apps' folders directly from the file system"
+    },
+    "answer": "a",
+    "explanation": "Bloatware should first be removed with the built-in uninstaller, which works for most applications and removes them cleanly. Third-party cleaners are a later option and can add their own risks. Disabling endpoint protection weakens security, and deleting folders directly can leave services and broken entries behind.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.4-05"
+    ]
+  },
+  {
+    "id": "SY0-701-2938",
+    "domain": "2.0",
+    "objective": "2.4",
+    "question": "Minutes after a technician connects two patch cables between the same pair of switches, the network on that floor becomes unusable because of a broadcast storm. Spanning Tree Protocol had been disabled on both switches. Which BEST describes this event?",
+    "choices": {
+      "a": "RF jamming",
+      "b": "ARP poisoning",
+      "c": "An amplified DDoS attack",
+      "d": "An unintentional denial of service caused by a layer 2 loop"
+    },
+    "answer": "d",
+    "explanation": "A denial of service does not have to be malicious, and a switching loop without STP floods the network until it is unusable. An amplified DDoS uses spoofed requests to third-party servers to flood a target. ARP poisoning redirects traffic to an attacker, and RF jamming affects wireless signals rather than cabled switches.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.4-13"
+    ]
+  },
+  {
+    "id": "SY0-701-2939",
+    "domain": "2.0",
+    "objective": "2.4",
+    "question": "Only one workstation is sent to a fake banking site when its user types the bank's correct address. Other computers that use the same DNS server reach the real bank. The analyst finds a new line in the workstation's hosts file mapping the bank's domain to an unfamiliar IP address. Which attack is this?",
+    "choices": {
+      "a": "Typosquatting",
+      "b": "DNS poisoning through the client's hosts file",
+      "c": "Domain hijacking",
+      "d": "Amplified DDoS"
+    },
+    "answer": "b",
+    "explanation": "Changing a client's hosts file is a form of DNS poisoning, and because the hosts file takes precedence over DNS queries, only that machine is redirected. Domain hijacking changes the domain's registration and would affect everyone. Typosquatting requires the user to mistype the name, and an amplified DDoS floods a target with traffic.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.4-14"
+    ]
+  },
+  {
+    "id": "SY0-701-2940",
+    "domain": "2.0",
+    "objective": "2.4",
+    "question": "Which IEEE standard protects Wi-Fi networks against deauthentication attacks by securing important 802.11 management frames?",
+    "choices": {
+      "a": "802.3af",
+      "b": "802.1X",
+      "c": "802.11w",
+      "d": "802.1Q"
+    },
+    "answer": "c",
+    "explanation": "802.11w adds protection to management frames such as deauthenticate and disassociate, so forged frames cannot easily disconnect clients. 802.1X is port-based network access control, 802.3af is a Power over Ethernet standard, and 802.1Q defines VLAN tagging.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.4-15"
+    ]
+  },
+  {
+    "id": "SY0-701-2941",
+    "domain": "2.0",
+    "objective": "2.4",
+    "question": "Why can an attacker on the same subnet place themselves on the path between victims and the default gateway by using ARP poisoning?",
+    "choices": {
+      "a": "ARP has no authentication, so hosts accept forged ARP replies that map the gateway's IP address to the attacker's MAC address",
+      "b": "ARP messages are routed across the internet to every network",
+      "c": "ARP traffic is encrypted with a weak key that is easy to crack",
+      "d": "ARP poisoning first requires the attacker to take over the company's DNS server"
+    },
+    "answer": "a",
+    "explanation": "ARP has no security, so an attacker on the local subnet can send fake replies that make victims send gateway traffic to the attacker, who then passes it on so nothing seems wrong. ARP is not encrypted at all. ARP stays on the local network segment, and the attack does not involve DNS servers.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.4-16"
+    ]
+  },
+  {
+    "id": "SY0-701-2942",
+    "domain": "2.0",
+    "objective": "2.4",
+    "question": "On a coffee shop's open Wi-Fi, an attacker captures the session ID cookie from a user's unencrypted webmail session, loads it into his own browser, and gets into the mailbox without knowing the password. Which control would BEST have prevented this?",
+    "choices": {
+      "a": "Locking the account after five failed logins",
+      "b": "Using HTTPS for the entire session so the session ID is encrypted end to end",
+      "c": "Requiring a longer password for the webmail account",
+      "d": "Asking a security question at each login"
+    },
+    "answer": "b",
+    "explanation": "This is session hijacking, a kind of replay in which a captured session ID is reused, and encrypting the whole session keeps the attacker from seeing the session ID. A longer password, account lockout, and security questions all protect the login step, but the attacker skipped login by reusing an already authenticated session.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.4-21"
+    ]
+  },
+  {
+    "id": "SY0-701-2943",
+    "domain": "2.0",
+    "objective": "2.4",
+    "question": "A security team wants to reduce the risk from malicious code arriving as executables, scripts, and macros through many different channels. Which TWO measures BEST support this goal? (Choose two.)",
+    "choices": {
+      "a": "Continuous patching of operating systems and applications",
+      "b": "Giving all users local administrator rights so they can remove infections themselves",
+      "c": "Turning off host-based firewalls to reduce performance overhead",
+      "d": "Anti-malware software with current signatures on all endpoints"
+    },
+    "answer": [
+      "a",
+      "d"
+    ],
+    "explanation": "Malicious code takes many forms, so protection is layered, including updated anti-malware to detect it and ongoing patching to close the vulnerabilities it exploits. Local administrator rights let malicious code do more damage. Turning off firewalls removes a layer that helps block malicious traffic.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.4-18"
+    ]
+  },
+  {
+    "id": "SY0-701-2944",
+    "domain": "2.0",
+    "objective": "2.4",
+    "question": "An on-path attacker intercepts a user's first plain HTTP request to a site. The attacker connects to the site over HTTPS but keeps the user's side of the connection on HTTP, so the user's username and password reach the attacker in cleartext. Which attack is this?",
+    "choices": {
+      "a": "Collision attack",
+      "b": "Birthday attack",
+      "c": "Password spraying",
+      "d": "SSL stripping"
+    },
+    "answer": "d",
+    "explanation": "SSL stripping is a downgrade attack in which an on-path attacker rewrites the connection so the victim stays on unencrypted HTTP while the attacker talks HTTPS to the server. Collision and birthday attacks target hash functions. Password spraying tries common passwords across many accounts and does not intercept traffic.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.4-25"
+    ]
+  },
+  {
+    "id": "SY0-701-2945",
+    "domain": "2.0",
+    "objective": "2.4",
+    "question": "An attacker copies a server's password hash file and, on a separate GPU system, hashes billions of candidate passwords and compares them to the stored hashes. The server's logs show no failed login attempts. Which attack is this?",
+    "choices": {
+      "a": "Password spraying",
+      "b": "Downgrade attack",
+      "c": "Offline brute force",
+      "d": "Credential replay"
+    },
+    "answer": "c",
+    "explanation": "An offline brute force attack works on stolen hashes away from the target, so account lockout and failed-login alerts never come into play; a strong, slow hashing algorithm is the main defense. Password spraying tries a few passwords against many live accounts. Credential replay reuses a captured credential without cracking it, and a downgrade attack forces weaker encryption.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.4-29"
+    ]
+  },
+  {
+    "id": "SY0-701-2946",
+    "domain": "2.0",
+    "objective": "2.5",
+    "question": "An administrator configures an application allow list so that only programs digitally signed by a few trusted software publishers can run. New versions from those publishers keep working without the list being updated. Which type of allow-list rule is this?",
+    "choices": {
+      "a": "Certificate (publisher) rule",
+      "b": "File hash rule",
+      "c": "Network zone rule",
+      "d": "Path rule"
+    },
+    "answer": "a",
+    "explanation": "A certificate rule allows any application signed by an approved publisher, so updates that keep the same signature continue to run. A hash rule allows only one exact file and must be updated for each new version. A path rule allows programs in certain folders, and a network zone rule depends on where the application runs from.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.5-04"
+    ]
+  },
+  {
+    "id": "SY0-701-2947",
+    "domain": "2.0",
+    "objective": "2.2",
+    "question": "Before launching a watering hole attack against employees of a regional bank, what must the attacker determine FIRST?",
+    "choices": {
+      "a": "Which third-party websites the bank's employees commonly visit",
+      "b": "Which misspelled versions of the bank's domain are still unregistered",
+      "c": "The phone number of the bank's help desk",
+      "d": "The passwords of the bank's administrators"
+    },
+    "answer": "a",
+    "explanation": "A watering hole attack depends on infecting a site the target group already uses, so the attacker first researches where those people go online, such as industry sites or local businesses. Admin passwords are not needed because the site visit delivers the malware. A help desk number is useful for vishing, and unregistered misspellings matter for typosquatting.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.2-25"
+    ]
+  },
+  {
+    "id": "SY0-701-2948",
+    "domain": "2.0",
+    "objective": "2.2",
+    "question": "Which TWO characteristics are typical of a disinformation influence campaign? (Choose two.)",
+    "choices": {
+      "a": "Factually incorrect content is created and then amplified through social media sharing, liking, and paid advertising",
+      "b": "It targets a single finance mailbox to change wire transfer details",
+      "c": "The goal is to sway public opinion on political or social issues and create division",
+      "d": "It requires installing malware on each target's computer"
+    },
+    "answer": [
+      "a",
+      "c"
+    ],
+    "explanation": "Influence campaigns spread false information through social media and advertising to confuse, divide, and persuade large audiences, and nation-states commonly use them. They work through people's beliefs rather than malware on their computers. Targeting one finance mailbox to redirect payments describes business email compromise.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.2-21"
+    ]
+  },
+  {
+    "id": "SY0-701-2949",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "An analyst suspects that malware has injected itself into a legitimate running process and never wrote any file to disk. Which technique is MOST likely to find it?",
+    "choices": {
+      "a": "Memory forensics on a capture of the system's RAM",
+      "b": "A review of the firewall rule base",
+      "c": "A signature scan of all files on the hard drive",
+      "d": "Comparing the hashes of files on disk with a known-good baseline"
+    },
+    "answer": "a",
+    "explanation": "Injected malware lives in the memory of running processes, so analyzing a memory capture can reveal the malicious code, threads, or loaded DLLs. File scans and file hash comparisons look only at what is stored on disk, where nothing malicious was written. A firewall rule review shows what traffic is allowed, not what is running inside a process.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.3-01"
+    ]
+  },
+  {
+    "id": "SY0-701-2950",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "Which operating system protection places code and data at random memory locations each time a program runs, so an attacker's buffer overflow cannot reliably jump to a known address?",
+    "choices": {
+      "a": "Address space layout randomization (ASLR)",
+      "b": "Full-disk encryption",
+      "c": "Data Execution Prevention (DEP)",
+      "d": "UEFI Secure Boot"
+    },
+    "answer": "a",
+    "explanation": "ASLR randomizes memory layout so exploit code that relies on fixed addresses usually fails. DEP marks data areas as non-executable, which is a different protection against overflow exploits. Secure Boot checks boot components, and full-disk encryption protects stored data rather than running memory.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.3-02"
+    ]
+  },
+  {
+    "id": "SY0-701-2951",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "Which TWO development practices BEST reduce race condition vulnerabilities? (Choose two.)",
+    "choices": {
+      "a": "Increase the size of input buffers",
+      "b": "Lock a shared resource so only one operation can check and change it at a time",
+      "c": "Encode output before it is displayed in a web page",
+      "d": "Perform the check and the use of a resource as a single atomic operation"
+    },
+    "answer": [
+      "b",
+      "d"
+    ],
+    "explanation": "Race conditions come from operations overlapping on shared data, so locking and atomic check-and-use operations remove the gap an attacker can exploit. Larger buffers relate to buffer overflows, not timing. Output encoding protects against cross-site scripting.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.3-03"
+    ]
+  },
+  {
+    "id": "SY0-701-2952",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "An administrator downloads a software update from a third-party mirror site. The file name matches the vendor's release, but its SHA-256 hash does not match the hash published on the vendor's website. What should the administrator do?",
+    "choices": {
+      "a": "Install it because the file name and version number match",
+      "b": "Turn off antivirus temporarily so the installation is not blocked",
+      "c": "Rename the file to match the vendor's naming and install it",
+      "d": "Do not install it, and get the update directly from the vendor's official site"
+    },
+    "answer": "d",
+    "explanation": "A hash mismatch means the file is not the one the vendor released, which may indicate a malicious or corrupted update, so it should not be installed and a trusted copy should be obtained from the source. Matching names prove nothing, and disabling antivirus or renaming the file only makes it easier for a tampered update to run.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.3-04"
+    ]
+  },
+  {
+    "id": "SY0-701-2953",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "Why are operating systems such an attractive target for attackers?",
+    "choices": {
+      "a": "Operating systems never receive security updates",
+      "b": "Every computer runs one, and their millions of lines of code contain flaws that can affect huge numbers of systems",
+      "c": "Only administrators can interact with an operating system",
+      "d": "Operating system flaws can be exploited only with physical access"
+    },
+    "answer": "b",
+    "explanation": "The OS is the foundation of every device and is extremely complex, so a single flaw can expose a vast number of systems, which makes it a big target. Vendors release OS security updates regularly, such as monthly. Ordinary users and remote network services interact with the OS all the time, and many OS flaws can be exploited remotely.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.3-05"
+    ]
+  },
+  {
+    "id": "SY0-701-2954",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "What is the root cause that makes SQL injection possible in a web application?",
+    "choices": {
+      "a": "The web server uses an outdated TLS version",
+      "b": "The database server does not use full-disk encryption",
+      "c": "The database listens on its default network port",
+      "d": "The application places user input directly into SQL statements without handling it safely"
+    },
+    "answer": "d",
+    "explanation": "SQL injection is a programming flaw: when input is combined directly into a query, an attacker can add their own SQL. Disk encryption, port numbers, and TLS versions do not change how the application builds its queries, so none of them causes or prevents SQL injection.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.3-06"
+    ]
+  },
+  {
+    "id": "SY0-701-2955",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "Which statement BEST describes stored (persistent) cross-site scripting compared with reflected cross-site scripting?",
+    "choices": {
+      "a": "Stored XSS changes SQL queries, while reflected XSS changes file paths",
+      "b": "Stored XSS runs on the web server, while reflected XSS runs in the browser",
+      "c": "Reflected XSS is saved in the site's database, while stored XSS is in an email link",
+      "d": "The stored script is saved on the site and delivered to everyone who views the page, so the attacker does not need to send each victim a link"
+    },
+    "answer": "d",
+    "explanation": "Persistent XSS saves the payload, for example in a post or comment, so every visitor's browser runs it, while reflected XSS depends on a victim clicking a crafted link. Both kinds run in the victim's browser, not on the server. The storage descriptions are reversed in one choice, and changing SQL queries or file paths describes SQL injection and directory traversal.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.3-07"
+    ]
+  },
+  {
+    "id": "SY0-701-2956",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "Why is a virtual machine escape considered one of the most serious virtualization vulnerabilities?",
+    "choices": {
+      "a": "It only crashes the single guest VM that was attacked",
+      "b": "It can be carried out only by someone with physical access to the server",
+      "c": "It affects only the VM's virtual network adapter settings",
+      "d": "An attacker who breaks out of one guest can reach the host and control other guest VMs on it"
+    },
+    "answer": "d",
+    "explanation": "A VM escape breaks the isolation the hypervisor provides, so control of the host can mean control of every VM it runs. Its impact is far larger than a single guest crash. It is usually done from inside a guest over software, without physical access, and it is not limited to network settings.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.3-11"
+    ]
+  },
+  {
+    "id": "SY0-701-2957",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "An attacker sends a crafted text string to a cloud-hosted web application, which passes it to an unpatched logging library. The library then downloads and runs the attacker's code on the cloud server. Which type of attack is this?",
+    "choices": {
+      "a": "Authentication bypass",
+      "b": "Directory traversal",
+      "c": "Denial of service",
+      "d": "Remote code execution"
+    },
+    "answer": "d",
+    "explanation": "Remote code execution lets an attacker run their own code on a target over the network, often by exploiting unpatched application components, which is common in cloud-hosted web applications. Denial of service makes a service unavailable, and authentication bypass gets past a login without valid credentials. Directory traversal reads files outside an allowed path.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.3-13"
+    ]
+  },
+  {
+    "id": "SY0-701-2958",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "A company is concerned about counterfeit or tampered routers and switches entering its network through the supply chain. Which practice BEST reduces this risk?",
+    "choices": {
+      "a": "Buy from whichever reseller offers the lowest price",
+      "b": "Buy only from a small set of authorized suppliers with strict security and procurement controls",
+      "c": "Accept equipment as authentic if the serial number label looks correct",
+      "d": "Skip firmware updates so the original factory code is kept"
+    },
+    "answer": "b",
+    "explanation": "Limiting purchases to a small base of authorized suppliers with strong controls makes it much harder for counterfeit or tampered hardware to reach the company. The cheapest resellers are a common source of fakes. Skipping firmware updates leaves known flaws in place, and labels are easy to forge.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.3-15"
+    ]
+  },
+  {
+    "id": "SY0-701-2959",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "An analyst finds a firewall rule that allows any source address to reach an internal database server on every port. The rule was added during troubleshooting months ago and never removed. Which practice would BEST have caught this misconfiguration?",
+    "choices": {
+      "a": "Enabling full-disk encryption on the database server",
+      "b": "Turning off logging on the firewall to improve performance",
+      "c": "Regularly testing and auditing the firewall rule set, especially after changes",
+      "d": "Increasing the minimum password length for database users"
+    },
+    "answer": "c",
+    "explanation": "Firewall rule sets are complex and easy to get wrong, so regular testing and audits catch overly broad or leftover rules that open services to attackers. Disk encryption and password length do not limit which hosts can reach open ports. Turning off logging removes evidence and makes problems harder to find.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.3-18"
+    ]
+  },
+  {
+    "id": "SY0-701-2960",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "Which TWO risks result when an employee jailbreaks a corporate smartphone? (Choose two.)",
+    "choices": {
+      "a": "All data on the phone becomes encrypted automatically",
+      "b": "The phone can no longer connect to cellular networks",
+      "c": "Mobile device management controls become much less effective",
+      "d": "Built-in operating system security features can be bypassed"
+    },
+    "answer": [
+      "c",
+      "d"
+    ],
+    "explanation": "Jailbreaking gives uncontrolled access to the operating system, so its security features can be circumvented and MDM policies can be bypassed. Jailbroken phones still connect to cellular networks. Jailbreaking weakens protections and does not add encryption.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.3-20"
+    ]
+  },
+  {
+    "id": "SY0-701-2961",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "Researchers who find new vulnerabilities usually report them to the developer, but attackers who find them often keep them secret. Why do attackers keep newly discovered vulnerabilities to themselves?",
+    "choices": {
+      "a": "The law requires discoverers to keep vulnerabilities private",
+      "b": "Keeping the flaw secret earns them a CVE identifier",
+      "c": "They can exploit the flaw while no patch or mitigation exists",
+      "d": "Secrecy makes the vendor release a patch faster"
+    },
+    "answer": "c",
+    "explanation": "An undisclosed flaw is a zero-day that the vendor cannot fix, so attackers can use it with little chance of being blocked. CVE identifiers are given to publicly disclosed vulnerabilities. Secrecy delays patches, and no law requires attackers to keep flaws private.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.3-21"
+    ]
+  },
+  {
+    "id": "SY0-701-2962",
+    "domain": "2.0",
+    "objective": "2.4",
+    "question": "Which statement BEST describes how typical ransomware uses cryptography against its victims?",
+    "choices": {
+      "a": "It encrypts only network traffic so the victim cannot browse the web",
+      "b": "It encrypts the victim's data files and leaves the operating system running so the victim can read the demand and pay for the decryption key",
+      "c": "It hashes the victim's files so they can never be recovered by anyone",
+      "d": "It deletes the operating system so the computer cannot start"
+    },
+    "answer": "b",
+    "explanation": "Ransomware encrypts documents, pictures, and other data but keeps the system usable so the victim can pay for the key, often through an untraceable payment system. Wiping the OS would prevent payment, and hashing is one-way, so even the attacker could not restore the files. Ransomware targets stored data, not network traffic.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.4-01"
+    ]
+  },
+  {
+    "id": "SY0-701-2963",
+    "domain": "2.0",
+    "objective": "2.4",
+    "question": "A spreadsheet from a business partner contains embedded VBA code. When a user enables content, the code copies itself into other Office documents on the user's drive. Which type of malware is this?",
+    "choices": {
+      "a": "Boot sector virus",
+      "b": "Worm",
+      "c": "Rootkit",
+      "d": "Macro virus"
+    },
+    "answer": "d",
+    "explanation": "A macro virus is written in a document's macro language and spreads to other documents when a user runs it, which is common with Microsoft Office files. A boot sector virus infects a disk's startup area. A worm spreads across networks without user action, and a rootkit hides deep in the operating system.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.4-06"
+    ]
+  },
+  {
+    "id": "SY0-701-2964",
+    "domain": "2.0",
+    "objective": "2.4",
+    "question": "Which TWO practices BEST protect a user's computer against spyware? (Choose two.)",
+    "choices": {
+      "a": "Read installation options carefully and decline bundled extras",
+      "b": "Turn off automatic operating system updates",
+      "c": "Install free security tools offered in browser pop-ups",
+      "d": "Keep anti-malware software and its signatures up to date"
+    },
+    "answer": [
+      "a",
+      "d"
+    ],
+    "explanation": "Current anti-malware signatures detect known spyware, and paying attention during installations avoids bundled software that monitors the user. Disabling updates leaves holes open. Fake security software offered in pop-ups is a common way spyware tricks people into installing it.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.4-04"
+    ]
+  },
+  {
+    "id": "SY0-701-2965",
+    "domain": "2.0",
+    "objective": "2.4",
+    "question": "Which feature helps stop rootkits that try to load before the operating system by checking the digital signatures of boot components?",
+    "choices": {
+      "a": "Data loss prevention",
+      "b": "Host-based firewall",
+      "c": "UEFI Secure Boot",
+      "d": "Data Execution Prevention"
+    },
+    "answer": "c",
+    "explanation": "Secure Boot verifies that the bootloader and early boot components are signed by trusted publishers, which blocks many rootkits that try to load before the OS. DEP protects running memory, a host-based firewall filters network traffic, and DLP watches for sensitive data leaving the organization.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.4-09"
+    ]
+  },
+  {
+    "id": "SY0-701-2966",
+    "domain": "2.0",
+    "objective": "2.4",
+    "question": "A company learns that its proximity access badges can be copied in seconds with an inexpensive reader. Which control BEST reduces the risk from cloned badges?",
+    "choices": {
+      "a": "Issue each employee a second badge as a spare",
+      "b": "Laminate the badges so they last longer",
+      "c": "Require a second factor, such as a PIN, at the door reader along with the badge",
+      "d": "Require longer network passwords"
+    },
+    "answer": "c",
+    "explanation": "A cloned badge alone is useless if the door also requires something the user knows, such as a PIN, which is why MFA is the main defense against RFID cloning. Spare or laminated badges can be cloned just as easily. Network passwords do not control physical door access.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.4-11"
+    ]
+  },
+  {
+    "id": "SY0-701-2967",
+    "domain": "2.0",
+    "objective": "2.4",
+    "question": "During a denial-of-service attack against the company's public website, why should the security operations team also keep a close watch on other systems?",
+    "choices": {
+      "a": "A DoS attack always encrypts files on internal servers",
+      "b": "A DoS attack can only be stopped by rebooting every internal server",
+      "c": "A DoS attack always changes the company's domain registration",
+      "d": "The DoS may be a smokescreen to distract defenders from another exploit"
+    },
+    "answer": "d",
+    "explanation": "Attackers sometimes use a DoS to occupy defenders while they carry out a different attack, so other systems should be watched closely. A DoS does not by itself encrypt files or change domain registrations, and rebooting internal servers does not stop traffic aimed at a public site.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.4-13"
+    ]
+  },
+  {
+    "id": "SY0-701-2968",
+    "domain": "2.0",
+    "objective": "2.4",
+    "question": "Which control BEST protects a company against domain hijacking?",
+    "choices": {
+      "a": "Flushing the internal DNS server's cache every day",
+      "b": "Registering common misspellings of the company's domain",
+      "c": "Enabling TLS on the company's web server",
+      "d": "Strong authentication, including MFA, on the domain registrar account and the email address that manages it"
+    },
+    "answer": "d",
+    "explanation": "Domain hijacking happens when an attacker gets into the registrar account, often through brute force, social engineering, or the account's email, so protecting those logins is the key defense. TLS protects web traffic but not the registration. Flushing a cache addresses cache poisoning, and buying misspelled domains addresses typosquatting.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.4-14"
+    ]
+  },
+  {
+    "id": "SY0-701-2969",
+    "domain": "2.0",
+    "objective": "2.4",
+    "question": "A team needs to find the physical location of a device that is jamming the office Wi-Fi. Which equipment is MOST useful?",
+    "choices": {
+      "a": "A multimeter",
+      "b": "A tone generator and probe",
+      "c": "A directional antenna with an attenuator and a spectrum analyzer",
+      "d": "A cable tester"
+    },
+    "answer": "c",
+    "explanation": "Finding a jammer is a fox hunt: a spectrum analyzer confirms the interfering signal and its strength, a directional antenna shows which way it is coming from, and an attenuator helps narrow it down as the team gets closer. A cable tester and a tone generator work on copper cabling, and a multimeter measures electrical values, so none of them can locate a radio source.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.4-15"
+    ]
+  },
+  {
+    "id": "SY0-701-2970",
+    "domain": "2.0",
+    "objective": "2.4",
+    "question": "An attacker plugs a laptop into an office network and runs a rogue DHCP server that hands out the laptop's own IP address as the default gateway. Clients' traffic now flows through the laptop and is then forwarded to the real router, so users notice nothing. Which type of attack is this?",
+    "choices": {
+      "a": "Replay attack",
+      "b": "Distributed denial of service",
+      "c": "On-path attack",
+      "d": "Domain hijacking"
+    },
+    "answer": "c",
+    "explanation": "Placing the attacker's system between victims and their destination, while forwarding traffic so the connection keeps working, is an on-path attack. A DDoS overwhelms a service instead of quietly relaying traffic. A replay attack resends captured data later, and domain hijacking takes over a domain's registration.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.4-16"
+    ]
+  },
+  {
+    "id": "SY0-701-2971",
+    "domain": "2.0",
+    "objective": "2.4",
+    "question": "Which statement BEST distinguishes a replay attack from an on-path attack?",
+    "choices": {
+      "a": "A replay changes traffic in real time as it passes between the two parties",
+      "b": "A replay requires physical access to the victim's workstation",
+      "c": "A replay always requires cracking the victim's password first",
+      "d": "A replay resends previously captured data later and does not need to sit between the two parties while it does so"
+    },
+    "answer": "d",
+    "explanation": "In a replay attack, the attacker first captures valid data, then sends it again later to appear as the victim, without needing the original workstation or a position in the live conversation. Changing traffic in real time is what an on-path attacker does. Replays can be done remotely and reuse captured data, so no physical access or password cracking is needed.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.4-21"
+    ]
+  },
+  {
+    "id": "SY0-701-2972",
+    "domain": "2.0",
+    "objective": "2.4",
+    "question": "A ransomware executable spread through a company by exploiting a vulnerability in the outdated SMBv1 file-sharing protocol to run arbitrary code. Which action BEST prevents this malicious code from succeeding again?",
+    "choices": {
+      "a": "Require longer passwords for all user accounts",
+      "b": "Block outbound HTTPS on port 443",
+      "c": "Enable full-disk encryption on all workstations",
+      "d": "Apply the operating system security patch and disable SMBv1"
+    },
+    "answer": "d",
+    "explanation": "The malicious code succeeded because of an unpatched flaw in an old protocol, so patching and removing SMBv1 closes the hole it used. Longer passwords do not fix a code execution flaw, and full-disk encryption does not stop ransomware running on a logged-in system. Blocking HTTPS would disrupt business and does not address SMB.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.4-18",
+      "2.4-01"
+    ]
+  },
+  {
+    "id": "SY0-701-2973",
+    "domain": "2.0",
+    "objective": "2.4",
+    "question": "A bank customer who is signed in to online banking visits a forum post containing a hidden image tag. The tag makes the customer's browser send a funds transfer request to the bank, and the bank processes it because the request includes the customer's valid session cookie. Which defense should the bank's developers add?",
+    "choices": {
+      "a": "A unique anti-forgery token in each form that the server checks before processing the request",
+      "b": "Length checks on all input fields",
+      "c": "Parameterized database queries",
+      "d": "Address space layout randomization on the web server"
+    },
+    "answer": "a",
+    "explanation": "This is cross-site request forgery, which abuses the site's trust in the user's browser, and an unpredictable anti-forgery token proves the request came from the bank's own page. Input length checks address buffer overflows, and parameterized queries stop SQL injection. ASLR protects memory and does nothing to verify where a web request came from.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.4-23"
+    ]
+  },
+  {
+    "id": "SY0-701-2974",
+    "domain": "2.0",
+    "objective": "2.4",
+    "question": "Sign-in logs for a company's internet-facing email portal show one or two attempts per account across thousands of accounts, using passwords such as Spring2026! and Password1. Which control would BEST reduce the chance that this password spraying succeeds?",
+    "choices": {
+      "a": "Salting the password hashes stored in the directory",
+      "b": "Raising the account lockout threshold from 5 to 10 failed attempts",
+      "c": "Encrypting the sign-in page with TLS",
+      "d": "Requiring MFA and blocking commonly used passwords"
+    },
+    "answer": "d",
+    "explanation": "Password spraying tries a few common passwords against many accounts to stay under lockout limits, so blocking common passwords removes the guesses it depends on, and MFA keeps a correct guess from being enough to sign in. Salting protects stored hashes against offline cracking, not live sign-in attempts. A higher lockout threshold gives the attacker more guesses per account, and TLS protects the password in transit without stopping a correct guess.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.4-28"
+    ]
+  },
+  {
+    "id": "SY0-701-3901",
+    "domain": "3.0",
+    "objective": "3.1",
+    "question": "A company's cloud environment uses a managed security provider's virtual firewall appliances and a separate SaaS vendor for log storage. Which practice best manages the risk these third parties add?",
+    "choices": {
+      "a": "Perform ongoing vendor risk assessments, monitor the vendors' services, and include them in incident response planning",
+      "b": "Assume the cloud provider's responsibility matrix covers all third-party products in the environment",
+      "c": "Give each vendor full administrative access so they can troubleshoot quickly",
+      "d": "Review each vendor's security once at contract signing and not again"
+    },
+    "answer": "a",
+    "explanation": "Third-party vendors in the cloud need ongoing risk assessment under a vendor risk management policy, continuous monitoring for changes, and a defined role in incident response. The cloud provider's responsibility matrix covers only that provider's services, unrestricted vendor access violates least privilege, and a one-time review misses later changes.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "3.1-01"
+    ]
+  },
+  {
+    "id": "SY0-701-3902",
+    "domain": "3.0",
+    "objective": "3.1",
+    "question": "A small company puts its accounting workstations and its guest devices on two different VLANs configured on the same switch. What is required for traffic to pass between the two VLANs?",
+    "choices": {
+      "a": "A layer 3 device, such as a router or layer 3 switch, that routes between them",
+      "b": "Nothing, because devices on the same physical switch can always communicate",
+      "c": "An air gap between the two VLANs",
+      "d": "A separate physical switch for each VLAN"
+    },
+    "answer": "a",
+    "explanation": "VLANs segment a network logically, so devices in different VLANs cannot communicate unless a layer 3 device routes between them, where access controls can also be applied. Sharing a physical switch does not bypass the VLAN separation, an air gap would block all communication, and separate switches describe physical segmentation rather than a VLAN requirement.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "3.1-06"
+    ]
+  },
+  {
+    "id": "SY0-701-3903",
+    "domain": "3.0",
+    "objective": "3.1",
+    "question": "In software-defined networking (SDN), which TWO functions belong to the control plane? (Choose two.)",
+    "choices": {
+      "a": "Maintaining the routing tables and session tables",
+      "b": "Processing dynamic routing protocol updates",
+      "c": "Forwarding frames and packets out of the correct interfaces",
+      "d": "Providing SSH, browser, and API access so administrators can configure the device"
+    },
+    "answer": [
+      "a",
+      "b"
+    ],
+    "explanation": "The control plane manages how traffic should be handled, which includes building routing and session tables and processing dynamic routing updates. Forwarding frames and packets is the job of the data plane (infrastructure layer), and SSH, browser, and API configuration access belongs to the management plane.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "3.1-06"
+    ]
+  },
+  {
+    "id": "SY0-701-3904",
+    "domain": "3.0",
+    "objective": "3.2",
+    "question": "Which statement correctly distinguishes an intrusion detection system (IDS) from an intrusion prevention system (IPS)?",
+    "choices": {
+      "a": "An IDS detects and alerts on intrusion attempts, while an IPS can stop the malicious traffic before it reaches its target",
+      "b": "An IDS can block traffic in real time, while an IPS can only send alerts",
+      "c": "An IDS inspects only encrypted traffic, while an IPS inspects only unencrypted traffic",
+      "d": "An IDS must be installed inline, while an IPS must be connected through a passive tap"
+    },
+    "answer": "a",
+    "explanation": "An IDS watches traffic for exploits and raises an alarm, while an IPS sits in the traffic path and can block the attack in real time. The second statement reverses the two, the encryption claim is false, and the placement is also reversed because an IPS is commonly inline while an IDS is commonly passive on a tap or port monitor.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "3.2-07",
+      "3.2-06"
+    ]
+  },
+  {
+    "id": "SY0-701-3905",
+    "domain": "3.0",
+    "objective": "3.2",
+    "question": "A company hosts a web application on several internal servers. It places a device in front of them that receives all inbound requests from the internet and forwards them to the internal servers, so outside clients never connect to those servers directly. Which device is this?",
+    "choices": {
+      "a": "Forward proxy",
+      "b": "Reverse proxy",
+      "c": "Open proxy",
+      "d": "Jump server"
+    },
+    "answer": "b",
+    "explanation": "A reverse proxy handles inbound traffic from the internet to an internal service, hiding the real servers and allowing inspection of requests. A forward proxy controls internal users' outbound access to the internet, an open proxy is an uncontrolled third-party proxy often used to get around security controls, and a jump server provides administrative access into a protected zone.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "3.2-07"
+    ]
+  },
+  {
+    "id": "SY0-701-3906",
+    "domain": "3.0",
+    "objective": "3.2",
+    "question": "Two web servers sit behind a load balancer. One server handles all user traffic while the other stays on standby and takes over only if the first server fails. Which load balancing configuration is this?",
+    "choices": {
+      "a": "Active/active",
+      "b": "Active/passive",
+      "c": "Round-robin",
+      "d": "TLS offload"
+    },
+    "answer": "b",
+    "explanation": "In active/passive load balancing, some servers are active while others wait on standby and replace an active server that fails. Active/active spreads the load across all servers at once, round-robin is a method for distributing requests among active servers, and TLS offload moves encryption work from the servers to the load balancer.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "3.2-07"
+    ]
+  },
+  {
+    "id": "SY0-701-3907",
+    "domain": "3.0",
+    "objective": "3.2",
+    "question": "A security operations center sends firewall logs, authentication logs, web server access logs, and IPS alerts to a SIEM, which compares events from all of these sources to find related activity. Which TWO statements about this design are correct? (Choose two.)",
+    "choices": {
+      "a": "The firewall, servers, and IPS act as sensors that generate the data",
+      "b": "The SIEM acts as a collector, and its correlation engine links events from different sources",
+      "c": "The SIEM sits inline and blocks traffic it considers malicious",
+      "d": "Only standalone sensor hardware can be used, because built-in device logs are not accepted"
+    },
+    "answer": [
+      "a",
+      "b"
+    ],
+    "explanation": "Sensors are the sources of security data, such as firewalls, IPSs, and server logs, and collectors such as a SIEM aggregate that data and correlate events across sources. A SIEM analyzes copies of log data rather than sitting inline to block traffic, and sensors are often built into switches, routers, servers, and firewalls.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "3.2-07"
+    ]
+  },
+  {
+    "id": "SY0-701-3908",
+    "domain": "3.0",
+    "objective": "3.2",
+    "question": "Which statement best describes Extensible Authentication Protocol (EAP)?",
+    "choices": {
+      "a": "An authentication framework that supports many different authentication methods and works with 802.1X to control network access",
+      "b": "A single fixed authentication method that always uses a username and password",
+      "c": "A tunneling protocol that encrypts all traffic between two sites",
+      "d": "A wireless encryption standard that replaces WPA3"
+    },
+    "answer": "a",
+    "explanation": "EAP is a framework rather than one method, so many standard and vendor-built EAP methods exist, and it is used with 802.1X to keep a device off the network until authentication succeeds. It is not limited to one credential type, it is not a site-to-site tunneling protocol such as IPsec, and it does not replace WPA3 encryption.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "3.2-08"
+    ]
+  },
+  {
+    "id": "SY0-701-3909",
+    "domain": "3.0",
+    "objective": "3.2",
+    "question": "A switch has IEEE 802.1X enabled on every access port. A visitor plugs a laptop into a conference room jack but has no valid credentials. What happens?",
+    "choices": {
+      "a": "The port passes only authentication traffic, so the laptop cannot reach the corporate network",
+      "b": "The laptop gets full network access, and its activity is logged for later review",
+      "c": "The laptop is placed on the corporate VLAN and challenged for credentials later",
+      "d": "The switch encrypts the laptop's traffic with IPsec before forwarding it"
+    },
+    "answer": "a",
+    "explanation": "802.1X is port-based network access control, so the switch allows only EAP authentication messages until the supplicant authenticates successfully. Without valid credentials, the laptop gets no other network access. 802.1X does not grant access first and check later, and it does not encrypt traffic with IPsec.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "3.2-08"
+    ]
+  },
+  {
+    "id": "SY0-701-3910",
+    "domain": "3.0",
+    "objective": "3.2",
+    "question": "A firewall administrator must allow Microsoft SQL Server traffic between two subnets but block YouTube and social media for all users, no matter which port those applications use. Which type of firewall can make this decision?",
+    "choices": {
+      "a": "Next-generation firewall (NGFW)",
+      "b": "Traditional layer 4 port-based firewall",
+      "c": "Web application firewall (WAF)",
+      "d": "Passive IDS sensor"
+    },
+    "answer": "a",
+    "explanation": "An NGFW inspects application-layer data in every packet, so it can identify and control applications such as SQL Server or YouTube regardless of port. A layer 4 firewall sees only addresses, ports, and protocols, a WAF protects a web application by filtering HTTP requests sent to it, and a passive IDS cannot block traffic.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "3.2-09"
+    ]
+  },
+  {
+    "id": "SY0-701-3911",
+    "domain": "3.0",
+    "objective": "3.2",
+    "question": "Which TWO statements correctly compare a traditional layer 4 firewall with a layer 7 (application-layer) firewall? (Choose two.)",
+    "choices": {
+      "a": "A layer 4 firewall filters traffic based on IP addresses, port numbers, and protocol",
+      "b": "A layer 7 firewall examines the application data in packets to identify the application and its content",
+      "c": "A layer 4 firewall can identify a specific web application even when it runs on a nonstandard port",
+      "d": "A layer 7 firewall needs less processing than a layer 4 firewall because it ignores port numbers"
+    },
+    "answer": [
+      "a",
+      "b"
+    ],
+    "explanation": "Layer 4 firewalls make decisions using addresses, ports, and protocol, while layer 7 firewalls decode application data to identify applications and content. Identifying an application on a nonstandard port requires layer 7 inspection, and layer 7 inspection needs more processing, not less, because every packet must be analyzed.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "3.2-09"
+    ]
+  },
+  {
+    "id": "SY0-701-3912",
+    "domain": "3.0",
+    "objective": "3.2",
+    "question": "Which statement best distinguishes software-defined WAN (SD-WAN) from secure access service edge (SASE)?",
+    "choices": {
+      "a": "SD-WAN manages efficient connectivity from sites directly to cloud services but does not adequately address security by itself, while SASE combines that connectivity with cloud-delivered security services",
+      "b": "SD-WAN delivers cloud-based security services such as a secure web gateway, while SASE only routes traffic between branch offices",
+      "c": "SASE sends all user traffic back to the headquarters firewall for inspection, while SD-WAN sends traffic directly to the cloud",
+      "d": "SD-WAN and SASE are both on-premises hardware appliances that must be installed in every branch office"
+    },
+    "answer": "a",
+    "explanation": "SD-WAN is a WAN built for the cloud that lets sites reach cloud applications directly, but it does not adequately address security on its own; SASE is a complete network and security solution that adds cloud-delivered services such as zero trust network access, a secure web gateway, and a CASB, with SASE clients on devices. The second statement reverses the two roles, SASE places security in the cloud close to users instead of backhauling traffic to headquarters, and SASE is delivered as a cloud service rather than branch hardware.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "3.2-13",
+      "3.2-14"
+    ]
+  },
+  {
+    "id": "SY0-701-3913",
+    "domain": "3.0",
+    "objective": "3.4",
+    "question": "A company bought enough on-premises servers to handle its busiest week of the year. For the other 51 weeks, most of that capacity sits idle. Which statement best describes the problem and a common fix?",
+    "choices": {
+      "a": "Supply exceeds normal demand, so the company is overpaying; cloud resources that can be added and removed as needed would match supply to demand",
+      "b": "Demand exceeds supply, so the company should buy more physical servers",
+      "c": "This is a people capacity problem, so the company should hire more staff for the busy week",
+      "d": "This is a platform diversity problem, so the servers should run a different operating system"
+    },
+    "answer": "a",
+    "explanation": "Capacity planning matches supply to demand, and too much supply means paying for resources that are not used; cloud-based infrastructure is easier to deploy and scale for changing demand. Buying more servers worsens the oversupply, the issue is server capacity rather than staffing, and changing operating systems does not affect capacity.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "3.4-10",
+      "3.4-11"
+    ]
+  },
+  {
+    "id": "SY0-701-3914",
+    "domain": "3.0",
+    "objective": "3.4",
+    "question": "Which type of UPS always powers the connected equipment through its inverter, so there is no transfer time when utility power fails?",
+    "choices": {
+      "a": "Offline/standby UPS",
+      "b": "Line-interactive UPS",
+      "c": "Online/double-conversion UPS",
+      "d": "Standby generator"
+    },
+    "answer": "c",
+    "explanation": "An online, or double-conversion, UPS continuously converts incoming power and runs the load from its inverter, so there is no switchover when utility power is lost. Offline/standby and line-interactive UPSs switch to battery power when an outage is detected, which involves a brief transfer, and a generator provides long-term power but takes time to start.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "3.4-24"
+    ]
+  },
+  {
+    "id": "SY0-701-3915",
+    "domain": "3.0",
+    "objective": "3.2",
+    "question": "A firewall administrator assigns each interface to a zone such as Trusted, Untrusted, and Screened, then replaces dozens of IP-range rules with rules like Untrusted to Screened: allow HTTPS and Untrusted to Trusted: deny. What is the main benefit of this change?",
+    "choices": {
+      "a": "Policies become simpler and more flexible because rules apply to zones rather than individual address ranges",
+      "b": "The firewall no longer needs to inspect traffic that crosses between zones",
+      "c": "All traffic between zones is automatically encrypted",
+      "d": "Hosts in the Trusted zone no longer need to be patched"
+    },
+    "answer": "a",
+    "explanation": "Zone-based security groups network areas into zones and writes policy between them, which is simpler and more flexible than maintaining rules for many IP address ranges. Traffic between zones is still inspected and filtered, zones do not encrypt traffic by themselves, and trusted hosts still need patching.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "3.2-02"
+    ]
+  },
+  {
+    "id": "SY0-701-3916",
+    "domain": "3.0",
+    "objective": "3.2",
+    "question": "An online retailer protects its web servers with an inline IPS. Management decides that if the IPS hardware fails, customer traffic must keep flowing to the site. Which statement describes this configuration?",
+    "choices": {
+      "a": "It is fail-open, so the site stays available but traffic passes without inspection while the IPS is down",
+      "b": "It is fail-closed, so the site stays secure but goes offline while the IPS is down",
+      "c": "It is fail-open, so the failed IPS continues to block known attacks",
+      "d": "It is passive monitoring, so traffic is blocked until the IPS is repaired"
+    },
+    "answer": "a",
+    "explanation": "A fail-open device lets data continue to flow when it fails, which preserves availability at the cost of losing inspection until it is fixed. Fail-closed would stop all traffic, a failed IPS cannot keep blocking attacks, and a passive device only watches copies of traffic and never blocks it.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "3.2-05",
+      "3.2-07"
+    ]
+  },
+  {
+    "id": "SY0-701-3917",
+    "domain": "3.0",
+    "objective": "3.2",
+    "question": "802.1X is used together with an authentication database that validates the credentials of devices and users. Which TWO could fill that role? (Choose two.)",
+    "choices": {
+      "a": "RADIUS",
+      "b": "LDAP",
+      "c": "SNMP",
+      "d": "Syslog"
+    },
+    "answer": [
+      "a",
+      "b"
+    ],
+    "explanation": "802.1X relies on a back-end authentication service such as RADIUS, LDAP, TACACS+, or Kerberos to check credentials before network access is granted. SNMP is used to monitor and manage network devices, and syslog transports log messages; neither validates credentials.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "3.2-08"
+    ]
+  },
+  {
+    "id": "SY0-701-3918",
+    "domain": "3.0",
+    "objective": "3.3",
+    "question": "An auditor finds customer records saved unencrypted in a database file on a server's SSD, readable by any local user account. Which data state is this, and which controls most directly protect it?",
+    "choices": {
+      "a": "Data at rest; disk or database encryption plus access control lists",
+      "b": "Data in transit; TLS",
+      "c": "Data in use; protecting the contents of system memory",
+      "d": "Data in transit; an IPsec tunnel"
+    },
+    "answer": "a",
+    "explanation": "Data stored on a drive is data at rest, protected by whole-disk, database, or file encryption along with permissions that limit access to authorized users. TLS and IPsec protect data in transit across a network, and memory protection addresses data in use while it is being processed.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "3.3-13",
+      "3.3-17",
+      "3.3-23"
+    ]
+  },
+  {
+    "id": "SY0-701-3919",
+    "domain": "3.0",
+    "objective": "3.4",
+    "question": "After automating most password-reset requests, a company's help desk has far more staff than it needs to handle the remaining calls. Which capacity planning response is most appropriate?",
+    "choices": {
+      "a": "Redeploy some of the staff to other parts of the organization or reduce headcount",
+      "b": "Recruit additional help desk staff",
+      "c": "Add more cloud server instances to the help desk system",
+      "d": "Run a fail over test of the help desk phone system"
+    },
+    "answer": "a",
+    "explanation": "Capacity planning for people matches staffing to demand, and when there are too many employees the usual responses are to redeploy them to other areas or downsize. Recruiting adds to the oversupply, adding server instances addresses technology rather than people, and a fail over test checks redundancy rather than staffing levels.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "3.4-09"
+    ]
+  },
+  {
+    "id": "SY0-701-3920",
+    "domain": "3.0",
+    "objective": "3.4",
+    "question": "Which TWO power problems is an uninterruptible power supply (UPS) designed to protect equipment against? (Choose two.)",
+    "choices": {
+      "a": "Brownouts and power surges",
+      "b": "Short blackouts",
+      "c": "A utility outage lasting several days",
+      "d": "The failure of a server's internal power supply unit"
+    },
+    "answer": [
+      "a",
+      "b"
+    ],
+    "explanation": "A UPS provides short-term battery power and conditioning, so it protects against blackouts, brownouts, and surges. A multi-day outage needs a generator with fuel storage, and a failed internal power supply unit is addressed with redundant power supplies in the server.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "3.4-24"
+    ]
+  },
+  {
+    "id": "SY0-701-4901",
+    "domain": "4.0",
+    "objective": "4.1",
+    "question": "A company lets each new employee pick a smartphone from a list of three approved models. The company purchases the phone, owns it, and manages it with MDM. Which deployment model is this?",
+    "choices": {
+      "a": "BYOD",
+      "b": "COPE",
+      "c": "CYOD",
+      "d": "MAM"
+    },
+    "answer": "c",
+    "explanation": "Choose your own device (CYOD) is like COPE because the company buys and controls the device, but the employee chooses the model from an approved list. BYOD means the employee owns the device, and COPE does not involve the employee choosing the device. Mobile application management controls apps rather than defining who owns or chooses the device.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.1-16"
+    ]
+  },
+  {
+    "id": "SY0-701-4902",
+    "domain": "4.0",
+    "objective": "4.1",
+    "question": "Field technicians often connect company tablets to public Wi-Fi hotspots in airports and hotels. Which control best protects company data from capture and on-path attacks on these networks?",
+    "choices": {
+      "a": "Require an always-on VPN that encrypts all traffic from the tablets",
+      "b": "Disable the tablets' cellular radios",
+      "c": "Turn off Bluetooth discoverability on the tablets",
+      "d": "Enable GPS location tracking through MDM"
+    },
+    "answer": "a",
+    "explanation": "Public Wi-Fi exposes traffic to capture and on-path attacks, so encrypting everything through a VPN protects the data even on an untrusted network. Disabling cellular would push the tablets onto Wi-Fi more often, Bluetooth settings do not affect Wi-Fi traffic, and location tracking helps find a lost device but does not protect data in transit.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.1-17"
+    ]
+  },
+  {
+    "id": "SY0-701-4903",
+    "domain": "4.0",
+    "objective": "4.1",
+    "question": "A wireless engineer reviewing WPA3 settings sees an encryption protocol that provides data confidentiality with AES and message integrity with the Galois Message Authentication Code (GMAC). Which protocol is this?",
+    "choices": {
+      "a": "CCMP",
+      "b": "GCMP",
+      "c": "TKIP",
+      "d": "SAE"
+    },
+    "answer": "b",
+    "explanation": "The Galois/Counter Mode Protocol (GCMP) used with WPA3 encrypts data with AES and provides integrity with GMAC. CCMP is the WPA2 protocol and uses CBC-MAC for integrity, and TKIP is a legacy RC4-based WPA protocol. SAE is the WPA3 authentication and key exchange process, not the data encryption protocol.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.1-18",
+      "4.1-20"
+    ]
+  },
+  {
+    "id": "SY0-701-4904",
+    "domain": "4.0",
+    "objective": "4.1",
+    "question": "An attacker captures the four-way handshake on an office WPA2-Personal network and cracks the pre-shared key offline. Why is this especially damaging?",
+    "choices": {
+      "a": "Only the session of the one user whose handshake was captured is exposed",
+      "b": "Every user shares the same key and there is no forward secrecy, so the attacker can join the network and decrypt other users' captured traffic",
+      "c": "The attacker obtains each user's individual RADIUS credentials",
+      "d": "The attacker obtains the private key of the access point's certificate"
+    },
+    "answer": "b",
+    "explanation": "With WPA2-PSK everyone uses the same pre-shared key, so cracking it effectively gives the attacker everyone's wireless key, and without forward secrecy previously captured traffic can be decrypted too. The exposure is not limited to one user. WPA2-Personal does not use RADIUS credentials or access point certificates; those belong to Enterprise (802.1X) deployments.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.1-21"
+    ]
+  },
+  {
+    "id": "SY0-701-4905",
+    "domain": "4.0",
+    "objective": "4.1",
+    "question": "A security team reviews real-time data from a web application showing blocked SQL injection attempts, a sudden increase in client connections, and an unusually large file transfer to one account at 3 AM. Which application security practice is providing this information?",
+    "choices": {
+      "a": "Static code analysis",
+      "b": "Code signing",
+      "c": "Application security monitoring",
+      "d": "Input validation"
+    },
+    "answer": "c",
+    "explanation": "Application security monitoring collects real-time usage information, records blocked attacks, and flags anomalies such as unusual file transfers or spikes in access. Static code analysis examines source code before it runs, code signing proves who published the software, and input validation checks data entering the application without reporting on overall activity.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.1-27"
+    ]
+  },
+  {
+    "id": "SY0-701-4906",
+    "domain": "4.0",
+    "objective": "4.3",
+    "question": "A tester sends large volumes of random and malformed input to a running application's API and watches for crashes, server errors, and unhandled exceptions. Which technique is the tester using?",
+    "choices": {
+      "a": "Static code analysis",
+      "b": "Fuzzing",
+      "c": "Package monitoring",
+      "d": "Code signing"
+    },
+    "answer": "b",
+    "explanation": "Fuzzing is a dynamic analysis technique that feeds random or unexpected input to a running program to find inputs that cause crashes or errors. Static code analysis reviews source code without running it, package monitoring tracks third-party components for known vulnerabilities, and code signing verifies publisher and integrity.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.3-02"
+    ]
+  },
+  {
+    "id": "SY0-701-4907",
+    "domain": "4.0",
+    "objective": "4.3",
+    "question": "Before a risk assessment, an analyst collects information about threats to the company's industry from public social media posts, discussion forums, government reports, and published financial filings. What type of threat intelligence is this?",
+    "choices": {
+      "a": "Proprietary/third-party intelligence",
+      "b": "Open-source intelligence (OSINT)",
+      "c": "Dark web intelligence",
+      "d": "Information-sharing organization data"
+    },
+    "answer": "b",
+    "explanation": "OSINT is gathered from publicly available sources such as the internet, social media, government data, and commercial publications. Proprietary intelligence is purchased from a vendor, dark web intelligence comes from overlay networks used by criminal groups, and information-sharing organizations distribute data contributed by their members.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.3-03"
+    ]
+  },
+  {
+    "id": "SY0-701-4908",
+    "domain": "4.0",
+    "objective": "4.3",
+    "question": "A company with a small security team pays a vendor for a subscription service that correlates threat data from many sources, continuously monitors for new threats, and automatically pushes new indicators to the company's firewalls. Which type of threat intelligence is this?",
+    "choices": {
+      "a": "Open-source intelligence",
+      "b": "Proprietary/third-party intelligence",
+      "c": "Dark web intelligence",
+      "d": "A bug bounty program"
+    },
+    "answer": "b",
+    "explanation": "Proprietary or third-party threat intelligence is compiled by a vendor and sold as a service, often with correlation, constant monitoring, and automated prevention workflows. OSINT comes from free public sources, dark web intelligence focuses on criminal forums and marketplaces, and a bug bounty pays researchers to report vulnerabilities rather than supplying threat data.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.3-03"
+    ]
+  },
+  {
+    "id": "SY0-701-4909",
+    "domain": "4.0",
+    "objective": "4.3",
+    "question": "A retailer wants early warning if its customers' card numbers or employees' account credentials are offered for sale, and it wants hacker forums watched for mentions of the company and its executives. Which threat intelligence source best meets this need?",
+    "choices": {
+      "a": "Dark web intelligence",
+      "b": "Credentialed vulnerability scanning",
+      "c": "Static code analysis",
+      "d": "Package monitoring"
+    },
+    "answer": "a",
+    "explanation": "Dark web intelligence monitors the forums and marketplaces where hacking groups sell stolen card numbers and credentials and discuss targets. Vulnerability scanning and static code analysis find weaknesses in the company's own systems and code, and package monitoring tracks vulnerabilities in third-party software components.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.3-03"
+    ]
+  },
+  {
+    "id": "SY0-701-4910",
+    "domain": "4.0",
+    "objective": "4.3",
+    "question": "During a penetration test, the tester compromises a web server in the screened subnet and then uses it as a relay to reach database servers on an internal network that cannot be reached directly from the internet. What is this technique called?",
+    "choices": {
+      "a": "Pivoting",
+      "b": "Persistence",
+      "c": "Passive reconnaissance",
+      "d": "Initial exploitation"
+    },
+    "answer": "a",
+    "explanation": "A pivot uses a compromised system as a proxy or relay to reach systems that would not normally be accessible. Persistence ensures the tester can get back in later, passive reconnaissance gathers information without touching the target, and initial exploitation is the first break-in, which had already happened.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.3-04"
+    ]
+  },
+  {
+    "id": "SY0-701-4911",
+    "domain": "4.0",
+    "objective": "4.3",
+    "question": "After gaining access to a server, a penetration tester creates a new local administrator account and installs a scheduled backdoor so that access will survive a reboot or a password change. Which part of the penetration testing process is this?",
+    "choices": {
+      "a": "Lateral movement",
+      "b": "Pivoting",
+      "c": "Persistence",
+      "d": "Rules of engagement"
+    },
+    "answer": "c",
+    "explanation": "Persistence makes sure there is a way back into a compromised system, for example by creating accounts or installing a backdoor. Lateral movement moves from system to system, pivoting uses a compromised host to reach otherwise unreachable networks, and the rules of engagement are the document that defines scope and test parameters.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.3-04"
+    ]
+  },
+  {
+    "id": "SY0-701-4912",
+    "domain": "4.0",
+    "objective": "4.3",
+    "question": "A security researcher discovers a vulnerability in a vendor's router firmware. Under a responsible disclosure program, which sequence should occur?",
+    "choices": {
+      "a": "The researcher publishes full details immediately so users can protect themselves",
+      "b": "The researcher reports the flaw to the vendor, the vendor creates a fix, and then the vulnerability is announced publicly",
+      "c": "The vendor announces the vulnerability publicly, and then the researcher reports the technical details",
+      "d": "The researcher keeps the flaw private until a buyer offers a reward for it"
+    },
+    "answer": "b",
+    "explanation": "Responsible disclosure is a controlled release of information: the researcher reports privately, the manufacturer develops a fix, and the vulnerability is then made public. Publishing immediately gives attackers a head start before a fix exists, the vendor cannot announce what it has not been told, and selling the flaw is not disclosure at all.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.3-05"
+    ]
+  },
+  {
+    "id": "SY0-701-4913",
+    "domain": "4.0",
+    "objective": "4.5",
+    "question": "Standard Linux file permissions let a file's owner decide who can access it. Which access control model does SELinux add to the Linux kernel?",
+    "choices": {
+      "a": "Discretionary access control",
+      "b": "Mandatory access control",
+      "c": "Attribute-based access control",
+      "d": "Time-of-day restrictions"
+    },
+    "answer": "b",
+    "explanation": "Security-Enhanced Linux adds mandatory access control to the Linux kernel, so the system enforces policy based on security labels that users cannot override. Traditional Linux file permissions are discretionary because owners control access. Attribute-based access control evaluates combinations of attributes and time-of-day restrictions limit when access is allowed; neither is the model SELinux adds.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.5-14"
+    ]
+  },
+  {
+    "id": "SY0-701-4914",
+    "domain": "4.0",
+    "objective": "4.5",
+    "question": "Users' mail clients currently retrieve messages with IMAP on TCP port 143. The security team wants retrieval to be encrypted with TLS. Which port should the firewall allow for the mail server instead?",
+    "choices": {
+      "a": "TCP 993",
+      "b": "TCP 995",
+      "c": "TCP 143",
+      "d": "TCP 25"
+    },
+    "answer": "a",
+    "explanation": "IMAP over TLS (IMAPS) uses TCP 993. TCP 995 is POP3 over TLS, a different retrieval protocol, TCP 143 is the unencrypted IMAP port already in use, and TCP 25 is SMTP for transferring mail between servers rather than retrieving it.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.5-16",
+      "4.5-15"
+    ]
+  },
+  {
+    "id": "SY0-701-4915",
+    "domain": "4.0",
+    "objective": "4.5",
+    "question": "Which TWO tools are examples of file integrity monitoring? (Choose two.)",
+    "choices": {
+      "a": "Windows System File Checker (SFC)",
+      "b": "Tripwire",
+      "c": "Wireshark",
+      "d": "Nmap"
+    },
+    "answer": [
+      "a",
+      "b"
+    ],
+    "explanation": "System File Checker verifies protected Windows system files and replaces modified ones, and Tripwire detects changes to files on Linux and other systems; both monitor file integrity. Wireshark is a protocol analyzer that captures packets, and Nmap is a network and port scanner.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.5-23"
+    ]
+  },
+  {
+    "id": "SY0-701-4916",
+    "domain": "4.0",
+    "objective": "4.5",
+    "question": "A data loss prevention (DLP) system must recognize sensitive information before it can block it from leaving the organization. Which TWO techniques does DLP commonly use to identify sensitive data? (Choose two.)",
+    "choices": {
+      "a": "Pattern matching, such as regular expressions that match credit card or Social Security number formats",
+      "b": "Reading classification labels applied to documents, such as Confidential or Restricted",
+      "c": "Comparing hashes of operating system binaries with a known-good baseline",
+      "d": "Checking whether a device has current antivirus definitions and patches before it joins the network"
+    },
+    "answer": [
+      "a",
+      "b"
+    ],
+    "explanation": "DLP inspects content and metadata, using patterns such as card number or Social Security number formats and the classification labels on documents, to decide what is sensitive before allowing or blocking a transfer. Comparing hashes of system binaries against a baseline is file integrity monitoring, and checking antivirus and patch status before admission is network access control posture assessment.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.5-24"
+    ]
+  },
+  {
+    "id": "SY0-701-4917",
+    "domain": "4.0",
+    "objective": "4.5",
+    "question": "A university's NAC system must check the security posture of student-owned laptops before granting network access, but students should not have to install permanent software. Which type of NAC agent best fits?",
+    "choices": {
+      "a": "Persistent agent",
+      "b": "Dissolvable agent",
+      "c": "Agentless NAC integrated with Active Directory",
+      "d": "An EDR agent"
+    },
+    "answer": "b",
+    "explanation": "A dissolvable agent is downloaded and run during the posture check and then removed, so nothing stays installed on a personal device. A persistent agent is permanently installed and periodically updated, agentless NAC tied to Active Directory checks domain members at login and would not cover non-domain student laptops, and an EDR agent is permanent endpoint protection rather than an admission check.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.5-25"
+    ]
+  },
+  {
+    "id": "SY0-701-4918",
+    "domain": "4.0",
+    "objective": "4.5",
+    "question": "Which TWO capabilities distinguish endpoint detection and response (EDR) from traditional signature-based antivirus? (Choose two.)",
+    "choices": {
+      "a": "Behavioral analysis that can detect threats for which no signature exists",
+      "b": "Automated responses such as isolating the host and rolling back malicious changes",
+      "c": "Scanning files only against a list of known malware signatures",
+      "d": "Filtering web requests by URL category"
+    },
+    "answer": [
+      "a",
+      "b"
+    ],
+    "explanation": "EDR looks at behavior and process activity, so it can catch new threats, and it can respond automatically by isolating a system or rolling back changes while recording data for root cause analysis. Matching only known signatures is what traditional antivirus does, and URL category filtering is a web filtering function.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.5-26"
+    ]
+  },
+  {
+    "id": "SY0-701-4919",
+    "domain": "4.0",
+    "objective": "4.6",
+    "question": "A company has employees install an authenticator app on their smartphones that shows a new six-digit code every 30 seconds, which they enter after their password. What is the app an example of?",
+    "choices": {
+      "a": "A soft authentication token",
+      "b": "A hard authentication token",
+      "c": "A biometric factor",
+      "d": "Somewhere you are"
+    },
+    "answer": "a",
+    "explanation": "An authenticator app that generates time-based one-time codes is a soft (software) token, which is a something-you-have factor. A hard token is a separate physical device such as a key fob, a biometric is something you are, and somewhere you are is based on location.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.6-17",
+      "4.6-18"
+    ]
+  },
+  {
+    "id": "SY0-701-4920",
+    "domain": "4.0",
+    "objective": "4.1",
+    "question": "An administrator deploys a new operating system security baseline to servers that already have an application vendor's baseline applied. The application stops working because the new baseline disables a service the application requires. Which practice would most likely have prevented this outage?",
+    "choices": {
+      "a": "Deploying baselines directly to production so problems surface quickly",
+      "b": "Testing and measuring the combined baselines in a lab to find conflicts before deployment",
+      "c": "Using only the operating system's default configuration",
+      "d": "Turning off integrity measurements against the baseline"
+    },
+    "answer": "b",
+    "explanation": "Baselines from different sources can contradict each other in complex environments, so they should be tested together before deployment. Deploying straight to production causes exactly this kind of outage, default configurations are not secure, and turning off integrity measurements only hides drift from the baseline.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.1-03",
+      "4.1-02"
+    ]
+  },
+  {
+    "id": "SY0-701-4921",
+    "domain": "4.0",
+    "objective": "4.3",
+    "question": "A company runs its vulnerability scans only from an internet-based scanning service against its public IP addresses. What is the main weakness of this approach?",
+    "choices": {
+      "a": "It misses vulnerabilities that an insider or an attacker who already has a foothold could reach on internal systems",
+      "b": "External scans always cause denial of service on public servers",
+      "c": "It produces CVE identifiers instead of CVSS scores",
+      "d": "Internet-based scans are more invasive than a penetration test"
+    },
+    "answer": "a",
+    "explanation": "Vulnerability scans should be run from both outside and inside the network, because many systems and services are reachable only internally and insider threats should not be dismissed. Scans are usually minimally invasive and far less intrusive than a penetration test, and scanners report both CVE references and severity scores regardless of where they run.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.3-01"
+    ]
+  },
+  {
+    "id": "SY0-701-4922",
+    "domain": "4.0",
+    "objective": "4.5",
+    "question": "A Windows kiosk in a hotel lobby is a standalone computer that is not joined to the company's Active Directory domain. The administrator must set an account lockout threshold and an automatic screen lock on it using built-in operating system tools. Which approach should the administrator use?",
+    "choices": {
+      "a": "Configure the settings in the kiosk's local Group Policy",
+      "b": "Link a domain Group Policy Object to an organizational unit, because domain policies apply to every Windows computer on the network",
+      "c": "Enable SELinux in enforcing mode on the kiosk",
+      "d": "Rely on agentless NAC to push the configuration settings to the kiosk at login"
+    },
+    "answer": "a",
+    "explanation": "Windows Group Policy exists as both local and domain policy, and domain Group Policy Objects apply only to computers that are members of the domain, so a standalone kiosk must be configured through its local Group Policy. A domain GPO never reaches a non-domain computer, SELinux is a Linux kernel security module, and agentless NAC checks domain-joined devices at login rather than pushing configuration settings.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.5-13"
+    ]
+  },
+  {
+    "id": "SY0-701-5901",
+    "domain": "5.0",
+    "objective": "5.1",
+    "question": "A company's information security policy says users must receive only the access their jobs require. The security team then writes a mandatory document stating that only role-based access control may be used, that every access request must include documented approval from the data owner, and the conditions under which access must be removed. Which type of document is this?",
+    "choices": {
+      "a": "Access control standard",
+      "b": "Acceptable use policy",
+      "c": "Offboarding procedure",
+      "d": "Security guideline"
+    },
+    "answer": "a",
+    "explanation": "An access control standard turns the policy into formal, mandatory requirements, defining which access control models may be used, how a user obtains access, and how access is removed. An acceptable use policy defines how users may use company resources, an offboarding procedure lists the steps taken when someone leaves rather than governing all access decisions, and a guideline is a recommendation rather than a mandatory requirement.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "5.1-10"
+    ]
+  },
+  {
+    "id": "SY0-701-5902",
+    "domain": "5.0",
+    "objective": "5.1",
+    "question": "Which requirements belong in an organization's password standard? (Choose two.)",
+    "choices": {
+      "a": "Visitors to the data center must be escorted at all times",
+      "b": "Passwords must be at least 15 characters, and passwords found in known breach lists must be rejected",
+      "c": "Backup media must be encrypted with AES-256 before leaving the site",
+      "d": "A user's identity must be verified before a forgotten password is reset"
+    },
+    "answer": [
+      "b",
+      "d"
+    ],
+    "explanation": "A password standard sets mandatory rules for passwords, including length, banned or breached passwords, and how resets are handled securely. Visitor escorts belong in a physical security standard, and encrypting backup media belongs in an encryption standard.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "5.1-09"
+    ]
+  },
+  {
+    "id": "SY0-701-5903",
+    "domain": "5.0",
+    "objective": "5.2",
+    "question": "A risk assessment finds that a public web application is vulnerable to SQL injection. The company keeps the application online, deploys a web application firewall, and fixes the vulnerable input validation, which lowers the risk to an acceptable level. Which risk management strategy is this?",
+    "choices": {
+      "a": "Transfer",
+      "b": "Mitigate",
+      "c": "Avoid",
+      "d": "Accept"
+    },
+    "answer": "b",
+    "explanation": "Mitigation reduces the likelihood or impact of a risk by adding or improving controls, such as a WAF and input validation. Avoidance would take the application offline or never run it, transfer would shift the impact to another party such as an insurer, and acceptance would leave the risk as it is without new controls.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "5.2-25"
+    ]
+  },
+  {
+    "id": "SY0-701-5904",
+    "domain": "5.0",
+    "objective": "5.2",
+    "question": "A company keeps spare drives and power supplies on site and trains its staff to swap them, so a failed storage array is now fixed in about one hour instead of waiting two days for the vendor. Which metric does this change directly improve?",
+    "choices": {
+      "a": "Mean time between failures (MTBF)",
+      "b": "Recovery point objective (RPO)",
+      "c": "Annualized loss expectancy (ALE)",
+      "d": "Mean time to repair (MTTR)"
+    },
+    "answer": "d",
+    "explanation": "MTTR is the average time needed to repair a failed component and return it to service, and on-site spares shorten it. MTBF measures how often failures happen, which spare parts do not change. The RPO is the maximum acceptable data loss, and ALE is the expected yearly cost of a risk rather than a repair-time measure.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "5.2-29"
+    ]
+  },
+  {
+    "id": "SY0-701-5905",
+    "domain": "5.0",
+    "objective": "5.3",
+    "question": "A company hires a consulting firm for a one-time project to segment its network. After the work is finished, the two sides disagree about whether updated network diagrams and administrator training were supposed to be included. Which agreement should have listed the project's specific tasks, deliverables, and completion date?",
+    "choices": {
+      "a": "Statement of work (SOW)",
+      "b": "Service-level agreement (SLA)",
+      "c": "Non-disclosure agreement (NDA)",
+      "d": "Memorandum of understanding (MOU)"
+    },
+    "answer": "a",
+    "explanation": "A statement of work, also called a work order, defines the specific scope, tasks, deliverables, schedule, and cost of a project, so it is the document that settles what was included. An SLA sets ongoing measurable service levels such as uptime or response times, an NDA protects confidential information, and an MOU is a generally non-binding statement of shared intent without detailed deliverables.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "5.3-12"
+    ]
+  },
+  {
+    "id": "SY0-701-5906",
+    "domain": "5.0",
+    "objective": "5.1",
+    "question": "A company is the data controller for its employees' personal data and plans to outsource payroll to an external payroll company that will process the data and store employee records. Which statement about this arrangement is correct?",
+    "choices": {
+      "a": "The company still decides the purposes and means of processing and remains accountable, so it should choose a processor with adequate safeguards and contractually limit it to the company's instructions",
+      "b": "Once payroll is outsourced, all accountability for the employees' data transfers to the payroll company",
+      "c": "The payroll company becomes the data controller because it stores the employee information",
+      "d": "The company becomes a data processor because it no longer handles the data itself"
+    },
+    "answer": "a",
+    "explanation": "The controller determines the purposes and means of processing, such as payroll amounts and timeframes, and keeps that role and its accountability when it uses a processor, so it must select a processor that protects the data and bind it to follow instructions. Outsourcing does not transfer the controller's accountability, storing the data makes the payroll company a processor rather than a controller, and the company does not become a processor because the processing is done by someone else.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "5.1-28",
+      "5.1-29"
+    ]
+  },
+  {
+    "id": "SY0-701-4801",
+    "domain": "4.0",
+    "objective": "4.5",
+    "question": "A vendor says its new monitoring application is secure because its agents communicate with the server over TCP port 443. How should the security team confirm that the traffic is actually protected?",
+    "choices": {
+      "a": "Accept the claim, because traffic on port 443 is always encrypted",
+      "b": "Capture packets between an agent and the server and confirm the payload is encrypted",
+      "c": "Run a port scan to confirm that port 443 is open on the server",
+      "d": "Check that the firewall has a rule allowing TCP 443 to the server"
+    },
+    "answer": "b",
+    "explanation": "A port number does not guarantee security, because any application can send cleartext data over port 443; a packet capture shows whether the data on the wire is really encrypted. A port scan and a firewall rule only show that the port is reachable, not whether the traffic is protected.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.5-16"
+    ]
+  },
+  {
+    "id": "SY0-701-4802",
+    "domain": "4.0",
+    "objective": "4.6",
+    "question": "A company's fingerprint authentication database is breached. The system stored mathematical representations of fingerprints rather than images. Why is this compromise still a greater long-term concern than a breach of password hashes?",
+    "choices": {
+      "a": "A fingerprint cannot be changed the way a password can, so affected users cannot simply replace it",
+      "b": "Fingerprint templates contain each user's password in encoded form",
+      "c": "Fingerprints are a something-you-have factor, so the templates can be used as physical tokens",
+      "d": "Biometric systems cannot be combined with any other authentication factor"
+    },
+    "answer": "a",
+    "explanation": "Biometrics are something you are, and while a user can change a password after a breach, they cannot change their fingerprint. Templates do not contain passwords, biometrics are something you are rather than something you have, and biometrics are commonly combined with other factors in multifactor authentication.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.6-17",
+      "4.6-18"
     ]
   }
 ]
