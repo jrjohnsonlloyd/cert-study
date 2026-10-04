@@ -1,0 +1,134 @@
+[
+  {
+    "id": "N10-009-0001",
+    "domain": "1.0",
+    "objective": "1.1",
+    "question": "Which OSI layer is responsible for logical addressing and for routing packets between networks?",
+    "choices": {"a": "Data link", "b": "Network", "c": "Transport", "d": "Session"},
+    "answer": "b",
+    "explanation": "Layer 3 (Network) handles logical addressing (IP) and routing. Data link (layer 2) uses MAC addresses within a single network, Transport (layer 4) handles ports and reliability (TCP/UDP), and Session (layer 5) manages conversations between applications.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0002",
+    "domain": "1.0",
+    "objective": "1.4",
+    "question": "A directory server must accept LDAP queries over TLS. Which port should the firewall allow?",
+    "choices": {"a": "389", "b": "636", "c": "3268", "d": "443"},
+    "answer": "b",
+    "explanation": "LDAPS (LDAP over TLS) uses TCP 636. Port 389 is plain LDAP (which can be upgraded with StartTLS), 3268 is the Active Directory Global Catalog, and 443 is HTTPS.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0003",
+    "domain": "1.0",
+    "objective": "1.7",
+    "question": "A workstation is configured as 192.168.10.77/26. What is its network address?",
+    "choices": {"a": "192.168.10.0", "b": "192.168.10.64", "c": "192.168.10.76", "d": "192.168.10.127"},
+    "answer": "b",
+    "explanation": "A /26 mask is 255.255.255.192, so subnets step by 64: .0, .64, .128, .192. The address .77 falls in the .64 block, so the network is 192.168.10.64. That block's broadcast is .127 and its usable hosts are .65 to .126.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0004",
+    "domain": "1.0",
+    "objective": "1.7",
+    "question": "How many usable host addresses does a /27 IPv4 subnet provide?",
+    "choices": {"a": "14", "b": "30", "c": "32", "d": "62"},
+    "answer": "b",
+    "explanation": "A /27 leaves 5 host bits: 2^5 = 32 addresses. Subtract the network and broadcast addresses to get 30 usable hosts. A /28 gives 14 and a /26 gives 62.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0005",
+    "domain": "1.0",
+    "objective": "1.5",
+    "question": "What is the maximum length of a Category 6 copper channel, including patch cords, under TIA-568?",
+    "choices": {"a": "55 meters", "b": "90 meters", "c": "100 meters", "d": "185 meters"},
+    "answer": "c",
+    "explanation": "The full channel can be 100 m: up to 90 m of permanent link plus up to 10 m of patch cords. 55 m is the commonly cited limit for 10GBASE-T over Cat6, and 185 m is the old 10BASE2 coaxial limit.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0006",
+    "domain": "2.0",
+    "objective": "2.2",
+    "question": "Which configuration allows one switch port to carry traffic for several VLANs to another switch?",
+    "choices": {"a": "Port mirroring", "b": "802.1Q trunk", "c": "Link aggregation (LACP)", "d": "Spanning Tree Protocol"},
+    "answer": "b",
+    "explanation": "An 802.1Q trunk tags frames with their VLAN ID so multiple VLANs share one link. Port mirroring copies traffic for analysis, LACP bundles several links into one logical link, and STP prevents switching loops.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0007",
+    "domain": "2.0",
+    "objective": "2.2",
+    "question": "A network administrator changes the native VLAN on all trunks to an unused VLAN that carries no hosts. What attack does this primarily mitigate?",
+    "choices": {"a": "ARP poisoning", "b": "VLAN hopping by double tagging", "c": "DHCP starvation", "d": "MAC flooding"},
+    "answer": "b",
+    "explanation": "Double tagging abuses untagged native-VLAN traffic on trunks. Moving the native VLAN to an unused VLAN with no access ports removes that path. ARP poisoning is mitigated with dynamic ARP inspection, DHCP starvation with DHCP snooping and port security, and MAC flooding with port security.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0008",
+    "domain": "3.0",
+    "objective": "3.4",
+    "question": "Which DNS record type maps a hostname to an IPv6 address?",
+    "choices": {"a": "A", "b": "AAAA", "c": "CNAME", "d": "PTR"},
+    "answer": "b",
+    "explanation": "AAAA records map names to IPv6 addresses. A records map to IPv4, CNAME creates an alias to another name, and PTR maps an address back to a name for reverse lookups.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0009",
+    "domain": "3.0",
+    "objective": "3.4",
+    "question": "During DHCP address assignment, which message does the client send immediately after receiving a DHCPOFFER?",
+    "choices": {"a": "DHCPDISCOVER", "b": "DHCPREQUEST", "c": "DHCPACK", "d": "DHCPRELEASE"},
+    "answer": "b",
+    "explanation": "The order is DORA: Discover (client), Offer (server), Request (client), Acknowledge (server). DHCPRELEASE is sent when a client gives up its lease.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0010",
+    "domain": "4.0",
+    "objective": "4.3",
+    "question": "In an 802.1X port-based authentication setup, what role does the switch play?",
+    "choices": {"a": "Supplicant", "b": "Authenticator", "c": "Authentication server", "d": "Certificate authority"},
+    "answer": "b",
+    "explanation": "The switch (or wireless access point) is the authenticator: it relays credentials and opens the port only after approval. The supplicant is the client device, and the authentication server is usually a RADIUS server.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0011",
+    "domain": "5.0",
+    "objective": "5.1",
+    "question": "In the CompTIA troubleshooting methodology, which step comes immediately after establishing a theory of probable cause?",
+    "choices": {"a": "Identify the problem", "b": "Test the theory to determine the cause", "c": "Establish a plan of action", "d": "Document findings"},
+    "answer": "b",
+    "explanation": "The order is: identify the problem, establish a theory, test the theory, establish a plan of action, implement the solution, verify full system functionality, and document findings. If the test fails, form a new theory or escalate.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0012",
+    "domain": "5.0",
+    "objective": "5.5",
+    "question": "A user reports slow access to a remote site. Which two Windows commands help locate where along the path the delay or loss occurs? (Choose two.)",
+    "choices": {"a": "tracert", "b": "pathping", "c": "ipconfig /flushdns", "d": "netstat -ano"},
+    "answer": ["a", "b"],
+    "explanation": "tracert lists each hop and its response time. pathping combines traceroute with per-hop loss statistics over time. Flushing the DNS cache does not measure the path, and netstat shows local connections and listening ports.",
+    "source": "ai-generated",
+    "verified": false
+  }
+]

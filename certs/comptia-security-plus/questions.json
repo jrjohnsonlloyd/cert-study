@@ -1,0 +1,134 @@
+[
+  {
+    "id": "SY0-701-0001",
+    "domain": "1.0",
+    "objective": "1.1",
+    "question": "A workstation locks an account after five failed logon attempts. Which control category and type is this?",
+    "choices": {"a": "Managerial, detective", "b": "Technical, preventive", "c": "Operational, corrective", "d": "Physical, deterrent"},
+    "answer": "b",
+    "explanation": "Account lockout is enforced by the system itself (technical) and stops further guessing before access is gained (preventive). Managerial controls are policies and risk decisions, operational controls are carried out by people, and physical controls protect facilities.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0002",
+    "domain": "1.0",
+    "objective": "1.2",
+    "question": "Which security concept gives proof that a specific sender sent a message, so the sender cannot later deny it?",
+    "choices": {"a": "Confidentiality", "b": "Availability", "c": "Non-repudiation", "d": "Obfuscation"},
+    "answer": "c",
+    "explanation": "Non-repudiation, usually provided by digital signatures, proves who originated a message. Confidentiality keeps data secret, availability keeps systems usable, and obfuscation makes data harder to understand without protecting it cryptographically.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0003",
+    "domain": "1.0",
+    "objective": "1.2",
+    "question": "In a zero trust architecture, which component evaluates policy and decides whether a subject may access a resource?",
+    "choices": {"a": "Policy enforcement point", "b": "Policy engine", "c": "Implicit trust zone", "d": "Subject"},
+    "answer": "b",
+    "explanation": "The policy engine (part of the control plane, with the policy administrator) makes the access decision. The policy enforcement point carries out that decision in the data plane. Zero trust removes implicit trust zones, and the subject is the user or device requesting access.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0004",
+    "domain": "1.0",
+    "objective": "1.4",
+    "question": "An administrator downloads an ISO and wants to confirm it was not altered. What should be compared with the value the vendor publishes?",
+    "choices": {"a": "An AES-256 ciphertext", "b": "A SHA-256 hash", "c": "An RSA public key", "d": "A Base64 encoding"},
+    "answer": "b",
+    "explanation": "Hashing provides integrity: if the computed SHA-256 hash matches the published one, the file is unchanged. AES provides confidentiality, an RSA public key on its own proves nothing about the file, and Base64 is encoding, not security.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0005",
+    "domain": "1.0",
+    "objective": "1.4",
+    "question": "Alice wants to send Bob a message that only Bob can read, using asymmetric encryption. Which key does Alice encrypt with?",
+    "choices": {"a": "Alice's private key", "b": "Alice's public key", "c": "Bob's public key", "d": "Bob's private key"},
+    "answer": "c",
+    "explanation": "Encrypting with Bob's public key means only Bob's private key can decrypt it. Encrypting with Alice's private key creates a digital signature, which proves origin but provides no confidentiality. Alice never has Bob's private key.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0006",
+    "domain": "2.0",
+    "objective": "2.4",
+    "question": "Logs show one or two failed logins against hundreds of different accounts, all using the same common password. Which attack is this?",
+    "choices": {"a": "Brute force", "b": "Password spraying", "c": "Credential stuffing", "d": "Pass the hash"},
+    "answer": "b",
+    "explanation": "Password spraying tries a few common passwords across many accounts to stay under lockout thresholds. Brute force hammers one account with many passwords, credential stuffing replays username and password pairs from breaches, and pass the hash reuses captured NTLM hashes.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0007",
+    "domain": "2.0",
+    "objective": "2.5",
+    "question": "A company wants receiving mail servers to quarantine messages that fail SPF and DKIM checks for its domain. Which DNS record sets that policy?",
+    "choices": {"a": "MX", "b": "DMARC", "c": "PTR", "d": "CNAME"},
+    "answer": "b",
+    "explanation": "A DMARC TXT record at _dmarc.<domain> tells receivers what to do with mail that fails SPF and DKIM alignment (none, quarantine, or reject) and where to send reports. MX routes inbound mail, PTR is reverse DNS, and CNAME is an alias.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0008",
+    "domain": "4.0",
+    "objective": "4.8",
+    "question": "An analyst moves an infected laptop to a quarantine VLAN to stop it spreading. Which phase of the incident response process is this?",
+    "choices": {"a": "Preparation", "b": "Detection", "c": "Containment", "d": "Lessons learned"},
+    "answer": "c",
+    "explanation": "Isolating an affected system limits damage, which is containment. Preparation happens before incidents, detection identifies that an incident happened, and lessons learned comes after recovery.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0009",
+    "domain": "4.0",
+    "objective": "4.8",
+    "question": "Following the order of volatility, which evidence should be collected first from a running compromised system?",
+    "choices": {"a": "A full image of the hard drive", "b": "The contents of RAM", "c": "Archived backup tapes", "d": "Logs on a remote syslog server"},
+    "answer": "b",
+    "explanation": "Collect the most volatile data first. RAM is lost at power-off, so it comes before disk images. Remote logs and archived backups are the least volatile and can be collected later. This is why containment procedures say not to power off a suspect machine.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0010",
+    "domain": "4.0",
+    "objective": "4.6",
+    "question": "A login requires a password and a hardware security key. Which two authentication factor categories are used? (Choose two.)",
+    "choices": {"a": "Something you know", "b": "Something you have", "c": "Something you are", "d": "Somewhere you are"},
+    "answer": ["a", "b"],
+    "explanation": "The password is something you know and the security key is something you have. Something you are is biometrics, and somewhere you are is location-based.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0011",
+    "domain": "5.0",
+    "objective": "5.2",
+    "question": "Management reviews a risk, decides the remaining risk is within its risk appetite, and formally signs off without taking further action. Which risk response is this?",
+    "choices": {"a": "Transfer", "b": "Avoid", "c": "Accept", "d": "Mitigate"},
+    "answer": "c",
+    "explanation": "Accepting a risk means formally acknowledging it and choosing not to act further. Transfer shifts it to another party (for example through insurance), avoidance stops the risky activity, and mitigation adds controls to reduce it.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0012",
+    "domain": "5.0",
+    "objective": "5.5",
+    "question": "A customer asks a SaaS vendor for evidence that its security controls operated effectively over the past twelve months. Which report best meets this request?",
+    "choices": {"a": "SOC 2 Type I", "b": "SOC 2 Type II", "c": "A vulnerability scan report", "d": "The vendor's acceptable use policy"},
+    "answer": "b",
+    "explanation": "A SOC 2 Type II report covers the operating effectiveness of controls over a period of time. Type I covers control design at a single point in time. A scan report and an acceptable use policy are not independent attestations.",
+    "source": "ai-generated",
+    "verified": false
+  }
+]
