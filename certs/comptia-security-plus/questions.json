@@ -8714,7 +8714,7 @@
     "id": "SY0-701-5028",
     "domain": "5.0",
     "objective": "5.2",
-    "question": "A critical remote code execution vulnerability is announced in the VPN appliance a company uses. The CISO immediately orders an unscheduled assessment of the risk it poses to the business. Which type of risk assessment is this?",
+    "question": "A small company has no formal risk assessment process or schedule. During a sales meeting, a large customer asks whether the company could keep operating if its main file server were lost, so the owner asks two staff members to assess that risk. The effort ends once they report back. Which type of risk assessment is this?",
     "choices": {
       "a": "One-time",
       "b": "Ad hoc",
@@ -8722,7 +8722,7 @@
       "d": "Continuous"
     },
     "answer": "b",
-    "explanation": "An ad hoc risk assessment is performed as needed in response to an event, such as a newly disclosed vulnerability. A recurring assessment happens on a set schedule, a continuous assessment runs constantly through ongoing monitoring, and a one-time assessment is done once for a specific project or decision.",
+    "explanation": "An ad hoc risk assessment is performed whenever a situation calls for one, often in an organization without a formal assessment process, and it ends once the question is answered. A one-time assessment is part of a specific one-time project, such as an acquisition or a new equipment installation, a recurring assessment repeats on a set schedule, and a continuous assessment is built into an ongoing process such as change control.",
     "source": "ai-generated",
     "verified": false,
     "topics": [
@@ -8741,7 +8741,7 @@
       "d": "Continuous"
     },
     "answer": "c",
-    "explanation": "A one-time assessment is performed once for a specific purpose, such as evaluating an acquisition or a new project. A recurring assessment is repeated on a schedule, and a continuous assessment is ongoing. An ad hoc assessment is a reaction to an unexpected event, such as a new vulnerability, rather than a planned single evaluation.",
+    "explanation": "A one-time assessment is performed as part of a specific one-time project or decision, such as an acquisition or a new equipment installation. A recurring assessment is repeated on a schedule, and a continuous assessment is built into an ongoing process such as change control. An ad hoc assessment is performed whenever a situation calls for one, often without a formal assessment process, rather than as part of a defined project.",
     "source": "ai-generated",
     "verified": false,
     "topics": [
@@ -8942,7 +8942,7 @@
       "d": "Key risk indicator"
     },
     "answer": "c",
-    "explanation": "A risk threshold is the defined level at which a risk requires a specific action, such as escalation. The risk owner is the accountable person, a key risk indicator is a metric that warns a risk is changing, and exposure factor is the percentage of asset value lost in one incident.",
+    "explanation": "A risk threshold is the defined boundary that determines when a risk calls for a specific action, such as escalation or more mitigation; it is also described in cost terms as the point where the cost of mitigation is at least equal to the value the mitigation provides. The risk owner is the accountable person, a key risk indicator is a metric that warns a risk is changing, and exposure factor is the percentage of asset value lost in one incident.",
     "source": "ai-generated",
     "verified": false,
     "topics": [
@@ -9317,7 +9317,7 @@
       "d": "Master service agreement (MSA)"
     },
     "answer": "c",
-    "explanation": "An NDA legally obligates the recipient to keep shared information confidential, which is needed before sensitive details are disclosed. An SLA sets service performance levels, an MOU expresses general intent without binding confidentiality terms, and an MSA sets overall terms for an ongoing service relationship that does not yet exist.",
+    "explanation": "An NDA is a formal, signed confidentiality agreement that obligates the recipient to protect the shared information, so it should be in place before sensitive details are disclosed. An MOU may include statements of confidentiality, but it is an informal letter of intent rather than a signed, enforceable contract. An SLA sets service performance levels, and an MSA sets overall terms for an ongoing service relationship that does not yet exist.",
     "source": "ai-generated",
     "verified": false,
     "topics": [
@@ -9511,7 +9511,7 @@
       "d": "Contractual impacts"
     },
     "answer": "a",
-    "explanation": "Due care is acting as a reasonable and prudent organization would by putting appropriate controls in place and keeping them working, and failing to show it can create legal liability; it is closely paired with due diligence, the investigation of risks and requirements and verification that controls are working. Attestation and acknowledgement is a formal, recorded confirmation that requirements are understood or met, compliance automation uses tools to check controls continuously, and contractual impacts are consequences that arise from breaching an agreement.",
+    "explanation": "Due care is acting as a reasonable and prudent organization would by putting appropriate controls in place and keeping them working; it tends to describe an organization's own internal activities, while due diligence (investigating and verifying) is often associated with evaluating third parties. Attestation and acknowledgement is a formal sign-off on compliance documentation or requirements, compliance automation uses tools to collect and report compliance data, and contractual impacts are consequences of breaching an agreement.",
     "source": "ai-generated",
     "verified": false,
     "topics": [
@@ -9530,7 +9530,7 @@
       "d": "External compliance monitoring"
     },
     "answer": "c",
-    "explanation": "Attestation and acknowledgement is the formal, recorded confirmation that people have read and will comply with requirements, giving the organization evidence for auditors. Automation uses tools to check compliance continuously, due diligence is investigating risks and requirements, and external monitoring is performed by a party outside the organization.",
+    "explanation": "Attestation and acknowledgement is a formal, recorded sign-off: here employees acknowledge that they have read and will follow the policy, and for formal compliance documentation the person who attests is ultimately responsible if it is incorrect. Automation uses tools to collect compliance data and report on it, due diligence is investigating and verifying, often for third parties, and external compliance monitoring involves parties outside the organization.",
     "source": "ai-generated",
     "verified": false,
     "topics": [
@@ -9602,7 +9602,7 @@
     "id": "SY0-701-5512",
     "domain": "5.0",
     "objective": "5.4",
-    "question": "A company's vice president of sales is accountable for the customer contact database. She decides how it is classified and must approve any new access to it, while the IT team manages its backups and encryption. Which role does the vice president hold for this data?",
+    "question": "A company's director of human resources is the senior officer accountable for the employee records database and answers to leadership for how it is used and protected. The IT team works with the data directly: it applies the sensitivity labels, manages access rights, and maintains backups and encryption. Which role does the director hold for this data?",
     "choices": {
       "a": "Data processor",
       "b": "Data owner",
@@ -9610,7 +9610,7 @@
       "d": "Data subject"
     },
     "answer": "b",
-    "explanation": "The data owner is the senior person accountable for a data set, who sets its classification and approves access. The IT team acts as custodian by carrying out technical protection. A processor is a separate party that processes personal data for a controller, and data subjects are the customers described in the records.",
+    "explanation": "The data owner is the senior person ultimately accountable for a specific data set. The IT team is the data custodian or steward, the role that works directly with the data, applies sensitivity labels, manages access rights, and implements security controls. A processor handles personal data on behalf of a controller, and the data subjects are the employees described in the records.",
     "source": "ai-generated",
     "verified": false,
     "topics": [
@@ -9815,7 +9815,7 @@
     "id": "SY0-701-5523",
     "domain": "5.0",
     "objective": "5.5",
-    "question": "A company wants its attack testers and its SOC analysts to work side by side. As each attack technique is run, the testers explain what they did and the analysts immediately check whether it was detected and tune their alerts. Which type of penetration testing is this?",
+    "question": "A company stops treating penetration testing as a once-a-year event. Its testers and SOC analysts now work together in a continuing cycle: testers find exploitable systems and services, administrators patch them, analysts tune their detections, and then the systems are tested again. Which type of penetration testing is this?",
     "choices": {
       "a": "Offensive",
       "b": "Defensive",
@@ -9823,7 +9823,7 @@
       "d": "Integrated"
     },
     "answer": "d",
-    "explanation": "Integrated penetration testing, often called purple teaming, combines offensive and defensive teams and has them share information in real time to improve detection quickly. Purely offensive or purely defensive testing keeps the teams separate, and unknown environment describes how much information the testers receive.",
+    "explanation": "Integrated penetration testing combines offensive and defensive work into an ongoing process of identifying exploitable systems, fixing them, and testing again; the shared approach is sometimes called purple teaming. Offensive testing is only the attacking side, defensive testing is only detecting and stopping attacks, and unknown environment describes how much information the testers receive.",
     "source": "ai-generated",
     "verified": false,
     "topics": [
@@ -10149,15 +10149,15 @@
     "id": "SY0-701-5540",
     "domain": "5.0",
     "objective": "5.6",
-    "question": "A company is launching a new security awareness program. Before any training is delivered, it sends a simulated phishing email to all staff and records the click and report rates. What is the main purpose of this step?",
+    "question": "A company's automated phishing simulation platform reports that an employee has clicked a simulated phishing link for the first time. How should the security awareness program handle this first occurrence?",
     "choices": {
-      "a": "To identify and discipline employees who click",
-      "b": "To establish an initial baseline so later results can show whether the program is working",
-      "c": "To meet the requirement for recurring annual training",
-      "d": "To replace the need for formal training content"
+      "a": "Suspend the employee's email access until she passes a security exam",
+      "b": "Treat it as an opportunity for immediate feedback and training so she can avoid the mistake in the future",
+      "c": "Take no action unless she clicks simulated phishing links several more times",
+      "d": "Refer her to human resources for disciplinary action"
     },
     "answer": "b",
-    "explanation": "Initial reporting and monitoring captures a starting baseline, so later recurring campaigns can measure improvement. Using results to punish employees discourages reporting, a single pre-training test is not recurring training, and simulations support training rather than replace it.",
+    "explanation": "Initial reporting treats a user's first occurrence as an opportunity for immediate feedback and training so the issue is avoided in the future, while recurring monitoring tracks long-term trends and gives extra help to users with multiple occurrences. Suspending access or sending a first-time mistake to HR is punitive and discourages reporting, and waiting for repeat clicks wastes the best moment to train.",
     "source": "ai-generated",
     "verified": false,
     "topics": [
@@ -10196,7 +10196,7 @@
       "d": "Choosing training topics based on recent incident trends"
     },
     "answer": "a",
-    "explanation": "Execution is delivering the program: running the training and simulations as scheduled and tracking participation and results. Identifying high-risk departments, defining learning objectives, and choosing topics are all part of developing the program before it is delivered.",
+    "explanation": "Execution covers creating and deploying the training materials, documenting success measurements, keeping stakeholders informed with ongoing metrics, and tracking user training efforts, so rolling out modules and simulations and tracking completion belongs here. Identifying high-risk departments, defining learning objectives, and choosing topics are development activities that set the program's direction before materials are built and delivered.",
     "source": "ai-generated",
     "verified": false,
     "topics": [
