@@ -6579,5 +6579,2468 @@
     "topics": [
       "5.5-17"
     ]
+  },
+  {
+    "id": "N10-009-1801",
+    "domain": "1.0",
+    "objective": "1.2",
+    "question": "A technician captures a ping reply from a remote server and sees an IP TTL value of 125 in the received packet. Assuming the server used its operating system's default starting TTL, which conclusion is most likely?",
+    "choices": {
+      "a": "The server is a Windows system three router hops away",
+      "b": "The server is a Linux system three router hops away",
+      "c": "The server is a Windows system 125 router hops away",
+      "d": "The server is a macOS system 61 router hops away"
+    },
+    "answer": "a",
+    "explanation": "Windows typically starts IP packets with a TTL of 128 and each router decreases it by 1, so 125 suggests three hops. Linux and macOS start at 64, so they could never produce a value of 125, and the TTL counts down from the starting value rather than recording the hop count directly.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.2-13"
+    ]
+  },
+  {
+    "id": "N10-009-1802",
+    "domain": "1.0",
+    "objective": "1.2",
+    "question": "Headquarters must terminate hundreds of encrypted remote-access tunnels from traveling employees. Which device performs the encryption and decryption for all of these tunnels and is often built into the firewall?",
+    "choices": {
+      "a": "Load balancer",
+      "b": "VPN concentrator",
+      "c": "Forward proxy",
+      "d": "Wireless LAN controller"
+    },
+    "answer": "b",
+    "explanation": "A VPN concentrator (head-end) is the device that builds and terminates VPN tunnels and handles their encryption and decryption, and this function is commonly integrated into firewalls. A load balancer spreads requests across servers, a forward proxy makes web requests on behalf of users, and a wireless LAN controller manages access points.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.2-11"
+    ]
+  },
+  {
+    "id": "N10-009-1803",
+    "domain": "1.0",
+    "objective": "1.4",
+    "question": "A packet capture shows a workstation connecting from source TCP port 52814 to destination TCP port 443 on a web server. What best describes port 52814?",
+    "choices": {
+      "a": "A non-ephemeral port permanently assigned to the browser",
+      "b": "An ephemeral port chosen in real time by the client",
+      "c": "A well-known port reserved for HTTPS clients",
+      "d": "A port assigned to the workstation by the DHCP server"
+    },
+    "answer": "b",
+    "explanation": "Clients pick temporary (ephemeral) source ports, generally from 1,024 to 65,535, when they open a connection. Non-ephemeral and well-known ports (0 to 1,023) are normally used by server services such as HTTPS on 443, and DHCP assigns IP settings, not port numbers.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.4-22"
+    ]
+  },
+  {
+    "id": "N10-009-1804",
+    "domain": "1.0",
+    "objective": "1.1",
+    "question": "A web browser on an Ethernet LAN sends an HTTP request to a server. Which order correctly lists the parts of the resulting frame, from the start of the frame to the end?",
+    "choices": {
+      "a": "Ethernet header, IP header, TCP header, HTTP data, Ethernet trailer",
+      "b": "IP header, Ethernet header, TCP header, HTTP data, Ethernet trailer",
+      "c": "Ethernet header, TCP header, IP header, HTTP data, Ethernet trailer",
+      "d": "Ethernet header, IP header, HTTP data, TCP header, Ethernet trailer"
+    },
+    "answer": "a",
+    "explanation": "The application data is placed inside a TCP segment (transport layer), the segment is carried inside an IP packet (network layer), and the packet is framed by an Ethernet header and trailer (data link layer). The other orders put the IP header outside the Ethernet frame, put TCP outside IP, or place the TCP header after the data it carries.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.1-02",
+      "1.1-03",
+      "1.1-04"
+    ]
+  },
+  {
+    "id": "N10-009-1805",
+    "domain": "1.0",
+    "objective": "1.4",
+    "question": "A user's laptop has a web session, an email client, and a file transfer open to the same server at the same time, and all three conversations arrive over the same IP address. How does the laptop deliver each incoming segment to the correct application?",
+    "choices": {
+      "a": "Each application uses a different MAC address on the network adapter",
+      "b": "The server sends each application's data with a different TTL value",
+      "c": "Each conversation uses a different combination of protocol and port numbers",
+      "d": "The default gateway tags each packet with an application ID"
+    },
+    "answer": "c",
+    "explanation": "TCP and UDP multiplex many conversations over one IP address by using port numbers, so each socket (IP address, protocol, and port) maps to one application. A host's adapter has a single MAC address for all applications, TTL limits a packet's lifetime, and routers do not tag packets for applications.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.4-22",
+      "1.4-23"
+    ]
+  },
+  {
+    "id": "N10-009-1806",
+    "domain": "1.0",
+    "objective": "1.4",
+    "question": "An engineer needs IPsec to verify that packets come from the expected peer and were not altered in transit, but encryption is not required. Which IPsec protocol provides only this authentication and integrity?",
+    "choices": {
+      "a": "Encapsulating Security Payload (ESP)",
+      "b": "Authentication Header (AH)",
+      "c": "Internet Key Exchange (IKE)",
+      "d": "Generic Routing Encapsulation (GRE)"
+    },
+    "answer": "b",
+    "explanation": "AH adds a hash of the packet built with a shared key, which proves the source and detects changes but does not encrypt the data. ESP is the protocol that encrypts the payload, IKE negotiates keys and security associations rather than protecting data packets, and GRE is a tunneling protocol with no built-in security.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.4-25"
+    ]
+  },
+  {
+    "id": "N10-009-1807",
+    "domain": "1.0",
+    "objective": "1.4",
+    "question": "Two firewalls build an IPsec site-to-site VPN. The entire original IP packet, including its header, is protected and a new IP header is added with the firewalls' addresses. Which IPsec mode is this?",
+    "choices": {
+      "a": "Transport mode",
+      "b": "Tunnel mode",
+      "c": "Main mode",
+      "d": "Aggressive mode"
+    },
+    "answer": "b",
+    "explanation": "Tunnel mode wraps the whole original packet, header included, and adds a new outer IP header, which is why it is used between VPN gateways. Transport mode keeps the original IP header and protects only the payload, while main mode and aggressive mode are IKE Phase 1 negotiation methods, not packet encapsulation modes.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.4-25"
+    ]
+  },
+  {
+    "id": "N10-009-1808",
+    "domain": "1.0",
+    "objective": "1.4",
+    "question": "A laptop that has just joined a wired network has no IPv4 address yet and sends a DHCP Discover message to find any DHCP server on its local network. Which destination IPv4 address does this message use?",
+    "choices": {
+      "a": "224.0.0.1",
+      "b": "0.0.0.0",
+      "c": "127.0.0.1",
+      "d": "255.255.255.255"
+    },
+    "answer": "d",
+    "explanation": "255.255.255.255 is the limited broadcast address, so the Discover reaches every device in the local broadcast domain and the client does not need to know where a DHCP server is. 224.0.0.1 is the all-hosts multicast group rather than a broadcast, 0.0.0.0 is the source address the client uses because it has no address yet, and 127.0.0.1 is the loopback address that never leaves the host.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.4-29"
+    ]
+  },
+  {
+    "id": "N10-009-1809",
+    "domain": "1.0",
+    "objective": "1.5",
+    "question": "Which cellular technology launched worldwide in 2020, is designed to eventually reach speeds of about 10 Gbit/s, and is expected to have a large impact on IoT devices by making bandwidth less of a constraint?",
+    "choices": {
+      "a": "LTE",
+      "b": "LTE Advanced",
+      "c": "5G",
+      "d": "EDGE"
+    },
+    "answer": "c",
+    "explanation": "5G is the fifth generation of cellular networking, launched in 2020, using higher frequencies to aim for multi-gigabit speeds and support large numbers of IoT devices. LTE is a 4G standard supporting about 150 Mbit/s, LTE Advanced raises that to about 300 Mbit/s, and EDGE is an older GSM data enhancement.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.5-02"
+    ]
+  },
+  {
+    "id": "N10-009-1810",
+    "domain": "1.0",
+    "objective": "1.5",
+    "question": "A purchasing manager asks who decides whether a new access point can carry the Wi-Fi logo. Which organization performs Wi-Fi interoperability testing, as opposed to writing the 802.11 standards?",
+    "choices": {
+      "a": "IEEE 802 LAN/MAN Standards Committee",
+      "b": "Wi-Fi Alliance",
+      "c": "Internet Engineering Task Force (IETF)",
+      "d": "Telecommunications Industry Association (TIA)"
+    },
+    "answer": "b",
+    "explanation": "The Wi-Fi Alliance owns the Wi-Fi trademark, tests products for interoperability, and gives standards marketing names such as Wi-Fi 6. The IEEE 802 committee writes the 802.11 standards themselves, the IETF publishes internet protocol RFCs, and the TIA publishes cabling standards.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.5-01"
+    ]
+  },
+  {
+    "id": "N10-009-1811",
+    "domain": "1.0",
+    "objective": "1.5",
+    "question": "A technician must provide 10 Gbit/s Ethernet over copper to a workstation that is 90 meters from the switch. Which Ethernet standard and minimum cable category should be specified?",
+    "choices": {
+      "a": "10GBASE-T over Category 6A",
+      "b": "10GBASE-T over Category 5e",
+      "c": "1000BASE-T over Category 6A",
+      "d": "10GBASE-SR over Category 6A"
+    },
+    "answer": "a",
+    "explanation": "10GBASE-T carries 10 Gbit/s over twisted pair copper, and Category 6A supports it for the full 100-meter distance. Category 5e is the minimum for 1000BASE-T, not 10GBASE-T, 1000BASE-T runs at only 1 Gbit/s, and 10GBASE-SR is a short-wavelength fiber standard that does not run over copper cable.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.5-04",
+      "1.5-08"
+    ]
+  },
+  {
+    "id": "N10-009-1812",
+    "domain": "1.0",
+    "objective": "1.5",
+    "question": "A manufacturing plant needs a network link that runs past large motors and radio transmitters, and the security team wants a medium that is very difficult to monitor or tap. Which two characteristics of optical fiber meet these needs? (Choose two.)",
+    "choices": {
+      "a": "It is immune to radio frequency interference",
+      "b": "It emits no RF signal that could be picked up",
+      "c": "It is less expensive to terminate than copper",
+      "d": "It can carry Power over Ethernet to devices"
+    },
+    "answer": [
+      "a",
+      "b"
+    ],
+    "explanation": "Fiber carries light rather than electrical signals, so it is not affected by radio interference and does not radiate an RF signal that an attacker could monitor. Fiber is generally more expensive and harder to terminate than copper, and it cannot deliver PoE because it carries no electrical power.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.5-05"
+    ]
+  },
+  {
+    "id": "N10-009-1813",
+    "domain": "1.0",
+    "objective": "1.5",
+    "question": "An engineer needs a low-cost fiber link between two rows in the same data center, about 300 meters apart. Which choice is most appropriate?",
+    "choices": {
+      "a": "Multimode fiber, which uses inexpensive light sources for short-range links",
+      "b": "Single-mode fiber, which is required for any fiber link longer than 100 meters",
+      "c": "Category 6A twisted pair, which supports 10 Gbit/s up to 500 meters",
+      "d": "RG-6 coaxial cable with F-type connectors"
+    },
+    "answer": "a",
+    "explanation": "Multimode fiber handles short-range links up to about 2 km with inexpensive LED-based optics, so a 300-meter run is a good fit. Single-mode is for long distances and uses more expensive lasers, but it is not required beyond 100 meters; Category 6A is limited to 100 meters; and RG-6 coax is used for cable TV and cable internet, not data center links.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.5-05"
+    ]
+  },
+  {
+    "id": "N10-009-1814",
+    "domain": "1.0",
+    "objective": "1.5",
+    "question": "Why are the two wires in each pair of a twisted pair Ethernet cable twisted around each other, with different twist rates for each pair?",
+    "choices": {
+      "a": "To increase the cable's tensile strength during installation",
+      "b": "To let each wire carry a separate Ethernet signal at the same time",
+      "c": "To reduce the effects of interference and crosstalk on the balanced signals",
+      "d": "To identify transmit and receive pairs without color coding"
+    },
+    "answer": "c",
+    "explanation": "Each pair carries equal and opposite signals, and the twist keeps the wires moving away from interference so the receiver can compare the two and cancel the noise; different twist rates reduce crosstalk between pairs. The twist is not for strength, the two wires form one balanced signal rather than two separate signals, and pairs are identified by color.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.5-04"
+    ]
+  },
+  {
+    "id": "N10-009-1815",
+    "domain": "1.0",
+    "objective": "1.5",
+    "question": "A manager asks how fast a new run of Category 6 cable is. Which statement is most accurate?",
+    "choices": {
+      "a": "Every Category 6 cable runs at exactly 10 Gbit/s regardless of the equipment",
+      "b": "The cable has no speed itself; the Ethernet standard's signaling sets the data rate, and the cable must meet that standard's minimum category",
+      "c": "Cable speed is determined by the cable's jacket rating, such as plenum or PVC",
+      "d": "Cable speed is set by the length of the patch cords at each end"
+    },
+    "answer": "b",
+    "explanation": "Copper does not have a speed; the data rate comes from the signal encoding defined by an IEEE 802.3 standard, and each standard requires a minimum cable category. A Cat 6 cable might carry 100 Mbit/s or 1 Gbit/s depending on the equipment, the jacket rating concerns fire safety, and patch cord length affects distance limits rather than defining the rate.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.5-08"
+    ]
+  },
+  {
+    "id": "N10-009-1816",
+    "domain": "1.0",
+    "objective": "1.5",
+    "question": "Which two statements correctly compare SFP+ transceivers with SFP transceivers? (Choose two.)",
+    "choices": {
+      "a": "SFP+ is exactly the same physical size as SFP",
+      "b": "SFP+ is commonly used for 10 Gigabit Ethernet, while SFP is commonly used for 1 Gbit/s",
+      "c": "SFP+ combines four SFP channels into one larger module",
+      "d": "SFP+ is used only for Fibre Channel, while SFP is used only for Ethernet"
+    },
+    "answer": [
+      "a",
+      "b"
+    ],
+    "explanation": "SFP+ (enhanced SFP) keeps the same form factor as SFP but supports higher data rates and is common with 10 Gigabit Ethernet, while SFP is commonly used for 1 Gbit/s. Combining four channels describes QSFP, and both form factors are available for Ethernet and Fibre Channel.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.5-11"
+    ]
+  },
+  {
+    "id": "N10-009-1817",
+    "domain": "1.0",
+    "objective": "1.5",
+    "question": "A switch has only open SFP slots, and a technician must connect a server that has a standard 1 Gbit/s RJ45 Ethernet port using an existing Category 6 patch cable. What should the technician install in the SFP slot?",
+    "choices": {
+      "a": "A 1000BASE-T SFP transceiver with an RJ45 port",
+      "b": "A QSFP+ transceiver",
+      "c": "A 10GBASE-LR SFP+ transceiver",
+      "d": "A Fibre Channel SFP transceiver"
+    },
+    "answer": "a",
+    "explanation": "SFP modules are made for copper as well as fiber, and a 1000BASE-T SFP provides an RJ45 port for Gigabit Ethernet over twisted pair. A QSFP+ is a 40 Gbit/s form factor that does not fit an SFP slot, a 10GBASE-LR module is for single-mode fiber, and a Fibre Channel module uses a different protocol than Ethernet.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.5-11",
+      "1.5-10"
+    ]
+  },
+  {
+    "id": "N10-009-1818",
+    "domain": "1.0",
+    "objective": "1.6",
+    "question": "A company wants a full mesh WAN connecting six offices so that every office has a direct link to every other office. How many links are required?",
+    "choices": {
+      "a": "6",
+      "b": "12",
+      "c": "15",
+      "d": "30"
+    },
+    "answer": "c",
+    "explanation": "A full mesh needs n(n-1)/2 links, so six sites need 6 x 5 / 2 = 15 links. Six links would form only a ring, 30 counts each link twice (once from each end), and 12 does not match any full mesh calculation for six sites.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.6-01"
+    ]
+  },
+  {
+    "id": "N10-009-1819",
+    "domain": "1.0",
+    "objective": "1.6",
+    "question": "In a three-tier hierarchical network, which layer is the center of the network where shared resources such as web servers, databases, and applications that many users need are located?",
+    "choices": {
+      "a": "Access",
+      "b": "Distribution",
+      "c": "Core",
+      "d": "Edge"
+    },
+    "answer": "c",
+    "explanation": "The core layer is the center of the three-tier design and holds the resources that many people need to reach. The access layer is where users and printers connect, the distribution layer sits between core and access, and edge is not one of the three tiers.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.6-06"
+    ]
+  },
+  {
+    "id": "N10-009-1820",
+    "domain": "1.0",
+    "objective": "1.6",
+    "question": "A growing company built its campus with a collapsed core design to save money. As it plans to add many more buildings, which two disadvantages of this design are most likely to become problems? (Choose two.)",
+    "choices": {
+      "a": "Limited scalability as the network grows",
+      "b": "Less redundancy because fewer devices are used",
+      "c": "Higher equipment cost than a three-tier design",
+      "d": "More complex deployment than a three-tier design"
+    },
+    "answer": [
+      "a",
+      "b"
+    ],
+    "explanation": "A collapsed core combines the core and distribution layers, so it has scalability limitations and fewer devices to provide redundancy. Its advantages are that it costs less and is simpler to deploy than a full three-tier design, so higher cost and greater complexity are not disadvantages of it.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.6-09"
+    ]
+  },
+  {
+    "id": "N10-009-1821",
+    "domain": "1.0",
+    "objective": "1.7",
+    "question": "What is the decimal value 200 written as an 8-bit binary octet?",
+    "choices": {
+      "a": "11001000",
+      "b": "11000100",
+      "c": "10101000",
+      "d": "11010000"
+    },
+    "answer": "a",
+    "explanation": "200 equals 128 + 64 + 8, so the 128, 64, and 8 bits are on: 11001000. The other values are 196 (11000100), 168 (10101000), and 208 (11010000).",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.7-05"
+    ]
+  },
+  {
+    "id": "N10-009-1822",
+    "domain": "1.0",
+    "objective": "1.7",
+    "question": "Using powers of two, how many unique values can be represented with 12 bits?",
+    "choices": {
+      "a": "1,024",
+      "b": "2,048",
+      "c": "4,096",
+      "d": "8,192"
+    },
+    "answer": "c",
+    "explanation": "Each added bit doubles the number of values, so 12 bits give 2^12 = 4,096 unique values. 1,024 is 2^10, 2,048 is 2^11, and 8,192 is 2^13.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.7-05"
+    ]
+  },
+  {
+    "id": "N10-009-1823",
+    "domain": "1.0",
+    "objective": "1.7",
+    "question": "A company is designing an internal IPv4 addressing plan that needs about 3 million private addresses taken from a single RFC1918 block. Which block must it use?",
+    "choices": {
+      "a": "192.168.0.0/16",
+      "b": "10.0.0.0/8",
+      "c": "172.16.0.0/12",
+      "d": "169.254.0.0/16"
+    },
+    "answer": "b",
+    "explanation": "10.0.0.0/8 is the largest RFC1918 block, with 16,777,216 addresses, so it is the only one that can hold about 3 million. 172.16.0.0/12 (172.16.0.0 to 172.31.255.255) has 1,048,576 addresses, 192.168.0.0/16 has only 65,536, and 169.254.0.0/16 is the APIPA link-local range rather than an RFC1918 private block.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.7-02"
+    ]
+  },
+  {
+    "id": "N10-009-1824",
+    "domain": "1.0",
+    "objective": "1.7",
+    "question": "Users with 10.20.0.0/16 addresses can reach every internal server, but after the edge router is replaced, they cannot reach any internet site. The router has a working internet connection and a correct default route. What is most likely missing on the new router?",
+    "choices": {
+      "a": "Network address translation (NAT) for the internal addresses",
+      "b": "An APIPA range for the internal clients",
+      "c": "A Class D multicast address on the outside interface",
+      "d": "A loopback address on the inside interface"
+    },
+    "answer": "a",
+    "explanation": "RFC1918 private addresses such as 10.x.x.x are routable internally but not on the internet, so the edge router must translate them with NAT. APIPA is a fallback when DHCP fails, Class D is for multicast, and a loopback address has nothing to do with reaching the internet.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.7-02"
+    ]
+  },
+  {
+    "id": "N10-009-1825",
+    "domain": "1.0",
+    "objective": "1.7",
+    "question": "Using classful addressing with the default subnet mask, what is the broadcast address of the network that contains 172.16.88.200?",
+    "choices": {
+      "a": "172.16.88.255",
+      "b": "172.16.255.255",
+      "c": "172.255.255.255",
+      "d": "172.16.0.0"
+    },
+    "answer": "b",
+    "explanation": "172 is in the Class B range, so the default mask is 255.255.0.0 and the network is 172.16.0.0; setting all host bits to 1 gives 172.16.255.255. 172.16.88.255 assumes a Class C mask, 172.255.255.255 assumes a Class A mask, and 172.16.0.0 is the network address, not the broadcast.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.7-07"
+    ]
+  },
+  {
+    "id": "N10-009-1826",
+    "domain": "1.0",
+    "objective": "1.7",
+    "question": "A router configuration lists the mask 255.255.240.0. What is the equivalent CIDR notation?",
+    "choices": {
+      "a": "/12",
+      "b": "/20",
+      "c": "/22",
+      "d": "/24"
+    },
+    "answer": "b",
+    "explanation": "255.255 is 16 one bits, and 240 is 11110000, adding 4 more, for /20. /12 would be 255.240.0.0, /22 would be 255.255.252.0, and /24 would be 255.255.255.0.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.7-05"
+    ]
+  },
+  {
+    "id": "N10-009-1827",
+    "domain": "1.0",
+    "objective": "1.7",
+    "question": "Which two of the following are valid IPv4 subnet masks? (Choose two.)",
+    "choices": {
+      "a": "255.255.0.255",
+      "b": "255.255.255.250",
+      "c": "255.255.248.0",
+      "d": "255.255.255.224"
+    },
+    "answer": [
+      "c",
+      "d"
+    ],
+    "explanation": "A subnet mask must be a contiguous series of ones followed by zeros: 248 is 11111000 and 224 is 11100000, so 255.255.248.0 (/21) and 255.255.255.224 (/27) are valid. 255.255.0.255 has ones after a zero octet, and 250 is 11111010, which breaks the contiguous pattern.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.7-05"
+    ]
+  },
+  {
+    "id": "N10-009-1828",
+    "domain": "1.0",
+    "objective": "1.7",
+    "question": "An administrator divides 172.16.0.0/16 into equal /20 subnets. How many subnets are created, and how many usable hosts does each subnet support?",
+    "choices": {
+      "a": "16 subnets with 4,094 usable hosts each",
+      "b": "16 subnets with 4,096 usable hosts each",
+      "c": "4 subnets with 16,382 usable hosts each",
+      "d": "20 subnets with 2,046 usable hosts each"
+    },
+    "answer": "a",
+    "explanation": "Going from /16 to /20 borrows 4 subnet bits, giving 2^4 = 16 subnets, and 12 host bits remain, giving 2^12 - 2 = 4,094 usable hosts. 4,096 forgets to subtract the network and broadcast addresses, 4 subnets would be a /18, and the prefix length is not the subnet count.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.7-04",
+      "1.7-05"
+    ]
+  },
+  {
+    "id": "N10-009-1829",
+    "domain": "1.0",
+    "objective": "1.7",
+    "question": "Using VLSM, an administrator is dividing 172.16.10.0/24. Sales has been assigned 172.16.10.0/25 and Engineering has been assigned 172.16.10.128/26. A new lab subnet needs 25 host addresses, and the administrator wants to leave as much address space free as possible without overlapping the existing subnets. Which subnet should be assigned to the lab?",
+    "choices": {
+      "a": "172.16.10.160/27",
+      "b": "172.16.10.192/27",
+      "c": "172.16.10.192/26",
+      "d": "172.16.10.192/28"
+    },
+    "answer": "b",
+    "explanation": "Engineering's /26 uses 172.16.10.128 through .191, so the next free block starts at .192, and a /27 gives 30 usable addresses, the smallest size that holds 25 hosts. 172.16.10.160/27 overlaps Engineering's range, 172.16.10.192/26 does not overlap but uses all of the remaining space, and a /28 provides only 14 usable addresses.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.7-04"
+    ]
+  },
+  {
+    "id": "N10-009-1830",
+    "domain": "1.0",
+    "objective": "1.7",
+    "question": "A host is configured as 10.10.37.100/22. What are the first and last usable host addresses in its subnet?",
+    "choices": {
+      "a": "10.10.36.1 and 10.10.39.254",
+      "b": "10.10.37.1 and 10.10.37.254",
+      "c": "10.10.32.1 and 10.10.39.254",
+      "d": "10.10.36.1 and 10.10.40.254"
+    },
+    "answer": "a",
+    "explanation": "A /22 mask is 255.255.252.0, so the interesting octet is the third and the magic number is 256 - 252 = 4; 37 falls in the 36 to 39 block, giving network 10.10.36.0 and broadcast 10.10.39.255, so usable hosts are 10.10.36.1 through 10.10.39.254. The other ranges treat the subnet as a /24, start at the wrong boundary, or run into the next subnet.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.7-05"
+    ]
+  },
+  {
+    "id": "N10-009-1831",
+    "domain": "1.0",
+    "objective": "1.7",
+    "question": "What is the broadcast address of the subnet that contains host 172.31.200.77/28?",
+    "choices": {
+      "a": "172.31.200.63",
+      "b": "172.31.200.79",
+      "c": "172.31.200.80",
+      "d": "172.31.200.95"
+    },
+    "answer": "b",
+    "explanation": "A /28 makes blocks of 16 in the last octet, so 77 is in the 64 to 79 block and the broadcast address is 172.31.200.79. 172.31.200.63 ends the previous block, 172.31.200.80 is the network address of the next block, and 172.31.200.95 would be correct only for a /27.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.7-05"
+    ]
+  },
+  {
+    "id": "N10-009-1832",
+    "domain": "1.0",
+    "objective": "1.8",
+    "question": "In software defined networking, which plane maintains the routing tables, session tables, and NAT tables and processes dynamic routing protocol updates?",
+    "choices": {
+      "a": "Data plane",
+      "b": "Control plane",
+      "c": "Management plane",
+      "d": "Application plane"
+    },
+    "answer": "b",
+    "explanation": "The control plane (control layer) decides how traffic should be handled and manages the tables and routing updates that the data plane uses. The data plane forwards, encrypts, and translates the actual frames and packets, and the management or application plane is used to configure the device through SSH, a browser, or an API.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.8-04"
+    ]
+  },
+  {
+    "id": "N10-009-1833",
+    "domain": "1.0",
+    "objective": "1.8",
+    "question": "An administrator connects to a router with SSH and through its REST API to change its configuration. In SDN terms, which plane is the administrator using?",
+    "choices": {
+      "a": "Data plane",
+      "b": "Control plane",
+      "c": "Management plane",
+      "d": "Forwarding plane"
+    },
+    "answer": "c",
+    "explanation": "The management plane (application layer) is used to configure and manage a device through SSH, a browser, or an API. The data plane, also called the forwarding or infrastructure layer, moves frames and packets, and the control plane maintains routing and session tables.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.8-04"
+    ]
+  },
+  {
+    "id": "N10-009-1834",
+    "domain": "1.0",
+    "objective": "1.8",
+    "question": "A cloud provider links three data centers so that customer networks span all sites seamlessly and workloads can be moved to whichever site is best, while each customer stays segmented on a shared core network. What is this design called?",
+    "choices": {
+      "a": "Data center interconnect (DCI)",
+      "b": "Collapsed core",
+      "c": "Hub and spoke",
+      "d": "Point-to-point"
+    },
+    "answer": "a",
+    "explanation": "Data center interconnect connects multiple data centers so networks span the locations and workloads can move between them, and VXLAN is commonly used to provide it. A collapsed core merges two campus layers, hub and spoke routes every site through a central point, and point-to-point describes a single link between two endpoints.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.8-05"
+    ]
+  },
+  {
+    "id": "N10-009-1835",
+    "domain": "1.0",
+    "objective": "1.8",
+    "question": "After an attacker bypasses the perimeter firewall, they move freely between internal servers because internal traffic is trusted by default. The company wants every device, process, and person verified on each request, even inside the network. Which approach should it adopt?",
+    "choices": {
+      "a": "Zero trust architecture",
+      "b": "Collapsed core architecture",
+      "c": "Spine and leaf architecture",
+      "d": "Screened subnet"
+    },
+    "answer": "a",
+    "explanation": "Zero trust treats nothing as inherently trusted and verifies every request with controls such as MFA, encryption, permissions, and monitoring, even for internal traffic. Collapsed core and spine and leaf are switching designs, and a screened subnet separates public-facing services from the internal network without verifying every internal request.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.8-07",
+      "1.8-08"
+    ]
+  },
+  {
+    "id": "N10-009-1836",
+    "domain": "1.0",
+    "objective": "1.8",
+    "question": "An engineer wants to test a major redesign of the network templates in the company's Git repository without changing the main code base that production deployments use, and later merge the work back. Which source control feature should be used?",
+    "choices": {
+      "a": "Branching",
+      "b": "Conflict identification",
+      "c": "Dynamic inventory",
+      "d": "Configuration drift"
+    },
+    "answer": "a",
+    "explanation": "Branching creates a separate line of development so work can proceed without changing the main code base and then be merged back. Conflict identification flags changes that cannot be merged automatically, a dynamic inventory queries devices in real time, and configuration drift is the problem of systems no longer matching their definition.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.8-12"
+    ]
+  },
+  {
+    "id": "N10-009-1837",
+    "domain": "1.0",
+    "objective": "1.8",
+    "question": "An automation tool queries the virtualization platform in real time to build the list of servers to configure, so newly created servers are included automatically on each run. Which IaC concept is this?",
+    "choices": {
+      "a": "Static hosts file",
+      "b": "Dynamic inventory",
+      "c": "Branching",
+      "d": "Central repository"
+    },
+    "answer": "b",
+    "explanation": "A dynamic inventory queries devices in real time and makes changes based on the results, so the target list stays current. A static hosts file must be edited by hand, and branching and a central repository are source control features rather than ways to discover devices.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.8-11"
+    ]
+  },
+  {
+    "id": "N10-009-1838",
+    "domain": "1.0",
+    "objective": "1.8",
+    "question": "Which two statements describe benefits of infrastructure as code? (Choose two.)",
+    "choices": {
+      "a": "The same definition files build an identical environment every time they are used",
+      "b": "Changes to infrastructure definitions can be versioned and tracked like application code",
+      "c": "Servers no longer need to be patched once they are defined in code",
+      "d": "Source control removes the need for a change approval process"
+    },
+    "answer": [
+      "a",
+      "b"
+    ],
+    "explanation": "IaC describes servers, networks, and applications in definition files that build the same environment each time and can be versioned and tracked in source control. Systems still need patching, which IaC can automate as an upgrade, and organizations still need change management even when changes are made through code.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.8-11"
+    ]
+  },
+  {
+    "id": "N10-009-1839",
+    "domain": "1.0",
+    "objective": "1.8",
+    "question": "Which is the correctly compressed form of the IPv6 address 2001:0db8:0000:0000:0000:0000:0a00:0001?",
+    "choices": {
+      "a": "2001:db8::a00:1",
+      "b": "2001:db8::a::1",
+      "c": "2001:db8:0:0::a00::1",
+      "d": "2001:db8::a000:1000"
+    },
+    "answer": "a",
+    "explanation": "Leading zeros in each group may be dropped and one run of all-zero groups can be replaced by a double colon, giving 2001:db8::a00:1. An address may contain only one double colon, so the two choices with two are invalid, and trailing zeros cannot be dropped, so 0a00 cannot become a000 and 0001 cannot become 1000.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.8-13"
+    ]
+  },
+  {
+    "id": "N10-009-1840",
+    "domain": "1.0",
+    "objective": "1.8",
+    "question": "A company configures its routers so each interface has both an IPv4 address and an IPv6 address during a long migration. Which statement describes how this dual-stack design routes traffic?",
+    "choices": {
+      "a": "IPv6 packets are encapsulated in IPv4 packets between all routers",
+      "b": "The router keeps separate IPv4 and IPv6 routing tables and runs routing protocols for each",
+      "c": "A NAT64 device translates every IPv6 packet into IPv4 before it is routed",
+      "d": "IPv4 addresses are converted into IPv6 addresses using 6to4"
+    },
+    "answer": "b",
+    "explanation": "Dual-stack runs both protocols at the same time, with separate addresses, routing tables, and dynamic routing protocols for IPv4 and IPv6. Encapsulating one protocol in the other is tunneling, NAT64 is a translation method, and 6to4 is a tunneling method that builds an IPv6 address from an IPv4 address.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.8-14"
+    ]
+  },
+  {
+    "id": "N10-009-1841",
+    "domain": "1.0",
+    "objective": "1.5",
+    "question": "Which IEEE committee defines the Ethernet standards for both copper and fiber media, such as 1000BASE-T and 10GBASE-SR?",
+    "choices": {
+      "a": "802.3",
+      "b": "802.11",
+      "c": "802.1X",
+      "d": "802.1Q"
+    },
+    "answer": "a",
+    "explanation": "The IEEE 802.3 committee is responsible for all Ethernet types and standards over copper and fiber. 802.11 covers wireless LANs, 802.1X defines port-based network access control, and 802.1Q defines VLAN tagging on trunks.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.5-04"
+    ]
+  },
+  {
+    "id": "N10-009-1842",
+    "domain": "1.0",
+    "objective": "1.7",
+    "question": "What is the decimal value of the binary octet 01101110?",
+    "choices": {
+      "a": "108",
+      "b": "110",
+      "c": "118",
+      "d": "220"
+    },
+    "answer": "b",
+    "explanation": "The bits that are on are worth 64, 32, 8, 4, and 2, which add up to 110. 108 and 118 come from adding the wrong place values, and 220 would be the value if every bit were shifted one place to the left (11011100).",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.7-05"
+    ]
+  },
+  {
+    "id": "N10-009-1843",
+    "domain": "1.0",
+    "objective": "1.7",
+    "question": "A host has the address 192.168.1.165 with mask 255.255.255.0 and needs to send a packet to 192.168.7.20. What does the host use its subnet mask for in this situation?",
+    "choices": {
+      "a": "To determine that the destination is on a different subnet, so the packet goes to the default gateway",
+      "b": "To encrypt the packet header before it leaves the network adapter",
+      "c": "To tell the destination host which subnet the sender belongs to",
+      "d": "To choose which DNS server will resolve the destination address"
+    },
+    "answer": "a",
+    "explanation": "The local device uses its subnet mask to work out which subnet it is on and whether a destination is local; 192.168.7.20 is outside 192.168.1.0/24, so the packet is sent to the default gateway. Masks do not encrypt anything, the mask is not usually transmitted to other hosts, and DNS server selection is a separate setting.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.7-05"
+    ]
+  },
+  {
+    "id": "N10-009-1844",
+    "domain": "1.0",
+    "objective": "1.7",
+    "question": "What is the network address of the subnet that contains host 10.50.77.9/19?",
+    "choices": {
+      "a": "10.50.77.0",
+      "b": "10.50.32.0",
+      "c": "10.50.64.0",
+      "d": "10.50.96.0"
+    },
+    "answer": "c",
+    "explanation": "A /19 mask is 255.255.224.0, so the interesting octet is the third and the magic number is 256 - 224 = 32; the block boundaries are 0, 32, 64, 96, and 77 falls in the 64 to 95 block, so the network is 10.50.64.0. 10.50.77.0 treats the subnet as a /24, 10.50.32.0 is the previous block, and 10.50.96.0 is the next block.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.7-05"
+    ]
+  },
+  {
+    "id": "N10-009-1845",
+    "domain": "1.0",
+    "objective": "1.7",
+    "question": "A new printer must be placed in the same subnet as a server at 192.168.5.100/27. Which address can be assigned to the printer?",
+    "choices": {
+      "a": "192.168.5.96",
+      "b": "192.168.5.126",
+      "c": "192.168.5.127",
+      "d": "192.168.5.128"
+    },
+    "answer": "b",
+    "explanation": "A /27 makes blocks of 32, so 100 is in the 96 to 127 block, with usable hosts from 192.168.5.97 to 192.168.5.126. 192.168.5.96 is the network address, 192.168.5.127 is the broadcast address, and 192.168.5.128 belongs to the next subnet.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.7-05"
+    ]
+  },
+  {
+    "id": "N10-009-1846",
+    "domain": "1.0",
+    "objective": "1.8",
+    "question": "A service provider uses VXLAN to keep thousands of tenant Layer 2 segments separate across its data centers. Which value in the VXLAN header identifies the segment that an encapsulated frame belongs to?",
+    "choices": {
+      "a": "The 12-bit 802.1Q VLAN ID",
+      "b": "The 24-bit VXLAN network identifier (VNI)",
+      "c": "The 6-bit DSCP value",
+      "d": "The 20-bit MPLS label"
+    },
+    "answer": "b",
+    "explanation": "Each VXLAN segment is identified by a 24-bit VNI, which allows over 16 million segments compared with about 4,000 for 12-bit VLAN IDs. The 802.1Q VLAN ID is the smaller tag VXLAN was designed to go beyond, DSCP marks QoS priority, and an MPLS label is used for label switching in provider networks.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "1.8-06"
+    ]
+  },
+  {
+    "id": "N10-009-2501",
+    "domain": "2.0",
+    "objective": "2.1",
+    "question": "A company's internal network uses only Cisco routers. The team wants an interior routing protocol that is easy to enable, converges quickly with loop-free operation, discovers neighbor routers efficiently, and minimizes bandwidth use. Some of the protocol's functions are Cisco proprietary, which is acceptable. Which protocol best fits?",
+    "choices": {
+      "a": "BGP",
+      "b": "EIGRP",
+      "c": "RIP",
+      "d": "OSPF"
+    },
+    "answer": "b",
+    "explanation": "EIGRP is a Cisco-developed interior protocol, partly proprietary, known for easy setup, fast loop-free convergence, efficient neighbor discovery, and low bandwidth use. OSPF is an open-standard link-state protocol, BGP is an exterior protocol for connecting autonomous systems, and RIP is a simple open-standard hop-count protocol with slow convergence.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.1-03"
+    ]
+  },
+  {
+    "id": "N10-009-2502",
+    "domain": "2.0",
+    "objective": "2.1",
+    "question": "An OSPF router learns two routes to 10.40.0.0/16. Both routes are learned through OSPF, and both have a total cost of 20. What will the router do with these routes?",
+    "choices": {
+      "a": "Install only the route that was learned first",
+      "b": "Install only the route through the neighbor with the highest router ID",
+      "c": "Install neither route, because identical costs create a routing loop",
+      "d": "Install both routes and load balance traffic across them"
+    },
+    "answer": "d",
+    "explanation": "OSPF prefers the lowest-cost path, and when two paths have identical costs it installs both and load balances traffic between them. It does not simply keep the first route learned, identical costs do not cause a loop, and the neighbor's router ID is not used to break ties between equal-cost paths.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.1-04",
+      "2.1-07"
+    ]
+  },
+  {
+    "id": "N10-009-2503",
+    "domain": "2.0",
+    "objective": "2.1",
+    "question": "A WAN link between two OSPF routers fails. For several seconds, some routers still forward traffic toward the failed link while updates spread through the network, until every router has recalculated its routes and agrees on the new topology. What is this process called?",
+    "choices": {
+      "a": "Administrative distance",
+      "b": "Route summarization",
+      "c": "Port address translation",
+      "d": "Convergence"
+    },
+    "answer": "d",
+    "explanation": "Convergence is the process of routers exchanging updates after a change until all of them share a consistent, correct view of the network, and its speed varies by routing protocol. Administrative distance ranks trust between routing sources, route summarization combines several prefixes into one advertisement, and port address translation is a NAT function unrelated to routing updates.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.1-04"
+    ]
+  },
+  {
+    "id": "N10-009-2504",
+    "domain": "2.0",
+    "objective": "2.1",
+    "question": "An edge router uses PAT to translate an inside host's session from 192.168.1.10:51000 to 203.0.113.5:62001 on its way to a web server at 198.51.100.20:443. The web server's reply arrives at the router addressed to 203.0.113.5:62001. What does the router do with the reply?",
+    "choices": {
+      "a": "Looks up port 62001 in its translation table and forwards the reply to 192.168.1.10 on port 51000",
+      "b": "Forwards the reply to 192.168.1.10 on port 62001 without changing the destination port",
+      "c": "Broadcasts the reply to every inside host that shares the public address",
+      "d": "Drops the reply, because PAT does not allow return traffic from the internet"
+    },
+    "answer": "a",
+    "explanation": "PAT records each session's inside address and port with the public port it assigned, so the reply to port 62001 is translated back to 192.168.1.10:51000. Return traffic for an existing session is allowed, the router never broadcasts replies to all inside hosts, and the destination port must be translated back to the original 51000 or the host will not match it to its session.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.1-09"
+    ]
+  },
+  {
+    "id": "N10-009-2505",
+    "domain": "2.0",
+    "objective": "2.1",
+    "question": "A small office has one public IPv4 address, 203.0.113.10, which all employees share for outbound browsing through PAT. Internet users must now reach an internal web server at 192.168.1.50 on TCP 443, and employees must keep sharing the same public address. What should be configured on the edge router?",
+    "choices": {
+      "a": "Port forwarding (a static PAT entry) that maps TCP 443 on 203.0.113.10 to 192.168.1.50 port 443",
+      "b": "Static one-to-one NAT that maps 203.0.113.10 entirely to 192.168.1.50",
+      "c": "A dynamic NAT pool that contains the address 192.168.1.50",
+      "d": "A static route on the ISP-facing interface for 192.168.1.0/24"
+    },
+    "answer": "a",
+    "explanation": "Port forwarding is a static PAT entry: connections that arrive for one port on the shared public address are always translated to a specific inside host and port, while other sessions continue to use PAT. A one-to-one static NAT would dedicate the whole public address to the server so employees could no longer share it, a dynamic NAT pool translates inside addresses to a pool of public addresses for outbound sessions rather than publishing a server, and a route cannot help because internet routers do not route the private 192.168.1.0/24 range.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.1-08",
+      "2.1-09"
+    ]
+  },
+  {
+    "id": "N10-009-2506",
+    "domain": "2.0",
+    "objective": "2.1",
+    "question": "An edge router translates inside hosts one-to-one to a pool of eight public IPv4 addresses, without using port numbers. When eight users are already browsing, a ninth user cannot reach the internet until another session times out. The company cannot obtain more public addresses. What is the best fix?",
+    "choices": {
+      "a": "Enlarge the DHCP scope on the inside network",
+      "b": "Configure NAT overload (PAT) so that many inside hosts share the public addresses using unique port numbers",
+      "c": "Configure static NAT for every inside host",
+      "d": "Add a second default route to the ISP"
+    },
+    "answer": "b",
+    "explanation": "One-to-one NAT runs out when every address in the public pool is in use, while PAT lets many inside hosts share one public address by tracking sessions with unique source ports. Static NAT for every host would need even more public addresses, a larger DHCP scope only adds inside addresses, and a second default route does not create more translations.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.1-08",
+      "2.1-09"
+    ]
+  },
+  {
+    "id": "N10-009-2507",
+    "domain": "2.0",
+    "objective": "2.2",
+    "question": "How long is the VLAN ID field in an 802.1Q tag, and which VLAN numbers can be assigned to traffic?",
+    "choices": {
+      "a": "12 bits; VLANs 1 through 4094, because 0 and 4095 are reserved",
+      "b": "16 bits; VLANs 1 through 65535",
+      "c": "12 bits; only the normal range of VLANs 1 through 1005",
+      "d": "10 bits; VLANs 1 through 1023"
+    },
+    "answer": "a",
+    "explanation": "The 802.1Q VLAN ID is 12 bits, giving values 0 to 4095, with 0 and 4095 reserved, so VLANs 1 through 4094 are usable. A 10-bit or 16-bit field would give different ranges, and the extended range 1006 through 4094 is also valid in addition to the normal range of 1 through 1005.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.2-05",
+      "2.2-01"
+    ]
+  },
+  {
+    "id": "N10-009-2508",
+    "domain": "2.0",
+    "objective": "2.2",
+    "question": "A technician configures a switch's management VLAN interface with the address 10.10.99.5/24. The switch can be managed from hosts in 10.10.99.0/24, but administrators in 10.10.50.0/24 cannot reach it, even though the router between the subnets is working. What is the most likely missing setting on the switch?",
+    "choices": {
+      "a": "A voice VLAN",
+      "b": "A DNS server address",
+      "c": "A default gateway",
+      "d": "A native VLAN on the management interface"
+    },
+    "answer": "c",
+    "explanation": "A management interface needs an IP address, a subnet mask, and a default gateway, and without a gateway the switch cannot send replies to hosts on other subnets. DNS is optional and only affects name lookups, a voice VLAN is for IP phones, and the native VLAN applies to untagged traffic on trunks, not to routing replies off the subnet.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.2-02"
+    ]
+  },
+  {
+    "id": "N10-009-2509",
+    "domain": "2.0",
+    "objective": "2.2",
+    "question": "Which two statements correctly describe link aggregation that is configured with LACP? (Choose two.)",
+    "choices": {
+      "a": "Each member link of the bundle must be assigned to a different VLAN",
+      "b": "Each member link must be configured for a different speed",
+      "c": "LACP automates the negotiation of the bundle and the handling of member links",
+      "d": "Several physical interfaces operate together as a single logical interface"
+    },
+    "answer": [
+      "c",
+      "d"
+    ],
+    "explanation": "Link aggregation (port bonding) makes multiple physical interfaces act like one larger logical interface, and LACP adds automated negotiation and management of the members. Members of a bundle must have matching VLAN and speed settings, not different ones.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.2-06"
+    ]
+  },
+  {
+    "id": "N10-009-2510",
+    "domain": "2.0",
+    "objective": "2.2",
+    "question": "Users at a branch connected through a site-to-site tunnel can ping servers and load small web pages, but large file transfers stall. The tunnel adds headers to every packet, and a firewall along the path blocks all ICMP messages. What is the most likely cause?",
+    "choices": {
+      "a": "Packets exceed the path MTU, and the blocked ICMP messages prevent hosts from discovering the smaller MTU",
+      "b": "The native VLAN does not match on the branch trunk",
+      "c": "Spanning tree is blocking the branch uplink",
+      "d": "A duplex mismatch exists on the branch router's LAN interface"
+    },
+    "answer": "a",
+    "explanation": "Tunnel headers reduce the usable MTU, and path MTU discovery relies on ICMP messages, so when ICMP is filtered the hosts never learn the smaller MTU and large packets that cannot be fragmented are silently dropped while small packets still pass. A duplex mismatch causes errors on all traffic, a native VLAN mismatch would affect untagged VLAN traffic regardless of packet size, and a blocked uplink would stop all traffic rather than only large transfers.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.2-10"
+    ]
+  },
+  {
+    "id": "N10-009-2511",
+    "domain": "2.0",
+    "objective": "2.2",
+    "question": "Two switches are connected by two cables, and spanning tree is disabled. A single broadcast frame begins circulating between the switches and never stops. Why is the frame never discarded?",
+    "choices": {
+      "a": "Broadcast frames are processed at Layer 3, where switches cannot drop them",
+      "b": "The two cables create a duplex mismatch that resends every frame",
+      "c": "Ethernet frames have no hop count or time-to-live field, so switches have no way to count how many times a frame has been forwarded",
+      "d": "Switches discard broadcast frames only after the MAC address table becomes full"
+    },
+    "answer": "c",
+    "explanation": "There is no counting mechanism at the MAC layer, so a looped frame is forwarded forever unless STP blocks the redundant path. MAC table capacity does not cause broadcasts to be discarded, broadcast frames are handled at Layer 2 by switches, and a duplex mismatch causes collisions rather than an endless loop.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.2-09"
+    ]
+  },
+  {
+    "id": "N10-009-2512",
+    "domain": "2.0",
+    "objective": "2.2",
+    "question": "A redundant uplink between two switches shows that the interface is up and administratively enabled. Spanning tree reports that the port is not forwarding user frames, and it stays in this state indefinitely to prevent a loop. In which STP state is the port?",
+    "choices": {
+      "a": "Listening",
+      "b": "Disabled",
+      "c": "Blocking",
+      "d": "Forwarding"
+    },
+    "answer": "c",
+    "explanation": "A blocking port stays up but does not forward user traffic so that a redundant path cannot create a loop, and it remains there until the topology changes. Disabled means an administrator turned the port off, listening is a short transitional state on the way to forwarding, and forwarding passes user traffic normally.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.2-09"
+    ]
+  },
+  {
+    "id": "N10-009-2513",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "A technician replaces an access point's 3 dBi antenna with a 6 dBi antenna of the same type. About how much does the signal power in the antenna's direction of coverage change?",
+    "choices": {
+      "a": "It about doubles",
+      "b": "It is cut in half",
+      "c": "It about quadruples",
+      "d": "It increases by about 3 percent"
+    },
+    "answer": "a",
+    "explanation": "Antenna gain is measured in decibels, and every 3 dB of gain roughly doubles the power, so going from 3 dBi to 6 dBi doubles it. Quadrupling would need about 6 dB more gain, decibels are logarithmic rather than a percentage, and higher gain increases rather than reduces power in the focused direction.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.3-18"
+    ]
+  },
+  {
+    "id": "N10-009-2514",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "Two laptops are associated with the same access point on a guest SSID. Both can reach the internet, but they cannot ping each other, and the access point is working as the administrator intended. What is the most likely explanation?",
+    "choices": {
+      "a": "The laptops are in ad hoc mode, which allows only internet traffic",
+      "b": "The access point is using a mesh backhaul that drops traffic between local clients",
+      "c": "Each laptop sees a different BSSID, and clients with different BSSIDs can never communicate",
+      "d": "In infrastructure mode, client traffic passes through the access point, and the access point is configured to block client-to-client traffic"
+    },
+    "answer": "d",
+    "explanation": "In infrastructure mode clients send traffic through the access point, which forwards it and can allow or block communication between clients, a common guest network setting. Ad hoc mode uses no access point at all, mesh backhaul links access points to each other and does not explain blocking between local clients, and both laptops on the same access point share the same BSSID.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.3-13"
+    ]
+  },
+  {
+    "id": "N10-009-2515",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "Which block cipher mode is associated with WPA3 and provides stronger encryption than the CCMP mode used by WPA2?",
+    "choices": {
+      "a": "TKIP",
+      "b": "WEP",
+      "c": "RC4",
+      "d": "GCMP"
+    },
+    "answer": "d",
+    "explanation": "WPA3 uses GCMP (Galois/Counter Mode Protocol), which provides AES confidentiality and integrity through GMAC and is stronger than WPA2's CCMP. TKIP was the interim protocol used by the original WPA, RC4 is the stream cipher used by WEP and TKIP, and WEP is the broken original wireless security standard.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.3-15"
+    ]
+  },
+  {
+    "id": "N10-009-2516",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "Which two security services does the block cipher mode used by WPA2 provide for wireless data? (Choose two.)",
+    "choices": {
+      "a": "A message integrity check that confirms the received data matches the data that was sent",
+      "b": "Individual user authentication through a RADIUS server",
+      "c": "Data confidentiality through AES encryption",
+      "d": "Assignment of each client to a VLAN"
+    },
+    "answer": [
+      "a",
+      "c"
+    ],
+    "explanation": "WPA2's CCMP mode encrypts data with AES for confidentiality and uses CBC-MAC as a message integrity check so that altered data is detected. User authentication with RADIUS comes from the 802.1X Enterprise mode, not from the cipher mode, and VLAN assignment is not an encryption service.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.3-14"
+    ]
+  },
+  {
+    "id": "N10-009-2517",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "A warehouse still uses an old handheld scanner whose wireless adapter supports only WEP. A manager suggests enabling WEP with the longest key available to keep the scanner online. What should the technician recommend?",
+    "choices": {
+      "a": "Replace or upgrade the scanner so it can use WPA2 or WPA3, because WEP has serious cryptographic weaknesses",
+      "b": "Use WEP with the longest key, because key length removes its weaknesses",
+      "c": "Use the original WPA, because it is the current recommended standard",
+      "d": "Combine WEP with MAC filtering, which together provide strong security"
+    },
+    "answer": "a",
+    "explanation": "WEP has serious cryptographic weaknesses that a longer key does not fix, so the device should be replaced or upgraded to support WPA2 or WPA3. The original WPA was only a short-term bridge from WEP and has been superseded, and MAC filtering is easily bypassed by spoofing an allowed address.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.3-14",
+      "2.3-15"
+    ]
+  },
+  {
+    "id": "N10-009-2518",
+    "domain": "2.0",
+    "objective": "2.4",
+    "question": "While dressing cables in a fiber distribution panel, a technician wraps the extra length of a fiber patch cord into a very small, tight coil. Afterward, the link shows high loss and then fails. What is the most likely cause?",
+    "choices": {
+      "a": "The fiber was bent tighter than its minimum bend radius",
+      "b": "Electromagnetic interference from the panel's power supply",
+      "c": "The fiber was terminated with the wrong T568 wiring standard",
+      "d": "Crosstalk from neighboring fiber strands"
+    },
+    "answer": "a",
+    "explanation": "Fiber has a minimum bend radius, and bending it too tightly causes signal loss and can break the glass, so extra length should be stored as a proper service loop. Fiber does not suffer crosstalk or electromagnetic interference the way copper does, and T568A and T568B are copper wiring standards.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.4-04"
+    ]
+  },
+  {
+    "id": "N10-009-2519",
+    "domain": "2.0",
+    "objective": "2.4",
+    "question": "Which two statements about electrical power for network equipment are correct? (Choose two.)",
+    "choices": {
+      "a": "Amperage is the electrical pressure that pushes electrons through a circuit",
+      "b": "Alternating current flows in one direction at a constant voltage",
+      "c": "Typical outlets supply about 110 to 120 VAC at 60 Hz in the US and Canada and about 220 to 240 VAC at 50 Hz in Europe",
+      "d": "Network devices use DC internally, so their power supplies convert AC from the outlet to DC"
+    },
+    "answer": [
+      "c",
+      "d"
+    ],
+    "explanation": "Most devices run on DC, so their power supplies convert the AC provided by the outlet, and AC voltage and frequency differ by region, about 120 V at 60 Hz in North America and 220 to 240 V at 50 Hz in Europe. Voltage, not amperage, is the electrical pressure, and it is direct current, not alternating current, that flows in one direction at a constant voltage.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.4-09"
+    ]
+  },
+  {
+    "id": "N10-009-2520",
+    "domain": "2.0",
+    "objective": "2.4",
+    "question": "A branch office has frequent brownouts in which the utility voltage sags for several seconds. The network team wants a UPS that corrects the low voltage without switching to battery each time, but the budget does not allow an online/double-conversion model. Which UPS type should be selected?",
+    "choices": {
+      "a": "A surge protector",
+      "b": "Offline/standby UPS",
+      "c": "Line-interactive UPS",
+      "d": "A managed PDU"
+    },
+    "answer": "c",
+    "explanation": "A line-interactive UPS adjusts low or high input voltage on its own and uses the battery only when it cannot correct the problem, at lower cost than an online/double-conversion unit. A standby UPS switches to battery for power problems instead of regulating voltage, a managed PDU distributes and monitors power but provides no backup, and a surge protector only limits voltage spikes.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.4-06"
+    ]
+  },
+  {
+    "id": "N10-009-2521",
+    "domain": "2.0",
+    "objective": "2.4",
+    "question": "Environmental sensors show that relative humidity in a server room has climbed to 80 percent during a humid summer. Which risk does this create, and what range do industry guidelines generally recommend?",
+    "choices": {
+      "a": "Condensation; keep humidity below 20 percent",
+      "b": "Static discharge; keep humidity around 40 to 60 percent",
+      "c": "Condensation on equipment; keep humidity around 40 to 60 percent",
+      "d": "Static discharge; keep humidity around 70 to 80 percent"
+    },
+    "answer": "c",
+    "explanation": "High humidity promotes condensation, which can damage electronics, and data center guidelines generally target about 40 to 60 percent relative humidity. Static discharge is the risk of low humidity, not high, and humidity below 20 percent would itself raise the static risk.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.4-10"
+    ]
+  },
+  {
+    "id": "N10-009-2522",
+    "domain": "2.0",
+    "objective": "2.4",
+    "question": "A data center's clean-agent fire suppression system is integrated with the HVAC system. What is a main reason for this integration?",
+    "choices": {
+      "a": "So the HVAC system can spray water mist from the air vents to put out the fire",
+      "b": "So the air handlers can be shut down or controlled when the agent is released, keeping it in the room and not spreading smoke",
+      "c": "So the HVAC system can raise humidity to put out the fire",
+      "d": "So the HVAC system can cool the suppression gas before it is released"
+    },
+    "answer": "b",
+    "explanation": "Suppression systems are integrated with HVAC so air handlers can be disabled or controlled during a discharge, which keeps the agent concentrated in the protected space and limits the spread of smoke, and the system can also monitor for carbon monoxide. HVAC systems do not spray water or raise humidity to put out fires, and clean agents are stored in tanks and do not need cooling by the HVAC system.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "2.4-11"
+    ]
+  },
+  {
+    "id": "N10-009-3801",
+    "domain": "3.0",
+    "objective": "3.1",
+    "question": "A firewall vendor normally publishes its updates on a fixed monthly schedule. Today it releases a patch outside that schedule to fix a zero-day vulnerability that attackers are already exploiting. How is this update best described?",
+    "choices": {
+      "a": "An emergency out-of-band update",
+      "b": "A service pack",
+      "c": "A routine monthly incremental update",
+      "d": "An end-of-support final release"
+    },
+    "answer": "a",
+    "explanation": "Vendors release emergency out-of-band updates outside the normal schedule when a zero-day or other critical security problem cannot wait for the next cycle. A service pack bundles many fixes at once, and a routine monthly update arrives on the regular schedule. An end-of-support release is the final version of a product, not an urgent security fix.",
+    "topics": [
+      "3.1-11"
+    ],
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-3802",
+    "domain": "3.0",
+    "objective": "3.1",
+    "question": "An organization is documenting the baseline (golden) configuration that every instance of a web application server must follow. Which two items belong in that baseline? (Choose two.)",
+    "choices": {
+      "a": "Required firewall settings for the server",
+      "b": "Approved patch levels and operating system file versions",
+      "c": "The names of users currently logged in to the server",
+      "d": "The server's current CPU and memory utilization"
+    },
+    "answer": [
+      "a",
+      "b"
+    ],
+    "explanation": "A baseline configuration defines the settings every instance must match, such as firewall settings, patch levels, and OS file versions, so integrity checks can compare systems against it. Logged-in users and current utilization change constantly and describe the server's activity, not its required configuration.",
+    "topics": [
+      "3.1-16"
+    ],
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-3803",
+    "domain": "3.0",
+    "objective": "3.1",
+    "question": "An engineer upgraded a router's firmware last month. Today she tries to restore a configuration backup that was saved before the upgrade, and the router rejects several commands in the file. What is the most likely cause?",
+    "choices": {
+      "a": "The backup was created under a different firmware version, and some commands are specific to that version",
+      "b": "Configuration backups store only IP addresses, not port or security settings",
+      "c": "Backups must be converted into a golden configuration before they can be restored",
+      "d": "The router can restore a backup only over SNMP"
+    },
+    "answer": "a",
+    "explanation": "Device configurations can be tied to a specific version of operating code or firmware, so restoring an older backup may require a firmware downgrade to work fully. Backups contain the full configuration, including port and security settings. A golden configuration is a reference standard, not a required format for restores, and SNMP is not required to restore a configuration.",
+    "topics": [
+      "3.1-15"
+    ],
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-3804",
+    "domain": "3.0",
+    "objective": "3.2",
+    "question": "A legacy switch supports only SNMPv1 and SNMPv2c. The monitoring server must be able to poll the switch's interface counters but must not be able to change any switch setting. What should the administrator configure?",
+    "choices": {
+      "a": "A read-only community string on the switch and the monitoring server",
+      "b": "A read-write community string on the switch and the monitoring server",
+      "c": "An SNMPv3 username and hashed password",
+      "d": "A trap community string only"
+    },
+    "answer": "a",
+    "explanation": "SNMPv1 and v2c authenticate with community strings, and a read-only string allows the server to poll values without changing anything; it should be changed from a default such as public. A read-write string would allow configuration changes. The switch does not support SNMPv3 usernames, and a trap setting only lets the switch send alerts, so the server could not poll counters.",
+    "topics": [
+      "3.2-01"
+    ],
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-3805",
+    "domain": "3.0",
+    "objective": "3.2",
+    "question": "A vendor's documentation says an interface's inbound byte count can be read at .1.3.6.1.2.1.2.2.1.10. What is this value?",
+    "choices": {
+      "a": "An SNMP object identifier (OID) for a variable in the MIB",
+      "b": "A compressed IPv6 link-local address",
+      "c": "A syslog facility code and severity level",
+      "d": "A NetFlow collector template number"
+    },
+    "answer": "a",
+    "explanation": "Every variable in an SNMP Management Information Base (MIB) has an object identifier, which can be written as a dotted string of numbers, and the SNMP manager requests data by OID. IPv6 addresses use hexadecimal groups separated by colons. Syslog facility and severity are small single codes, and NetFlow templates are not referenced with dotted OID notation.",
+    "topics": [
+      "3.2-01"
+    ],
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-3806",
+    "domain": "3.0",
+    "objective": "3.2",
+    "question": "Over a weekend, an office was rearranged and many desktops were plugged into different wall jacks. On Monday morning, a technician wants to run a single network scan right away to see which devices are now connected where, rather than wait for the regular weekly report. Which approach fits this need?",
+    "choices": {
+      "a": "Ad hoc network discovery",
+      "b": "Scheduled network discovery",
+      "c": "Availability monitoring",
+      "d": "Configuration monitoring"
+    },
+    "answer": "a",
+    "explanation": "Ad hoc network discovery is a scan run as needed, at the moment it is required. Scheduled discovery runs at regular intervals, which is what the technician does not want to wait for. Availability monitoring reports whether devices are up or down, and configuration monitoring checks for changes to device settings, not where devices are connected.",
+    "topics": [
+      "3.2-08"
+    ],
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-3807",
+    "domain": "3.0",
+    "objective": "3.3",
+    "question": "A company is buying two firewalls to run as an active-passive pair. Peak internet traffic through the firewall is 8 Gbps. What is the minimum throughput each firewall should be rated for so that a failover does not reduce performance?",
+    "choices": {
+      "a": "8 Gbps, because only one firewall forwards traffic at a time and it must carry the full load by itself",
+      "b": "4 Gbps, because the pair splits the 8 Gbps load evenly between the two units",
+      "c": "16 Gbps, because the passive unit must reserve capacity to synchronize session data",
+      "d": "2 Gbps, because the passive unit adds its full capacity to the active unit during peak hours"
+    },
+    "answer": "a",
+    "explanation": "In active-passive, only one device operates at a time and the other takes over if it fails, so each unit must be able to handle the entire 8 Gbps peak on its own. Splitting the load between both units describes active-active, not active-passive. Session synchronization does not require doubling the throughput rating, and the passive unit never adds its capacity to the active one.",
+    "topics": [
+      "3.3-09"
+    ],
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-3808",
+    "domain": "3.0",
+    "objective": "3.3",
+    "question": "Two firewalls run as an active-active pair. During peak hours, each one carries about 70 percent of its own maximum throughput. What is the most likely result if one firewall fails during peak hours?",
+    "choices": {
+      "a": "The surviving firewall cannot carry the combined load, so performance degrades",
+      "b": "There is no impact, because active-active doubles the capacity of each device",
+      "c": "All traffic stops, because active-active designs cannot fail over",
+      "d": "A third standby firewall activates to absorb the extra traffic"
+    },
+    "answer": "a",
+    "explanation": "In active-active, both devices carry traffic, so if one fails the other must handle the combined load, about 140 percent of its capacity in this case, and performance suffers. To keep full redundancy, each device should normally run below about half of its capacity. Active-active does not increase a single device's capacity, it can still fail over to the surviving unit, and no standby device exists in this design.",
+    "topics": [
+      "3.3-08"
+    ],
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-3809",
+    "domain": "3.0",
+    "objective": "3.4",
+    "question": "Which two DHCP messages are sent by the DHCP server to the client during the address assignment process? (Choose two.)",
+    "choices": {
+      "a": "DHCPOFFER",
+      "b": "DHCPACK",
+      "c": "DHCPDISCOVER",
+      "d": "DHCPREQUEST"
+    },
+    "answer": [
+      "a",
+      "b"
+    ],
+    "explanation": "In the DHCP process, the server sends the Offer with proposed address settings and later sends the Acknowledgment that confirms the lease. The client sends the Discover to find available servers and the Request to formally accept an offer.",
+    "topics": [
+      "3.4-01"
+    ],
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-3810",
+    "domain": "3.0",
+    "objective": "3.4",
+    "question": "A company uses one DHCP server for all of its sites. Management is concerned that if that server fails, clients will be unable to obtain or renew addresses. What is the best way to address this concern?",
+    "choices": {
+      "a": "Add a second DHCP server configured to share or fail over the scopes",
+      "b": "Configure an IP helper address on every router interface",
+      "c": "Create a reservation for every client MAC address",
+      "d": "Increase the lease time on every scope to one year"
+    },
+    "answer": "a",
+    "explanation": "Redundant DHCP servers, for example a failover pair or a split scope, allow clients to keep obtaining addresses if one server fails. An IP helper only forwards requests to a server and does not add redundancy. Reservations still depend on the single server, and very long leases only delay the problem while making address reuse harder.",
+    "topics": [
+      "3.4-01"
+    ],
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-3811",
+    "domain": "3.0",
+    "objective": "3.4",
+    "question": "A DHCP scope uses a lease time of 24 hours with the default timers. When does a client first try to renew with the server that issued its lease, and when does it begin trying to rebind with any available DHCP server if it gets no answer?",
+    "choices": {
+      "a": "Renew at 12 hours and rebind at 21 hours",
+      "b": "Renew at 6 hours and rebind at 12 hours",
+      "c": "Renew at 12 hours and rebind at 18 hours",
+      "d": "Renew at 18 hours and rebind at 24 hours"
+    },
+    "answer": "a",
+    "explanation": "By default, the T1 renewal timer is 50 percent of the lease (12 of 24 hours) and the T2 rebinding timer is 87.5 percent, or seven-eighths, of the lease (21 of 24 hours). The other choices use incorrect percentages for one or both timers.",
+    "topics": [
+      "3.4-01"
+    ],
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-3812",
+    "domain": "3.0",
+    "objective": "3.4",
+    "question": "After a new DHCP scope is created, clients receive an IP address and subnet mask and can communicate with hosts on their own subnet, but they cannot reach any other subnet or the internet, even by IP address. Which scope setting was most likely left out?",
+    "choices": {
+      "a": "The default gateway (router) option",
+      "b": "The DNS server option",
+      "c": "An exclusion range",
+      "d": "A longer lease duration"
+    },
+    "answer": "a",
+    "explanation": "Without a default gateway option, clients have no router to send traffic for remote networks, so only local communication works. A missing DNS server would break name resolution but not connections made by IP address. Exclusion ranges and lease duration do not affect whether clients can route off their subnet.",
+    "topics": [
+      "3.4-01"
+    ],
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-3813",
+    "domain": "3.0",
+    "objective": "3.4",
+    "question": "A company adds VLAN 40 with the subnet 192.168.40.0/24. The VLAN's router interface already relays DHCP requests to the central DHCP server, which currently has a scope only for 192.168.10.0/24. What must the administrator do on the DHCP server so VLAN 40 clients receive correct addresses?",
+    "choices": {
+      "a": "Create a new scope for 192.168.40.0/24 with its own range, mask, and options",
+      "b": "Add the 192.168.40.0/24 addresses to the existing 192.168.10.0/24 scope",
+      "c": "Create a reservation for each VLAN 40 client in the existing scope",
+      "d": "Nothing, because the server builds a scope automatically from relayed requests"
+    },
+    "answer": "a",
+    "explanation": "Each subnet needs its own scope, a contiguous pool with its own mask, lease settings, and options such as the default gateway. Adding the addresses to another subnet's scope would hand out wrong settings, and reservations still require a scope for that subnet. DHCP servers do not create scopes automatically from relayed traffic.",
+    "topics": [
+      "3.4-01"
+    ],
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-3814",
+    "domain": "3.0",
+    "objective": "3.4",
+    "question": "Which protocol does an IPv6 host use to discover the MAC address of another device on its local link, replacing the IPv4 ARP, and how are its messages sent?",
+    "choices": {
+      "a": "Neighbor Discovery Protocol, using ICMPv6 multicast messages",
+      "b": "Address Resolution Protocol, using broadcast frames",
+      "c": "DHCPv6, using broadcast frames",
+      "d": "Link Layer Discovery Protocol, using Ethernet multicast frames"
+    },
+    "answer": "a",
+    "explanation": "IPv6 has no broadcasts and no ARP; NDP runs over ICMPv6 and uses multicast to find neighbor MAC addresses and routers. ARP is an IPv4 protocol, and DHCPv6 assigns addresses rather than resolving MAC addresses. LLDP advertises device information to directly connected neighbors but does not resolve IPv6 addresses to MAC addresses.",
+    "topics": [
+      "3.4-02"
+    ],
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-3815",
+    "domain": "3.0",
+    "objective": "3.4",
+    "question": "A packet capture on an IPv6 segment shows the router periodically sending Router Advertisement messages even though no host has asked for one. Which destination address do these unsolicited messages use, and what information do they carry?",
+    "choices": {
+      "a": "ff02::1, carrying the network prefix, prefix length, and settings such as DNS server information",
+      "b": "ff02::2, carrying the router's MAC address table",
+      "c": "ff:ff:ff:ff:ff:ff, carrying DHCP lease information",
+      "d": "::1, carrying the router's routing table"
+    },
+    "answer": "a",
+    "explanation": "Routers send unsolicited Router Advertisements to the all-nodes multicast address ff02::1, providing the prefix, prefix length, and other settings hosts use for SLAAC. The all-routers address ff02::2 is used by hosts sending Router Solicitations. IPv6 does not use broadcasts, and ::1 is the loopback address.",
+    "topics": [
+      "3.4-02"
+    ],
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-3816",
+    "domain": "3.0",
+    "objective": "3.4",
+    "question": "A technician runs nslookup for www.example.com, and the output labels the result as a non-authoritative answer. What does this indicate?",
+    "choices": {
+      "a": "The responding server is not the authority for the zone and likely answered from its cache",
+      "b": "The response failed DNSSEC validation and should not be trusted",
+      "c": "The record does not exist in the example.com zone",
+      "d": "The answer came from a secondary server, so its data is invalid"
+    },
+    "answer": "a",
+    "explanation": "A non-authoritative answer comes from a server that does not hold the zone's source files, usually from cached information that remains valid until its TTL expires. It says nothing about DNSSEC validation, and the record clearly exists because an answer was returned. Secondary servers hold a read-only copy of the zone and are themselves authoritative, so their answers are valid.",
+    "topics": [
+      "3.4-03"
+    ],
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-3817",
+    "domain": "3.0",
+    "objective": "3.4",
+    "question": "One server named mail.example.com also hosts the company's web, FTP, and chat services. The administrator wants www, ftp, and chat to be aliases of mail.example.com, so only one record must change if the server's IP address changes. Which record type should be used for the aliases?",
+    "choices": {
+      "a": "CNAME",
+      "b": "PTR",
+      "c": "NS",
+      "d": "MX"
+    },
+    "answer": "a",
+    "explanation": "A CNAME record makes one name an alias of another, canonical name, so many service names can point to one host whose A record holds the IP address. PTR records map IP addresses back to names, NS records identify the zone's name servers, and MX records identify mail servers.",
+    "topics": [
+      "3.4-03"
+    ],
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-3818",
+    "domain": "3.0",
+    "objective": "3.4",
+    "question": "Which DNS record contains a zone's serial number along with the refresh, retry, and expiry timers that secondary servers use when checking for zone updates?",
+    "choices": {
+      "a": "Start of Authority (SOA)",
+      "b": "Name server (NS)",
+      "c": "Text (TXT)",
+      "d": "Pointer (PTR)"
+    },
+    "answer": "a",
+    "explanation": "The SOA record describes the zone itself, including the serial number, refresh, retry, and expiry timers, and caching duration. NS records only list the zone's name servers, TXT records hold human-readable or policy text such as SPF, and PTR records are used for reverse lookups.",
+    "topics": [
+      "3.4-03"
+    ],
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-3819",
+    "domain": "3.0",
+    "objective": "3.4",
+    "question": "Which two statements about DNS resource records are correct? (Choose two.)",
+    "choices": {
+      "a": "An NS record identifies a name server for the zone by its host name",
+      "b": "An MX record points to the mail server's host name rather than directly to an IP address",
+      "c": "A PTR record maps a host name to an IPv6 address",
+      "d": "A CNAME record maps an IP address back to a host name"
+    },
+    "answer": [
+      "a",
+      "b"
+    ],
+    "explanation": "NS and MX records both point to host names, which are then resolved to addresses through A or AAAA records. A host name is mapped to an IPv6 address with an AAAA record, not a PTR record. Mapping an IP address back to a name is the job of a PTR record, while a CNAME creates an alias.",
+    "topics": [
+      "3.4-03"
+    ],
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-3820",
+    "domain": "3.0",
+    "objective": "3.4",
+    "question": "A company's core router obtains its time from an upstream internet NTP server and also answers time requests from all of the branch switches. How is the router operating?",
+    "choices": {
+      "a": "As an NTP client/server",
+      "b": "As an NTP server only",
+      "c": "As an NTP client only",
+      "d": "As an NTS key exchange server"
+    },
+    "answer": "a",
+    "explanation": "An NTP client/server requests time updates from an upstream NTP server and also responds to time requests from other NTP clients. An NTP server only answers requests and does not modify its own time from another source, while an NTP client only requests time. An NTS key exchange server provides authentication keys and cookies, not the time itself.",
+    "topics": [
+      "3.4-05"
+    ],
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-3821",
+    "domain": "3.0",
+    "objective": "3.5",
+    "question": "Remote laptops connect with a full-tunnel client-to-site VPN. Which two statements about this configuration are correct? (Choose two.)",
+    "choices": {
+      "a": "All traffic from the laptop, including general internet browsing, is sent through the VPN tunnel",
+      "b": "The VPN concentrator may need additional routing to send internet-bound traffic back out",
+      "c": "Only traffic destined for corporate subnets is sent through the tunnel",
+      "d": "It reduces traffic on the corporate internet connection compared to split tunneling"
+    },
+    "answer": [
+      "a",
+      "b"
+    ],
+    "explanation": "In a full tunnel, the client sends everything through the VPN and makes no forwarding decisions of its own, so the concentrator side may need extra routing to send internet traffic back out. Sending only corporate traffic through the tunnel describes a split tunnel. Full tunneling increases load on the corporate internet link, because browsing traffic enters and leaves through it.",
+    "topics": [
+      "3.5-03"
+    ],
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-3822",
+    "domain": "3.0",
+    "objective": "3.5",
+    "question": "At headquarters, a firewall terminates encrypted tunnels from branch office VPN appliances and from remote employees' VPN software, encrypting and decrypting all of that traffic. Which function is the firewall providing?",
+    "choices": {
+      "a": "VPN concentrator",
+      "b": "Jump box",
+      "c": "Load balancer",
+      "d": "Console server"
+    },
+    "answer": "a",
+    "explanation": "A VPN concentrator is the access device that encrypts and decrypts VPN traffic and terminates many tunnels; it is often built into a firewall. A jump box is a hardened host used to reach a protected network zone, a load balancer spreads requests across servers, and a console server provides out-of-band serial access to devices.",
+    "topics": [
+      "3.5-01"
+    ],
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-4501",
+    "domain": "4.0",
+    "objective": "4.1",
+    "question": "A VPN concentrator is configured to record each remote user's login time, logout time, and the amount of data sent and received during the session. Which AAA function does this provide?",
+    "choices": {
+      "a": "Accounting",
+      "b": "Authorization",
+      "c": "Authentication",
+      "d": "Identification"
+    },
+    "answer": "a",
+    "explanation": "Accounting tracks the resources a user consumed, such as session times and data transferred. Authentication proves the user is who they claim to be, authorization decides what that user may access, and identification is simply the claim of identity, usually the username.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.1-03"
+    ]
+  },
+  {
+    "id": "N10-009-4502",
+    "domain": "4.0",
+    "objective": "4.1",
+    "question": "An application looks up a user in the company directory with the distinguished name CN=Jsmith,OU=Sales,O=Example,C=US. Which two statements about this lookup are correct? (Choose two.)",
+    "choices": {
+      "a": "LDAP is the protocol used to query and update this X.500-style directory",
+      "b": "The most specific attribute, CN, is listed first in the distinguished name",
+      "c": "C=US is a leaf object that represents the user account itself",
+      "d": "The directory stores its records as a flat list with no hierarchy"
+    },
+    "answer": [
+      "a",
+      "b"
+    ],
+    "explanation": "LDAP is the lightweight protocol used to read and write X.500 directories such as Active Directory, and X.500 distinguished names list the most specific attribute first. Country, organization, and organizational unit are container objects in a hierarchical directory information tree, while the user is the leaf object, so the directory is not flat.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.1-03"
+    ]
+  },
+  {
+    "id": "N10-009-4503",
+    "domain": "4.0",
+    "objective": "4.1",
+    "question": "A company wants its routers, firewalls, VPN concentrator, and 802.1X-enabled switches and access points to all check user credentials against one central AAA server. The protocol must be widely supported on network devices and available on nearly any server operating system. Which protocol best fits?",
+    "choices": {
+      "a": "RADIUS",
+      "b": "TACACS+",
+      "c": "SAML",
+      "d": "TOTP"
+    },
+    "answer": "a",
+    "explanation": "RADIUS is a common AAA protocol that centralizes authentication for network devices, remote VPN access, and 802.1X network access. TACACS+ is mainly used for administrator access to network devices and is not the protocol used for 802.1X, SAML is a web-based standard for authenticating to third-party applications, and TOTP is a one-time password method rather than a AAA protocol.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.1-03"
+    ]
+  },
+  {
+    "id": "N10-009-4504",
+    "domain": "4.0",
+    "objective": "4.1",
+    "question": "A risk register entry notes that a nearby river could flood the ground-floor server room and destroy equipment. No attacker is involved. Which term best describes the potential flood?",
+    "choices": {
+      "a": "Threat",
+      "b": "Exploit",
+      "c": "Vulnerability",
+      "d": "Honeypot"
+    },
+    "answer": "a",
+    "explanation": "A threat is anything that could take advantage of a weakness and cause harm, and it can be accidental or natural, such as a fire or flood, as well as intentional. An exploit is a technique that takes advantage of a vulnerability, the vulnerability here would be the server room's exposed location, and a honeypot is a decoy system used to study attackers.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.1-12"
+    ]
+  },
+  {
+    "id": "N10-009-4505",
+    "domain": "4.0",
+    "objective": "4.1",
+    "question": "A former customer who lives in Germany asks an online retailer to erase all personal data it holds about her and to remove her information from search results. Which regulation gives her this right?",
+    "choices": {
+      "a": "GDPR",
+      "b": "PCI DSS",
+      "c": "HIPAA",
+      "d": "SOX"
+    },
+    "answer": "a",
+    "explanation": "GDPR gives data subjects in the EU control over their personal data, including the right to be forgotten. PCI DSS is a standard for protecting payment card data, HIPAA covers US health information, and SOX covers US corporate financial reporting; none of these grant an EU right of erasure.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.1-16"
+    ]
+  },
+  {
+    "id": "N10-009-4506",
+    "domain": "4.0",
+    "objective": "4.1",
+    "question": "Which two are among the control objectives of PCI DSS? (Choose two.)",
+    "choices": {
+      "a": "Protect cardholder data",
+      "b": "Maintain a vulnerability management program",
+      "c": "Store all personal data collected from EU citizens inside the EU",
+      "d": "Give data subjects the right to have their personal data erased"
+    },
+    "answer": [
+      "a",
+      "b"
+    ],
+    "explanation": "PCI DSS is a standard for protecting credit card data, and its control objectives include protecting cardholder data and maintaining a vulnerability management program, along with secure networks, strong access control, monitoring and testing, and a security policy. Storing EU citizens' data inside the EU and the right to erasure are GDPR requirements, not PCI DSS objectives.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.1-15"
+    ]
+  },
+  {
+    "id": "N10-009-4507",
+    "domain": "4.0",
+    "objective": "4.1",
+    "question": "Why do operational technology (OT) networks, such as those controlling an electric grid or traffic signals, require a more critical security posture than a typical office IT network?",
+    "choices": {
+      "a": "A compromise can cause physical consequences such as power outages, unsafe traffic signals, or a manufacturing shutdown",
+      "b": "OT devices store far more personal data than office computers do",
+      "c": "OT networks carry much more web browsing traffic than office networks",
+      "d": "OT devices cannot be placed on separate network segments"
+    },
+    "answer": "a",
+    "explanation": "OT is the hardware and software that runs industrial equipment, so an attack can do far more than take a web server offline; it can drop a power grid or shut down a plant. OT systems are not mainly personal-data stores or web-browsing networks, and they can and should be heavily segmented.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.1-18"
+    ]
+  },
+  {
+    "id": "N10-009-4508",
+    "domain": "4.0",
+    "objective": "4.1",
+    "question": "A retailer moves its point-of-sale terminals and payment servers onto an isolated network segment, separate from office PCs and guest Wi-Fi, because the credit card industry's security standard calls for the cardholder data environment to be isolated. Which reason for segmentation does this primarily illustrate?",
+    "choices": {
+      "a": "Compliance",
+      "b": "Performance for high-bandwidth applications",
+      "c": "Fault tolerance",
+      "d": "Load balancing"
+    },
+    "answer": "a",
+    "explanation": "Segmenting systems because a standard such as PCI DSS requires it is segmentation for compliance, which also makes auditing and change control easier. Performance segmentation isolates high-bandwidth applications, while fault tolerance and load balancing are availability techniques rather than reasons for this kind of isolation.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.1-15"
+    ]
+  },
+  {
+    "id": "N10-009-4509",
+    "domain": "4.0",
+    "objective": "4.2",
+    "question": "On a network where Spanning Tree Protocol is disabled, a technician connects a second patch cable between two switches. Within seconds the network becomes unusable. No attacker is involved. How is this event best described?",
+    "choices": {
+      "a": "An unintentional denial of service caused by a layer 2 loop",
+      "b": "A MAC flooding attack",
+      "c": "VLAN hopping by switch spoofing",
+      "d": "A reflected and amplified DDoS attack"
+    },
+    "answer": "a",
+    "explanation": "A denial of service does not always come from an attacker; a layer 2 loop without STP can flood the network and make it unavailable, an accidental or friendly DoS. MAC flooding, switch spoofing, and reflected DDoS all require a deliberate attacker sending crafted traffic.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.2-01"
+    ]
+  },
+  {
+    "id": "N10-009-4510",
+    "domain": "4.0",
+    "objective": "4.2",
+    "question": "A single remote host sends a few malformed requests that crash a web server's service every time they arrive. The vendor has published a fix for the flaw. Which action most directly prevents this denial of service?",
+    "choices": {
+      "a": "Apply the vendor's patch to the web server",
+      "b": "Increase the bandwidth of the internet connection",
+      "c": "Enable MAC filtering on the server's switch port",
+      "d": "Change the native VLAN on the server's trunk link"
+    },
+    "answer": "a",
+    "explanation": "This DoS takes advantage of a software vulnerability rather than overwhelming bandwidth, so patching the flaw removes the cause. More bandwidth does not help when a few packets crash the service, MAC filtering only applies on the local network, and the native VLAN setting has nothing to do with a remote application crash.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.2-01"
+    ]
+  },
+  {
+    "id": "N10-009-4511",
+    "domain": "4.0",
+    "objective": "4.2",
+    "question": "Which two techniques are used to carry out VLAN hopping attacks? (Choose two.)",
+    "choices": {
+      "a": "Switch spoofing",
+      "b": "Double tagging",
+      "c": "MAC flooding",
+      "d": "ARP poisoning"
+    },
+    "answer": [
+      "a",
+      "b"
+    ],
+    "explanation": "VLAN hopping lets an attacker reach a VLAN they should not have access to, either by pretending to be a switch and negotiating a trunk (switch spoofing) or by sending frames with two 802.1Q tags that exploit the native VLAN (double tagging). MAC flooding overflows a switch's MAC table within a VLAN, and ARP poisoning redirects traffic on the local subnet; neither moves the attacker to another VLAN.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.2-02"
+    ]
+  },
+  {
+    "id": "N10-009-4512",
+    "domain": "4.0",
+    "objective": "4.2",
+    "question": "An attacker on native VLAN 10 sends frames with two 802.1Q tags, an outer tag for VLAN 10 and an inner tag for VLAN 20, to reach a server on VLAN 20. Why is this technique mainly useful for denial of service rather than for interactive sessions with the server?",
+    "choices": {
+      "a": "The server's replies have no way back to the attacker, so the attack works in one direction only",
+      "b": "The second switch drops every frame that arrives with an inner tag",
+      "c": "The inner tag is encrypted, so the server cannot read the attacker's data",
+      "d": "The first switch removes both tags, so the frame stays on VLAN 10"
+    },
+    "answer": "a",
+    "explanation": "With double tagging, the first switch strips the native VLAN tag and the second switch delivers the frame to VLAN 20, but the victim's responses are not routed back to the attacker's VLAN, making it a one-way trip. The second switch does forward the frame, 802.1Q tags are not encrypted, and the first switch removes only the outer tag.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.2-02"
+    ]
+  },
+  {
+    "id": "N10-009-4513",
+    "domain": "4.0",
+    "objective": "4.2",
+    "question": "Users throughout the company are sent to a fake site when they browse to a partner's portal. Their hosts files are clean, and every client queries the internal DNS server, which returns an attacker-controlled IP address for the portal's name. Users at other companies reach the real portal. What has most likely happened?",
+    "choices": {
+      "a": "The records on the company's DNS server were modified",
+      "b": "Every workstation's hosts file was edited",
+      "c": "The default gateway's MAC address was spoofed in each client's ARP cache",
+      "d": "A rogue DHCP server is assigning duplicate IP addresses"
+    },
+    "answer": "a",
+    "explanation": "When one internal DNS server hands every client the wrong address, the server itself has been poisoned, which affects everyone who uses it. The hosts files were checked and are clean, ARP spoofing redirects traffic at layer 2 but does not change the IP address returned by DNS, and duplicate addresses from a rogue DHCP server would cause connectivity problems rather than wrong name resolution.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.2-06"
+    ]
+  },
+  {
+    "id": "N10-009-4514",
+    "domain": "4.0",
+    "objective": "4.2",
+    "question": "A technician finds and disconnects an unauthorized DHCP server. Several workstations still have incorrect IP addresses and gateway settings that it assigned. What should the technician do next?",
+    "choices": {
+      "a": "Release and renew the IP leases on the affected workstations",
+      "b": "Flush the DNS cache on the internal DNS server",
+      "c": "Clear the MAC address table on the access switch",
+      "d": "Change the native VLAN on all trunk links"
+    },
+    "answer": "a",
+    "explanation": "Clients keep the settings from the rogue DHCP server until their leases expire, so releasing and renewing forces them to get correct settings from the legitimate server. Flushing DNS caches, clearing the MAC table, and changing the native VLAN do not replace bad IP configuration on the clients.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.2-08"
+    ]
+  },
+  {
+    "id": "N10-009-4515",
+    "domain": "4.0",
+    "objective": "4.2",
+    "question": "A company is concerned that employees might plug their own wireless access points into office wall jacks. Which two measures would best help prevent or find these devices? (Choose two.)",
+    "choices": {
+      "a": "Require 802.1X authentication on switch ports so any connected device must authenticate",
+      "b": "Perform periodic wireless surveys of the building to locate unauthorized access points",
+      "c": "Hide the corporate SSID by disabling its broadcast",
+      "d": "Increase the DHCP lease time on the user VLAN"
+    },
+    "answer": [
+      "a",
+      "b"
+    ],
+    "explanation": "802.1X network access control requires every device to authenticate before it can communicate, which blocks an unauthorized access point plugged into a jack, and regular wireless surveys find rogue access points that are broadcasting. Hiding the corporate SSID does nothing to stop someone else's access point, and the DHCP lease time does not affect rogue devices.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.2-09"
+    ]
+  },
+  {
+    "id": "N10-009-4516",
+    "domain": "4.0",
+    "objective": "4.2",
+    "question": "Traveling employees often connect to public Wi-Fi hotspots where an attacker could run an evil twin. Which control best protects the confidentiality of their traffic even if they join one?",
+    "choices": {
+      "a": "Require an always-on VPN for all traffic from company laptops",
+      "b": "Configure laptops to join whichever network has the strongest signal",
+      "c": "Enable MAC filtering on the company's office access points",
+      "d": "Restrict laptops to the 2.4 GHz band"
+    },
+    "answer": "a",
+    "explanation": "An evil twin places the attacker on the path of the user's traffic, so encrypting everything inside a VPN means the attacker can see only encrypted data. Joining the strongest signal is exactly how evil twins lure victims, MAC filtering on office access points does not protect users on a hotspot, and the frequency band does not affect the attack.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.2-10"
+    ]
+  },
+  {
+    "id": "N10-009-4517",
+    "domain": "4.0",
+    "objective": "4.2",
+    "question": "A visitor with arms full of boxes asks an employee to hold the badge-controlled door open, and the employee knowingly lets the visitor in without checking for a badge. Which term best describes this?",
+    "choices": {
+      "a": "Piggybacking",
+      "b": "Tailgating",
+      "c": "Shoulder surfing",
+      "d": "Phishing"
+    },
+    "answer": "a",
+    "explanation": "Piggybacking is entry through a secured door with the authorized person's consent, as when an employee knowingly holds the door for someone. Tailgating is the same act without the authorized person's consent or knowledge, shoulder surfing is watching someone's screen or keyboard, and phishing is a deceptive message, usually by email or text.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.2-15"
+    ]
+  },
+  {
+    "id": "N10-009-4518",
+    "domain": "4.0",
+    "objective": "4.2",
+    "question": "An attacker pulls discarded organization charts, phone lists, and vendor invoices from a company's trash bins, then calls the help desk pretending to be a manager named on the chart. Which technique gathered the information, and what was its purpose?",
+    "choices": {
+      "a": "Dumpster diving, to collect details that make a later impersonation more convincing",
+      "b": "Shoulder surfing, to capture the manager's password as it was typed",
+      "c": "Dumpster diving, to install malware on the help desk computers",
+      "d": "Tailgating, to gain physical access to the help desk area"
+    },
+    "answer": "a",
+    "explanation": "Dumpster diving is searching trash for useful information, often to gather names and phone numbers for a later social engineering attack such as impersonation. Shoulder surfing involves watching someone directly, dumpster diving does not install malware, and tailgating is following someone through a secured door.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.2-13"
+    ]
+  },
+  {
+    "id": "N10-009-4519",
+    "domain": "4.0",
+    "objective": "4.2",
+    "question": "A user's documents suddenly have unfamiliar file extensions and will not open. A message on the screen demands payment in cryptocurrency in exchange for a decryption key. Which type of malware is this?",
+    "choices": {
+      "a": "Ransomware",
+      "b": "Rootkit",
+      "c": "Adware",
+      "d": "Logic bomb"
+    },
+    "answer": "a",
+    "explanation": "Ransomware encrypts the victim's data and demands payment for the key. A rootkit hides itself in the operating system, adware displays advertising, and a logic bomb runs when a specific condition is met; none of these by definition hold data for ransom.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.2-16"
+    ]
+  },
+  {
+    "id": "N10-009-4520",
+    "domain": "4.0",
+    "objective": "4.2",
+    "question": "A disgruntled administrator leaves a script on a server that will delete the payroll database automatically if his account is ever removed from the HR system. Which type of malware is this?",
+    "choices": {
+      "a": "Logic bomb",
+      "b": "Worm",
+      "c": "Trojan horse",
+      "d": "Keylogger"
+    },
+    "answer": "a",
+    "explanation": "A logic bomb waits for a specific event or condition, here the removal of an account, and then performs its malicious action. A worm spreads by itself across a network, a Trojan horse pretends to be legitimate software, and a keylogger records keystrokes.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.2-16"
+    ]
+  },
+  {
+    "id": "N10-009-4521",
+    "domain": "4.0",
+    "objective": "4.2",
+    "question": "Malware modifies the operating system kernel so that its files and processes do not appear in Task Manager or in standard antivirus scans. Which type of malware is this?",
+    "choices": {
+      "a": "Rootkit",
+      "b": "Spyware",
+      "c": "Bloatware",
+      "d": "Virus"
+    },
+    "answer": "a",
+    "explanation": "A rootkit embeds itself deep in the operating system, often in the kernel, to hide its presence from normal tools. Spyware gathers information about the user, bloatware is unnecessary preinstalled software, and a virus spreads by attaching to files when they are run; none of these is defined by hiding in the kernel.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.2-16"
+    ]
+  },
+  {
+    "id": "N10-009-4522",
+    "domain": "4.0",
+    "objective": "4.3",
+    "question": "A new access switch will be managed only with SSH from the management VLAN, and it must keep sending logs to the central syslog server. A scan of its management address shows four services enabled. Which two should the administrator disable as part of hardening? (Choose two.)",
+    "choices": {
+      "a": "Telnet server on tcp/23",
+      "b": "Unencrypted HTTP web management on tcp/80",
+      "c": "SSH server on tcp/22",
+      "d": "Syslog messages sent to the central syslog server"
+    },
+    "answer": [
+      "a",
+      "b"
+    ],
+    "explanation": "Hardening means disabling services that are not needed, and Telnet and plain HTTP management are both unused here and send credentials in the clear. SSH is the required management method, so disabling it would lock administrators out, and syslog forwarding is required for monitoring.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.3-01"
+    ]
+  },
+  {
+    "id": "N10-009-4523",
+    "domain": "4.0",
+    "objective": "4.3",
+    "question": "Only administrators on the management subnet 10.50.0.0/24 should be able to SSH into the core router. Users on other subnets should not even reach the router's login prompt. Which control best meets this requirement?",
+    "choices": {
+      "a": "An ACL applied to the router's management access that permits SSH only from 10.50.0.0/24",
+      "b": "URL filtering on the next-generation firewall",
+      "c": "Content filtering on outbound traffic",
+      "d": "Changing the router's default administrator password"
+    },
+    "answer": "a",
+    "explanation": "An access control list can restrict access to network devices by source IP address, so only the management subnet can open an SSH session. URL and content filtering control web traffic and data, not access to a router's management interface, and changing the default password is important but still lets other users reach the login prompt.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.3-07"
+    ]
+  },
+  {
+    "id": "N10-009-4524",
+    "domain": "4.0",
+    "objective": "4.2",
+    "question": "Which behavior of normal switch MAC address learning does a MAC flooding attack take advantage of?",
+    "choices": {
+      "a": "The switch records the source MAC address of every incoming frame in a table that can hold only a limited number of entries",
+      "b": "The switch learns MAC addresses only from the destination field of frames it forwards",
+      "c": "The switch requires each device to authenticate before its MAC address is learned",
+      "d": "MAC address table entries never age out once they are learned"
+    },
+    "answer": "a",
+    "explanation": "A switch builds its MAC table from the source address of incoming frames, and because the table is finite, an attacker sending frames from thousands of fake source addresses can fill it and push out legitimate entries. Switches learn from source addresses, not destinations, ordinary MAC learning requires no authentication, and entries do age out, often after about five minutes.",
+    "source": "ai-generated",
+    "verified": false,
+    "topics": [
+      "4.2-03"
+    ]
+  },
+  {
+    "id": "N10-009-5501",
+    "domain": "5.0",
+    "objective": "5.2",
+    "question": "A company replaces its access switches with 10GBASE-T models. The existing horizontal runs are about 80 meters, and a cable certifier confirms that every run passes Category 5e testing with a correct wire map. Most links negotiate only 1 Gbps or show rising CRC errors when forced to 10 Gbps. What is the most likely cause?",
+    "choices": {
+      "a": "The installed cable category does not meet the minimum requirement for 10GBASE-T at that distance",
+      "b": "Transmit and receive pairs are transposed at the patch panel",
+      "c": "The runs exceed the 100-meter maximum length for twisted pair",
+      "d": "10GBASE-T requires single-mode fiber instead of copper"
+    },
+    "answer": "a",
+    "explanation": "10GBASE-T needs Category 6A for a full 100-meter run (Category 6 only reaches about 55 meters), so 80-meter Cat 5e runs cannot reliably carry 10 Gbps and fall back or produce errors. The certifier already confirmed correct wire maps, so transposed pairs are ruled out, 80 meters is within the 100-meter limit, and 10GBASE-T is a copper standard.",
+    "topics": [
+      "5.2-01"
+    ],
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-5502",
+    "domain": "5.0",
+    "objective": "5.2",
+    "question": "A technician configures LACP on two ports of Switch A to bundle them toward Switch B. The ports on Switch B are still configured as ordinary standalone ports. Immediately after the change, the two ports on Switch A show a status of suspended. What is the most likely cause?",
+    "choices": {
+      "a": "LACP is configured on one side of the link but not the other",
+      "b": "A port security violation placed the ports in an error-disabled state",
+      "c": "An administrator issued a shutdown command on the ports",
+      "d": "Spanning tree placed the ports in the blocking state because of a loop"
+    },
+    "answer": "a",
+    "explanation": "A suspended status means the port's configuration is not compatible with the current connection, and a classic example is LACP enabled on one side but not on the other; it takes effect immediately. Port security violations produce an error-disabled state, a shutdown command produces administratively down, and spanning tree blocking is a port state, not a suspended status.",
+    "topics": [
+      "5.2-06"
+    ],
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-5503",
+    "domain": "5.0",
+    "objective": "5.2",
+    "question": "A switch interface that has been up for 300 days shows 4,812 CRC errors, but users on that port report no problems today. What should the technician do to find out whether the port has a current problem?",
+    "choices": {
+      "a": "Clear the interface counters, or record the current values, and check again later to see whether the errors are still increasing",
+      "b": "Replace the patch cable immediately, because any nonzero CRC count means the cable is failing now",
+      "c": "Change the port to half duplex so that CRC errors can no longer occur",
+      "d": "Enable jumbo frames on the port to reduce the number of frames that can fail the CRC check"
+    },
+    "answer": "a",
+    "explanation": "Interface counters are cumulative since the last reset, so a large total may reflect an old event; what matters is whether the counter is increasing now, which clearing or recording the values and rechecking shows. Replacing the cable is premature until the errors are shown to be current, half duplex would add collisions rather than prevent CRC errors, and jumbo frames do not stop corrupted frames.",
+    "topics": [
+      "5.2-05"
+    ],
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-5504",
+    "domain": "5.0",
+    "objective": "5.2",
+    "question": "Two switches in the same rack are connected with a 10-meter OM3 multimode patch cord. Switch A uses a 10GBASE-SR SFP+ module and Switch B uses a 1000BASE-SX SFP module; both operate at 850 nm. Diagnostics on both modules show receive light levels within normal range, but the link never comes up. What is the most likely cause?",
+    "choices": {
+      "a": "The transceivers are mismatched because they use different Ethernet standards and speeds",
+      "b": "Multimode transceivers were connected with single-mode fiber",
+      "c": "The transmit and receive fibers are transposed",
+      "d": "Attenuation over the patch cord is too high"
+    },
+    "answer": "a",
+    "explanation": "Transceivers at both ends of a fiber link must match, and a 10 Gbps 10GBASE-SR module cannot form a link with a 1 Gbps 1000BASE-SX module even though both use multimode fiber at 850 nm. The cord is OM3 multimode, so there is no single-mode mismatch, normal receive light on both ends rules out transposed fibers, and a 10-meter patch cord adds negligible attenuation.",
+    "topics": [
+      "5.2-08"
+    ],
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-5505",
+    "domain": "5.0",
+    "objective": "5.2",
+    "question": "A technician is checking a 10 km single-mode fiber link before installation. The transmitter output is -5 dBm, and the receiver sensitivity is -19 dBm. The fiber loses 0.4 dB per km, the four connectors lose 0.75 dB each, and the six splices lose 0.1 dB each. What is the expected received power, and will the link work?",
+    "choices": {
+      "a": "-12.6 dBm, which is stronger than the receiver sensitivity, so the link should work",
+      "b": "-12.6 dBm, which is weaker than the receiver sensitivity, so the link will fail",
+      "c": "+2.6 dBm, which will overload the receiver",
+      "d": "-7.6 dBm, which is stronger than the receiver sensitivity, so the link should work"
+    },
+    "answer": "a",
+    "explanation": "Total loss is 4 dB of fiber plus 3 dB of connectors plus 0.6 dB of splices, or 7.6 dB, and subtracting that from the -5 dBm transmit power gives -12.6 dBm. Because -12.6 dBm is a stronger signal than the -19 dBm minimum, the link has about 6.4 dB of margin. Adding the loss instead of subtracting it gives +2.6 dBm, and -7.6 dBm is just the loss value rather than the received power.",
+    "topics": [
+      "5.2-08"
+    ],
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-5506",
+    "domain": "5.0",
+    "objective": "5.3",
+    "question": "Desktop PCs on a network that uses 802.1D Spanning Tree Protocol often receive APIPA addresses when they boot. If a user waits about a minute and renews the lease, the PC gets a valid address. The DHCP scope has plenty of free addresses. What is the most likely cause?",
+    "choices": {
+      "a": "The access ports spend about 30 seconds in the listening and learning states before forwarding, so the PCs' first DHCP requests are not forwarded",
+      "b": "The DHCP pool is exhausted until older leases expire",
+      "c": "The access ports are assigned to the wrong VLAN",
+      "d": "Another device on the network is using a duplicate IP address"
+    },
+    "answer": "a",
+    "explanation": "With 802.1D, a newly connected port moves through listening and learning, about 15 seconds each, and does not forward data until it reaches the forwarding state, so DHCP requests sent at boot can be lost; enabling PortFast on edge ports avoids the delay. The scope has free addresses, so it is not exhausted, a wrong VLAN would not fix itself after a minute, and a duplicate IP address does not cause APIPA assignment.",
+    "topics": [
+      "5.3-01"
+    ],
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-5507",
+    "domain": "5.0",
+    "objective": "5.3",
+    "question": "Three switches are connected in a triangle, and SW1 has been elected the root bridge. On both SW2 and SW3, the port facing SW1 has become a root port. Which statement describes the link between SW2 and SW3 after spanning tree converges?",
+    "choices": {
+      "a": "One end is a designated port and the other end is blocked to prevent a loop",
+      "b": "Both ends become root ports because each switch has a path to the root bridge",
+      "c": "Both ends are designated ports and forward traffic because the root bridge is not on that link",
+      "d": "Both ends are blocked, and the link carries no BPDUs"
+    },
+    "answer": "a",
+    "explanation": "Every network segment gets exactly one designated port, and in a triangle one port on the remaining redundant link must be blocked so the topology has no loop. Each non-root switch has only one root port, and it already faces SW1. If both ends forwarded, a loop would form, and blocked ports still receive BPDUs so they can react to topology changes.",
+    "topics": [
+      "5.3-01"
+    ],
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-5508",
+    "domain": "5.0",
+    "objective": "5.4",
+    "question": "In a dense open office, a Wi-Fi analyzer shows that many of the company's own access points hear one another on the same channels at high signal levels, airtime utilization is very high, and some older clients connect at 1 or 2 Mbps. Which two changes would most improve wireless performance? (Choose two.)",
+    "choices": {
+      "a": "Reduce access point transmit power so neighboring APs on the same channel interfere less",
+      "b": "Disable legacy low-speed data rates such as those used by 802.11b",
+      "c": "Raise every access point to maximum transmit power",
+      "d": "Place every access point on the same channel so clients can roam more easily"
+    },
+    "answer": [
+      "a",
+      "b"
+    ],
+    "explanation": "Lowering transmit power shrinks each AP's coverage so nearby APs on the same channel stop contending with each other, and disabling legacy low data rates stops slow transmissions from consuming excessive airtime. Raising power to maximum increases co-channel interference, and putting every AP on one channel maximizes overlap; roaming depends on identical SSID and security settings, not a shared channel.",
+    "topics": [
+      "5.4-07"
+    ],
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-5509",
+    "domain": "5.0",
+    "objective": "5.5",
+    "question": "A security team wants to inventory unknown devices on a lab subnet. Which two tasks can Nmap perform for them? (Choose two.)",
+    "choices": {
+      "a": "Identify a remote device's operating system without logging in to it",
+      "b": "Run Nmap Scripting Engine scripts to extend a scan, such as checking for known vulnerabilities",
+      "c": "Report the switch port and VLAN of a directly connected neighbor from Layer 2 advertisements",
+      "d": "Passively record every frame on the link for later decoding in a graphical analyzer"
+    },
+    "answer": [
+      "a",
+      "b"
+    ],
+    "explanation": "Nmap actively probes hosts and can fingerprint their operating systems without credentials, and the Nmap Scripting Engine adds capabilities such as vulnerability checks. Reporting a neighbor's port and VLAN from Layer 2 advertisements is the job of LLDP or CDP, and passively recording frames for decoding is what a protocol analyzer or tcpdump does.",
+    "topics": [
+      "5.5-03"
+    ],
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-5510",
+    "domain": "5.0",
+    "objective": "5.5",
+    "question": "A Windows server is suspected of running malware that makes outbound connections. The administrator wants to list the server's active connections along with the executable responsible for each one. Which command should the administrator run from an elevated prompt?",
+    "choices": {
+      "a": "netstat -b",
+      "b": "netstat -n",
+      "c": "arp -a",
+      "d": "tracert"
+    },
+    "answer": "a",
+    "explanation": "netstat -b displays active connections together with the binary, or executable, that created each one, and it requires administrative rights. netstat -n shows connections with numeric addresses but does not identify the program, arp -a shows the local IP-to-MAC table, and tracert maps the hops to a destination.",
+    "topics": [
+      "5.5-02"
+    ],
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-5511",
+    "domain": "5.0",
+    "objective": "5.5",
+    "question": "An intranet server was moved to a new IP address and its DNS record was updated. Most users reach it, but one Windows user still connects to the old address, even though nslookup run against the company DNS server returns the new address. Which command will most likely fix the problem on the user's PC?",
+    "choices": {
+      "a": "ipconfig /flushdns",
+      "b": "ipconfig /release",
+      "c": "ipconfig /all",
+      "d": "netstat -a"
+    },
+    "answer": "a",
+    "explanation": "The PC is still using a cached copy of the old DNS answer, and ipconfig /flushdns clears the local resolver cache so the next lookup gets the new address. ipconfig /release gives up the PC's DHCP lease without touching the DNS cache, ipconfig /all only displays the configuration, and netstat -a only lists connections and listening ports.",
+    "topics": [
+      "5.5-02"
+    ],
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-5512",
+    "domain": "5.0",
+    "objective": "5.5",
+    "question": "A technician is logged in to a minimal Linux server where the ifconfig utility is not installed. Which command should the technician use to view the IP addresses assigned to the server's interfaces?",
+    "choices": {
+      "a": "ip address",
+      "b": "ipconfig /all",
+      "c": "netstat -n",
+      "d": "dig"
+    },
+    "answer": "a",
+    "explanation": "ip address is the current Linux utility for viewing and managing interface IP configuration, and it replaces the older ifconfig. ipconfig /all is a Windows command, netstat -n lists connections with numeric addresses rather than interface settings, and dig queries DNS servers.",
+    "topics": [
+      "5.5-02"
+    ],
+    "source": "ai-generated",
+    "verified": false
   }
 ]
