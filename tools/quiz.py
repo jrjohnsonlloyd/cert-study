@@ -18,6 +18,7 @@ import csv
 import datetime
 import json
 import random
+import signal
 import sys
 from collections import defaultdict
 from pathlib import Path
@@ -230,6 +231,8 @@ def cmd_validate(_):
 
 
 def main():
+    if hasattr(signal, "SIGPIPE"):  # exit quietly when output is piped into head/less
+        signal.signal(signal.SIGPIPE, signal.SIG_DFL)
     p = argparse.ArgumentParser(description="Quiz runner for cert-study question banks.")
     sub = p.add_subparsers(dest="cmd", required=True)
     sub.add_parser("list")

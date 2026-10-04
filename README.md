@@ -13,7 +13,8 @@ certs/<cert>/README.md     Exam facts, domains and weights, resources, status
 certs/<cert>/questions.json  Question bank for that cert
 certs/<cert>/labs.md       Hands-on labs, mostly in the Hyper-V lab (DC01, WS01, ...)
 certs/<cert>/notes.md      Your own notes
-certs/<cert>/objectives.md Objective outline built from the official PDF (Network+ so far)
+certs/<cert>/objectives.md Objective outline built from the official PDF
+certs/<cert>/topics.json   Every topic in that outline, with an ID that questions are tagged with
 reference/                 Official PDFs and course notes; ignored by Git, so it stays on the machine where you put it
 progress/attempts.csv      Every answered question (written by the quiz tool and by Claude)
 tools/quiz.py              Terminal quiz runner (Python 3, no extra packages)
@@ -29,6 +30,7 @@ python tools/quiz.py quiz comptia-network-plus -n 10      # 10 questions
 python tools/quiz.py quiz comptia-security-plus --weak    # missed questions first, then unseen
 python tools/quiz.py quiz comptia-network-plus --domain 1.0
 python tools/quiz.py report comptia-network-plus          # accuracy by domain and objective
+python tools/quiz.py coverage comptia-network-plus        # which official topics have questions
 python tools/quiz.py validate                             # check every question bank
 ```
 
