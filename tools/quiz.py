@@ -3,7 +3,7 @@
 
 Usage:
   quiz.py list
-  quiz.py quiz <cert> [-n N] [--domain D] [--weak]
+  quiz.py quiz <cert> [-n N] [--domain D[,D]] [--objective O[,O]] [--weak]
   quiz.py report <cert>
   quiz.py coverage <cert> [--limit N]
   quiz.py validate
@@ -162,7 +162,12 @@ def cmd_list(_):
 def cmd_quiz(args):
     questions = load_bank(args.cert)
     if args.domain:
-        questions = [q for q in questions if q["domain"] == args.domain]
+        # accept 1, 1.0, 1.x; several separated by commas
+        wanted = {d.strip().split(".")[0] + ".0" for d in args.domain.split(",") if d.strip()}
+        questions = [q for q in questions if q["domain"] in wanted]
+    if args.objective:
+        wanted = {o.strip() for o in args.objective.split(",") if o.strip()}
+        questions = [q for q in questions if q["objective"] in wanted]
     if not questions:
         sys.exit("No questions match.")
     questions = weak_order(args.cert, questions) if args.weak else random.sample(questions, len(questions))
@@ -239,7 +244,8 @@ def main():
     q = sub.add_parser("quiz")
     q.add_argument("cert")
     q.add_argument("-n", type=int, default=10, help="number of questions (default 10)")
-    q.add_argument("--domain", help="only this domain, for example 1.0")
+    q.add_argument("--domain", help="only these domains, for example 1.0 or 1 or 1,3")
+    q.add_argument("--objective", help="only these objectives, for example 1.4 or 1.4,2.2")
     q.add_argument("--weak", action="store_true", help="most-missed questions first, then unseen")
     r = sub.add_parser("report")
     r.add_argument("cert")

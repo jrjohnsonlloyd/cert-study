@@ -28,7 +28,9 @@ Run these from the repository root. On Windows use `python`; on Linux or macOS u
 python tools/quiz.py list                                 # certs and question counts
 python tools/quiz.py quiz comptia-network-plus -n 10      # 10 questions
 python tools/quiz.py quiz comptia-security-plus --weak    # missed questions first, then unseen
-python tools/quiz.py quiz comptia-network-plus --domain 1.0
+python tools/quiz.py quiz comptia-network-plus --domain 1           # all of 1.x
+python tools/quiz.py quiz comptia-network-plus --objective 1.4     # one objective
+python tools/quiz.py quiz comptia-security-plus --objective 2.4,4.5 --weak -n 20
 python tools/quiz.py report comptia-network-plus          # accuracy by domain and objective
 python tools/quiz.py coverage comptia-network-plus        # which official topics have questions
 python tools/quiz.py validate                             # check every question bank
