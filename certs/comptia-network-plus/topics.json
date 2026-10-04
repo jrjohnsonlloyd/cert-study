@@ -880,19 +880,19 @@
  "3.4": [
   {
    "id": "3.4-01",
-   "name": "Dynamic addressing Domain Name System Security Extensions (DNSSEC) - DHCP (DNS over HTTPS (DoH), Reservations and DNS over TLS (DoT), Scope, Record types, Lease time, Address (A), Options, AAAA, Relay/IP helper, Canonical name (CNAME), Exclusions, Mail exchange (MX))"
+   "name": "Dynamic addressing - DHCP (Reservations, Scope, Lease time, Options, Relay/IP helper, Exclusions)"
   },
   {
    "id": "3.4-02",
-   "name": "Dynamic addressing Domain Name System Security Extensions (DNSSEC) - Stateless address (Text (TXT) autoconfiguration (SLAAC), Nameserver (NS))"
+   "name": "Dynamic addressing - Stateless address autoconfiguration (SLAAC)"
   },
   {
    "id": "3.4-03",
-   "name": "Name resolution Pointer (PTR) - DNS (Zone types, Forward, Reverse, Authoritative vs. non-authoritative, Primary vs. secondary, Recursive)"
+   "name": "Name resolution - DNS (Domain Name System Security Extensions (DNSSEC), DNS over HTTPS (DoH) and DNS over TLS (DoT), Record types, Address (A), AAAA, Canonical name (CNAME), Mail exchange (MX), Text (TXT), Nameserver (NS), Pointer (PTR), Zone types, Forward, Reverse, Authoritative vs. non-authoritative, Primary vs. secondary, Recursive)"
   },
   {
    "id": "3.4-04",
-   "name": "Name resolution Pointer (PTR) - Hosts file"
+   "name": "Name resolution - Hosts file"
   },
   {
    "id": "3.4-05",

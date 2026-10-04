@@ -1,0 +1,2450 @@
+{
+ "1.1": [
+  {
+   "id": "1.1-01",
+   "name": "Categories - Technical"
+  },
+  {
+   "id": "1.1-02",
+   "name": "Categories - Managerial"
+  },
+  {
+   "id": "1.1-03",
+   "name": "Categories - Operational"
+  },
+  {
+   "id": "1.1-04",
+   "name": "Categories - Physical"
+  },
+  {
+   "id": "1.1-05",
+   "name": "Control types - Preventive"
+  },
+  {
+   "id": "1.1-06",
+   "name": "Control types - Deterrent"
+  },
+  {
+   "id": "1.1-07",
+   "name": "Control types - Detective"
+  },
+  {
+   "id": "1.1-08",
+   "name": "Control types - Corrective"
+  },
+  {
+   "id": "1.1-09",
+   "name": "Control types - Compensating"
+  },
+  {
+   "id": "1.1-10",
+   "name": "Control types - Directive"
+  }
+ ],
+ "1.2": [
+  {
+   "id": "1.2-01",
+   "name": "Confidentiality, Integrity, and Availability (CIA)"
+  },
+  {
+   "id": "1.2-02",
+   "name": "Non-repudiation"
+  },
+  {
+   "id": "1.2-03",
+   "name": "Authentication, Authorization, and Accounting (AAA) - Authenticating people"
+  },
+  {
+   "id": "1.2-04",
+   "name": "Authentication, Authorization, and Accounting (AAA) - Authenticating systems"
+  },
+  {
+   "id": "1.2-05",
+   "name": "Authentication, Authorization, and Accounting (AAA) - Authorization models"
+  },
+  {
+   "id": "1.2-06",
+   "name": "Gap analysis"
+  },
+  {
+   "id": "1.2-07",
+   "name": "Zero Trust - Control Plane (Adaptive identity, Threat scope reduction, Policy-driven access control, Policy Administrator, Policy Engine)"
+  },
+  {
+   "id": "1.2-08",
+   "name": "Zero Trust - Data Plane (Implicit trust zones, Subject/System, Policy Enforcement Point)"
+  },
+  {
+   "id": "1.2-09",
+   "name": "Physical security - Bollards"
+  },
+  {
+   "id": "1.2-10",
+   "name": "Physical security - Access control vestibule"
+  },
+  {
+   "id": "1.2-11",
+   "name": "Physical security - Fencing"
+  },
+  {
+   "id": "1.2-12",
+   "name": "Physical security - Video surveillance"
+  },
+  {
+   "id": "1.2-13",
+   "name": "Physical security - Security guard"
+  },
+  {
+   "id": "1.2-14",
+   "name": "Physical security - Access badge"
+  },
+  {
+   "id": "1.2-15",
+   "name": "Physical security - Lighting"
+  },
+  {
+   "id": "1.2-16",
+   "name": "Physical security - Sensors (Infrared, Pressure, Microwave, Ultrasonic)"
+  },
+  {
+   "id": "1.2-17",
+   "name": "Deception and disruption technology - Honeypot"
+  },
+  {
+   "id": "1.2-18",
+   "name": "Deception and disruption technology - Honeynet"
+  },
+  {
+   "id": "1.2-19",
+   "name": "Deception and disruption technology - Honeyfile"
+  },
+  {
+   "id": "1.2-20",
+   "name": "Deception and disruption technology - Honeytoken"
+  }
+ ],
+ "1.3": [
+  {
+   "id": "1.3-01",
+   "name": "Business processes impacting security operation - Approval process"
+  },
+  {
+   "id": "1.3-02",
+   "name": "Business processes impacting security operation - Ownership"
+  },
+  {
+   "id": "1.3-03",
+   "name": "Business processes impacting security operation - Stakeholders"
+  },
+  {
+   "id": "1.3-04",
+   "name": "Business processes impacting security operation - Impact analysis"
+  },
+  {
+   "id": "1.3-05",
+   "name": "Business processes impacting security operation - Test results"
+  },
+  {
+   "id": "1.3-06",
+   "name": "Business processes impacting security operation - Backout plan"
+  },
+  {
+   "id": "1.3-07",
+   "name": "Business processes impacting security operation - Maintenance window"
+  },
+  {
+   "id": "1.3-08",
+   "name": "Business processes impacting security operation - Standard operating procedure"
+  },
+  {
+   "id": "1.3-09",
+   "name": "Technical implications - Allow lists/deny lists"
+  },
+  {
+   "id": "1.3-10",
+   "name": "Technical implications - Restricted activities"
+  },
+  {
+   "id": "1.3-11",
+   "name": "Technical implications - Downtime"
+  },
+  {
+   "id": "1.3-12",
+   "name": "Technical implications - Service restart"
+  },
+  {
+   "id": "1.3-13",
+   "name": "Technical implications - Application restart"
+  },
+  {
+   "id": "1.3-14",
+   "name": "Technical implications - Legacy applications"
+  },
+  {
+   "id": "1.3-15",
+   "name": "Technical implications - Dependencies"
+  },
+  {
+   "id": "1.3-16",
+   "name": "Documentation - Updating diagrams"
+  },
+  {
+   "id": "1.3-17",
+   "name": "Documentation - Updating policies/procedures"
+  },
+  {
+   "id": "1.3-18",
+   "name": "Version control"
+  }
+ ],
+ "1.4": [
+  {
+   "id": "1.4-01",
+   "name": "Public key infrastructure (PKI) - Public key"
+  },
+  {
+   "id": "1.4-02",
+   "name": "Public key infrastructure (PKI) - Private key"
+  },
+  {
+   "id": "1.4-03",
+   "name": "Public key infrastructure (PKI) - Key escrow"
+  },
+  {
+   "id": "1.4-04",
+   "name": "Encryption - Level (Full-disk, Partition, File, Volume, Database, Record)"
+  },
+  {
+   "id": "1.4-05",
+   "name": "Encryption - Transport/communication"
+  },
+  {
+   "id": "1.4-06",
+   "name": "Encryption - Asymmetric"
+  },
+  {
+   "id": "1.4-07",
+   "name": "Encryption - Symmetric"
+  },
+  {
+   "id": "1.4-08",
+   "name": "Encryption - Key exchange"
+  },
+  {
+   "id": "1.4-09",
+   "name": "Encryption - Algorithms"
+  },
+  {
+   "id": "1.4-10",
+   "name": "Encryption - Key length"
+  },
+  {
+   "id": "1.4-11",
+   "name": "Tools - Trusted Platform Module (TPM)"
+  },
+  {
+   "id": "1.4-12",
+   "name": "Tools - Hardware security module (HSM)"
+  },
+  {
+   "id": "1.4-13",
+   "name": "Tools - Key management system"
+  },
+  {
+   "id": "1.4-14",
+   "name": "Tools - Secure enclave"
+  },
+  {
+   "id": "1.4-15",
+   "name": "Obfuscation - Steganography"
+  },
+  {
+   "id": "1.4-16",
+   "name": "Obfuscation - Tokenization"
+  },
+  {
+   "id": "1.4-17",
+   "name": "Obfuscation - Data masking"
+  },
+  {
+   "id": "1.4-18",
+   "name": "Hashing"
+  },
+  {
+   "id": "1.4-19",
+   "name": "Salting"
+  },
+  {
+   "id": "1.4-20",
+   "name": "Digital signatures"
+  },
+  {
+   "id": "1.4-21",
+   "name": "Key stretching"
+  },
+  {
+   "id": "1.4-22",
+   "name": "Blockchain"
+  },
+  {
+   "id": "1.4-23",
+   "name": "Open public ledger"
+  },
+  {
+   "id": "1.4-24",
+   "name": "Certificates - Certificate authorities"
+  },
+  {
+   "id": "1.4-25",
+   "name": "Certificates - Certificate revocation lists (CRLs)"
+  },
+  {
+   "id": "1.4-26",
+   "name": "Certificates - Online Certificate Status Protocol (OCSP)"
+  },
+  {
+   "id": "1.4-27",
+   "name": "Certificates - Self-signed"
+  },
+  {
+   "id": "1.4-28",
+   "name": "Certificates - Third-party"
+  },
+  {
+   "id": "1.4-29",
+   "name": "Certificates - Root of trust"
+  },
+  {
+   "id": "1.4-30",
+   "name": "Certificates - Certificate signing request (CSR) generation"
+  },
+  {
+   "id": "1.4-31",
+   "name": "Certificates - Wildcard"
+  }
+ ],
+ "2.1": [
+  {
+   "id": "2.1-01",
+   "name": "Threat actors - Nation-state"
+  },
+  {
+   "id": "2.1-02",
+   "name": "Threat actors - Unskilled attacker"
+  },
+  {
+   "id": "2.1-03",
+   "name": "Threat actors - Hacktivist"
+  },
+  {
+   "id": "2.1-04",
+   "name": "Threat actors - Insider threat"
+  },
+  {
+   "id": "2.1-05",
+   "name": "Threat actors - Organized crime"
+  },
+  {
+   "id": "2.1-06",
+   "name": "Threat actors - Shadow IT"
+  },
+  {
+   "id": "2.1-07",
+   "name": "Attributes of actors - Internal/external"
+  },
+  {
+   "id": "2.1-08",
+   "name": "Attributes of actors - Resources/funding"
+  },
+  {
+   "id": "2.1-09",
+   "name": "Attributes of actors - Level of sophistication/capability"
+  },
+  {
+   "id": "2.1-10",
+   "name": "Motivations - Data exfiltration"
+  },
+  {
+   "id": "2.1-11",
+   "name": "Motivations - Espionage"
+  },
+  {
+   "id": "2.1-12",
+   "name": "Motivations - Service disruption"
+  },
+  {
+   "id": "2.1-13",
+   "name": "Motivations - Blackmail"
+  },
+  {
+   "id": "2.1-14",
+   "name": "Motivations - Financial gain"
+  },
+  {
+   "id": "2.1-15",
+   "name": "Motivations - Philosophical/political beliefs"
+  },
+  {
+   "id": "2.1-16",
+   "name": "Motivations - Ethical"
+  },
+  {
+   "id": "2.1-17",
+   "name": "Motivations - Revenge"
+  },
+  {
+   "id": "2.1-18",
+   "name": "Motivations - Disruption/chaos"
+  },
+  {
+   "id": "2.1-19",
+   "name": "Motivations - War"
+  }
+ ],
+ "2.2": [
+  {
+   "id": "2.2-01",
+   "name": "Message-based - Email"
+  },
+  {
+   "id": "2.2-02",
+   "name": "Message-based - Short Message Service (SMS)"
+  },
+  {
+   "id": "2.2-03",
+   "name": "Message-based - Instant messaging (IM)"
+  },
+  {
+   "id": "2.2-04",
+   "name": "Image-based"
+  },
+  {
+   "id": "2.2-05",
+   "name": "File-based"
+  },
+  {
+   "id": "2.2-06",
+   "name": "Voice call"
+  },
+  {
+   "id": "2.2-07",
+   "name": "Removable device"
+  },
+  {
+   "id": "2.2-08",
+   "name": "Vulnerable software - Client-based vs. agentless"
+  },
+  {
+   "id": "2.2-09",
+   "name": "Unsupported systems and applications"
+  },
+  {
+   "id": "2.2-10",
+   "name": "Unsecure networks - Wireless"
+  },
+  {
+   "id": "2.2-11",
+   "name": "Unsecure networks - Wired"
+  },
+  {
+   "id": "2.2-12",
+   "name": "Unsecure networks - Bluetooth"
+  },
+  {
+   "id": "2.2-13",
+   "name": "Open service ports"
+  },
+  {
+   "id": "2.2-14",
+   "name": "Default credentials"
+  },
+  {
+   "id": "2.2-15",
+   "name": "Supply chain - Managed service providers (MSPs)"
+  },
+  {
+   "id": "2.2-16",
+   "name": "Supply chain - Vendors"
+  },
+  {
+   "id": "2.2-17",
+   "name": "Supply chain - Suppliers"
+  },
+  {
+   "id": "2.2-18",
+   "name": "Human vectors/social engineering - Phishing"
+  },
+  {
+   "id": "2.2-19",
+   "name": "Human vectors/social engineering - Vishing"
+  },
+  {
+   "id": "2.2-20",
+   "name": "Human vectors/social engineering - Smishing"
+  },
+  {
+   "id": "2.2-21",
+   "name": "Human vectors/social engineering - Misinformation/disinformation"
+  },
+  {
+   "id": "2.2-22",
+   "name": "Human vectors/social engineering - Impersonation"
+  },
+  {
+   "id": "2.2-23",
+   "name": "Human vectors/social engineering - Business email compromise"
+  },
+  {
+   "id": "2.2-24",
+   "name": "Human vectors/social engineering - Pretexting"
+  },
+  {
+   "id": "2.2-25",
+   "name": "Human vectors/social engineering - Watering hole"
+  },
+  {
+   "id": "2.2-26",
+   "name": "Human vectors/social engineering - Brand impersonation"
+  },
+  {
+   "id": "2.2-27",
+   "name": "Human vectors/social engineering - Typosquatting"
+  }
+ ],
+ "2.3": [
+  {
+   "id": "2.3-01",
+   "name": "Application - Memory injection"
+  },
+  {
+   "id": "2.3-02",
+   "name": "Application - Buffer overflow"
+  },
+  {
+   "id": "2.3-03",
+   "name": "Application - Race conditions (Time-of-check (TOC), Time-of-use (TOU))"
+  },
+  {
+   "id": "2.3-04",
+   "name": "Application - Malicious update"
+  },
+  {
+   "id": "2.3-05",
+   "name": "Operating system (OS)-based"
+  },
+  {
+   "id": "2.3-06",
+   "name": "Web-based - Structured Query Language injection (SQLi)"
+  },
+  {
+   "id": "2.3-07",
+   "name": "Web-based - Cross-site scripting (XSS)"
+  },
+  {
+   "id": "2.3-08",
+   "name": "Hardware - Firmware"
+  },
+  {
+   "id": "2.3-09",
+   "name": "Hardware - End-of-life"
+  },
+  {
+   "id": "2.3-10",
+   "name": "Hardware - Legacy"
+  },
+  {
+   "id": "2.3-11",
+   "name": "Virtualization - Virtual machine (VM) escape"
+  },
+  {
+   "id": "2.3-12",
+   "name": "Virtualization - Resource reuse"
+  },
+  {
+   "id": "2.3-13",
+   "name": "Cloud-specific"
+  },
+  {
+   "id": "2.3-14",
+   "name": "Supply chain - Service provider"
+  },
+  {
+   "id": "2.3-15",
+   "name": "Supply chain - Hardware provider"
+  },
+  {
+   "id": "2.3-16",
+   "name": "Supply chain - Software provider"
+  },
+  {
+   "id": "2.3-17",
+   "name": "Cryptographic"
+  },
+  {
+   "id": "2.3-18",
+   "name": "Misconfiguration"
+  },
+  {
+   "id": "2.3-19",
+   "name": "Mobile device - Side loading"
+  },
+  {
+   "id": "2.3-20",
+   "name": "Mobile device - Jailbreaking"
+  },
+  {
+   "id": "2.3-21",
+   "name": "Zero-day"
+  }
+ ],
+ "2.4": [
+  {
+   "id": "2.4-01",
+   "name": "Malware attacks - Ransomware"
+  },
+  {
+   "id": "2.4-02",
+   "name": "Malware attacks - Trojan"
+  },
+  {
+   "id": "2.4-03",
+   "name": "Malware attacks - Worm"
+  },
+  {
+   "id": "2.4-04",
+   "name": "Malware attacks - Spyware"
+  },
+  {
+   "id": "2.4-05",
+   "name": "Malware attacks - Bloatware"
+  },
+  {
+   "id": "2.4-06",
+   "name": "Malware attacks - Virus"
+  },
+  {
+   "id": "2.4-07",
+   "name": "Malware attacks - Keylogger"
+  },
+  {
+   "id": "2.4-08",
+   "name": "Malware attacks - Logic bomb"
+  },
+  {
+   "id": "2.4-09",
+   "name": "Malware attacks - Rootkit"
+  },
+  {
+   "id": "2.4-10",
+   "name": "Physical attacks - Brute force"
+  },
+  {
+   "id": "2.4-11",
+   "name": "Physical attacks - Radio frequency identification (RFID) cloning"
+  },
+  {
+   "id": "2.4-12",
+   "name": "Physical attacks - Environmental"
+  },
+  {
+   "id": "2.4-13",
+   "name": "Network attacks - Distributed denial-of-service (DDoS) (Amplified, Reflected)"
+  },
+  {
+   "id": "2.4-14",
+   "name": "Network attacks - Domain Name System (DNS) attacks"
+  },
+  {
+   "id": "2.4-15",
+   "name": "Network attacks - Wireless"
+  },
+  {
+   "id": "2.4-16",
+   "name": "Network attacks - On-path"
+  },
+  {
+   "id": "2.4-17",
+   "name": "Network attacks - Credential replay"
+  },
+  {
+   "id": "2.4-18",
+   "name": "Network attacks - Malicious code"
+  },
+  {
+   "id": "2.4-19",
+   "name": "Application attacks - Injection"
+  },
+  {
+   "id": "2.4-20",
+   "name": "Application attacks - Buffer overflow"
+  },
+  {
+   "id": "2.4-21",
+   "name": "Application attacks - Replay"
+  },
+  {
+   "id": "2.4-22",
+   "name": "Application attacks - Privilege escalation"
+  },
+  {
+   "id": "2.4-23",
+   "name": "Application attacks - Forgery"
+  },
+  {
+   "id": "2.4-24",
+   "name": "Application attacks - Directory traversal"
+  },
+  {
+   "id": "2.4-25",
+   "name": "Cryptographic attacks - Downgrade"
+  },
+  {
+   "id": "2.4-26",
+   "name": "Cryptographic attacks - Collision"
+  },
+  {
+   "id": "2.4-27",
+   "name": "Cryptographic attacks - Birthday"
+  },
+  {
+   "id": "2.4-28",
+   "name": "Password attacks - Spraying"
+  },
+  {
+   "id": "2.4-29",
+   "name": "Password attacks - Brute force"
+  },
+  {
+   "id": "2.4-30",
+   "name": "Indicators - Account lockout"
+  },
+  {
+   "id": "2.4-31",
+   "name": "Indicators - Concurrent session usage"
+  },
+  {
+   "id": "2.4-32",
+   "name": "Indicators - Blocked content"
+  },
+  {
+   "id": "2.4-33",
+   "name": "Indicators - Impossible travel"
+  },
+  {
+   "id": "2.4-34",
+   "name": "Indicators - Resource consumption"
+  },
+  {
+   "id": "2.4-35",
+   "name": "Indicators - Resource inaccessibility"
+  },
+  {
+   "id": "2.4-36",
+   "name": "Indicators - Out-of-cycle logging"
+  },
+  {
+   "id": "2.4-37",
+   "name": "Indicators - Published/documented"
+  },
+  {
+   "id": "2.4-38",
+   "name": "Indicators - Missing logs"
+  }
+ ],
+ "2.5": [
+  {
+   "id": "2.5-01",
+   "name": "Segmentation"
+  },
+  {
+   "id": "2.5-02",
+   "name": "Access control - Access control list (ACL)"
+  },
+  {
+   "id": "2.5-03",
+   "name": "Access control - Permissions"
+  },
+  {
+   "id": "2.5-04",
+   "name": "Application allow list"
+  },
+  {
+   "id": "2.5-05",
+   "name": "Isolation"
+  },
+  {
+   "id": "2.5-06",
+   "name": "Patching"
+  },
+  {
+   "id": "2.5-07",
+   "name": "Encryption"
+  },
+  {
+   "id": "2.5-08",
+   "name": "Monitoring"
+  },
+  {
+   "id": "2.5-09",
+   "name": "Least privilege"
+  },
+  {
+   "id": "2.5-10",
+   "name": "Configuration enforcement"
+  },
+  {
+   "id": "2.5-11",
+   "name": "Decommissioning"
+  },
+  {
+   "id": "2.5-12",
+   "name": "Hardening techniques - Encryption"
+  },
+  {
+   "id": "2.5-13",
+   "name": "Hardening techniques - Installation of endpoint protection"
+  },
+  {
+   "id": "2.5-14",
+   "name": "Hardening techniques - Host-based firewall"
+  },
+  {
+   "id": "2.5-15",
+   "name": "Hardening techniques - Host-based intrusion prevention system (HIPS)"
+  },
+  {
+   "id": "2.5-16",
+   "name": "Hardening techniques - Disabling ports/protocols"
+  },
+  {
+   "id": "2.5-17",
+   "name": "Hardening techniques - Default password changes"
+  },
+  {
+   "id": "2.5-18",
+   "name": "Hardening techniques - Removal of unnecessary software"
+  }
+ ],
+ "3.1": [
+  {
+   "id": "3.1-01",
+   "name": "Architecture and infrastructure concepts - Cloud (Responsibility matrix, Hybrid considerations, Third-party vendors)"
+  },
+  {
+   "id": "3.1-02",
+   "name": "Architecture and infrastructure concepts - Infrastructure as code (IaC)"
+  },
+  {
+   "id": "3.1-03",
+   "name": "Architecture and infrastructure concepts - Serverless"
+  },
+  {
+   "id": "3.1-04",
+   "name": "Architecture and infrastructure concepts - Microservices"
+  },
+  {
+   "id": "3.1-05",
+   "name": "Architecture and infrastructure concepts - Network infrastructure"
+  },
+  {
+   "id": "3.1-06",
+   "name": "Architecture and infrastructure concepts - Physical isolation (Air-gapped, Logical segmentation, Software-defined networking (SDN))"
+  },
+  {
+   "id": "3.1-07",
+   "name": "Architecture and infrastructure concepts - On-premises"
+  },
+  {
+   "id": "3.1-08",
+   "name": "Architecture and infrastructure concepts - Centralized vs. decentralized"
+  },
+  {
+   "id": "3.1-09",
+   "name": "Architecture and infrastructure concepts - Containerization"
+  },
+  {
+   "id": "3.1-10",
+   "name": "Architecture and infrastructure concepts - Virtualization"
+  },
+  {
+   "id": "3.1-11",
+   "name": "Architecture and infrastructure concepts - IoT"
+  },
+  {
+   "id": "3.1-12",
+   "name": "Architecture and infrastructure concepts - Industrial control systems (ICS)/supervisory control and data acquisition (SCADA)"
+  },
+  {
+   "id": "3.1-13",
+   "name": "Architecture and infrastructure concepts - Real-time operating system (RTOS)"
+  },
+  {
+   "id": "3.1-14",
+   "name": "Architecture and infrastructure concepts - Embedded systems"
+  },
+  {
+   "id": "3.1-15",
+   "name": "Architecture and infrastructure concepts - High availability"
+  },
+  {
+   "id": "3.1-16",
+   "name": "Considerations - Availability"
+  },
+  {
+   "id": "3.1-17",
+   "name": "Considerations - Resilience"
+  },
+  {
+   "id": "3.1-18",
+   "name": "Considerations - Cost"
+  },
+  {
+   "id": "3.1-19",
+   "name": "Considerations - Responsiveness"
+  },
+  {
+   "id": "3.1-20",
+   "name": "Considerations - Scalability"
+  },
+  {
+   "id": "3.1-21",
+   "name": "Considerations - Ease of deployment"
+  },
+  {
+   "id": "3.1-22",
+   "name": "Considerations - Risk transference"
+  },
+  {
+   "id": "3.1-23",
+   "name": "Considerations - Ease of recovery"
+  },
+  {
+   "id": "3.1-24",
+   "name": "Considerations - Patch availability"
+  },
+  {
+   "id": "3.1-25",
+   "name": "Considerations - Inability to patch"
+  },
+  {
+   "id": "3.1-26",
+   "name": "Considerations - Power"
+  },
+  {
+   "id": "3.1-27",
+   "name": "Considerations - Compute"
+  }
+ ],
+ "3.2": [
+  {
+   "id": "3.2-01",
+   "name": "Infrastructure considerations - Device placement"
+  },
+  {
+   "id": "3.2-02",
+   "name": "Infrastructure considerations - Security zones"
+  },
+  {
+   "id": "3.2-03",
+   "name": "Infrastructure considerations - Attack surface"
+  },
+  {
+   "id": "3.2-04",
+   "name": "Infrastructure considerations - Connectivity"
+  },
+  {
+   "id": "3.2-05",
+   "name": "Infrastructure considerations - Failure modes (Fail-open, Fail-closed)"
+  },
+  {
+   "id": "3.2-06",
+   "name": "Infrastructure considerations - Device attribute (Active vs. passive, Inline vs. tap/monitor)"
+  },
+  {
+   "id": "3.2-07",
+   "name": "Infrastructure considerations - Network appliances (Jump server, Proxy server, Intrusion prevention system (IPS)/intrusion detection system (IDS), Load balancer, Sensors)"
+  },
+  {
+   "id": "3.2-08",
+   "name": "Infrastructure considerations - Port security (802.1X, Extensible Authentication Protocol (EAP))"
+  },
+  {
+   "id": "3.2-09",
+   "name": "Infrastructure considerations - Firewall types (Web application firewall (WAF), Unified threat management (UTM), Next-generation firewall (NGFW), Layer 4/Layer 7)"
+  },
+  {
+   "id": "3.2-10",
+   "name": "Secure communication/access - Virtual private network (VPN)"
+  },
+  {
+   "id": "3.2-11",
+   "name": "Secure communication/access - Remote access"
+  },
+  {
+   "id": "3.2-12",
+   "name": "Secure communication/access - Tunneling (Transport Layer Security (TLS), Internet protocol security (IPSec))"
+  },
+  {
+   "id": "3.2-13",
+   "name": "Secure communication/access - Software-defined wide area network (SD-WAN)"
+  },
+  {
+   "id": "3.2-14",
+   "name": "Secure communication/access - Secure access service edge (SASE)"
+  },
+  {
+   "id": "3.2-15",
+   "name": "Selection of effective controls"
+  }
+ ],
+ "3.3": [
+  {
+   "id": "3.3-01",
+   "name": "Data types - Regulated"
+  },
+  {
+   "id": "3.3-02",
+   "name": "Data types - Trade secret"
+  },
+  {
+   "id": "3.3-03",
+   "name": "Data types - Intellectual property"
+  },
+  {
+   "id": "3.3-04",
+   "name": "Data types - Legal information"
+  },
+  {
+   "id": "3.3-05",
+   "name": "Data types - Financial information"
+  },
+  {
+   "id": "3.3-06",
+   "name": "Data types - Human- and non-human-readable"
+  },
+  {
+   "id": "3.3-07",
+   "name": "Data classifications - Sensitive"
+  },
+  {
+   "id": "3.3-08",
+   "name": "Data classifications - Confidential"
+  },
+  {
+   "id": "3.3-09",
+   "name": "Data classifications - Public"
+  },
+  {
+   "id": "3.3-10",
+   "name": "Data classifications - Restricted"
+  },
+  {
+   "id": "3.3-11",
+   "name": "Data classifications - Private"
+  },
+  {
+   "id": "3.3-12",
+   "name": "Data classifications - Critical"
+  },
+  {
+   "id": "3.3-13",
+   "name": "General data considerations - Data states (Data at rest, Data in transit, Data in use)"
+  },
+  {
+   "id": "3.3-14",
+   "name": "General data considerations - Data sovereignty"
+  },
+  {
+   "id": "3.3-15",
+   "name": "General data considerations - Geolocation"
+  },
+  {
+   "id": "3.3-16",
+   "name": "Methods to secure data - Geographic restrictions"
+  },
+  {
+   "id": "3.3-17",
+   "name": "Methods to secure data - Encryption"
+  },
+  {
+   "id": "3.3-18",
+   "name": "Methods to secure data - Hashing"
+  },
+  {
+   "id": "3.3-19",
+   "name": "Methods to secure data - Masking"
+  },
+  {
+   "id": "3.3-20",
+   "name": "Methods to secure data - Tokenization"
+  },
+  {
+   "id": "3.3-21",
+   "name": "Methods to secure data - Obfuscation"
+  },
+  {
+   "id": "3.3-22",
+   "name": "Methods to secure data - Segmentation"
+  },
+  {
+   "id": "3.3-23",
+   "name": "Methods to secure data - Permission restrictions"
+  }
+ ],
+ "3.4": [
+  {
+   "id": "3.4-01",
+   "name": "High availability - Load balancing vs. clustering"
+  },
+  {
+   "id": "3.4-02",
+   "name": "Site considerations - Hot"
+  },
+  {
+   "id": "3.4-03",
+   "name": "Site considerations - Cold"
+  },
+  {
+   "id": "3.4-04",
+   "name": "Site considerations - Warm"
+  },
+  {
+   "id": "3.4-05",
+   "name": "Site considerations - Geographic dispersion"
+  },
+  {
+   "id": "3.4-06",
+   "name": "Platform diversity"
+  },
+  {
+   "id": "3.4-07",
+   "name": "Multi-cloud systems"
+  },
+  {
+   "id": "3.4-08",
+   "name": "Continuity of operations"
+  },
+  {
+   "id": "3.4-09",
+   "name": "Capacity planning - People"
+  },
+  {
+   "id": "3.4-10",
+   "name": "Capacity planning - Technology"
+  },
+  {
+   "id": "3.4-11",
+   "name": "Capacity planning - Infrastructure"
+  },
+  {
+   "id": "3.4-12",
+   "name": "Testing - Tabletop exercises"
+  },
+  {
+   "id": "3.4-13",
+   "name": "Testing - Fail over"
+  },
+  {
+   "id": "3.4-14",
+   "name": "Testing - Simulation"
+  },
+  {
+   "id": "3.4-15",
+   "name": "Testing - Parallel processing"
+  },
+  {
+   "id": "3.4-16",
+   "name": "Backups - Onsite/offsite"
+  },
+  {
+   "id": "3.4-17",
+   "name": "Backups - Frequency"
+  },
+  {
+   "id": "3.4-18",
+   "name": "Backups - Encryption"
+  },
+  {
+   "id": "3.4-19",
+   "name": "Backups - Snapshots"
+  },
+  {
+   "id": "3.4-20",
+   "name": "Backups - Recovery"
+  },
+  {
+   "id": "3.4-21",
+   "name": "Backups - Replication"
+  },
+  {
+   "id": "3.4-22",
+   "name": "Backups - Journaling"
+  },
+  {
+   "id": "3.4-23",
+   "name": "Power - Generators"
+  },
+  {
+   "id": "3.4-24",
+   "name": "Power - Uninterruptible power supply (UPS)"
+  }
+ ],
+ "4.1": [
+  {
+   "id": "4.1-01",
+   "name": "Secure baselines - Establish"
+  },
+  {
+   "id": "4.1-02",
+   "name": "Secure baselines - Deploy"
+  },
+  {
+   "id": "4.1-03",
+   "name": "Secure baselines - Maintain"
+  },
+  {
+   "id": "4.1-04",
+   "name": "Hardening targets - Mobile devices"
+  },
+  {
+   "id": "4.1-05",
+   "name": "Hardening targets - Workstations"
+  },
+  {
+   "id": "4.1-06",
+   "name": "Hardening targets - Switches"
+  },
+  {
+   "id": "4.1-07",
+   "name": "Hardening targets - Routers"
+  },
+  {
+   "id": "4.1-08",
+   "name": "Hardening targets - Cloud infrastructure"
+  },
+  {
+   "id": "4.1-09",
+   "name": "Hardening targets - Servers"
+  },
+  {
+   "id": "4.1-10",
+   "name": "Hardening targets - ICS/SCADA"
+  },
+  {
+   "id": "4.1-11",
+   "name": "Hardening targets - Embedded systems"
+  },
+  {
+   "id": "4.1-12",
+   "name": "Hardening targets - RTOS"
+  },
+  {
+   "id": "4.1-13",
+   "name": "Hardening targets - IoT devices"
+  },
+  {
+   "id": "4.1-14",
+   "name": "Wireless devices - Installation considerations (Site surveys, Heat maps)"
+  },
+  {
+   "id": "4.1-15",
+   "name": "Mobile solutions - Mobile device management (MDM)"
+  },
+  {
+   "id": "4.1-16",
+   "name": "Mobile solutions - Deployment models (Bring your own device (BYOD), Corporate-owned, personally enabled (COPE), Choose your own device (CYOD))"
+  },
+  {
+   "id": "4.1-17",
+   "name": "Mobile solutions - Connection methods (Cellular, Wi-Fi, Bluetooth)"
+  },
+  {
+   "id": "4.1-18",
+   "name": "Wireless security settings - Wi-Fi Protected Access 3 (WPA3)"
+  },
+  {
+   "id": "4.1-19",
+   "name": "Wireless security settings - AAA/Remote Authentication Dial-In User Service (RADIUS)"
+  },
+  {
+   "id": "4.1-20",
+   "name": "Wireless security settings - Cryptographic protocols"
+  },
+  {
+   "id": "4.1-21",
+   "name": "Wireless security settings - Authentication protocols"
+  },
+  {
+   "id": "4.1-22",
+   "name": "Application security - Input validation"
+  },
+  {
+   "id": "4.1-23",
+   "name": "Application security - Secure cookies"
+  },
+  {
+   "id": "4.1-24",
+   "name": "Application security - Static code analysis"
+  },
+  {
+   "id": "4.1-25",
+   "name": "Application security - Code signing"
+  },
+  {
+   "id": "4.1-26",
+   "name": "Sandboxing"
+  },
+  {
+   "id": "4.1-27",
+   "name": "Monitoring"
+  }
+ ],
+ "4.2": [
+  {
+   "id": "4.2-01",
+   "name": "Acquisition/procurement process"
+  },
+  {
+   "id": "4.2-02",
+   "name": "Assignment/accounting - Ownership"
+  },
+  {
+   "id": "4.2-03",
+   "name": "Assignment/accounting - Classification"
+  },
+  {
+   "id": "4.2-04",
+   "name": "Monitoring/asset tracking - Inventory"
+  },
+  {
+   "id": "4.2-05",
+   "name": "Monitoring/asset tracking - Enumeration"
+  },
+  {
+   "id": "4.2-06",
+   "name": "Disposal/decommissioning - Sanitization"
+  },
+  {
+   "id": "4.2-07",
+   "name": "Disposal/decommissioning - Destruction"
+  },
+  {
+   "id": "4.2-08",
+   "name": "Disposal/decommissioning - Certification"
+  },
+  {
+   "id": "4.2-09",
+   "name": "Disposal/decommissioning - Data retention"
+  }
+ ],
+ "4.3": [
+  {
+   "id": "4.3-01",
+   "name": "Identification methods - Vulnerability scan"
+  },
+  {
+   "id": "4.3-02",
+   "name": "Identification methods - Application security (Static analysis, Dynamic analysis, Package monitoring)"
+  },
+  {
+   "id": "4.3-03",
+   "name": "Identification methods - Threat feed (Open-source intelligence (OSINT), Proprietary/third-party, Information-sharing organization, Dark web)"
+  },
+  {
+   "id": "4.3-04",
+   "name": "Identification methods - Penetration testing"
+  },
+  {
+   "id": "4.3-05",
+   "name": "Identification methods - Responsible disclosure program (Bug bounty program)"
+  },
+  {
+   "id": "4.3-06",
+   "name": "Identification methods - System/process audit"
+  },
+  {
+   "id": "4.3-07",
+   "name": "Analysis - Confirmation (False positive, False negative)"
+  },
+  {
+   "id": "4.3-08",
+   "name": "Analysis - Prioritize"
+  },
+  {
+   "id": "4.3-09",
+   "name": "Analysis - Common Vulnerability Scoring System (CVSS)"
+  },
+  {
+   "id": "4.3-10",
+   "name": "Analysis - Common Vulnerability Enumeration (CVE)"
+  },
+  {
+   "id": "4.3-11",
+   "name": "Analysis - Vulnerability classification"
+  },
+  {
+   "id": "4.3-12",
+   "name": "Analysis - Exposure factor"
+  },
+  {
+   "id": "4.3-13",
+   "name": "Analysis - Environmental variables"
+  },
+  {
+   "id": "4.3-14",
+   "name": "Analysis - Industry/organizational impact"
+  },
+  {
+   "id": "4.3-15",
+   "name": "Analysis - Risk tolerance"
+  },
+  {
+   "id": "4.3-16",
+   "name": "Vulnerability response and remediation - Patching"
+  },
+  {
+   "id": "4.3-17",
+   "name": "Vulnerability response and remediation - Insurance"
+  },
+  {
+   "id": "4.3-18",
+   "name": "Vulnerability response and remediation - Segmentation"
+  },
+  {
+   "id": "4.3-19",
+   "name": "Vulnerability response and remediation - Compensating controls"
+  },
+  {
+   "id": "4.3-20",
+   "name": "Vulnerability response and remediation - Exceptions and exemptions"
+  },
+  {
+   "id": "4.3-21",
+   "name": "Validation of remediation - Rescanning"
+  },
+  {
+   "id": "4.3-22",
+   "name": "Validation of remediation - Audit"
+  },
+  {
+   "id": "4.3-23",
+   "name": "Validation of remediation - Verification"
+  },
+  {
+   "id": "4.3-24",
+   "name": "Reporting"
+  }
+ ],
+ "4.4": [
+  {
+   "id": "4.4-01",
+   "name": "Monitoring computing resources - Systems"
+  },
+  {
+   "id": "4.4-02",
+   "name": "Monitoring computing resources - Applications"
+  },
+  {
+   "id": "4.4-03",
+   "name": "Monitoring computing resources - Infrastructure"
+  },
+  {
+   "id": "4.4-04",
+   "name": "Activities - Log aggregation"
+  },
+  {
+   "id": "4.4-05",
+   "name": "Activities - Alerting"
+  },
+  {
+   "id": "4.4-06",
+   "name": "Activities - Scanning"
+  },
+  {
+   "id": "4.4-07",
+   "name": "Activities - Reporting"
+  },
+  {
+   "id": "4.4-08",
+   "name": "Activities - Archiving"
+  },
+  {
+   "id": "4.4-09",
+   "name": "Activities - Alert response and remediation/validation (Quarantine, Alert tuning)"
+  },
+  {
+   "id": "4.4-10",
+   "name": "Tools - Security Content Automation Protocol (SCAP)"
+  },
+  {
+   "id": "4.4-11",
+   "name": "Tools - Benchmarks"
+  },
+  {
+   "id": "4.4-12",
+   "name": "Tools - Agents/agentless"
+  },
+  {
+   "id": "4.4-13",
+   "name": "Tools - Security information and event management (SIEM)"
+  },
+  {
+   "id": "4.4-14",
+   "name": "Tools - Antivirus"
+  },
+  {
+   "id": "4.4-15",
+   "name": "Tools - Data loss prevention (DLP)"
+  },
+  {
+   "id": "4.4-16",
+   "name": "Tools - Simple Network Management Protocol (SNMP) traps"
+  },
+  {
+   "id": "4.4-17",
+   "name": "Tools - NetFlow"
+  },
+  {
+   "id": "4.4-18",
+   "name": "Tools - Vulnerability scanners"
+  }
+ ],
+ "4.5": [
+  {
+   "id": "4.5-01",
+   "name": "Firewall - Rules"
+  },
+  {
+   "id": "4.5-02",
+   "name": "Firewall - Access lists"
+  },
+  {
+   "id": "4.5-03",
+   "name": "Firewall - Ports/protocols"
+  },
+  {
+   "id": "4.5-04",
+   "name": "Firewall - Screened subnets"
+  },
+  {
+   "id": "4.5-05",
+   "name": "IDS/IPS - Trends"
+  },
+  {
+   "id": "4.5-06",
+   "name": "IDS/IPS - Signatures"
+  },
+  {
+   "id": "4.5-07",
+   "name": "Web filter - Agent-based"
+  },
+  {
+   "id": "4.5-08",
+   "name": "Web filter - Centralized proxy"
+  },
+  {
+   "id": "4.5-09",
+   "name": "Web filter - Universal Resource Locator (URL) scanning"
+  },
+  {
+   "id": "4.5-10",
+   "name": "Web filter - Content categorization"
+  },
+  {
+   "id": "4.5-11",
+   "name": "Web filter - Block rules"
+  },
+  {
+   "id": "4.5-12",
+   "name": "Web filter - Reputation"
+  },
+  {
+   "id": "4.5-13",
+   "name": "Operating system security - Group Policy"
+  },
+  {
+   "id": "4.5-14",
+   "name": "Operating system security - SELinux"
+  },
+  {
+   "id": "4.5-15",
+   "name": "Implementation of secure protocols - Protocol selection"
+  },
+  {
+   "id": "4.5-16",
+   "name": "Implementation of secure protocols - Port selection"
+  },
+  {
+   "id": "4.5-17",
+   "name": "Implementation of secure protocols - Transport method"
+  },
+  {
+   "id": "4.5-18",
+   "name": "DNS filtering"
+  },
+  {
+   "id": "4.5-19",
+   "name": "Email security - Domain-based Message Authentication Reporting and Conformance (DMARC)"
+  },
+  {
+   "id": "4.5-20",
+   "name": "Email security - DomainKeys Identified Mail (DKIM)"
+  },
+  {
+   "id": "4.5-21",
+   "name": "Email security - Sender Policy Framework (SPF)"
+  },
+  {
+   "id": "4.5-22",
+   "name": "Email security - Gateway"
+  },
+  {
+   "id": "4.5-23",
+   "name": "File integrity monitoring"
+  },
+  {
+   "id": "4.5-24",
+   "name": "DLP"
+  },
+  {
+   "id": "4.5-25",
+   "name": "Network access control (NAC)"
+  },
+  {
+   "id": "4.5-26",
+   "name": "Endpoint detection and response (EDR)/extended detection and response (XDR)"
+  },
+  {
+   "id": "4.5-27",
+   "name": "User behavior analytics"
+  }
+ ],
+ "4.6": [
+  {
+   "id": "4.6-01",
+   "name": "Provisioning/de-provisioning user accounts"
+  },
+  {
+   "id": "4.6-02",
+   "name": "Permission assignments and implications"
+  },
+  {
+   "id": "4.6-03",
+   "name": "Identity proofing"
+  },
+  {
+   "id": "4.6-04",
+   "name": "Federation"
+  },
+  {
+   "id": "4.6-05",
+   "name": "Single sign-on (SSO) - Lightweight Directory Access Protocol (LDAP)"
+  },
+  {
+   "id": "4.6-06",
+   "name": "Single sign-on (SSO) - Open authorization (OAuth)"
+  },
+  {
+   "id": "4.6-07",
+   "name": "Single sign-on (SSO) - Security Assertions Markup Language (SAML)"
+  },
+  {
+   "id": "4.6-08",
+   "name": "Interoperability"
+  },
+  {
+   "id": "4.6-09",
+   "name": "Attestation"
+  },
+  {
+   "id": "4.6-10",
+   "name": "Access controls - Mandatory"
+  },
+  {
+   "id": "4.6-11",
+   "name": "Access controls - Discretionary"
+  },
+  {
+   "id": "4.6-12",
+   "name": "Access controls - Role-based"
+  },
+  {
+   "id": "4.6-13",
+   "name": "Access controls - Rule-based"
+  },
+  {
+   "id": "4.6-14",
+   "name": "Access controls - Attribute-based"
+  },
+  {
+   "id": "4.6-15",
+   "name": "Access controls - Time-of-day restrictions"
+  },
+  {
+   "id": "4.6-16",
+   "name": "Access controls - Least privilege"
+  },
+  {
+   "id": "4.6-17",
+   "name": "Multifactor authentication - Implementations (Biometrics, Hard/soft authentication tokens, Security keys)"
+  },
+  {
+   "id": "4.6-18",
+   "name": "Multifactor authentication - Factors (Something you know, Something you have, Something you are, Somewhere you are)"
+  },
+  {
+   "id": "4.6-19",
+   "name": "Password concepts - Password best practices (Length, Complexity, Reuse, Expiration, Age)"
+  },
+  {
+   "id": "4.6-20",
+   "name": "Password concepts - Password managers"
+  },
+  {
+   "id": "4.6-21",
+   "name": "Password concepts - Passwordless"
+  },
+  {
+   "id": "4.6-22",
+   "name": "Privileged access management tools - Just-in-time permissions"
+  },
+  {
+   "id": "4.6-23",
+   "name": "Privileged access management tools - Password vaulting"
+  },
+  {
+   "id": "4.6-24",
+   "name": "Privileged access management tools - Ephemeral credentials"
+  }
+ ],
+ "4.7": [
+  {
+   "id": "4.7-01",
+   "name": "Use cases of automation and scripting - User provisioning"
+  },
+  {
+   "id": "4.7-02",
+   "name": "Use cases of automation and scripting - Resource provisioning"
+  },
+  {
+   "id": "4.7-03",
+   "name": "Use cases of automation and scripting - Guard rails"
+  },
+  {
+   "id": "4.7-04",
+   "name": "Use cases of automation and scripting - Security groups"
+  },
+  {
+   "id": "4.7-05",
+   "name": "Use cases of automation and scripting - Ticket creation"
+  },
+  {
+   "id": "4.7-06",
+   "name": "Use cases of automation and scripting - Escalation"
+  },
+  {
+   "id": "4.7-07",
+   "name": "Use cases of automation and scripting - Enabling/disabling services and access"
+  },
+  {
+   "id": "4.7-08",
+   "name": "Use cases of automation and scripting - Continuous integration and testing"
+  },
+  {
+   "id": "4.7-09",
+   "name": "Use cases of automation and scripting - Integrations and Application programming interfaces (APIs)"
+  },
+  {
+   "id": "4.7-10",
+   "name": "Benefits - Efficiency/time saving"
+  },
+  {
+   "id": "4.7-11",
+   "name": "Benefits - Enforcing baselines"
+  },
+  {
+   "id": "4.7-12",
+   "name": "Benefits - Standard infrastructure configurations"
+  },
+  {
+   "id": "4.7-13",
+   "name": "Benefits - Scaling in a secure manner"
+  },
+  {
+   "id": "4.7-14",
+   "name": "Benefits - Employee retention"
+  },
+  {
+   "id": "4.7-15",
+   "name": "Benefits - Reaction time"
+  },
+  {
+   "id": "4.7-16",
+   "name": "Benefits - Workforce multiplier"
+  },
+  {
+   "id": "4.7-17",
+   "name": "Other considerations - Complexity"
+  },
+  {
+   "id": "4.7-18",
+   "name": "Other considerations - Cost"
+  },
+  {
+   "id": "4.7-19",
+   "name": "Other considerations - Single point of failure"
+  },
+  {
+   "id": "4.7-20",
+   "name": "Other considerations - Technical debt"
+  },
+  {
+   "id": "4.7-21",
+   "name": "Other considerations - Ongoing supportability"
+  }
+ ],
+ "4.8": [
+  {
+   "id": "4.8-01",
+   "name": "Process - Preparation"
+  },
+  {
+   "id": "4.8-02",
+   "name": "Process - Detection"
+  },
+  {
+   "id": "4.8-03",
+   "name": "Process - Analysis"
+  },
+  {
+   "id": "4.8-04",
+   "name": "Process - Containment"
+  },
+  {
+   "id": "4.8-05",
+   "name": "Process - Eradication"
+  },
+  {
+   "id": "4.8-06",
+   "name": "Process - Recovery"
+  },
+  {
+   "id": "4.8-07",
+   "name": "Process - Lessons learned"
+  },
+  {
+   "id": "4.8-08",
+   "name": "Training"
+  },
+  {
+   "id": "4.8-09",
+   "name": "Testing - Tabletop exercise"
+  },
+  {
+   "id": "4.8-10",
+   "name": "Testing - Simulation"
+  },
+  {
+   "id": "4.8-11",
+   "name": "Root cause analysis"
+  },
+  {
+   "id": "4.8-12",
+   "name": "Threat hunting"
+  },
+  {
+   "id": "4.8-13",
+   "name": "Digital forensics - Legal hold"
+  },
+  {
+   "id": "4.8-14",
+   "name": "Digital forensics - Chain of custody"
+  },
+  {
+   "id": "4.8-15",
+   "name": "Digital forensics - Acquisition"
+  },
+  {
+   "id": "4.8-16",
+   "name": "Digital forensics - Reporting"
+  },
+  {
+   "id": "4.8-17",
+   "name": "Digital forensics - Preservation"
+  },
+  {
+   "id": "4.8-18",
+   "name": "Digital forensics - E-discovery"
+  }
+ ],
+ "4.9": [
+  {
+   "id": "4.9-01",
+   "name": "Log data - Firewall logs"
+  },
+  {
+   "id": "4.9-02",
+   "name": "Log data - Application logs"
+  },
+  {
+   "id": "4.9-03",
+   "name": "Log data - Endpoint logs"
+  },
+  {
+   "id": "4.9-04",
+   "name": "Log data - OS-specific security logs"
+  },
+  {
+   "id": "4.9-05",
+   "name": "Log data - IPS/IDS logs"
+  },
+  {
+   "id": "4.9-06",
+   "name": "Log data - Network logs"
+  },
+  {
+   "id": "4.9-07",
+   "name": "Log data - Metadata"
+  },
+  {
+   "id": "4.9-08",
+   "name": "Data sources - Vulnerability scans"
+  },
+  {
+   "id": "4.9-09",
+   "name": "Data sources - Automated reports"
+  },
+  {
+   "id": "4.9-10",
+   "name": "Data sources - Dashboards"
+  },
+  {
+   "id": "4.9-11",
+   "name": "Data sources - Packet captures"
+  }
+ ],
+ "5.1": [
+  {
+   "id": "5.1-01",
+   "name": "Guidelines"
+  },
+  {
+   "id": "5.1-02",
+   "name": "Policies - Acceptable use policy (AUP)"
+  },
+  {
+   "id": "5.1-03",
+   "name": "Policies - Information security policies"
+  },
+  {
+   "id": "5.1-04",
+   "name": "Policies - Business continuity"
+  },
+  {
+   "id": "5.1-05",
+   "name": "Policies - Disaster recovery"
+  },
+  {
+   "id": "5.1-06",
+   "name": "Policies - Incident response"
+  },
+  {
+   "id": "5.1-07",
+   "name": "Policies - Software development lifecycle (SDLC)"
+  },
+  {
+   "id": "5.1-08",
+   "name": "Policies - Change management"
+  },
+  {
+   "id": "5.1-09",
+   "name": "Standards - Password"
+  },
+  {
+   "id": "5.1-10",
+   "name": "Standards - Access control"
+  },
+  {
+   "id": "5.1-11",
+   "name": "Standards - Physical security"
+  },
+  {
+   "id": "5.1-12",
+   "name": "Standards - Encryption"
+  },
+  {
+   "id": "5.1-13",
+   "name": "Procedures - Change management"
+  },
+  {
+   "id": "5.1-14",
+   "name": "Procedures - Onboarding/offboarding"
+  },
+  {
+   "id": "5.1-15",
+   "name": "Procedures - Playbooks"
+  },
+  {
+   "id": "5.1-16",
+   "name": "External considerations - Regulatory"
+  },
+  {
+   "id": "5.1-17",
+   "name": "External considerations - Legal"
+  },
+  {
+   "id": "5.1-18",
+   "name": "External considerations - Industry"
+  },
+  {
+   "id": "5.1-19",
+   "name": "External considerations - Local/regional"
+  },
+  {
+   "id": "5.1-20",
+   "name": "External considerations - National"
+  },
+  {
+   "id": "5.1-21",
+   "name": "External considerations - Global"
+  },
+  {
+   "id": "5.1-22",
+   "name": "Monitoring and revision"
+  },
+  {
+   "id": "5.1-23",
+   "name": "Types of governance structures - Boards"
+  },
+  {
+   "id": "5.1-24",
+   "name": "Types of governance structures - Committees"
+  },
+  {
+   "id": "5.1-25",
+   "name": "Types of governance structures - Government entities"
+  },
+  {
+   "id": "5.1-26",
+   "name": "Types of governance structures - Centralized/decentralized"
+  },
+  {
+   "id": "5.1-27",
+   "name": "Roles and responsibilities for systems and data - Owners"
+  },
+  {
+   "id": "5.1-28",
+   "name": "Roles and responsibilities for systems and data - Controllers"
+  },
+  {
+   "id": "5.1-29",
+   "name": "Roles and responsibilities for systems and data - Processors"
+  },
+  {
+   "id": "5.1-30",
+   "name": "Roles and responsibilities for systems and data - Custodians/stewards"
+  }
+ ],
+ "5.2": [
+  {
+   "id": "5.2-01",
+   "name": "Risk identification"
+  },
+  {
+   "id": "5.2-02",
+   "name": "Risk assessment - Ad hoc"
+  },
+  {
+   "id": "5.2-03",
+   "name": "Risk assessment - Recurring"
+  },
+  {
+   "id": "5.2-04",
+   "name": "Risk assessment - One-time"
+  },
+  {
+   "id": "5.2-05",
+   "name": "Risk assessment - Continuous"
+  },
+  {
+   "id": "5.2-06",
+   "name": "Risk analysis - Qualitative"
+  },
+  {
+   "id": "5.2-07",
+   "name": "Risk analysis - Quantitative"
+  },
+  {
+   "id": "5.2-08",
+   "name": "Risk analysis - Single loss expectancy (SLE)"
+  },
+  {
+   "id": "5.2-09",
+   "name": "Risk analysis - Annualized loss expectancy (ALE)"
+  },
+  {
+   "id": "5.2-10",
+   "name": "Risk analysis - Annualized rate of occurrence (ARO)"
+  },
+  {
+   "id": "5.2-11",
+   "name": "Risk analysis - Probability"
+  },
+  {
+   "id": "5.2-12",
+   "name": "Risk analysis - Likelihood"
+  },
+  {
+   "id": "5.2-13",
+   "name": "Risk analysis - Exposure factor"
+  },
+  {
+   "id": "5.2-14",
+   "name": "Risk analysis - Impact"
+  },
+  {
+   "id": "5.2-15",
+   "name": "Risk register - Key risk indicators"
+  },
+  {
+   "id": "5.2-16",
+   "name": "Risk register - Risk owners"
+  },
+  {
+   "id": "5.2-17",
+   "name": "Risk register - Risk threshold"
+  },
+  {
+   "id": "5.2-18",
+   "name": "Risk tolerance"
+  },
+  {
+   "id": "5.2-19",
+   "name": "Risk appetite - Expansionary"
+  },
+  {
+   "id": "5.2-20",
+   "name": "Risk appetite - Conservative"
+  },
+  {
+   "id": "5.2-21",
+   "name": "Risk appetite - Neutral"
+  },
+  {
+   "id": "5.2-22",
+   "name": "Risk management strategies - Transfer"
+  },
+  {
+   "id": "5.2-23",
+   "name": "Risk management strategies - Accept (Exemption, Exception)"
+  },
+  {
+   "id": "5.2-24",
+   "name": "Risk management strategies - Avoid"
+  },
+  {
+   "id": "5.2-25",
+   "name": "Risk management strategies - Mitigate"
+  },
+  {
+   "id": "5.2-26",
+   "name": "Risk reporting"
+  },
+  {
+   "id": "5.2-27",
+   "name": "Business impact analysis - Recovery time objective (RTO)"
+  },
+  {
+   "id": "5.2-28",
+   "name": "Business impact analysis - Recovery point objective (RPO)"
+  },
+  {
+   "id": "5.2-29",
+   "name": "Business impact analysis - Mean time to repair (MTTR)"
+  },
+  {
+   "id": "5.2-30",
+   "name": "Business impact analysis - Mean time between failures (MTBF)"
+  }
+ ],
+ "5.3": [
+  {
+   "id": "5.3-01",
+   "name": "Vendor assessment - Penetration testing"
+  },
+  {
+   "id": "5.3-02",
+   "name": "Vendor assessment - Right-to-audit clause"
+  },
+  {
+   "id": "5.3-03",
+   "name": "Vendor assessment - Evidence of internal audits"
+  },
+  {
+   "id": "5.3-04",
+   "name": "Vendor assessment - Independent assessments"
+  },
+  {
+   "id": "5.3-05",
+   "name": "Vendor assessment - Supply chain analysis"
+  },
+  {
+   "id": "5.3-06",
+   "name": "Vendor selection - Due diligence"
+  },
+  {
+   "id": "5.3-07",
+   "name": "Vendor selection - Conflict of interest"
+  },
+  {
+   "id": "5.3-08",
+   "name": "Agreement types - Service-level agreement (SLA)"
+  },
+  {
+   "id": "5.3-09",
+   "name": "Agreement types - Memorandum of agreement (MOA)"
+  },
+  {
+   "id": "5.3-10",
+   "name": "Agreement types - Memorandum of understanding (MOU)"
+  },
+  {
+   "id": "5.3-11",
+   "name": "Agreement types - Master service agreement (MSA)"
+  },
+  {
+   "id": "5.3-12",
+   "name": "Agreement types - Work order (WO)/statement of work (SOW)"
+  },
+  {
+   "id": "5.3-13",
+   "name": "Agreement types - Non-disclosure agreement (NDA)"
+  },
+  {
+   "id": "5.3-14",
+   "name": "Agreement types - Business partners agreement (BPA)"
+  },
+  {
+   "id": "5.3-15",
+   "name": "Vendor monitoring"
+  },
+  {
+   "id": "5.3-16",
+   "name": "Questionnaires"
+  },
+  {
+   "id": "5.3-17",
+   "name": "Rules of engagement"
+  }
+ ],
+ "5.4": [
+  {
+   "id": "5.4-01",
+   "name": "Compliance reporting - Internal"
+  },
+  {
+   "id": "5.4-02",
+   "name": "Compliance reporting - External"
+  },
+  {
+   "id": "5.4-03",
+   "name": "Consequences of non-compliance - Fines"
+  },
+  {
+   "id": "5.4-04",
+   "name": "Consequences of non-compliance - Sanctions"
+  },
+  {
+   "id": "5.4-05",
+   "name": "Consequences of non-compliance - Reputational damage"
+  },
+  {
+   "id": "5.4-06",
+   "name": "Consequences of non-compliance - Loss of license"
+  },
+  {
+   "id": "5.4-07",
+   "name": "Consequences of non-compliance - Contractual impacts"
+  },
+  {
+   "id": "5.4-08",
+   "name": "Compliance monitoring - Due diligence/care"
+  },
+  {
+   "id": "5.4-09",
+   "name": "Compliance monitoring - Attestation and acknowledgement"
+  },
+  {
+   "id": "5.4-10",
+   "name": "Compliance monitoring - Internal and external"
+  },
+  {
+   "id": "5.4-11",
+   "name": "Compliance monitoring - Automation"
+  },
+  {
+   "id": "5.4-12",
+   "name": "Privacy - Legal implications (Local/regional, National, Global)"
+  },
+  {
+   "id": "5.4-13",
+   "name": "Privacy - Data subject"
+  },
+  {
+   "id": "5.4-14",
+   "name": "Privacy - Controller vs. processor"
+  },
+  {
+   "id": "5.4-15",
+   "name": "Privacy - Ownership"
+  },
+  {
+   "id": "5.4-16",
+   "name": "Privacy - Data inventory and retention"
+  },
+  {
+   "id": "5.4-17",
+   "name": "Privacy - Right to be forgotten"
+  }
+ ],
+ "5.5": [
+  {
+   "id": "5.5-01",
+   "name": "Attestation"
+  },
+  {
+   "id": "5.5-02",
+   "name": "Internal - Compliance"
+  },
+  {
+   "id": "5.5-03",
+   "name": "Internal - Audit committee"
+  },
+  {
+   "id": "5.5-04",
+   "name": "Internal - Self-assessments"
+  },
+  {
+   "id": "5.5-05",
+   "name": "External - Regulatory"
+  },
+  {
+   "id": "5.5-06",
+   "name": "External - Examinations"
+  },
+  {
+   "id": "5.5-07",
+   "name": "External - Assessment"
+  },
+  {
+   "id": "5.5-08",
+   "name": "External - Independent third-party audit"
+  },
+  {
+   "id": "5.5-09",
+   "name": "Penetration testing - Physical"
+  },
+  {
+   "id": "5.5-10",
+   "name": "Penetration testing - Offensive"
+  },
+  {
+   "id": "5.5-11",
+   "name": "Penetration testing - Defensive"
+  },
+  {
+   "id": "5.5-12",
+   "name": "Penetration testing - Integrated"
+  },
+  {
+   "id": "5.5-13",
+   "name": "Penetration testing - Known environment"
+  },
+  {
+   "id": "5.5-14",
+   "name": "Penetration testing - Partially known environment"
+  },
+  {
+   "id": "5.5-15",
+   "name": "Penetration testing - Unknown environment"
+  },
+  {
+   "id": "5.5-16",
+   "name": "Penetration testing - Reconnaissance (Passive, Active)"
+  }
+ ],
+ "5.6": [
+  {
+   "id": "5.6-01",
+   "name": "Phishing - Campaigns"
+  },
+  {
+   "id": "5.6-02",
+   "name": "Phishing - Recognizing a phishing attempt"
+  },
+  {
+   "id": "5.6-03",
+   "name": "Phishing - Responding to reported suspicious messages"
+  },
+  {
+   "id": "5.6-04",
+   "name": "Anomalous behavior recognition - Risky"
+  },
+  {
+   "id": "5.6-05",
+   "name": "Anomalous behavior recognition - Unexpected"
+  },
+  {
+   "id": "5.6-06",
+   "name": "Anomalous behavior recognition - Unintentional"
+  },
+  {
+   "id": "5.6-07",
+   "name": "User guidance and training - Policy/handbooks"
+  },
+  {
+   "id": "5.6-08",
+   "name": "User guidance and training - Situational awareness"
+  },
+  {
+   "id": "5.6-09",
+   "name": "User guidance and training - Insider threat"
+  },
+  {
+   "id": "5.6-10",
+   "name": "User guidance and training - Password management"
+  },
+  {
+   "id": "5.6-11",
+   "name": "User guidance and training - Removable media and cables"
+  },
+  {
+   "id": "5.6-12",
+   "name": "User guidance and training - Social engineering"
+  },
+  {
+   "id": "5.6-13",
+   "name": "User guidance and training - Operational security"
+  },
+  {
+   "id": "5.6-14",
+   "name": "User guidance and training - Hybrid/remote work environments"
+  },
+  {
+   "id": "5.6-15",
+   "name": "Reporting and monitoring - Initial"
+  },
+  {
+   "id": "5.6-16",
+   "name": "Reporting and monitoring - Recurring"
+  },
+  {
+   "id": "5.6-17",
+   "name": "Development"
+  },
+  {
+   "id": "5.6-18",
+   "name": "Execution"
+  }
+ ]
+}

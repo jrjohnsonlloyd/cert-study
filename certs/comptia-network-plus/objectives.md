@@ -1,6 +1,6 @@
 # CompTIA Network+ N10-009: Objectives Outline
 
-Condensed from the official CompTIA N10-009 Exam Objectives (document version 6.0) for tagging questions and tracking coverage. The official PDF is the authority; this outline lists objective numbers, titles, and topic headings only. Note that CompTIA lists SMTPS as port 587.
+Condensed from the official CompTIA Network+ N10-009 Exam Objectives (document version 6.0) for tagging questions and tracking coverage. The official PDF is the authority; this outline lists objective numbers, titles, and topic headings only. Note that CompTIA lists SMTPS as port 587.
 
 ## 1.0 Networking Concepts (23%)
 
@@ -155,8 +155,8 @@ Condensed from the official CompTIA N10-009 Exam Objectives (document version 6.
 
 ### 3.4 Given a scenario, implement IPv4 and IPv6 network services.
 
-- Dynamic addressing Domain Name System Security Extensions (DNSSEC): DHCP (DNS over HTTPS (DoH), Reservations and DNS over TLS (DoT), Scope, Record types, Lease time, Address (A), Options, AAAA, Relay/IP helper, Canonical name (CNAME), Exclusions, Mail exchange (MX)); Stateless address (Text (TXT) autoconfiguration (SLAAC), Nameserver (NS))
-- Name resolution Pointer (PTR): DNS (Zone types, Forward, Reverse, Authoritative vs. non-authoritative, Primary vs. secondary, Recursive); Hosts file
+- Dynamic addressing: DHCP (Reservations, Scope, Lease time, Options, Relay/IP helper, Exclusions); Stateless address autoconfiguration (SLAAC)
+- Name resolution: DNS (Domain Name System Security Extensions (DNSSEC), DNS over HTTPS (DoH) and DNS over TLS (DoT), Record types, Address (A), AAAA, Canonical name (CNAME), Mail exchange (MX), Text (TXT), Nameserver (NS), Pointer (PTR), Zone types, Forward, Reverse, Authoritative vs. non-authoritative, Primary vs. secondary, Recursive); Hosts file
 - Time protocols: NTP; Precision Time Protocol (PTP); Network Time Security (NTS)
 
 ### 3.5 Compare and contrast network access and management methods.
