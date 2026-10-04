@@ -2,7 +2,7 @@
 
 **Status:** Studying
 
-> Verify every fact on this page against the official exam objectives before relying on it.
+> Question count, time limit, and domain weights were checked against the official SY0-701 objectives PDF (document version 7.0). The passing score and price come from CompTIA's website and should be confirmed before you book.
 
 ## Exam facts
 
@@ -36,4 +36,6 @@
 
 - `questions.json`: question bank (quiz with `python tools/quiz.py quiz comptia-security-plus`)
 - `labs.md`: hands-on labs in the Hyper-V lab
+- `objectives.md`: objective outline from the official PDF
+- `topics.json`: every topic in that outline, used by `python tools/quiz.py coverage comptia-security-plus`
 - `notes.md`: your own notes

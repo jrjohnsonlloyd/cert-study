@@ -37,4 +37,5 @@
 - `questions.json`: question bank (quiz with `python tools/quiz.py quiz comptia-network-plus`)
 - `labs.md`: hands-on labs in the Hyper-V lab
 - `objectives.md`: objective outline from the official PDF, including CompTIA's port table
+- `topics.json`: every topic in that outline, used by `python tools/quiz.py coverage comptia-network-plus`
 - `notes.md`: your own notes

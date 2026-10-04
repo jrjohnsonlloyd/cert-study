@@ -18,12 +18,12 @@ Ordered by what to do next. Prices and dates were researched in October 2026 and
 | 4 | ISC2 CGRC | CGRC | Not started | $599 | Formalizes NIST 800-53 and RMF control mapping. Can be taken as an Associate of ISC2 until the experience requirement is met |
 | 5 | ISO/IEC 27001 Lead Implementer | PECB or similar | Not started | Varies by provider | ISO 27001 is better known than SOC 2 outside the US |
 | 6 | Microsoft SC-300 (optional) | SC-300 | Not started | $165 | Entra ID and Conditional Access; serves both admin work and GRC evidence |
-| 7 | CompTIA CySA+ (optional, later) | CS0-004 | Not started | $439 | Renews Security+ and Network+ when passed |
+| 7 | CompTIA CySA+ (optional, later) | CS0-004 | Not started | $439 | Analyst-level, taken after Net+ and Sec+. Passing it renews both, so take it within 3 years of passing Security+ |
 | 8 | Cisco CCNA (optional) | 200-301 | Not started | $300 | Deeper networking, if hands-on network work becomes a focus |
 
 ## Timing notes
 
-- **Security+:** SY0-801 is expected around November 17, 2026, and SY0-701 is expected to retire around June 2027. Take SY0-701 when you are ready, as long as it is before it retires. Do not wait for 801.
+- **Security+:** you plan to take SY0-701 before it retires (expected around June 2027), so no SY0-801 question bank is needed. SY0-801 is expected around November 17, 2026.
 - **CySA+:** CS0-004 is current. Passing it renews Security+ and Network+.
 - **CMMC:** not on the path. The work generally requires being in the US, and the program is being reorganized.
 
