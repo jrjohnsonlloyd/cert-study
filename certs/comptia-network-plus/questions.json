@@ -4,7 +4,12 @@
     "domain": "1.0",
     "objective": "1.1",
     "question": "Which OSI layer is responsible for logical addressing and for routing packets between networks?",
-    "choices": {"a": "Data link", "b": "Network", "c": "Transport", "d": "Session"},
+    "choices": {
+      "a": "Data link",
+      "b": "Network",
+      "c": "Transport",
+      "d": "Session"
+    },
     "answer": "b",
     "explanation": "Layer 3 (Network) handles logical addressing (IP) and routing. Data link (layer 2) uses MAC addresses within a single network, Transport (layer 4) handles ports and reliability (TCP/UDP), and Session (layer 5) manages conversations between applications.",
     "source": "ai-generated",
@@ -15,7 +20,12 @@
     "domain": "1.0",
     "objective": "1.4",
     "question": "A directory server must accept LDAP queries over TLS. Which port should the firewall allow?",
-    "choices": {"a": "389", "b": "636", "c": "3268", "d": "443"},
+    "choices": {
+      "a": "389",
+      "b": "636",
+      "c": "3268",
+      "d": "443"
+    },
     "answer": "b",
     "explanation": "LDAPS (LDAP over TLS) uses TCP 636. Port 389 is plain LDAP (which can be upgraded with StartTLS), 3268 is the Active Directory Global Catalog, and 443 is HTTPS.",
     "source": "ai-generated",
@@ -26,7 +36,12 @@
     "domain": "1.0",
     "objective": "1.7",
     "question": "A workstation is configured as 192.168.10.77/26. What is its network address?",
-    "choices": {"a": "192.168.10.0", "b": "192.168.10.64", "c": "192.168.10.76", "d": "192.168.10.127"},
+    "choices": {
+      "a": "192.168.10.0",
+      "b": "192.168.10.64",
+      "c": "192.168.10.76",
+      "d": "192.168.10.127"
+    },
     "answer": "b",
     "explanation": "A /26 mask is 255.255.255.192, so subnets step by 64: .0, .64, .128, .192. The address .77 falls in the .64 block, so the network is 192.168.10.64. That block's broadcast is .127 and its usable hosts are .65 to .126.",
     "source": "ai-generated",
@@ -37,7 +52,12 @@
     "domain": "1.0",
     "objective": "1.7",
     "question": "How many usable host addresses does a /27 IPv4 subnet provide?",
-    "choices": {"a": "14", "b": "30", "c": "32", "d": "62"},
+    "choices": {
+      "a": "14",
+      "b": "30",
+      "c": "32",
+      "d": "62"
+    },
     "answer": "b",
     "explanation": "A /27 leaves 5 host bits: 2^5 = 32 addresses. Subtract the network and broadcast addresses to get 30 usable hosts. A /28 gives 14 and a /26 gives 62.",
     "source": "ai-generated",
@@ -48,7 +68,12 @@
     "domain": "1.0",
     "objective": "1.5",
     "question": "What is the maximum length of a Category 6 copper channel, including patch cords, under TIA-568?",
-    "choices": {"a": "55 meters", "b": "90 meters", "c": "100 meters", "d": "185 meters"},
+    "choices": {
+      "a": "55 meters",
+      "b": "90 meters",
+      "c": "100 meters",
+      "d": "185 meters"
+    },
     "answer": "c",
     "explanation": "The full channel can be 100 m: up to 90 m of permanent link plus up to 10 m of patch cords. 55 m is the commonly cited limit for 10GBASE-T over Cat6, and 185 m is the old 10BASE2 coaxial limit.",
     "source": "ai-generated",
@@ -59,7 +84,12 @@
     "domain": "2.0",
     "objective": "2.2",
     "question": "Which configuration allows one switch port to carry traffic for several VLANs to another switch?",
-    "choices": {"a": "Port mirroring", "b": "802.1Q trunk", "c": "Link aggregation (LACP)", "d": "Spanning Tree Protocol"},
+    "choices": {
+      "a": "Port mirroring",
+      "b": "802.1Q trunk",
+      "c": "Link aggregation (LACP)",
+      "d": "Spanning Tree Protocol"
+    },
     "answer": "b",
     "explanation": "An 802.1Q trunk tags frames with their VLAN ID so multiple VLANs share one link. Port mirroring copies traffic for analysis, LACP bundles several links into one logical link, and STP prevents switching loops.",
     "source": "ai-generated",
@@ -67,12 +97,17 @@
   },
   {
     "id": "N10-009-0007",
-    "domain": "2.0",
-    "objective": "2.2",
+    "domain": "4.0",
+    "objective": "4.2",
     "question": "A network administrator changes the native VLAN on all trunks to an unused VLAN that carries no hosts. What attack does this primarily mitigate?",
-    "choices": {"a": "ARP poisoning", "b": "VLAN hopping by double tagging", "c": "DHCP starvation", "d": "MAC flooding"},
+    "choices": {
+      "a": "ARP poisoning",
+      "b": "VLAN hopping by double tagging",
+      "c": "DHCP starvation",
+      "d": "MAC flooding"
+    },
     "answer": "b",
-    "explanation": "Double tagging abuses untagged native-VLAN traffic on trunks. Moving the native VLAN to an unused VLAN with no access ports removes that path. ARP poisoning is mitigated with dynamic ARP inspection, DHCP starvation with DHCP snooping and port security, and MAC flooding with port security.",
+    "explanation": "Double tagging is a VLAN hopping method: an attacker on the native VLAN sends a frame with two 802.1Q tags, the first switch strips the outer (native VLAN) tag because native traffic crosses the trunk untagged, and the next switch forwards the frame using the inner tag into the target VLAN. Moving the native VLAN to an unused VLAN with no devices on it removes that path. ARP poisoning is mitigated with dynamic ARP inspection, DHCP starvation with DHCP snooping and port security, and MAC flooding with port security.",
     "source": "ai-generated",
     "verified": false
   },
@@ -81,7 +116,12 @@
     "domain": "3.0",
     "objective": "3.4",
     "question": "Which DNS record type maps a hostname to an IPv6 address?",
-    "choices": {"a": "A", "b": "AAAA", "c": "CNAME", "d": "PTR"},
+    "choices": {
+      "a": "A",
+      "b": "AAAA",
+      "c": "CNAME",
+      "d": "PTR"
+    },
     "answer": "b",
     "explanation": "AAAA records map names to IPv6 addresses. A records map to IPv4, CNAME creates an alias to another name, and PTR maps an address back to a name for reverse lookups.",
     "source": "ai-generated",
@@ -92,7 +132,12 @@
     "domain": "3.0",
     "objective": "3.4",
     "question": "During DHCP address assignment, which message does the client send immediately after receiving a DHCPOFFER?",
-    "choices": {"a": "DHCPDISCOVER", "b": "DHCPREQUEST", "c": "DHCPACK", "d": "DHCPRELEASE"},
+    "choices": {
+      "a": "DHCPDISCOVER",
+      "b": "DHCPREQUEST",
+      "c": "DHCPACK",
+      "d": "DHCPRELEASE"
+    },
     "answer": "b",
     "explanation": "The order is DORA: Discover (client), Offer (server), Request (client), Acknowledge (server). DHCPRELEASE is sent when a client gives up its lease.",
     "source": "ai-generated",
@@ -103,9 +148,14 @@
     "domain": "4.0",
     "objective": "4.3",
     "question": "In an 802.1X port-based authentication setup, what role does the switch play?",
-    "choices": {"a": "Supplicant", "b": "Authenticator", "c": "Authentication server", "d": "Certificate authority"},
+    "choices": {
+      "a": "Supplicant",
+      "b": "Authenticator",
+      "c": "Authentication server",
+      "d": "Certificate authority"
+    },
     "answer": "b",
-    "explanation": "The switch (or wireless access point) is the authenticator: it relays credentials and opens the port only after approval. The supplicant is the client device, and the authentication server is usually a RADIUS server.",
+    "explanation": "The switch (or wireless access point) is the authenticator: it relays the client's credentials and opens the port only after the authentication server approves them. The supplicant is the client device requesting access, the authentication server is usually a RADIUS server that checks the credentials, and a certificate authority issues certificates (for example, for EAP-TLS) but does not control the switch port.",
     "source": "ai-generated",
     "verified": false
   },
@@ -114,7 +164,12 @@
     "domain": "5.0",
     "objective": "5.1",
     "question": "In the CompTIA troubleshooting methodology, which step comes immediately after establishing a theory of probable cause?",
-    "choices": {"a": "Identify the problem", "b": "Test the theory to determine the cause", "c": "Establish a plan of action", "d": "Document findings"},
+    "choices": {
+      "a": "Identify the problem",
+      "b": "Test the theory to determine the cause",
+      "c": "Establish a plan of action",
+      "d": "Document findings"
+    },
     "answer": "b",
     "explanation": "The order is: identify the problem, establish a theory, test the theory, establish a plan of action, implement the solution, verify full system functionality, and document findings. If the test fails, form a new theory or escalate.",
     "source": "ai-generated",
@@ -124,10 +179,804 @@
     "id": "N10-009-0012",
     "domain": "5.0",
     "objective": "5.5",
-    "question": "A user reports slow access to a remote site. Which two Windows commands help locate where along the path the delay or loss occurs? (Choose two.)",
-    "choices": {"a": "tracert", "b": "pathping", "c": "ipconfig /flushdns", "d": "netstat -ano"},
-    "answer": ["a", "b"],
-    "explanation": "tracert lists each hop and its response time. pathping combines traceroute with per-hop loss statistics over time. Flushing the DNS cache does not measure the path, and netstat shows local connections and listening ports.",
+    "question": "The help desk supports both Windows and Linux workstations. A user reports slow access to a remote site. Which two commands display each router hop along the path with its response time, helping locate where the delay begins? (Choose two.)",
+    "choices": {
+      "a": "tracert",
+      "b": "traceroute",
+      "c": "ipconfig /flushdns",
+      "d": "netstat -a"
+    },
+    "answer": [
+      "a",
+      "b"
+    ],
+    "explanation": "tracert (Windows) and traceroute (Linux and macOS) both use increasing TTL values and the resulting ICMP Time Exceeded messages to list each hop and its response time, so a jump in delay shows where the problem starts. ipconfig /flushdns only clears the local DNS resolver cache, and netstat -a shows the local machine's active connections and listening ports; neither measures the path.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0101",
+    "domain": "1.0",
+    "objective": "1.2",
+    "question": "Which network device distributes incoming client requests across a pool of servers and automatically stops sending traffic to a server that fails its health checks?",
+    "choices": {
+      "a": "Load balancer",
+      "b": "Forward proxy",
+      "c": "Intrusion prevention system (IPS)",
+      "d": "VPN concentrator"
+    },
+    "answer": "a",
+    "explanation": "A load balancer spreads requests across multiple servers and uses health checks to pull failed servers out of rotation. A forward proxy makes outbound requests on behalf of internal clients, an IPS inspects traffic and blocks malicious activity, and a VPN concentrator terminates many VPN tunnels; none of them distribute load across a server pool.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0102",
+    "domain": "1.0",
+    "objective": "1.3",
+    "question": "Virtual machines in a private subnet of a company's VPC must download operating system updates from the internet, but they must not be reachable by connections initiated from the internet. Which cloud component should the administrator deploy?",
+    "choices": {
+      "a": "An internet gateway with a public IP address assigned to each virtual machine",
+      "b": "A NAT gateway",
+      "c": "A peering connection to another VPC",
+      "d": "A site-to-site VPN gateway to the on-premises data center"
+    },
+    "answer": "b",
+    "explanation": "A NAT gateway lets instances in a private subnet start outbound connections to the internet while blocking connections that originate from the internet. Giving each VM a public IP behind an internet gateway would make the VMs directly reachable. VPC peering and a site-to-site VPN connect to other private networks, not to the public internet.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0103",
+    "domain": "1.0",
+    "objective": "1.4",
+    "question": "A security policy allows only encrypted protocols through a firewall. Administrators need remote command-line access to Linux servers and directory queries to an LDAP server. Which two ports should be opened? (Choose two.)",
+    "choices": {
+      "a": "22",
+      "b": "636",
+      "c": "23",
+      "d": "389"
+    },
+    "answer": [
+      "a",
+      "b"
+    ],
+    "explanation": "SSH uses TCP 22 and encrypts remote command-line sessions, and LDAPS (LDAP over SSL/TLS) uses TCP 636 to encrypt directory queries. Port 23 is Telnet, which sends everything including passwords in cleartext, and port 389 is standard LDAP, which is unencrypted unless upgraded with StartTLS and so does not meet an encrypted-only policy.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0104",
+    "domain": "1.0",
+    "objective": "1.4",
+    "question": "Which port and transport protocol are used by default when a managed switch sends an SNMP trap to a network management station?",
+    "choices": {
+      "a": "UDP 162",
+      "b": "UDP 161",
+      "c": "UDP 514",
+      "d": "UDP 123"
+    },
+    "answer": "a",
+    "explanation": "SNMP traps are sent from the agent to the manager on UDP port 162. UDP 161 is used when the manager polls the agent with get and set requests, UDP 514 is syslog, and UDP 123 is NTP.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0105",
+    "domain": "1.0",
+    "objective": "1.5",
+    "question": "A network engineer needs a 10 Gbps link between two campus buildings that are 8 km (about 5 miles) apart. Which option will support this distance?",
+    "choices": {
+      "a": "10GBASE-SR transceivers over multimode fiber",
+      "b": "10GBASE-LR transceivers over single-mode fiber",
+      "c": "10GBASE-T over Cat 6A copper",
+      "d": "Passive twinaxial direct attach copper (DAC) cable"
+    },
+    "answer": "b",
+    "explanation": "10GBASE-LR uses single-mode fiber and is rated for distances up to 10 km, so it covers 8 km. 10GBASE-SR over multimode fiber reaches only a few hundred meters, 10GBASE-T over Cat 6A is limited to 100 m, and passive DAC cables are meant for very short in-rack runs of a few meters.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0106",
+    "domain": "1.0",
+    "objective": "1.6",
+    "question": "In a data center, every access-layer switch connects to every backbone switch, the backbone switches do not connect to each other, and servers connect only to the access-layer switches. Which architecture does this describe?",
+    "choices": {
+      "a": "Three-tier (core, distribution, access)",
+      "b": "Collapsed core",
+      "c": "Spine and leaf",
+      "d": "Hub and spoke"
+    },
+    "answer": "c",
+    "explanation": "In a spine and leaf design, each leaf switch connects to every spine switch, spines do not interconnect, and endpoints attach to leaves, which gives predictable low latency for east-west traffic. A three-tier design adds a separate distribution layer, a collapsed core merges the core and distribution layers into one layer, and hub and spoke connects remote sites through a central hub.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0107",
+    "domain": "1.0",
+    "objective": "1.7",
+    "question": "What is the broadcast address of the subnet that contains the host 172.16.45.200/21?",
+    "choices": {
+      "a": "172.16.45.255",
+      "b": "172.16.47.254",
+      "c": "172.16.47.255",
+      "d": "172.16.40.255"
+    },
+    "answer": "c",
+    "explanation": "A /21 mask is 255.255.248.0, so subnets increment by 8 in the third octet; 45 falls in the 40 to 47 block, giving network 172.16.40.0 and broadcast 172.16.47.255. 172.16.45.255 assumes a /24 mask, 172.16.47.254 is the last usable host address, and 172.16.40.255 is just a host address inside the subnet.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0108",
+    "domain": "1.0",
+    "objective": "1.7",
+    "question": "An administrator is dividing 10.20.30.0/24 into smaller subnets. One subnet must hold 12 hosts, and the administrator wants to waste as few addresses as possible. Which subnet mask should be used for that subnet?",
+    "choices": {
+      "a": "255.255.255.248",
+      "b": "255.255.255.240",
+      "c": "255.255.255.224",
+      "d": "255.255.255.252"
+    },
+    "answer": "b",
+    "explanation": "255.255.255.240 is a /28, which has 16 addresses and 14 usable hosts, the smallest subnet that fits 12 hosts. A /29 (255.255.255.248) gives only 6 usable hosts and a /30 (255.255.255.252) only 2, while a /27 (255.255.255.224) gives 30 usable hosts and wastes more addresses than needed.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0109",
+    "domain": "1.0",
+    "objective": "1.8",
+    "question": "A data center architect must extend Layer 2 segments between two sites across a routed Layer 3 network and needs far more than the roughly 4,000 segments that 802.1Q VLAN IDs allow. Which technology meets both requirements?",
+    "choices": {
+      "a": "Software-defined WAN (SD-WAN)",
+      "b": "Virtual Extensible LAN (VXLAN)",
+      "c": "Secure access service edge (SASE)",
+      "d": "Link Aggregation Control Protocol (LACP)"
+    },
+    "answer": "b",
+    "explanation": "VXLAN encapsulates Ethernet frames in UDP so Layer 2 segments can be carried over a Layer 3 underlay, and its 24-bit VXLAN network identifier supports about 16 million segments. SD-WAN manages traffic across multiple WAN links, SASE combines networking and cloud-delivered security services, and LACP bundles physical links between two devices; none of them stretch Layer 2 segments at that scale.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0110",
+    "domain": "2.0",
+    "objective": "2.1",
+    "question": "A Cisco router using default settings learns a route to 10.50.0.0/16 from OSPF, from internal EIGRP, and from RIP. Which route will be placed in the routing table?",
+    "choices": {
+      "a": "The OSPF route, because its administrative distance is 110",
+      "b": "The internal EIGRP route, because its administrative distance is 90",
+      "c": "The RIP route, because its administrative distance is 120",
+      "d": "Whichever route has the lowest metric, regardless of which protocol supplied it"
+    },
+    "answer": "b",
+    "explanation": "When the same prefix is learned from different routing protocols, the router prefers the source with the lowest administrative distance, and internal EIGRP (90) beats OSPF (110) and RIP (120). Metrics are only compared between routes from the same protocol, because each protocol calculates its metric differently.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0111",
+    "domain": "2.0",
+    "objective": "2.1",
+    "question": "A router has these entries in its routing table: 10.0.0.0/8 via 192.168.1.1, 10.1.0.0/16 via 192.168.1.2, 10.1.1.0/25 via 192.168.1.3, and 0.0.0.0/0 via 192.168.1.4. A packet arrives destined for 10.1.1.130. Which next hop will the router use?",
+    "choices": {
+      "a": "192.168.1.1",
+      "b": "192.168.1.2",
+      "c": "192.168.1.3",
+      "d": "192.168.1.4"
+    },
+    "answer": "b",
+    "explanation": "Routers forward using the longest matching prefix. The 10.1.1.0/25 route covers only 10.1.1.0 through 10.1.1.127, so it does not match 10.1.1.130, leaving 10.1.0.0/16 via 192.168.1.2 as the longest match. The /8 route and the default route also match but are less specific.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0112",
+    "domain": "2.0",
+    "objective": "2.1",
+    "question": "Which type of address translation allows many internal hosts to share a single public IPv4 address by tracking each session with a unique source port number?",
+    "choices": {
+      "a": "Static NAT",
+      "b": "Dynamic NAT",
+      "c": "Port address translation (PAT)",
+      "d": "Destination NAT (port forwarding)"
+    },
+    "answer": "c",
+    "explanation": "PAT, also called NAT overload, maps many private addresses to one public address and uses source port numbers to keep each session separate. Static NAT is a fixed one-to-one mapping, dynamic NAT assigns addresses one-to-one from a pool of public addresses, and port forwarding redirects inbound traffic on a port to a specific internal host.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0113",
+    "domain": "5.0",
+    "objective": "5.3",
+    "question": "Four switches running Spanning Tree Protocol have the following bridge priorities and MAC addresses. SW1: 32768, 0011.2233.4455. SW2: 28672, 00AA.BBCC.DDEE. SW3: 32768, 0001.0203.0405. SW4: 61440, 0000.0000.0001. Which switch will be elected root bridge?",
+    "choices": {
+      "a": "SW1",
+      "b": "SW2",
+      "c": "SW3",
+      "d": "SW4"
+    },
+    "answer": "b",
+    "explanation": "The root bridge is the switch with the lowest bridge ID, which compares priority first and uses the MAC address only to break a tie. SW2 has the lowest priority (28672), so it wins even though its MAC address is the highest. SW3 has a lower MAC than SW1 but a higher priority than SW2, and SW4 has the lowest MAC but the highest priority.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0114",
+    "domain": "2.0",
+    "objective": "2.2",
+    "question": "A technician watches a newly connected switch port move through the 802.1D spanning tree port states. In which state is the port still not forwarding user traffic but is adding MAC addresses to its MAC address table?",
+    "choices": {
+      "a": "Learning",
+      "b": "Listening",
+      "c": "Blocking",
+      "d": "Forwarding"
+    },
+    "answer": "a",
+    "explanation": "In the learning state the port does not yet forward frames but populates the MAC address table so it is ready when forwarding begins. Listening also does not forward, but it is cleaning the MAC table rather than adding to it; blocking does not forward in order to prevent a loop; and forwarding passes data and is fully operational.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0115",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "Which two security improvements does WPA3-Personal provide compared with WPA2-Personal? (Choose two.)",
+    "choices": {
+      "a": "Simultaneous Authentication of Equals (SAE) replaces WPA2's PSK authentication exchange, resisting offline dictionary attacks",
+      "b": "Forward secrecy, so a captured session cannot be decrypted later even if the passphrase is learned",
+      "c": "TKIP encryption for backward compatibility with older clients",
+      "d": "A RADIUS server that authenticates each user with individual credentials"
+    },
+    "answer": [
+      "a",
+      "b"
+    ],
+    "explanation": "WPA3-Personal replaces WPA2's PSK authentication exchange with SAE (the Dragonfly handshake), which blocks offline dictionary attacks against captured handshakes and provides forward secrecy, so recorded traffic stays protected even if the passphrase is later learned. TKIP is a deprecated WPA-era cipher that WPA3 does not use, and per-user RADIUS authentication is a feature of Enterprise mode (802.1X), not Personal mode.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0116",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "A wireless survey of a US office shows three 2.4 GHz access points using 20 MHz channels 3, 5, and 9, and users report poor performance from interference. Which channel plan should the technician use to eliminate overlap between these access points?",
+    "choices": {
+      "a": "1, 6, and 11",
+      "b": "2, 6, and 10",
+      "c": "3, 7, and 11",
+      "d": "1, 7, and 13"
+    },
+    "answer": "a",
+    "explanation": "In the 2.4 GHz band, channels are only 5 MHz apart, so channels 1, 6, and 11 are the only set of three that do not overlap in the US. Channels spaced four apart, such as 2, 6, 10 or 3, 7, 11, still overlap, and channel 13 is not available for normal use in the US.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0117",
+    "domain": "2.0",
+    "objective": "2.3",
+    "question": "A company is deploying access points in a crowded conference center. Every client device supports Wi-Fi 6E, and the goal is the most available spectrum with no interference from older Wi-Fi devices. Which frequency band should the access points use?",
+    "choices": {
+      "a": "2.4 GHz",
+      "b": "5 GHz",
+      "c": "6 GHz",
+      "d": "Dual-band 2.4 GHz and 5 GHz with band steering"
+    },
+    "answer": "c",
+    "explanation": "The 6 GHz band, available with Wi-Fi 6E and later, offers the most spectrum and the most non-overlapping channels, and older devices cannot use it, so it has no legacy interference. The 2.4 GHz band has only three non-overlapping channels and is heavily congested, and 5 GHz has more channels than 2.4 GHz but is shared with legacy Wi-Fi 4, 5, and 6 devices. Band steering between 2.4 and 5 GHz still leaves clients on those shared bands.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0118",
+    "domain": "2.0",
+    "objective": "2.4",
+    "question": "Which fire suppression method is best suited to a server room because it puts out fires without leaving residue or water damage on electronic equipment?",
+    "choices": {
+      "a": "Wet-pipe sprinkler system",
+      "b": "Dry-pipe sprinkler system",
+      "c": "Deluge sprinkler system",
+      "d": "Clean agent gaseous system"
+    },
+    "answer": "d",
+    "explanation": "Clean agent systems, such as those using FM-200 or similar gases, suppress fire without water and leave no residue, so they protect electronic equipment. Wet-pipe, dry-pipe, and deluge systems all discharge water, which can damage servers and network gear.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0119",
+    "domain": "2.0",
+    "objective": "2.4",
+    "question": "Servers in a data center take in air at the front and exhaust it at the rear. How should rows of racks be arranged to create proper hot aisles and cold aisles?",
+    "choices": {
+      "a": "All rows face the same direction so every rack draws air from the row behind it",
+      "b": "Adjacent rows face front-to-front and back-to-back, so intakes share cold aisles and exhausts share hot aisles",
+      "c": "Racks within each row alternate between facing forward and facing backward",
+      "d": "Rows are placed perpendicular to the cooling units so air flows across the sides of the racks"
+    },
+    "answer": "b",
+    "explanation": "In a hot aisle/cold aisle layout, rows face front-to-front so equipment intakes draw from a shared cold aisle, and back-to-back so exhausts go into a shared hot aisle that is returned to the cooling system. Facing all rows the same way makes each row take in the hot exhaust of the row in front of it, and alternating racks or relying on side airflow mixes hot and cold air.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0201",
+    "domain": "3.0",
+    "objective": "3.1",
+    "question": "After a branch router failed and was replaced, an engineer applied the standardized, pre-approved configuration template that the organization maintains as the reference for every router of that model. What is this template commonly called?",
+    "choices": {
+      "a": "Golden configuration",
+      "b": "Running configuration",
+      "c": "Logical network diagram",
+      "d": "IPAM export"
+    },
+    "answer": "a",
+    "explanation": "A golden configuration is the approved, standardized reference configuration used to build or restore devices consistently. The running configuration is whatever is currently active on a single device, a logical diagram documents how the network is connected, and an IPAM export lists address assignments rather than device settings.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0202",
+    "domain": "3.0",
+    "objective": "3.2",
+    "question": "Which two capabilities does SNMPv3 add that SNMPv2c does not provide? (Choose two.)",
+    "choices": {
+      "a": "Encryption of SNMP messages",
+      "b": "User-based authentication of SNMP messages",
+      "c": "Support for unsolicited trap notifications",
+      "d": "Community strings for read and read-write access"
+    },
+    "answer": [
+      "a",
+      "b"
+    ],
+    "explanation": "SNMPv3 adds a user-based security model with message authentication and optional encryption (privacy), which is why it is preferred for secure monitoring. Traps already existed in SNMPv1 and v2c, and plaintext community strings are the weak access method used by v1 and v2c that v3 replaces.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0203",
+    "domain": "3.0",
+    "objective": "3.2",
+    "question": "An administrator configures all switches to forward syslog messages to a central server, but only for events at the Warning severity or more severe. Which syslog severity levels will be forwarded?",
+    "choices": {
+      "a": "Levels 0 through 4",
+      "b": "Levels 4 through 7",
+      "c": "Levels 0 through 3",
+      "d": "Levels 5 through 7"
+    },
+    "answer": "a",
+    "explanation": "Syslog severity runs from 0 (Emergency, most severe) to 7 (Debug, least severe), and Warning is level 4, so Warning and more severe means levels 0 through 4. Levels 4 through 7 and 5 through 7 would include the less severe Notice, Informational, and Debug messages, while 0 through 3 stops at Error and leaves out Warning.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0204",
+    "domain": "3.0",
+    "objective": "3.3",
+    "question": "During business continuity planning, the finance director states that the company can afford to lose no more than two hours of transaction data if the primary database server fails. Which metric does this statement define?",
+    "choices": {
+      "a": "Recovery point objective (RPO)",
+      "b": "Recovery time objective (RTO)",
+      "c": "Mean time to repair (MTTR)",
+      "d": "Mean time between failures (MTBF)"
+    },
+    "answer": "a",
+    "explanation": "RPO is the maximum acceptable amount of data loss measured in time, and it drives how often backups or replication must occur. RTO is how quickly service must be restored, MTTR is the average time it takes to repair a failed component, and MTBF is the average time a component runs before failing.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0205",
+    "domain": "3.0",
+    "objective": "3.3",
+    "question": "A company's alternate facility already has racks, power, network connectivity, and installed servers, but the servers hold no current data. After a disaster, staff must restore the latest backups before operations can resume, which takes roughly a day. Which type of recovery site is this?",
+    "choices": {
+      "a": "Warm site",
+      "b": "Hot site",
+      "c": "Cold site",
+      "d": "Active-active data center"
+    },
+    "answer": "a",
+    "explanation": "A warm site has hardware and connectivity in place but needs current data restored before it can take over, so recovery takes hours to days. A hot site is fully equipped with near-real-time data and can take over almost immediately, a cold site provides only space and power with no equipment ready, and an active-active design already serves production traffic at both locations.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0206",
+    "domain": "3.0",
+    "objective": "3.4",
+    "question": "A company moved its only DHCP server to a data center VLAN. Clients on that VLAN still receive addresses, but clients on VLAN 30 now receive 169.254.x.x addresses. What should be configured on the VLAN 30 router interface to fix the problem?",
+    "choices": {
+      "a": "A DHCP relay (IP helper) address that points to the DHCP server",
+      "b": "A DHCP exclusion range for the VLAN 30 subnet",
+      "c": "A longer DHCP lease time for the VLAN 30 scope",
+      "d": "SLAAC on the VLAN 30 interface"
+    },
+    "answer": "a",
+    "explanation": "DHCP discovers are broadcasts that routers do not forward, so the VLAN 30 interface needs a DHCP relay (IP helper) to forward them as unicast to the server on the other VLAN. An exclusion range only keeps addresses from being handed out, a longer lease does not help clients that cannot reach the server at all, and SLAAC provides IPv6 addresses rather than IPv4 DHCP leases.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0207",
+    "domain": "3.0",
+    "objective": "3.4",
+    "question": "A company is bringing a new mail server online. Other mail servers on the internet must be able to find it as the destination for the domain's email, and many receiving servers will check that the server's public IP address resolves back to its hostname. Which two DNS record types are needed? (Choose two.)",
+    "choices": {
+      "a": "MX",
+      "b": "PTR",
+      "c": "CNAME",
+      "d": "SRV"
+    },
+    "answer": [
+      "a",
+      "b"
+    ],
+    "explanation": "An MX record tells sending servers which host accepts mail for the domain, and a PTR record in the reverse lookup zone maps the server's IP address back to its hostname. A CNAME is an alias from one name to another, and an SRV record advertises the host and port for services such as SIP or LDAP rather than domain mail delivery.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0208",
+    "domain": "3.0",
+    "objective": "3.5",
+    "question": "Remote employees use a client-to-site VPN. To save bandwidth on the corporate internet link, the network team wants only traffic destined for corporate subnets to go through the VPN, while general web browsing goes directly out each user's home internet connection. Which VPN configuration meets this goal?",
+    "choices": {
+      "a": "Split tunnel",
+      "b": "Full tunnel",
+      "c": "Site-to-site tunnel",
+      "d": "Clientless VPN"
+    },
+    "answer": "a",
+    "explanation": "A split tunnel sends only traffic for specified corporate networks through the VPN and lets all other traffic use the local internet connection. A full tunnel forces all traffic, including web browsing, through the corporate network, a site-to-site tunnel connects whole networks rather than individual remote users, and a clientless VPN provides browser-based access to specific applications.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0209",
+    "domain": "3.0",
+    "objective": "3.5",
+    "question": "A network engineer must be able to reach the console of a remote branch router even when the branch WAN link and production network are completely down. Which solution best meets this requirement?",
+    "choices": {
+      "a": "A console server at the branch with its own cellular connection",
+      "b": "SSH to the router's loopback address across the WAN",
+      "c": "A jump box in the main data center that connects to the router over the WAN",
+      "d": "API access to the router through the management VLAN"
+    },
+    "answer": "a",
+    "explanation": "Out-of-band management uses a separate path, such as a console server with a cellular or modem link, so the device stays reachable when the production network fails. SSH to a loopback, a jump box over the WAN, and API access through a management VLAN are all in-band methods that depend on the same network that has gone down.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0210",
+    "domain": "4.0",
+    "objective": "4.1",
+    "question": "A network team wants a AAA protocol for administrator logins to routers and switches that encrypts the entire packet body and handles authentication, authorization, and accounting separately so individual commands can be authorized. Which protocol best fits?",
+    "choices": {
+      "a": "TACACS+",
+      "b": "RADIUS",
+      "c": "LDAP",
+      "d": "SAML"
+    },
+    "answer": "a",
+    "explanation": "TACACS+ runs over TCP, encrypts the whole payload, and separates authentication, authorization, and accounting, which allows per-command authorization for device administration. RADIUS encrypts only the password and combines authentication and authorization, LDAP is a directory access protocol, and SAML is used for web-based single sign-on federation.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0211",
+    "domain": "4.0",
+    "objective": "4.1",
+    "question": "Facilities staff are installing IP cameras and smart thermostats that have weak built-in security and rarely receive firmware updates. What is the best way to reduce the risk these devices pose to the corporate network?",
+    "choices": {
+      "a": "Place them on a dedicated VLAN with ACLs that allow only the traffic they require",
+      "b": "Connect them to the same VLAN as user workstations using static IP addresses",
+      "c": "Enable MAC filtering on the corporate wireless network",
+      "d": "Place them in the screened subnet with public IP addresses"
+    },
+    "answer": "a",
+    "explanation": "Segmenting IoT devices onto their own VLAN and restricting their traffic with ACLs limits what an attacker could reach if one device is compromised. Sharing the workstation VLAN puts the weak devices next to user systems, MAC filtering is easily bypassed by spoofing, and a screened subnet with public addresses is meant for internet-facing services and would increase their exposure.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0212",
+    "domain": "4.0",
+    "objective": "4.2",
+    "question": "Several users report that sessions are being intercepted. On one workstation, the arp -a output shows that the default gateway 10.0.0.1 and host 10.0.0.37 both map to the same MAC address, which belongs to the network card of 10.0.0.37. Which attack is most likely taking place?",
+    "choices": {
+      "a": "ARP poisoning",
+      "b": "MAC flooding",
+      "c": "DNS poisoning",
+      "d": "VLAN hopping"
+    },
+    "answer": "a",
+    "explanation": "In ARP poisoning, an attacker sends forged ARP replies so victims map the gateway's IP address to the attacker's MAC address, placing the attacker on-path; dynamic ARP inspection is a common defense. MAC flooding overloads a switch's MAC address table, DNS poisoning corrupts name-to-IP resolution rather than ARP entries, and VLAN hopping lets traffic reach a VLAN it should not.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0213",
+    "domain": "4.0",
+    "objective": "4.2",
+    "question": "Employees at a branch office notice the corporate SSID listed twice. Users who joined the one with the stronger signal were shown a login page asking for their domain credentials. Investigators find an unauthorized access point in a parked car broadcasting the same SSID. Which attack is this?",
+    "choices": {
+      "a": "Evil twin",
+      "b": "Rogue DHCP server",
+      "c": "Wireless jamming",
+      "d": "DNS poisoning"
+    },
+    "answer": "a",
+    "explanation": "An evil twin is an attacker-controlled access point that imitates a legitimate SSID to lure users into connecting so their traffic or credentials can be captured. A rogue DHCP server hands out unauthorized IP settings, jamming disrupts wireless signals rather than impersonating a network, and DNS poisoning corrupts name resolution instead of copying an SSID.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0214",
+    "domain": "4.0",
+    "objective": "4.2",
+    "question": "An analyst running a packet capture on a laptop plugged into a normal access port suddenly begins seeing unicast traffic between other hosts. The switch's MAC address table shows thousands of random MAC addresses learned on a single port. Which attack is most likely occurring?",
+    "choices": {
+      "a": "MAC flooding",
+      "b": "ARP poisoning",
+      "c": "VLAN hopping",
+      "d": "Rogue DHCP server"
+    },
+    "answer": "a",
+    "explanation": "MAC flooding fills the switch's MAC address table with fake entries so the switch floods unknown unicast frames out all ports, exposing traffic to anyone listening. ARP poisoning corrupts IP-to-MAC mappings on hosts rather than filling the switch table, VLAN hopping gains access to other VLANs, and a rogue DHCP server hands out unauthorized addressing.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0215",
+    "domain": "4.0",
+    "objective": "4.3",
+    "question": "Clients at a branch office are receiving 192.168.0.x addresses and a consumer router as their default gateway instead of the corporate 10.x scope, after someone plugged a home router into a wall jack. Which switch feature would prevent this?",
+    "choices": {
+      "a": "DHCP snooping with only the uplink port trusted",
+      "b": "BPDU guard on access ports",
+      "c": "Port mirroring to the corporate DHCP server",
+      "d": "Changing the native VLAN on trunk ports"
+    },
+    "answer": "a",
+    "explanation": "DHCP snooping drops DHCP server messages that arrive on untrusted ports, so only the trusted uplink toward the real DHCP server can answer clients. BPDU guard protects against unauthorized switches that send spanning tree BPDUs, port mirroring only copies traffic for analysis, and changing the native VLAN is a defense against VLAN hopping.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0216",
+    "domain": "4.0",
+    "objective": "4.3",
+    "question": "An audit found live switch ports in an unoccupied office and in the lobby that an attacker could use to launch a MAC flooding attack. Which two controls would best address this finding? (Choose two.)",
+    "choices": {
+      "a": "Administratively shut down the unused switch ports",
+      "b": "Enable port security to limit the number of MAC addresses learned per port",
+      "c": "Change the native VLAN on all trunk links",
+      "d": "Enable DNSSEC on the internal DNS servers"
+    },
+    "answer": [
+      "a",
+      "b"
+    ],
+    "explanation": "Disabling unused ports removes the attacker's access point, and port security caps how many MAC addresses a port can learn so the MAC table cannot be flooded. Changing the native VLAN mitigates VLAN hopping, and DNSSEC protects DNS responses, so neither stops MAC flooding.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0217",
+    "domain": "5.0",
+    "objective": "5.1",
+    "question": "A technician has just replaced a failed power supply in a distribution switch, which was the root cause of an outage. According to the CompTIA troubleshooting methodology, what should the technician do next?",
+    "choices": {
+      "a": "Verify full system functionality and, if applicable, implement preventive measures",
+      "b": "Document findings, actions, outcomes, and lessons learned",
+      "c": "Establish a plan of action to resolve the problem",
+      "d": "Test the theory to determine the cause"
+    },
+    "answer": "a",
+    "explanation": "After implementing the solution, the next step is to verify full system functionality and put preventive measures in place if needed. Documenting findings is the final step and comes after verification, while establishing a plan of action and testing the theory happen before the fix is implemented.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0218",
+    "domain": "5.0",
+    "objective": "5.2",
+    "question": "A new Cat 6 cable was run from the MDF to an office at the far end of a warehouse. The run measures 140 meters, and the link drops intermittently and shows input errors. What is the most likely cause?",
+    "choices": {
+      "a": "Attenuation from exceeding the maximum cable length",
+      "b": "Crosstalk from improper termination",
+      "c": "TX/RX transposed on the cable",
+      "d": "PoE budget exceeded on the switch"
+    },
+    "answer": "a",
+    "explanation": "Twisted-pair Ethernet is limited to 100 meters per segment, and beyond that the signal weakens (attenuates) enough to cause errors and drops. Crosstalk comes from untwisted or poorly terminated pairs rather than length, TX/RX transposition on copper is normally handled by auto-MDIX, and a PoE budget problem affects powered devices rather than causing length-related errors.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0219",
+    "domain": "5.0",
+    "objective": "5.2",
+    "question": "A technician installs a new duplex LC fiber patch cord between two switches. Both SFP modules are compatible and show no faults, but the link stays down. When the technician swaps the two connectors at one end of the patch cord, the link comes up immediately. What was the problem?",
+    "choices": {
+      "a": "TX/RX transposed",
+      "b": "Single-mode and multimode fiber mismatch",
+      "c": "Attenuation from excessive fiber length",
+      "d": "Duplex mismatch between the switches"
+    },
+    "answer": "a",
+    "explanation": "Swapping the two strands at one end fixing the link shows that transmit was connected to transmit, meaning TX and RX were transposed. A fiber type mismatch or excessive length would not be fixed by swapping strands, and a duplex mismatch causes errors on a working link rather than keeping it fully down.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0220",
+    "domain": "5.0",
+    "objective": "5.2",
+    "question": "Two switches 20 meters apart each use a 1000BASE-SX transceiver. A technician connects them with a yellow-jacketed OS2 patch cord, and the link either will not come up or shows very high optical loss. What is the most likely cause?",
+    "choices": {
+      "a": "Multimode transceivers were connected with single-mode fiber",
+      "b": "The fiber run exceeds the maximum distance for 1000BASE-SX",
+      "c": "EMI from nearby power cables is affecting the fiber",
+      "d": "The switch has exceeded its PoE budget"
+    },
+    "answer": "a",
+    "explanation": "1000BASE-SX is a multimode standard, and OS2 (usually yellow) is single-mode fiber, so the mismatched core sizes cause severe signal loss. A 20-meter run is far within SX distance limits, fiber is not affected by electromagnetic interference, and PoE does not apply to fiber links.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0221",
+    "domain": "5.0",
+    "objective": "5.2",
+    "question": "After a technician terminates new keystone jacks, a cable certifier reports near-end crosstalk (NEXT) failures on several runs, and the switch shows incrementing CRC errors on those ports. Inspection shows the wire pairs were untwisted about 5 cm back from each termination. What is the most likely cause of the errors?",
+    "choices": {
+      "a": "Crosstalk caused by improper termination",
+      "b": "Attenuation from excessive cable length",
+      "c": "TX/RX transposed in the jack",
+      "d": "EMI from nearby fluorescent lighting"
+    },
+    "answer": "a",
+    "explanation": "Untwisting pairs too far at the termination removes the protection the twists provide, causing crosstalk between pairs that corrupts frames and shows up as CRC errors. Attenuation is related to cable length, transposed pairs would show as a wiremap fault rather than NEXT, and the certifier specifically pointed to crosstalk at the termination rather than outside interference.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0222",
+    "domain": "5.0",
+    "objective": "5.3",
+    "question": "Minutes after a user connected an unmanaged switch to two wall jacks in a conference room, the network slowed to a crawl, switch CPU utilization spiked, and MAC addresses were seen moving rapidly between ports. Spanning tree is disabled on the access switches. What is the most likely cause?",
+    "choices": {
+      "a": "A switching loop causing a broadcast storm",
+      "b": "A MAC flooding attack",
+      "c": "DHCP scope exhaustion",
+      "d": "A speed and duplex mismatch"
+    },
+    "answer": "a",
+    "explanation": "Connecting two jacks through another switch with spanning tree disabled creates a Layer 2 loop, so broadcasts circulate endlessly, CPU rises, and MAC entries flap between ports. MAC flooding fills the MAC table with fake addresses, DHCP exhaustion only stops new clients from getting addresses, and a duplex mismatch causes errors on one link rather than a network-wide slowdown.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0223",
+    "domain": "5.0",
+    "objective": "5.3",
+    "question": "A network printer is intermittently unreachable, and several workstations log IP address conflict warnings for the printer's address. The printer was manually configured as 10.0.5.20, which falls inside the DHCP scope of 10.0.5.10 to 10.0.5.200. Which action best prevents this problem from recurring?",
+    "choices": {
+      "a": "Create a DHCP reservation for the printer's MAC address and set the printer to use DHCP",
+      "b": "Shorten the DHCP lease time for the scope",
+      "c": "Configure an IP helper address on the printer's VLAN interface",
+      "d": "Increase the scope size by using a shorter subnet mask"
+    },
+    "answer": "a",
+    "explanation": "The DHCP server does not know about the static address and keeps leasing it to other clients, causing a duplicate IP; a reservation ties that address to the printer's MAC so it is never given to another device. A shorter lease, an IP helper, or a larger scope would not stop the server from handing out the printer's address.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0224",
+    "domain": "5.0",
+    "objective": "5.3",
+    "question": "A hotel's guest wireless uses a single /24 DHCP scope with an 8-day lease. By each afternoon, newly arriving guests get 169.254.x.x addresses, while guests who connected earlier work normally. Which two actions would resolve the issue? (Choose two.)",
+    "choices": {
+      "a": "Reduce the DHCP lease time",
+      "b": "Expand the scope to a larger subnet",
+      "c": "Configure an IP helper address on the guest VLAN interface",
+      "d": "Create DHCP reservations for guest devices"
+    },
+    "answer": [
+      "a",
+      "b"
+    ],
+    "explanation": "The scope is running out of addresses because leases from departed guests are held for days, so shortening the lease returns addresses sooner and a larger subnet provides more addresses. An IP helper is not the issue because earlier guests already get leases, and reservations would tie up even more addresses for transient devices.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0225",
+    "domain": "5.0",
+    "objective": "5.3",
+    "question": "A user can reach hosts on the local subnet and browse the internet but cannot reach a file server at 192.168.20.15 on another VLAN, although coworkers can. The workstation shows IP address 192.168.10.44, subnet mask 255.255.0.0, and default gateway 192.168.10.1. The network uses /24 subnets. What is the most likely cause?",
+    "choices": {
+      "a": "Incorrect subnet mask",
+      "b": "Incorrect default gateway",
+      "c": "Duplicate IP address",
+      "d": "DHCP scope exhaustion"
+    },
+    "answer": "a",
+    "explanation": "With a /16 mask, the workstation treats 192.168.20.15 as local and sends ARP requests for it instead of forwarding the traffic to the gateway, so the server is unreachable. The gateway must be correct because internet access works, a duplicate IP would cause intermittent problems with all traffic, and DHCP exhaustion would leave the host without a valid address at all.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0226",
+    "domain": "5.0",
+    "objective": "5.4",
+    "question": "Users report that VoIP calls sound choppy and robotic. Monitoring shows no packet loss and an average delay of about 40 ms, but the delay between consecutive voice packets varies from 5 ms to 120 ms. Which issue is affecting call quality?",
+    "choices": {
+      "a": "Jitter",
+      "b": "High latency",
+      "c": "Packet loss",
+      "d": "Insufficient bandwidth"
+    },
+    "answer": "a",
+    "explanation": "Jitter is the variation in delay between packets, and real-time traffic like voice is very sensitive to it even when average delay is acceptable. Latency is the delay itself, which averages a reasonable 40 ms here, monitoring shows no packet loss, and nothing in the data points to a lack of bandwidth.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0227",
+    "domain": "5.0",
+    "objective": "5.5",
+    "question": "A technician needs to find which port on a patch panel an unlabeled wall jack is connected to. Which tool is best suited for this task?",
+    "choices": {
+      "a": "Toner and probe",
+      "b": "Cable tester",
+      "c": "Wi-Fi analyzer",
+      "d": "Visual fault locator"
+    },
+    "answer": "a",
+    "explanation": "A toner places a signal on the cable at the wall jack, and the probe detects it at the patch panel to identify the matching port. A cable tester checks wiring and continuity once both ends are known, a Wi-Fi analyzer examines wireless signals and channels, and a visual fault locator shines visible light down fiber, not copper.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0228",
+    "domain": "5.0",
+    "objective": "5.5",
+    "question": "An administrator has published an SPF record for example.com and wants to confirm from a Linux host that it is visible in public DNS. Which command should the administrator use?",
+    "choices": {
+      "a": "dig example.com TXT",
+      "b": "dig example.com MX",
+      "c": "dig example.com SRV",
+      "d": "dig -x 203.0.113.25"
+    },
+    "answer": "a",
+    "explanation": "SPF policies are published in TXT records, so querying the TXT type shows whether the record is visible. The MX query returns the domain's mail servers, the SRV query returns service host and port records, and dig -x performs a reverse (PTR) lookup on an IP address.",
+    "source": "ai-generated",
+    "verified": false
+  },
+  {
+    "id": "N10-009-0229",
+    "domain": "5.0",
+    "objective": "5.5",
+    "question": "A security analyst needs to find which hosts on the 10.20.0.0/24 subnet are listening on TCP port 3389 and identify the service versions they are running. Which tool is best suited for this task?",
+    "choices": {
+      "a": "nmap",
+      "b": "netstat",
+      "c": "tcpdump",
+      "d": "nslookup"
+    },
+    "answer": "a",
+    "explanation": "nmap scans remote hosts across a range to discover open ports and can fingerprint the services and versions behind them. netstat shows connections and listening ports only on the local machine, tcpdump captures traffic passively rather than probing hosts, and nslookup performs DNS queries.",
     "source": "ai-generated",
     "verified": false
   }
