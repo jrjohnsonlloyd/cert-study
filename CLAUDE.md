@@ -15,6 +15,8 @@ This is Lloyd's private certification study repository. Lloyd is a veteran study
 
 - Questions you write are AI-generated. Add them to a bank with `"verified": false` and `"source": "ai-generated"`.
 - Never claim a question is from or matches the real exam. Never reproduce copyrighted practice-test content.
+- Use `certs/<cert>/objectives.md` for objective tags and scope. If `reference/` holds the official objectives or Professor Messer's notes, check questions against them.
+- Never commit anything from `reference/`. It is ignored by Git on purpose.
 - If you are not sure of a fact, say so, and point Lloyd to the official exam objectives or vendor documentation.
 - Keep exam facts in each `certs/<cert>/README.md` marked "verify" until Lloyd has checked them against the official source.
 

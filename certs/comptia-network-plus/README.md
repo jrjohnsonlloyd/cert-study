@@ -2,7 +2,7 @@
 
 **Status:** Studying
 
-> Verify every fact on this page against the official exam objectives before relying on it.
+> Question count, time limit, and domain weights were checked against the official N10-009 objectives PDF (document version 6.0). The passing score and price come from CompTIA's website and should be confirmed before you book.
 
 ## Exam facts
 
@@ -36,4 +36,5 @@
 
 - `questions.json`: question bank (quiz with `python tools/quiz.py quiz comptia-network-plus`)
 - `labs.md`: hands-on labs in the Hyper-V lab
+- `objectives.md`: objective outline from the official PDF, including CompTIA's port table
 - `notes.md`: your own notes

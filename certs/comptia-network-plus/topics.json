@@ -1,0 +1,1388 @@
+{
+ "1.1": [
+  {
+   "id": "1.1-01",
+   "name": "Layer 1 - Physical"
+  },
+  {
+   "id": "1.1-02",
+   "name": "Layer 2 - Data link"
+  },
+  {
+   "id": "1.1-03",
+   "name": "Layer 3 - Network"
+  },
+  {
+   "id": "1.1-04",
+   "name": "Layer 4 - Transport"
+  },
+  {
+   "id": "1.1-05",
+   "name": "Layer 5 - Session"
+  },
+  {
+   "id": "1.1-06",
+   "name": "Layer 6 - Presentation"
+  },
+  {
+   "id": "1.1-07",
+   "name": "Layer 7 - Application"
+  }
+ ],
+ "1.2": [
+  {
+   "id": "1.2-01",
+   "name": "Physical and virtual appliances - Router"
+  },
+  {
+   "id": "1.2-02",
+   "name": "Physical and virtual appliances - Switch"
+  },
+  {
+   "id": "1.2-03",
+   "name": "Physical and virtual appliances - Firewall"
+  },
+  {
+   "id": "1.2-04",
+   "name": "Physical and virtual appliances - Intrusion detection system (IDS)/ intrusion prevention system (IPS)"
+  },
+  {
+   "id": "1.2-05",
+   "name": "Physical and virtual appliances - Load balancer"
+  },
+  {
+   "id": "1.2-06",
+   "name": "Physical and virtual appliances - Proxy"
+  },
+  {
+   "id": "1.2-07",
+   "name": "Physical and virtual appliances - Network-attached storage (NAS)"
+  },
+  {
+   "id": "1.2-08",
+   "name": "Physical and virtual appliances - Storage area network (SAN)"
+  },
+  {
+   "id": "1.2-09",
+   "name": "Physical and virtual appliances - Wireless (Access point (AP), Controller)"
+  },
+  {
+   "id": "1.2-10",
+   "name": "Applications - Content delivery network (CDN)"
+  },
+  {
+   "id": "1.2-11",
+   "name": "Functions - Virtual private network (VPN)"
+  },
+  {
+   "id": "1.2-12",
+   "name": "Functions - Quality of service (QoS)"
+  },
+  {
+   "id": "1.2-13",
+   "name": "Functions - Time to live (TTL)"
+  }
+ ],
+ "1.3": [
+  {
+   "id": "1.3-01",
+   "name": "Network functions virtualization (NFV)"
+  },
+  {
+   "id": "1.3-02",
+   "name": "Virtual private cloud (VPC)"
+  },
+  {
+   "id": "1.3-03",
+   "name": "Network security groups"
+  },
+  {
+   "id": "1.3-04",
+   "name": "Network security lists"
+  },
+  {
+   "id": "1.3-05",
+   "name": "Cloud gateways - Internet gateway"
+  },
+  {
+   "id": "1.3-06",
+   "name": "Cloud gateways - Network address translation (NAT) gateway"
+  },
+  {
+   "id": "1.3-07",
+   "name": "Cloud connectivity options - VPN"
+  },
+  {
+   "id": "1.3-08",
+   "name": "Cloud connectivity options - Direct Connect"
+  },
+  {
+   "id": "1.3-09",
+   "name": "Deployment models - Public"
+  },
+  {
+   "id": "1.3-10",
+   "name": "Deployment models - Private"
+  },
+  {
+   "id": "1.3-11",
+   "name": "Deployment models - Hybrid"
+  },
+  {
+   "id": "1.3-12",
+   "name": "Service models - Software as a service (SaaS)"
+  },
+  {
+   "id": "1.3-13",
+   "name": "Service models - Infrastructure as a service (IaaS)"
+  },
+  {
+   "id": "1.3-14",
+   "name": "Service models - Platform as a service (PaaS)"
+  },
+  {
+   "id": "1.3-15",
+   "name": "Scalability"
+  },
+  {
+   "id": "1.3-16",
+   "name": "Elasticity"
+  },
+  {
+   "id": "1.3-17",
+   "name": "Multitenancy"
+  }
+ ],
+ "1.4": [
+  {
+   "id": "1.4-01",
+   "name": "Port 20/21: File Transfer Protocol (FTP)"
+  },
+  {
+   "id": "1.4-02",
+   "name": "Port 22: Secure File Transfer Protocol (SFTP)"
+  },
+  {
+   "id": "1.4-03",
+   "name": "Port 22: Secure Shell (SSH)"
+  },
+  {
+   "id": "1.4-04",
+   "name": "Port 23: Telnet"
+  },
+  {
+   "id": "1.4-05",
+   "name": "Port 25: Simple Mail Transfer Protocol (SMTP)"
+  },
+  {
+   "id": "1.4-06",
+   "name": "Port 53: Domain Name System (DNS)"
+  },
+  {
+   "id": "1.4-07",
+   "name": "Port 67/68: Dynamic Host Configuration Protocol (DHCP)"
+  },
+  {
+   "id": "1.4-08",
+   "name": "Port 69: Trivial File Transfer Protocol (TFTP)"
+  },
+  {
+   "id": "1.4-09",
+   "name": "Port 80: Hypertext Transfer Protocol (HTTP)"
+  },
+  {
+   "id": "1.4-10",
+   "name": "Port 123: Network Time Protocol (NTP)"
+  },
+  {
+   "id": "1.4-11",
+   "name": "Port 161/162: Simple Network Management Protocol (SNMP)"
+  },
+  {
+   "id": "1.4-12",
+   "name": "Port 389: Lightweight Directory Access Protocol (LDAP)"
+  },
+  {
+   "id": "1.4-13",
+   "name": "Port 443: Hypertext Transfer Protocol Secure (HTTPS)"
+  },
+  {
+   "id": "1.4-14",
+   "name": "Port 445: Server Message Block (SMB)"
+  },
+  {
+   "id": "1.4-15",
+   "name": "Port 514: Syslog"
+  },
+  {
+   "id": "1.4-16",
+   "name": "Port 587: Simple Mail Transfer Protocol Secure (SMTPS)"
+  },
+  {
+   "id": "1.4-17",
+   "name": "Port 636: Lightweight Directory Access Protocol over SSL (LDAPS)"
+  },
+  {
+   "id": "1.4-18",
+   "name": "Port 1433: Structured Query Language (SQL) Server"
+  },
+  {
+   "id": "1.4-19",
+   "name": "Port 3389: Remote Desktop Protocol (RDP)"
+  },
+  {
+   "id": "1.4-20",
+   "name": "Port 5060/5061: Session Initiation Protocol (SIP)"
+  },
+  {
+   "id": "1.4-21",
+   "name": "Internet Protocol (IP) types - Internet Control Message Protocol (ICMP)"
+  },
+  {
+   "id": "1.4-22",
+   "name": "Internet Protocol (IP) types - Transmission Control Protocol (TCP)"
+  },
+  {
+   "id": "1.4-23",
+   "name": "Internet Protocol (IP) types - User Datagram Protocol (UDP)"
+  },
+  {
+   "id": "1.4-24",
+   "name": "Internet Protocol (IP) types - Generic Routing Encapsulation (GRE)"
+  },
+  {
+   "id": "1.4-25",
+   "name": "Internet Protocol (IP) types - Internet Protocol Security (IPSec) (Authentication Header (AH), Encapsulating Security Payload (ESP), Internet Key Exchange (IKE))"
+  },
+  {
+   "id": "1.4-26",
+   "name": "Traffic types - Unicast"
+  },
+  {
+   "id": "1.4-27",
+   "name": "Traffic types - Multicast"
+  },
+  {
+   "id": "1.4-28",
+   "name": "Traffic types - Anycast"
+  },
+  {
+   "id": "1.4-29",
+   "name": "Traffic types - Broadcast"
+  }
+ ],
+ "1.5": [
+  {
+   "id": "1.5-01",
+   "name": "Wireless - 802.11 standards"
+  },
+  {
+   "id": "1.5-02",
+   "name": "Wireless - Cellular"
+  },
+  {
+   "id": "1.5-03",
+   "name": "Wireless - Satellite"
+  },
+  {
+   "id": "1.5-04",
+   "name": "Wired - 802.3 standards"
+  },
+  {
+   "id": "1.5-05",
+   "name": "Wired - Single-mode vs. multimode fiber"
+  },
+  {
+   "id": "1.5-06",
+   "name": "Wired - Direct attach copper (DAC) cable (Twinaxial cable)"
+  },
+  {
+   "id": "1.5-07",
+   "name": "Wired - Coaxial cable"
+  },
+  {
+   "id": "1.5-08",
+   "name": "Wired - Cable speeds"
+  },
+  {
+   "id": "1.5-09",
+   "name": "Wired - Plenum vs. non-plenum cable"
+  },
+  {
+   "id": "1.5-10",
+   "name": "Transceivers - Protocol (Ethernet, Fibre Channel (FC))"
+  },
+  {
+   "id": "1.5-11",
+   "name": "Transceivers - Form factors (Small form-factor pluggable (SFP), Quad small form-factor pluggable (QSFP))"
+  },
+  {
+   "id": "1.5-12",
+   "name": "Connector types - Subscriber connector (SC)"
+  },
+  {
+   "id": "1.5-13",
+   "name": "Connector types - Local connector (LC)"
+  },
+  {
+   "id": "1.5-14",
+   "name": "Connector types - Straight tip (ST)"
+  },
+  {
+   "id": "1.5-15",
+   "name": "Connector types - Multi-fiber push on (MPO)"
+  },
+  {
+   "id": "1.5-16",
+   "name": "Connector types - RJ11"
+  },
+  {
+   "id": "1.5-17",
+   "name": "Connector types - RJ45"
+  },
+  {
+   "id": "1.5-18",
+   "name": "Connector types - F-type"
+  },
+  {
+   "id": "1.5-19",
+   "name": "Connector types - Bayonet Neill\u2013Concelman (BNC)"
+  }
+ ],
+ "1.6": [
+  {
+   "id": "1.6-01",
+   "name": "Mesh"
+  },
+  {
+   "id": "1.6-02",
+   "name": "Hybrid"
+  },
+  {
+   "id": "1.6-03",
+   "name": "Star/hub and spoke"
+  },
+  {
+   "id": "1.6-04",
+   "name": "Spine and leaf"
+  },
+  {
+   "id": "1.6-05",
+   "name": "Point to point"
+  },
+  {
+   "id": "1.6-06",
+   "name": "Three-tier hierarchical model - Core"
+  },
+  {
+   "id": "1.6-07",
+   "name": "Three-tier hierarchical model - Distribution"
+  },
+  {
+   "id": "1.6-08",
+   "name": "Three-tier hierarchical model - Access"
+  },
+  {
+   "id": "1.6-09",
+   "name": "Collapsed core"
+  },
+  {
+   "id": "1.6-10",
+   "name": "Traffic flows - North-south"
+  },
+  {
+   "id": "1.6-11",
+   "name": "Traffic flows - East-west"
+  }
+ ],
+ "1.7": [
+  {
+   "id": "1.7-01",
+   "name": "Public vs. private - Automatic Private IP Addressing (APIPA)"
+  },
+  {
+   "id": "1.7-02",
+   "name": "Public vs. private - RFC1918"
+  },
+  {
+   "id": "1.7-03",
+   "name": "Public vs. private - Loopback/localhost"
+  },
+  {
+   "id": "1.7-04",
+   "name": "Subnetting - Variable Length Subnet Mask (VLSM)"
+  },
+  {
+   "id": "1.7-05",
+   "name": "Subnetting - Classless Inter-domain Routing (CIDR)"
+  },
+  {
+   "id": "1.7-06",
+   "name": "IPv4 address classes - Class A"
+  },
+  {
+   "id": "1.7-07",
+   "name": "IPv4 address classes - Class B"
+  },
+  {
+   "id": "1.7-08",
+   "name": "IPv4 address classes - Class C"
+  },
+  {
+   "id": "1.7-09",
+   "name": "IPv4 address classes - Class D"
+  },
+  {
+   "id": "1.7-10",
+   "name": "IPv4 address classes - Class E"
+  }
+ ],
+ "1.8": [
+  {
+   "id": "1.8-01",
+   "name": "Software-defined network (SDN) and software-defined wide area network (SD-WAN) - Application aware"
+  },
+  {
+   "id": "1.8-02",
+   "name": "Software-defined network (SDN) and software-defined wide area network (SD-WAN) - Zero-touch provisioning"
+  },
+  {
+   "id": "1.8-03",
+   "name": "Software-defined network (SDN) and software-defined wide area network (SD-WAN) - Transport agnostic"
+  },
+  {
+   "id": "1.8-04",
+   "name": "Software-defined network (SDN) and software-defined wide area network (SD-WAN) - Central policy management"
+  },
+  {
+   "id": "1.8-05",
+   "name": "Virtual Extensible Local Area Network (VXLAN) - Data center interconnect (DCI)"
+  },
+  {
+   "id": "1.8-06",
+   "name": "Virtual Extensible Local Area Network (VXLAN) - Layer 2 encapsulation"
+  },
+  {
+   "id": "1.8-07",
+   "name": "Zero trust architecture (ZTA) - Policy-based authentication"
+  },
+  {
+   "id": "1.8-08",
+   "name": "Zero trust architecture (ZTA) - Authorization"
+  },
+  {
+   "id": "1.8-09",
+   "name": "Zero trust architecture (ZTA) - Least privilege access"
+  },
+  {
+   "id": "1.8-10",
+   "name": "Secure Access Secure Edge (SASE)/Security Service Edge (SSE)"
+  },
+  {
+   "id": "1.8-11",
+   "name": "Infrastructure as code (IaC) - Automation (Playbooks/templates/ reusable tasks, Configuration drift/compliance, Upgrades, Dynamic inventories)"
+  },
+  {
+   "id": "1.8-12",
+   "name": "Infrastructure as code (IaC) - Source control (Version control, Central repository, Conflict identification, Branching)"
+  },
+  {
+   "id": "1.8-13",
+   "name": "IPv6 addressing - Mitigating address exhaustion"
+  },
+  {
+   "id": "1.8-14",
+   "name": "IPv6 addressing - Compatibility requirements (Tunneling, Dual stack, NAT64)"
+  }
+ ],
+ "2.1": [
+  {
+   "id": "2.1-01",
+   "name": "Static routing"
+  },
+  {
+   "id": "2.1-02",
+   "name": "Dynamic routing - Border Gateway Protocol (BGP)"
+  },
+  {
+   "id": "2.1-03",
+   "name": "Dynamic routing - Enhanced Interior Gateway Routing Protocol (EIGRP)"
+  },
+  {
+   "id": "2.1-04",
+   "name": "Dynamic routing - Open Shortest Path First (OSPF)"
+  },
+  {
+   "id": "2.1-05",
+   "name": "Route selection - Administrative distance"
+  },
+  {
+   "id": "2.1-06",
+   "name": "Route selection - Prefix length"
+  },
+  {
+   "id": "2.1-07",
+   "name": "Route selection - Metric"
+  },
+  {
+   "id": "2.1-08",
+   "name": "Address translation - NAT"
+  },
+  {
+   "id": "2.1-09",
+   "name": "Address translation - Port address translation (PAT)"
+  },
+  {
+   "id": "2.1-10",
+   "name": "First Hop Redundancy Protocol (FHRP)"
+  },
+  {
+   "id": "2.1-11",
+   "name": "Virtual IP (VIP)"
+  },
+  {
+   "id": "2.1-12",
+   "name": "Subinterfaces"
+  }
+ ],
+ "2.2": [
+  {
+   "id": "2.2-01",
+   "name": "Virtual Local Area Network (VLAN) - VLAN database"
+  },
+  {
+   "id": "2.2-02",
+   "name": "Virtual Local Area Network (VLAN) - Switch virtual interface (SVI)"
+  },
+  {
+   "id": "2.2-03",
+   "name": "Interface configuration - Native VLAN"
+  },
+  {
+   "id": "2.2-04",
+   "name": "Interface configuration - Voice VLAN"
+  },
+  {
+   "id": "2.2-05",
+   "name": "Interface configuration - 802.1Q tagging"
+  },
+  {
+   "id": "2.2-06",
+   "name": "Interface configuration - Link aggregation"
+  },
+  {
+   "id": "2.2-07",
+   "name": "Interface configuration - Speed"
+  },
+  {
+   "id": "2.2-08",
+   "name": "Interface configuration - Duplex"
+  },
+  {
+   "id": "2.2-09",
+   "name": "Spanning tree"
+  },
+  {
+   "id": "2.2-10",
+   "name": "Maximum transmission unit (MTU) - Jumbo frames"
+  }
+ ],
+ "2.3": [
+  {
+   "id": "2.3-01",
+   "name": "Channels - Channel width"
+  },
+  {
+   "id": "2.3-02",
+   "name": "Channels - Non-overlapping channels"
+  },
+  {
+   "id": "2.3-03",
+   "name": "Channels - Regulatory impacts (802.11h)"
+  },
+  {
+   "id": "2.3-04",
+   "name": "Frequency options - 2.4GHz"
+  },
+  {
+   "id": "2.3-05",
+   "name": "Frequency options - 5GHz"
+  },
+  {
+   "id": "2.3-06",
+   "name": "Frequency options - 6GHz"
+  },
+  {
+   "id": "2.3-07",
+   "name": "Frequency options - Band steering"
+  },
+  {
+   "id": "2.3-08",
+   "name": "Service set identifier (SSID) - Basic service set identifier (BSSID)"
+  },
+  {
+   "id": "2.3-09",
+   "name": "Service set identifier (SSID) - Extended service set identifier (ESSID)"
+  },
+  {
+   "id": "2.3-10",
+   "name": "Network types - Mesh networks"
+  },
+  {
+   "id": "2.3-11",
+   "name": "Network types - Ad hoc"
+  },
+  {
+   "id": "2.3-12",
+   "name": "Network types - Point to point"
+  },
+  {
+   "id": "2.3-13",
+   "name": "Network types - Infrastructure"
+  },
+  {
+   "id": "2.3-14",
+   "name": "Encryption - Wi-Fi Protected Access 2 (WPA2)"
+  },
+  {
+   "id": "2.3-15",
+   "name": "Encryption - WPA3"
+  },
+  {
+   "id": "2.3-16",
+   "name": "Guest networks - Captive portals"
+  },
+  {
+   "id": "2.3-17",
+   "name": "Authentication - Pre-shared key (PSK) vs. Enterprise"
+  },
+  {
+   "id": "2.3-18",
+   "name": "Antennas - Omnidirectional vs. directional"
+  },
+  {
+   "id": "2.3-19",
+   "name": "Autonomous vs. lightweight AP"
+  }
+ ],
+ "2.4": [
+  {
+   "id": "2.4-01",
+   "name": "Important installation implications - Locations (Intermediate distribution frame (IDF), Main distribution frame (MDF))"
+  },
+  {
+   "id": "2.4-02",
+   "name": "Important installation implications - Rack size"
+  },
+  {
+   "id": "2.4-03",
+   "name": "Important installation implications - Port-side exhaust/intake"
+  },
+  {
+   "id": "2.4-04",
+   "name": "Important installation implications - Cabling (Patch panel, Fiber distribution panel)"
+  },
+  {
+   "id": "2.4-05",
+   "name": "Important installation implications - Lockable"
+  },
+  {
+   "id": "2.4-06",
+   "name": "Power - Uninterruptible power supply (UPS)"
+  },
+  {
+   "id": "2.4-07",
+   "name": "Power - Power distribution unit (PDU)"
+  },
+  {
+   "id": "2.4-08",
+   "name": "Power - Power load"
+  },
+  {
+   "id": "2.4-09",
+   "name": "Power - Voltage"
+  },
+  {
+   "id": "2.4-10",
+   "name": "Environmental factors - Humidity"
+  },
+  {
+   "id": "2.4-11",
+   "name": "Environmental factors - Fire suppression"
+  },
+  {
+   "id": "2.4-12",
+   "name": "Environmental factors - Temperature"
+  }
+ ],
+ "3.1": [
+  {
+   "id": "3.1-01",
+   "name": "Documentation - Physical vs. logical diagrams"
+  },
+  {
+   "id": "3.1-02",
+   "name": "Documentation - Rack diagrams"
+  },
+  {
+   "id": "3.1-03",
+   "name": "Documentation - Cable maps and diagrams"
+  },
+  {
+   "id": "3.1-04",
+   "name": "Documentation - Network diagrams (Layer 1, Layer 2, Layer 3)"
+  },
+  {
+   "id": "3.1-05",
+   "name": "Documentation - Asset inventory (Hardware, Software, Licensing, Warranty support)"
+  },
+  {
+   "id": "3.1-06",
+   "name": "Documentation - IP address management (IPAM)"
+  },
+  {
+   "id": "3.1-07",
+   "name": "Documentation - Service-level agreement (SLA)"
+  },
+  {
+   "id": "3.1-08",
+   "name": "Documentation - Wireless survey/heat map"
+  },
+  {
+   "id": "3.1-09",
+   "name": "Life-cycle management - End-of-life (EOL)"
+  },
+  {
+   "id": "3.1-10",
+   "name": "Life-cycle management - End-of-support (EOS)"
+  },
+  {
+   "id": "3.1-11",
+   "name": "Life-cycle management - Software management (Patches and bug fixes, Operating system (OS), Firmware)"
+  },
+  {
+   "id": "3.1-12",
+   "name": "Life-cycle management - Decommissioning"
+  },
+  {
+   "id": "3.1-13",
+   "name": "Change management - Request process tracking/ service request"
+  },
+  {
+   "id": "3.1-14",
+   "name": "Configuration management - Production configuration"
+  },
+  {
+   "id": "3.1-15",
+   "name": "Configuration management - Backup configuration"
+  },
+  {
+   "id": "3.1-16",
+   "name": "Configuration management - Baseline/golden configuration"
+  }
+ ],
+ "3.2": [
+  {
+   "id": "3.2-01",
+   "name": "Methods - SNMP (Traps, Management information base (MIB), Versions, v2c, v3, Community strings, Authentication)"
+  },
+  {
+   "id": "3.2-02",
+   "name": "Methods - Flow data"
+  },
+  {
+   "id": "3.2-03",
+   "name": "Methods - Packet capture"
+  },
+  {
+   "id": "3.2-04",
+   "name": "Methods - Baseline metrics (Anomaly alerting/notification)"
+  },
+  {
+   "id": "3.2-05",
+   "name": "Methods - Log aggregation (Syslog collector, Security information and event management (SIEM))"
+  },
+  {
+   "id": "3.2-06",
+   "name": "Methods - Application programming interface (API) integration"
+  },
+  {
+   "id": "3.2-07",
+   "name": "Methods - Port mirroring"
+  },
+  {
+   "id": "3.2-08",
+   "name": "Solutions - Network discovery (Ad hoc, Scheduled)"
+  },
+  {
+   "id": "3.2-09",
+   "name": "Solutions - Traffic analysis"
+  },
+  {
+   "id": "3.2-10",
+   "name": "Solutions - Performance monitoring"
+  },
+  {
+   "id": "3.2-11",
+   "name": "Solutions - Availability monitoring"
+  },
+  {
+   "id": "3.2-12",
+   "name": "Solutions - Configuration monitoring"
+  }
+ ],
+ "3.3": [
+  {
+   "id": "3.3-01",
+   "name": "DR metrics - Recovery point objective (RPO)"
+  },
+  {
+   "id": "3.3-02",
+   "name": "DR metrics - Recovery time objective (RTO)"
+  },
+  {
+   "id": "3.3-03",
+   "name": "DR metrics - Mean time to repair (MTTR)"
+  },
+  {
+   "id": "3.3-04",
+   "name": "DR metrics - Mean time between failures (MTBF)"
+  },
+  {
+   "id": "3.3-05",
+   "name": "DR sites - Cold site"
+  },
+  {
+   "id": "3.3-06",
+   "name": "DR sites - Warm site"
+  },
+  {
+   "id": "3.3-07",
+   "name": "DR sites - Hot site"
+  },
+  {
+   "id": "3.3-08",
+   "name": "High-availability approaches - Active-active"
+  },
+  {
+   "id": "3.3-09",
+   "name": "High-availability approaches - Active-passive"
+  },
+  {
+   "id": "3.3-10",
+   "name": "Testing - Tabletop exercises"
+  },
+  {
+   "id": "3.3-11",
+   "name": "Testing - Validation tests"
+  }
+ ],
+ "3.4": [
+  {
+   "id": "3.4-01",
+   "name": "Dynamic addressing Domain Name System Security Extensions (DNSSEC) - DHCP (DNS over HTTPS (DoH), Reservations and DNS over TLS (DoT), Scope, Record types, Lease time, Address (A), Options, AAAA, Relay/IP helper, Canonical name (CNAME), Exclusions, Mail exchange (MX))"
+  },
+  {
+   "id": "3.4-02",
+   "name": "Dynamic addressing Domain Name System Security Extensions (DNSSEC) - Stateless address (Text (TXT) autoconfiguration (SLAAC), Nameserver (NS))"
+  },
+  {
+   "id": "3.4-03",
+   "name": "Name resolution Pointer (PTR) - DNS (Zone types, Forward, Reverse, Authoritative vs. non-authoritative, Primary vs. secondary, Recursive)"
+  },
+  {
+   "id": "3.4-04",
+   "name": "Name resolution Pointer (PTR) - Hosts file"
+  },
+  {
+   "id": "3.4-05",
+   "name": "Time protocols - NTP"
+  },
+  {
+   "id": "3.4-06",
+   "name": "Time protocols - Precision Time Protocol (PTP)"
+  },
+  {
+   "id": "3.4-07",
+   "name": "Time protocols - Network Time Security (NTS)"
+  }
+ ],
+ "3.5": [
+  {
+   "id": "3.5-01",
+   "name": "Site-to-site VPN"
+  },
+  {
+   "id": "3.5-02",
+   "name": "Client-to-site VPN - Clientless"
+  },
+  {
+   "id": "3.5-03",
+   "name": "Client-to-site VPN - Split tunnel vs. full tunnel"
+  },
+  {
+   "id": "3.5-04",
+   "name": "Connection methods - SSH"
+  },
+  {
+   "id": "3.5-05",
+   "name": "Connection methods - Graphical user interface (GUI)"
+  },
+  {
+   "id": "3.5-06",
+   "name": "Connection methods - API"
+  },
+  {
+   "id": "3.5-07",
+   "name": "Connection methods - Console"
+  },
+  {
+   "id": "3.5-08",
+   "name": "Jump box/host"
+  },
+  {
+   "id": "3.5-09",
+   "name": "In-band vs. out-of-band management"
+  }
+ ],
+ "4.1": [
+  {
+   "id": "4.1-01",
+   "name": "Logical security - Encryption (Data in transit, Data at rest)"
+  },
+  {
+   "id": "4.1-02",
+   "name": "Logical security - Certificates (Public key infrastructure (PKI), Self-signed)"
+  },
+  {
+   "id": "4.1-03",
+   "name": "Logical security - Identity and access management (IAM) (Authentication, Multifactor authentication (MFA), Single sign-on (SSO), Remote Authentication Dial-in User Service (RADIUS), LDAP, Security Assertion Markup Language (SAML), Terminal Access Controller Access Control System Plus (TACACS+), Time-based authentication, Authorization, Least privilege, Role-based access control)"
+  },
+  {
+   "id": "4.1-04",
+   "name": "Logical security - Geofencing"
+  },
+  {
+   "id": "4.1-05",
+   "name": "Physical security - Camera"
+  },
+  {
+   "id": "4.1-06",
+   "name": "Physical security - Locks"
+  },
+  {
+   "id": "4.1-07",
+   "name": "Deception technologies - Honeypot"
+  },
+  {
+   "id": "4.1-08",
+   "name": "Deception technologies - Honeynet"
+  },
+  {
+   "id": "4.1-09",
+   "name": "Common security terminology - Risk"
+  },
+  {
+   "id": "4.1-10",
+   "name": "Common security terminology - Vulnerability"
+  },
+  {
+   "id": "4.1-11",
+   "name": "Common security terminology - Exploit"
+  },
+  {
+   "id": "4.1-12",
+   "name": "Common security terminology - Threat"
+  },
+  {
+   "id": "4.1-13",
+   "name": "Common security terminology - Confidentiality, Integrity, and Availability (CIA) triad"
+  },
+  {
+   "id": "4.1-14",
+   "name": "Audits and regulatory compliance - Data locality"
+  },
+  {
+   "id": "4.1-15",
+   "name": "Audits and regulatory compliance - Payment Card Industry Data Security Standards (PCI DSS)"
+  },
+  {
+   "id": "4.1-16",
+   "name": "Audits and regulatory compliance - General Data Protection Regulation (GDPR)"
+  },
+  {
+   "id": "4.1-17",
+   "name": "Network segmentation enforcement - Internet of Things (IoT) and Industrial Internet of Things (IIoT)"
+  },
+  {
+   "id": "4.1-18",
+   "name": "Network segmentation enforcement - Supervisory control and data acquisition (SCADA), industrial control System (ICS), operational technology (OT)"
+  },
+  {
+   "id": "4.1-19",
+   "name": "Network segmentation enforcement - Guest"
+  },
+  {
+   "id": "4.1-20",
+   "name": "Network segmentation enforcement - Bring your own device (BYOD)"
+  }
+ ],
+ "4.2": [
+  {
+   "id": "4.2-01",
+   "name": "Denial-of-service (DoS)/distributed denial-of-service (DDoS)"
+  },
+  {
+   "id": "4.2-02",
+   "name": "VLAN hopping"
+  },
+  {
+   "id": "4.2-03",
+   "name": "Media Access Control (MAC) flooding"
+  },
+  {
+   "id": "4.2-04",
+   "name": "Address Resolution Protocol (ARP) poisoning"
+  },
+  {
+   "id": "4.2-05",
+   "name": "ARP spoofing"
+  },
+  {
+   "id": "4.2-06",
+   "name": "DNS poisoning"
+  },
+  {
+   "id": "4.2-07",
+   "name": "DNS spoofing"
+  },
+  {
+   "id": "4.2-08",
+   "name": "Rogue devices and services - DHCP"
+  },
+  {
+   "id": "4.2-09",
+   "name": "Rogue devices and services - AP"
+  },
+  {
+   "id": "4.2-10",
+   "name": "Evil twin"
+  },
+  {
+   "id": "4.2-11",
+   "name": "On-path attack"
+  },
+  {
+   "id": "4.2-12",
+   "name": "Social engineering - Phishing"
+  },
+  {
+   "id": "4.2-13",
+   "name": "Social engineering - Dumpster diving"
+  },
+  {
+   "id": "4.2-14",
+   "name": "Social engineering - Shoulder surfing"
+  },
+  {
+   "id": "4.2-15",
+   "name": "Social engineering - Tailgating"
+  },
+  {
+   "id": "4.2-16",
+   "name": "Malware"
+  }
+ ],
+ "4.3": [
+  {
+   "id": "4.3-01",
+   "name": "Device hardening - Disable unused ports and services"
+  },
+  {
+   "id": "4.3-02",
+   "name": "Device hardening - Change default passwords"
+  },
+  {
+   "id": "4.3-03",
+   "name": "Network access control (NAC) - Port security"
+  },
+  {
+   "id": "4.3-04",
+   "name": "Network access control (NAC) - 802.1X"
+  },
+  {
+   "id": "4.3-05",
+   "name": "Network access control (NAC) - MAC filtering"
+  },
+  {
+   "id": "4.3-06",
+   "name": "Key management"
+  },
+  {
+   "id": "4.3-07",
+   "name": "Security rules - Access control list (ACL)"
+  },
+  {
+   "id": "4.3-08",
+   "name": "Security rules - Uniform Resource Locator (URL) filtering"
+  },
+  {
+   "id": "4.3-09",
+   "name": "Security rules - Content filtering"
+  },
+  {
+   "id": "4.3-10",
+   "name": "Zones - Trusted vs. untrusted"
+  },
+  {
+   "id": "4.3-11",
+   "name": "Zones - Screened subnet"
+  }
+ ],
+ "5.1": [
+  {
+   "id": "5.1-01",
+   "name": "Identify the problem - Gather information"
+  },
+  {
+   "id": "5.1-02",
+   "name": "Identify the problem - Question users"
+  },
+  {
+   "id": "5.1-03",
+   "name": "Identify the problem - Identify symptoms"
+  },
+  {
+   "id": "5.1-04",
+   "name": "Identify the problem - Determine if anything has changed"
+  },
+  {
+   "id": "5.1-05",
+   "name": "Identify the problem - Duplicate the problem, if possible"
+  },
+  {
+   "id": "5.1-06",
+   "name": "Identify the problem - Approach multiple problems individually"
+  },
+  {
+   "id": "5.1-07",
+   "name": "Establish a theory of probable cause - Question the obvious"
+  },
+  {
+   "id": "5.1-08",
+   "name": "Establish a theory of probable cause - Consider multiple approaches (Top-to-bottom/bottom-to-top OSI model, Divide and conquer)"
+  },
+  {
+   "id": "5.1-09",
+   "name": "Test the theory to determine the cause - If theory is confirmed, determine next steps to resolve problem"
+  },
+  {
+   "id": "5.1-10",
+   "name": "Test the theory to determine the cause - If theory is not confirmed, establish a new theory or escalate"
+  },
+  {
+   "id": "5.1-11",
+   "name": "Establish a plan of action to resolve the problem and identify potential effects"
+  },
+  {
+   "id": "5.1-12",
+   "name": "Implement the solution or escalate as necessary"
+  },
+  {
+   "id": "5.1-13",
+   "name": "Verify full system functionality and implement preventive measures if applicable"
+  },
+  {
+   "id": "5.1-14",
+   "name": "Document findings, actions, outcomes, and lessons learned throughout the process"
+  }
+ ],
+ "5.2": [
+  {
+   "id": "5.2-01",
+   "name": "Cable issues - Incorrect cable (Single mode vs. multimode, Category 5/6/7/8, Shielded twisted pair (STP) vs. unshielded twisted pair (UTP))"
+  },
+  {
+   "id": "5.2-02",
+   "name": "Cable issues - Signal degradation (Crosstalk, Interference, Attenuation)"
+  },
+  {
+   "id": "5.2-03",
+   "name": "Cable issues - Improper termination"
+  },
+  {
+   "id": "5.2-04",
+   "name": "Cable issues - Transmitter (TX)/Receiver (RX) transposed"
+  },
+  {
+   "id": "5.2-05",
+   "name": "Interface issues - Increasing interface counters (Cyclic redundancy check (CRC), Runts, Giants, Drops)"
+  },
+  {
+   "id": "5.2-06",
+   "name": "Interface issues - Port status (Error disabled, Administratively down, Suspended)"
+  },
+  {
+   "id": "5.2-07",
+   "name": "Hardware issues - Power over Ethernet (PoE) (Power budget exceeded, Incorrect standard)"
+  },
+  {
+   "id": "5.2-08",
+   "name": "Hardware issues - Transceivers (Mismatch, Signal strength)"
+  }
+ ],
+ "5.3": [
+  {
+   "id": "5.3-01",
+   "name": "Switching issues - STP (Network loops, Root bridge selection, Port roles, Port states)"
+  },
+  {
+   "id": "5.3-02",
+   "name": "Switching issues - Incorrect VLAN assignment"
+  },
+  {
+   "id": "5.3-03",
+   "name": "Switching issues - ACLs"
+  },
+  {
+   "id": "5.3-04",
+   "name": "Route selection - Routing table"
+  },
+  {
+   "id": "5.3-05",
+   "name": "Route selection - Default routes"
+  },
+  {
+   "id": "5.3-06",
+   "name": "Address pool exhaustion"
+  },
+  {
+   "id": "5.3-07",
+   "name": "Incorrect default gateway"
+  },
+  {
+   "id": "5.3-08",
+   "name": "Incorrect IP address - Duplicate IP address"
+  },
+  {
+   "id": "5.3-09",
+   "name": "Incorrect subnet mask"
+  }
+ ],
+ "5.4": [
+  {
+   "id": "5.4-01",
+   "name": "Congestion/contention"
+  },
+  {
+   "id": "5.4-02",
+   "name": "Bottlenecking"
+  },
+  {
+   "id": "5.4-03",
+   "name": "Bandwidth - Throughput capacity"
+  },
+  {
+   "id": "5.4-04",
+   "name": "Latency"
+  },
+  {
+   "id": "5.4-05",
+   "name": "Packet loss"
+  },
+  {
+   "id": "5.4-06",
+   "name": "Jitter"
+  },
+  {
+   "id": "5.4-07",
+   "name": "Wireless - Interference (Channel overlap)"
+  },
+  {
+   "id": "5.4-08",
+   "name": "Wireless - Signal degradation or loss"
+  },
+  {
+   "id": "5.4-09",
+   "name": "Wireless - Insufficient wireless coverage"
+  },
+  {
+   "id": "5.4-10",
+   "name": "Wireless - Client disassociation issues"
+  },
+  {
+   "id": "5.4-11",
+   "name": "Wireless - Roaming misconfiguration"
+  }
+ ],
+ "5.5": [
+  {
+   "id": "5.5-01",
+   "name": "Software tools - Protocol analyzer"
+  },
+  {
+   "id": "5.5-02",
+   "name": "Software tools - Command line (ping, traceroute/tracert, nslookup, tcpdump, dig, netstat, ip/ifconfig/ipconfig, arp)"
+  },
+  {
+   "id": "5.5-03",
+   "name": "Software tools - Nmap"
+  },
+  {
+   "id": "5.5-04",
+   "name": "Software tools - Link Layer Discovery Protocol (LLDP)/Cisco Discovery Protocol (CDP)"
+  },
+  {
+   "id": "5.5-05",
+   "name": "Software tools - Speed tester"
+  },
+  {
+   "id": "5.5-06",
+   "name": "Hardware tools - Toner"
+  },
+  {
+   "id": "5.5-07",
+   "name": "Hardware tools - Cable tester"
+  },
+  {
+   "id": "5.5-08",
+   "name": "Hardware tools - Taps"
+  },
+  {
+   "id": "5.5-09",
+   "name": "Hardware tools - Wi-Fi analyzer"
+  },
+  {
+   "id": "5.5-10",
+   "name": "Hardware tools - Visual fault locator"
+  },
+  {
+   "id": "5.5-11",
+   "name": "Basic networking device commands - show mac-address-table"
+  },
+  {
+   "id": "5.5-12",
+   "name": "Basic networking device commands - show route"
+  },
+  {
+   "id": "5.5-13",
+   "name": "Basic networking device commands - show interface"
+  },
+  {
+   "id": "5.5-14",
+   "name": "Basic networking device commands - show config"
+  },
+  {
+   "id": "5.5-15",
+   "name": "Basic networking device commands - show arp"
+  },
+  {
+   "id": "5.5-16",
+   "name": "Basic networking device commands - show vlan"
+  },
+  {
+   "id": "5.5-17",
+   "name": "Basic networking device commands - show power"
+  }
+ ]
+}

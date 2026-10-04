@@ -5,6 +5,7 @@ Usage:
   quiz.py list
   quiz.py quiz <cert> [-n N] [--domain D] [--weak]
   quiz.py report <cert>
+  quiz.py coverage <cert> [--limit N]
   quiz.py validate
 
 Question banks live in certs/<cert>/questions.json. Every answer is appended
@@ -115,6 +116,41 @@ def ask(q, number, total):
     return ok
 
 
+def load_topics(cert):
+    path = CERTS / cert / "topics.json"
+    return json.loads(path.read_text(encoding="utf-8")) if path.exists() else {}
+
+
+def topic_ids(cert):
+    return {t["id"] for ts in load_topics(cert).values() for t in ts}
+
+
+def cmd_coverage(args):
+    topics = load_topics(args.cert)
+    if not topics:
+        sys.exit(f"No topics.json for {args.cert}. It is built from the official objectives PDF.")
+    questions = load_bank(args.cert)
+    hits = defaultdict(int)
+    per_obj = defaultdict(int)
+    for q in questions:
+        per_obj[q["objective"]] += 1
+        for t in q.get("topics", []):
+            hits[t] += 1
+    total = sum(len(ts) for ts in topics.values())
+    covered = sum(1 for ts in topics.values() for t in ts if hits[t["id"]])
+    print(f"{args.cert}: {len(questions)} questions, {covered}/{total} topics covered ({100 * covered // total}%)\n")
+    print(f"{'Objective':10} {'Questions':>9} {'Topics':>7} {'Covered':>8}")
+    for obj, ts in topics.items():
+        print(f"{obj:10} {per_obj[obj]:9} {len(ts):7} {sum(1 for t in ts if hits[t['id']]):8}")
+    missing = [t for ts in topics.values() for t in ts if not hits[t["id"]]]
+    if missing:
+        print(f"\nUncovered topics ({len(missing)}):")
+        for t in missing[: args.limit]:
+            print(f"  {t['id']:8} {t['name']}")
+        if len(missing) > args.limit:
+            print(f"  ... and {len(missing) - args.limit} more (use --limit)")
+
+
 def cmd_list(_):
     for d in sorted(p for p in CERTS.iterdir() if p.is_dir()):
         bank = d / "questions.json"
@@ -143,17 +179,19 @@ def cmd_quiz(args):
 
 
 def cmd_report(args):
-    by_domain = defaultdict(lambda: [0, 0])  # domain -> [right, total]
-    for r in load_attempts(args.cert):
-        by_domain[r["domain"]][0] += r["correct"] == "1"
-        by_domain[r["domain"]][1] += 1
-    if not by_domain:
+    attempts = load_attempts(args.cert)
+    if not attempts:
         print("No attempts yet.")
         return
-    print(f"{'Domain':8} {'Right':>6} {'Total':>6} {'Accuracy':>9}")
-    for domain in sorted(by_domain):
-        right, total = by_domain[domain]
-        print(f"{domain:8} {right:6} {total:6} {100 * right // total:8}%")
+    for key, label in (("domain", "Domain"), ("objective", "Objective")):
+        tally = defaultdict(lambda: [0, 0])  # value -> [right, total]
+        for r in attempts:
+            tally[r[key]][0] += r["correct"] == "1"
+            tally[r[key]][1] += 1
+        print(f"\n{label:10} {'Right':>6} {'Total':>6} {'Accuracy':>9}")
+        for value in sorted(tally, key=lambda v: [int(x) for x in v.split(".")]):
+            right, total = tally[value]
+            print(f"{value:10} {right:6} {total:6} {100 * right // total:8}%")
 
 
 def cmd_validate(_):
@@ -180,6 +218,10 @@ def cmd_validate(_):
             if not set(answers_of(q)) <= set(q["choices"]):
                 print(f"{where}: answer not among choices")
                 problems += 1
+            known = topic_ids(bank.parent.name)
+            if known and [t for t in q.get("topics", []) if t not in known]:
+                print(f"{where}: unknown topic id(s) {[t for t in q['topics'] if t not in known]}")
+                problems += 1
             if len(q["choices"]) < 2:
                 print(f"{where}: fewer than two choices")
                 problems += 1
@@ -198,9 +240,12 @@ def main():
     q.add_argument("--weak", action="store_true", help="most-missed questions first, then unseen")
     r = sub.add_parser("report")
     r.add_argument("cert")
+    c = sub.add_parser("coverage")
+    c.add_argument("cert")
+    c.add_argument("--limit", type=int, default=40, help="how many uncovered topics to list")
     sub.add_parser("validate")
     args = p.parse_args()
-    {"list": cmd_list, "quiz": cmd_quiz, "report": cmd_report, "validate": cmd_validate}[args.cmd](args)
+    {"list": cmd_list, "quiz": cmd_quiz, "report": cmd_report, "coverage": cmd_coverage, "validate": cmd_validate}[args.cmd](args)
 
 
 if __name__ == "__main__":
